@@ -1,0 +1,9 @@
+<section class="conversion-banner" aria-label="Booking call to action">
+  <p class="eyebrow">{{ eyebrow() }}</p>
+  <h2>{{ title() }}</h2>
+  <p class="subtitle">{{ subtitle() }}</p>
+  <div class="actions">
+    <app-button [label]="primaryLabel()" [route]="primaryRoute()" />
+    <app-button [label]="secondaryLabel()" [route]="secondaryRoute()" variant="ghost" />
+  </div>
+</section>

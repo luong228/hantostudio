@@ -1,0 +1,23 @@
+<section class="section">
+  <app-section-header
+    eyebrow="Bang gia nhanh"
+    title="Muc gia khoi diem ro rang ngay tu dau"
+    subtitle="Xem nhanh gia bat dau va cac hang muc co trong goi truoc khi dat lich tu van." />
+
+  <div class="plans">
+    @for (plan of plans(); track plan.id) {
+      <article [class.featured]="plan.highlighted">
+        <p class="name">{{ plan.name }}</p>
+        <h3>Tu {{ plan.price | number }} VND</h3>
+        <p>{{ plan.summary }}</p>
+        <ul>
+          @for (feature of plan.features.slice(0, 3); track feature) {
+            <li>{{ feature }}</li>
+          }
+        </ul>
+      </article>
+    }
+  </div>
+
+  <app-button label="Xem bang gia day du" route="/bang-gia" variant="ghost" />
+</section>

@@ -1,0 +1,25 @@
+<section class="page-wrap">
+  <app-section-header
+    eyebrow="Portfolio Archive"
+    title="Browse complete sets to evaluate consistency, not just hero shots"
+    subtitle="Use these stories to choose the visual direction that feels closest to your own vision." />
+
+  <div class="grid">
+    @for (collection of repo.portfolioCollections(); track collection.id) {
+      <app-content-card
+        [title]="collection.title"
+        [description]="collection.teaser"
+        [image]="collection.coverImage"
+        [meta]="collection.category + ' • ' + collection.imageCount + ' photos'"
+          [route]="'/bo-suu-tap/' + collection.slug" />
+    }
+  </div>
+
+  <app-conversion-banner
+    title="Found a mood that feels right?"
+    subtitle="Send us your favorite collection references and we will build a tailored session plan."
+    primaryLabel="Start planning"
+      primaryRoute="/lien-he"
+    secondaryLabel="View services"
+      secondaryRoute="/dich-vu" />
+</section>

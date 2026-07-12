@@ -1,0 +1,24 @@
+<section class="page-wrap">
+  @if (post(); as item) {
+    <img [src]="item.coverImage" [alt]="item.title" />
+    <p class="meta">{{ item.publishedAt }} • {{ item.readingMinutes }} min read</p>
+    <h1>{{ item.title }}</h1>
+    <p class="excerpt">{{ item.excerpt }}</p>
+    <article>
+      <p>{{ item.content }}</p>
+    </article>
+
+    <app-conversion-banner
+      title="Want these ideas shaped into your own portrait session?"
+      subtitle="Our team can guide concept direction and session flow based on your personality and purpose."
+      primaryLabel="Book a planning call"
+      primaryRoute="/lien-he"
+      secondaryLabel="Explore services"
+      secondaryRoute="/dich-vu" />
+
+    <a routerLink="/blog">Back to journal</a>
+  } @else {
+    <h1>Post not found</h1>
+    <a routerLink="/blog">Back to journal</a>
+  }
+</section>

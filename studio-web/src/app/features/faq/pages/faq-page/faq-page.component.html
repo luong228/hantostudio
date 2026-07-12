@@ -1,0 +1,23 @@
+<section class="page-wrap">
+  <app-section-header
+    eyebrow="Planning FAQ"
+    title="Answers that remove booking hesitation"
+    subtitle="If you still need clarity, send us your question and we will answer directly." />
+
+  <div class="faq-list">
+    @for (item of repo.faqItems(); track item.id) {
+      <details>
+        <summary>{{ item.question }}</summary>
+        <p>{{ item.answer }}</p>
+      </details>
+    }
+  </div>
+
+  <app-conversion-banner
+    title="Still deciding? Let us guide you in one quick call"
+    subtitle="We will help you choose package, styling direction, and ideal timeline."
+    primaryLabel="Ask our team"
+    primaryRoute="/lien-he"
+    secondaryLabel="See pricing"
+    secondaryRoute="/bang-gia" />
+</section>

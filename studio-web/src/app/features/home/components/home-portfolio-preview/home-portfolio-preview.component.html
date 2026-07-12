@@ -1,0 +1,17 @@
+<section class="section">
+  <app-section-header
+    eyebrow="Bo suu tap dac biet"
+    title="Cac collection theo chu de rieng cua studio"
+    subtitle="Moi bo suu tap la mot huong hinh anh ro rang: mood, bo canh va nong do cam xuc khac biet." />
+
+  <div class="grid">
+    @for (collection of collections(); track collection.id) {
+      <app-content-card
+        [title]="collection.title"
+        [description]="collection.teaser"
+        [image]="collection.coverImage"
+        [meta]="collection.category + ' • ' + collection.imageCount + ' anh'"
+        [route]="'/bo-suu-tap/' + collection.slug" />
+    }
+  </div>
+</section>

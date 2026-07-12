@@ -1,0 +1,41 @@
+.page-wrap {
+  padding: 3rem clamp(1rem, 4vw, 4rem);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.plan {
+  background: #fff;
+  border-radius: 1rem;
+  border: 1px solid rgba(36, 25, 21, 0.12);
+  padding: 1.2rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.plan--highlight {
+  background: linear-gradient(160deg, #fff8f2, #f9ede5);
+  border-color: #c6a18e;
+}
+
+.plan__name,
+.ideal,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+app-conversion-banner {
+  margin-top: 0.4rem;
+}

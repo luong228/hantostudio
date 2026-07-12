@@ -1,0 +1,29 @@
+<section class="detail-wrap">
+  @if (service(); as item) {
+    <img class="hero-image" [src]="item.heroImage" [alt]="item.name" />
+    <p class="eyebrow">{{ item.badges.join(' • ') }}</p>
+    <h1>{{ item.name }}</h1>
+    <p class="lead">{{ item.description }}</p>
+    <p class="price">Starting at {{ item.startingPrice | number }} VND</p>
+
+    <div class="gallery">
+      @for (image of item.gallery; track image) {
+        <img [src]="image" [alt]="item.name + ' gallery photo'" loading="lazy" />
+      }
+    </div>
+
+    <app-button label="Dat lich dich vu nay" route="/lien-he" />
+
+    <app-conversion-banner
+      title="Can tu van them truoc khi chot lich?"
+      subtitle="Studio se goi nhanh de tu van timeline, phong cach trang phuc va muc giao anh phu hop." 
+      primaryLabel="Goi tu van"
+      primaryRoute="/lien-he"
+      secondaryLabel="Quay lai danh muc dich vu"
+      secondaryRoute="/dich-vu" />
+  } @else {
+    <h1>Service not found</h1>
+    <p>The service you requested may have been moved.</p>
+    <a routerLink="/dich-vu">Back to all services</a>
+  }
+</section>

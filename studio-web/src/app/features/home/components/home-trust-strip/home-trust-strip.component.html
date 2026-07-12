@@ -1,0 +1,9 @@
+<section class="trust-strip" aria-label="Studio trust indicators">
+  @for (metric of metrics(); track metric.label) {
+    <article class="metric">
+      <p class="metric__label">{{ metric.label }}</p>
+      <p class="metric__value">{{ metric.value }}</p>
+      <p class="metric__detail">{{ metric.detail }}</p>
+    </article>
+  }
+</section>

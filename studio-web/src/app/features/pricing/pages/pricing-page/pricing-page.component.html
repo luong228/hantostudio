@@ -1,0 +1,31 @@
+<section class="page-wrap">
+  <app-section-header
+    eyebrow="Session Investment"
+    title="Clear tiers, intentional outcomes"
+    subtitle="Every package is built around preparation, direction, and deliverables you can actually use." />
+
+  <div class="grid">
+    @for (plan of repo.pricingPlans(); track plan.id) {
+      <article class="plan" [class.plan--highlight]="plan.highlighted">
+        <p class="plan__name">{{ plan.name }}</p>
+        <h3>{{ plan.price | number }} VND</h3>
+        <p>{{ plan.summary }}</p>
+        <p class="ideal">Ideal for: {{ plan.idealFor }}</p>
+        <ul>
+          @for (feature of plan.features; track feature) {
+            <li>{{ feature }}</li>
+          }
+        </ul>
+        <app-button label="Dat lich goi nay" route="/lien-he" [variant]="plan.highlighted ? 'primary' : 'ghost'" />
+      </article>
+    }
+  </div>
+
+  <app-conversion-banner
+    title="Need a custom concept quote?"
+    subtitle="Tell us your concept depth, team size, and deadline. We will build a custom production estimate."
+    primaryLabel="Request custom quote"
+    primaryRoute="/lien-he"
+    secondaryLabel="Review service types"
+    secondaryRoute="/dich-vu" />
+</section>

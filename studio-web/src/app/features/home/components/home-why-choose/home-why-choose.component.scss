@@ -1,0 +1,27 @@
+.section {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+article {
+  border: 1px solid rgba(38, 26, 21, 0.12);
+  border-radius: 0.9rem;
+  background: #fffcf9;
+  padding: 1rem;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+p {
+  margin-top: 0.5rem;
+  color: #5a4a43;
+}

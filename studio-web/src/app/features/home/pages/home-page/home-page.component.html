@@ -1,0 +1,50 @@
+<div class="home-stack">
+  @if (heroContent(); as hero) {
+    <app-home-hero-section
+      [eyebrow]="hero.eyebrow"
+      [headline]="hero.headline"
+      [subheadline]="hero.subheadline"
+      [trustLine]="hero.trustLine"
+      [primaryCtaLabel]="hero.primaryCtaLabel"
+      [primaryCtaRoute]="hero.primaryCtaRoute"
+      [secondaryCtaLabel]="hero.secondaryCtaLabel"
+      [secondaryCtaRoute]="hero.secondaryCtaRoute"
+      [heroImage]="hero.heroImage"
+      [heroImageAlt]="hero.heroImageAlt ?? ''"
+      [metrics]="heroMetrics()" />
+  }
+
+  <app-home-pricing-teaser [plans]="featuredPlans()" />
+
+  <app-home-featured-services [services]="featuredServices()" />
+
+  <app-home-why-choose [items]="repo.whyChooseItems()" />
+
+  <app-home-portfolio-preview [collections]="featuredCollections()" />
+
+  <section class="home-band home-band--proof">
+    <app-home-testimonials ngSkipHydration [testimonials]="repo.testimonials()" />
+  </section>
+
+  <section class="home-band home-band--closing">
+    <app-home-faq-preview [faqs]="featuredFaqs()" />
+    <app-home-branches-contact
+      [branches]="repo.branches()"
+      [channels]="repo.contactChannels()"
+      [studioInfo]="repo.studioInfo()" />
+  </section>
+
+  <app-home-booking-process [steps]="repo.bookingSteps()" />
+
+  <section class="home-band home-band--final">
+    @if (finalCtaContent(); as cta) {
+      <app-home-final-cta
+        [title]="cta.title"
+        [subtitle]="cta.subtitle"
+        [primaryLabel]="cta.primaryLabel"
+        [primaryRoute]="cta.primaryRoute"
+        [secondaryLabel]="cta.secondaryLabel"
+        [secondaryRoute]="cta.secondaryRoute" />
+    }
+  </section>
+</div>

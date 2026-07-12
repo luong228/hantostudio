@@ -1,0 +1,5 @@
+@if (route()) {
+  <a class="btn" [class.btn--ghost]="variant() === 'ghost'" [routerLink]="route()">{{ label() }}</a>
+} @else {
+  <button class="btn" [class.btn--ghost]="variant() === 'ghost'" type="button">{{ label() }}</button>
+}

@@ -1,0 +1,22 @@
+<header class="site-header">
+  <a class="brand" routerLink="/">
+    <span class="brand__name">{{ contentRepo.studioInfo().brandName }}</span>
+    <span class="brand__sub">Portrait Atelier</span>
+  </a>
+
+  <nav aria-label="Primary" class="site-nav">
+    @for (item of contentRepo.navItems(); track item.route) {
+      <a [routerLink]="item.route" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: item.route === '/' }">
+        {{ item.label }}
+      </a>
+    }
+  </nav>
+
+  <div class="header-actions">
+    <a class="hotline-link" [href]="'tel:' + contentRepo.studioInfo().phone.replaceAll(' ', '')">
+      Hotline {{ contentRepo.studioInfo().phone }}
+    </a>
+    <p class="lang-switch" aria-label="Language switch">VI | EN</p>
+    <a class="book-link" routerLink="/lien-he">Dat lich ngay</a>
+  </div>
+</header>

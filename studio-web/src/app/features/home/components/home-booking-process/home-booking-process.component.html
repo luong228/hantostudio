@@ -1,0 +1,16 @@
+<section class="section">
+  <app-section-header
+    eyebrow="How Booking Works"
+    title="Simple milestones, no guesswork"
+    subtitle="From first message to final delivery, every step is clear and time-bound." />
+
+  <ol>
+    @for (step of steps(); track step.step) {
+      <li>
+        <p class="step">{{ step.step }}</p>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.description }}</p>
+      </li>
+    }
+  </ol>
+</section>

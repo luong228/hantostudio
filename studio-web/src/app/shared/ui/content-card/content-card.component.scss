@@ -1,0 +1,38 @@
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(36, 25, 21, 0.08);
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.card__body {
+  padding: 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.card__meta {
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.72rem;
+  margin: 0;
+  color: #7f6a61;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: #3f2f2b;
+  text-decoration: none;
+  font-weight: 600;
+}

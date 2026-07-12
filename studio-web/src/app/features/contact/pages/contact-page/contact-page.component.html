@@ -1,0 +1,48 @@
+<section class="page-wrap">
+  <app-section-header
+    eyebrow="Contact"
+    title="Start your booking conversation"
+    subtitle="Tell us what you want to express. We will shape the right session and timeline." />
+
+  <p class="prompt">{{ contactPrompt }}</p>
+
+  <div class="layout">
+    <form [formGroup]="inquiryForm" (ngSubmit)="submit()">
+      <label>
+        Full name
+        <input formControlName="fullName" type="text" />
+      </label>
+
+      <label>
+        Email
+        <input formControlName="email" type="email" />
+      </label>
+
+      <label>
+        Preferred service
+        <select formControlName="preferredService">
+          <option value="">Select</option>
+          @for (service of repo.services(); track service.id) {
+            <option [value]="service.slug">{{ service.name }}</option>
+          }
+        </select>
+      </label>
+
+      <label>
+        Message
+        <textarea formControlName="message" rows="4"></textarea>
+      </label>
+
+      <button type="submit">Send inquiry</button>
+    </form>
+
+    <aside>
+      <h3>Studio Contact</h3>
+      @for (channel of repo.contactChannels(); track channel.label) {
+        <a [href]="channel.href" target="_blank" rel="noopener noreferrer">{{ channel.label }}: {{ channel.value }}</a>
+      }
+      <p>{{ repo.studioInfo().address }}</p>
+      <p>{{ repo.studioInfo().openingHours }}</p>
+    </aside>
+  </div>
+</section>

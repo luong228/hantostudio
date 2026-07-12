@@ -1,0 +1,17 @@
+<section class="section">
+  <app-section-header
+    eyebrow="Cau hoi nhanh"
+    title="Giai dap truoc khi dat lich: coc, lich chup, giao anh, dia diem"
+    subtitle="Nhung thong tin quan trong nhat de ban quyet dinh nhanh va yen tam." />
+
+  <div class="faq-list">
+    @for (item of faqs(); track item.id) {
+      <article>
+        <h3>{{ item.question }}</h3>
+        <p>{{ item.answer }}</p>
+      </article>
+    }
+  </div>
+
+  <app-button label="Xem tat ca cau hoi" route="/cau-hoi-thuong-gap" variant="ghost" />
+</section>

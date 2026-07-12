@@ -1,0 +1,26 @@
+.section {
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+article {
+  border-radius: 0.8rem;
+  border: 1px solid rgba(34, 23, 19, 0.14);
+  background: #fffdfa;
+  padding: 0.9rem;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+p {
+  margin-top: 0.45rem;
+  color: #5e4f48;
+}

@@ -1,0 +1,37 @@
+.site-footer {
+  margin-top: 5rem;
+  padding: 2.5rem clamp(1rem, 3vw, 3rem);
+  background: #2d1f1a;
+  color: #f6ece6;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+a {
+  display: block;
+  color: #f8dfd1;
+  text-decoration: none;
+  margin-bottom: 0.4rem;
+}
+
+p {
+  margin: 0.35rem 0;
+}
+
+.branch-name {
+  margin-top: 0.75rem;
+  font-weight: 700;
+  color: #f6ece6;
+}
+
+.copyright {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #e6c5b3;
+}

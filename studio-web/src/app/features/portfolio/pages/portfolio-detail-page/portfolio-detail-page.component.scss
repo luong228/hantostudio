@@ -1,0 +1,37 @@
+.page-wrap {
+  padding: 2.4rem clamp(1rem, 4vw, 4rem);
+  display: grid;
+  gap: 1rem;
+}
+
+img {
+  width: 100%;
+  border-radius: 1rem;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #866d61;
+  font-size: 0.78rem;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.story {
+  max-width: 72ch;
+  color: #5f4f49;
+}
+
+.count {
+  font-weight: 700;
+}
+
+app-conversion-banner {
+  margin-top: 0.45rem;
+}

@@ -1,0 +1,17 @@
+<section class="section">
+  <app-section-header
+    eyebrow="Dich vu cot loi"
+    title="3 nhom chup duoc dat nhieu nhat tai studio"
+    subtitle="Chan dung, gia dinh, ao dai-thai san-concept voi quy trinh ro rang va gia khoi diem minh bach." />
+
+  <div class="grid">
+    @for (service of services(); track service.id) {
+      <app-content-card
+        [title]="service.name"
+        [description]="service.shortDescription"
+        [image]="service.heroImage"
+        [meta]="'From ' + (service.startingPrice | number) + ' VND'"
+        [route]="'/dich-vu/' + service.slug" />
+    }
+  </div>
+</section>

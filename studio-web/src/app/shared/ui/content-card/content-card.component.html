@@ -1,0 +1,11 @@
+<article class="card">
+  <img [src]="image()" [alt]="title()" loading="lazy" />
+  <div class="card__body">
+    @if (meta()) {
+      <p class="card__meta">{{ meta() }}</p>
+    }
+    <h3>{{ title() }}</h3>
+    <p>{{ description() }}</p>
+    <a [routerLink]="route()">View details</a>
+  </div>
+</article>

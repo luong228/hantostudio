@@ -1,0 +1,31 @@
+.page-wrap {
+  padding: 3rem clamp(1rem, 4vw, 4rem);
+  display: grid;
+  gap: 1.2rem;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+details {
+  border: 1px solid rgba(36, 25, 21, 0.15);
+  border-radius: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: #fff;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 0;
+  color: #5a4a44;
+}
+
+app-conversion-banner {
+  margin-top: 0.45rem;
+}

@@ -1,0 +1,27 @@
+<section class="section">
+  <app-section-header
+    eyebrow="Chi nhanh va lien he"
+    title="2 chi nhanh, hotline ro rang, mo cua moi ngay"
+    subtitle="Ban co the dat lich qua hotline, Zalo, Facebook hoac den truc tiep studio theo khung gio hoat dong." />
+
+  <div class="meta-strip">
+    <p><strong>Hotline:</strong> <a [href]="'tel:' + studioInfo().phone.replaceAll(' ', '')">{{ studioInfo().phone }}</a></p>
+    <p><strong>Gio mo cua:</strong> {{ studioInfo().openingHours }}</p>
+  </div>
+
+  <div class="branches">
+    @for (branch of branches(); track branch.name) {
+      <article>
+        <h3>{{ branch.name }}</h3>
+        <p>{{ branch.address }}</p>
+        <a [href]="'tel:' + branch.phone.replaceAll(' ', '')">{{ branch.phone }}</a>
+      </article>
+    }
+  </div>
+
+  <div class="channels">
+    @for (channel of channels(); track channel.label) {
+      <a [href]="channel.href" target="_blank" rel="noopener noreferrer">{{ channel.label }}: {{ channel.value }}</a>
+    }
+  </div>
+</section>

@@ -1,0 +1,24 @@
+<section class="section">
+  <app-section-header
+    eyebrow="Khach hang xac thuc"
+    title="Danh gia that sau khi nhan bo anh hoan chinh"
+    subtitle="Tap trung vao 3 yeu to chot don: chat luong anh, trai nghiem chup, toc do ban giao." />
+
+  <div class="proof-headline">
+    <p><strong>Danh gia trung binh:</strong> 4.9/5 tu khach hang da dat lich</p>
+    <p><strong>Media mentions:</strong> Dang cap nhat danh sach bao chi va doi tac thuong hieu</p>
+  </div>
+
+  <div class="grid">
+    @for (item of testimonials(); track item.name + item.sessionType) {
+      <blockquote>
+        <p class="stars" aria-label="Rated {{ item.rating }} out of 5">{{ stars(item.rating) }}</p>
+        <p class="quote">“{{ item.quote }}”</p>
+        <footer>
+          <cite>{{ item.name }}</cite>
+          <span>{{ item.sessionType }}</span>
+        </footer>
+      </blockquote>
+    }
+  </div>
+</section>

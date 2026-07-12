@@ -1,0 +1,52 @@
+<section class="hero-cinematic" aria-labelledby="home-hero-title">
+  <div class="hero-cinematic__bg">
+    <img [src]="heroImage()" [attr.alt]="heroImageAlt() || 'Portrait photography preview'" fetchpriority="high" />
+  </div>
+
+  <div class="hero-cinematic__haze"></div>
+
+  <div class="hero-cinematic__floating" aria-hidden="true">
+    <figure class="float-photo float-photo--tl">
+      <img [src]="floatingPhotoPlaceholders[0]" alt="" loading="lazy" />
+    </figure>
+    <figure class="float-photo float-photo--tr">
+      <img [src]="floatingPhotoPlaceholders[1]" alt="" loading="lazy" />
+    </figure>
+    <figure class="float-photo float-photo--ml">
+      <img [src]="floatingPhotoPlaceholders[2]" alt="" loading="lazy" />
+    </figure>
+    <figure class="float-photo float-photo--br">
+      <img [src]="floatingPhotoPlaceholders[3]" alt="" loading="lazy" />
+    </figure>
+    <figure class="float-photo float-photo--mr">
+      <img [src]="floatingPhotoPlaceholders[4]" alt="" loading="lazy" />
+    </figure>
+  </div>
+
+  <div class="hero-cinematic__content">
+    <p class="hero-badge">{{ eyebrow() }}</p>
+
+    <h1 id="home-hero-title">
+      {{ headline() }}
+      <span>{{ trustLine() }}</span>
+    </h1>
+
+    <div class="hero-description-card">
+      <p>{{ subheadline() }}</p>
+    </div>
+
+    <div class="hero-ctas">
+      <a class="hero-cta hero-cta--primary" [routerLink]="primaryCtaRoute()">{{ primaryCtaLabel() }}</a>
+      <a class="hero-cta hero-cta--secondary" [routerLink]="secondaryCtaRoute()">{{ secondaryCtaLabel() }}</a>
+    </div>
+  </div>
+
+  <div class="hero-stats" aria-label="Studio trust metrics">
+    @for (metric of metrics(); track metric.label) {
+      <article class="hero-stat-card">
+        <p class="hero-stat-card__value">{{ metric.value }}</p>
+        <p class="hero-stat-card__label">{{ metric.label }}</p>
+      </article>
+    }
+  </div>
+</section>

@@ -1,0 +1,9 @@
+<section class="cta">
+  <p class="eyebrow">Last Step</p>
+  <h2 id="final-cta-title">{{ title() }}</h2>
+  <p>{{ subtitle() }}</p>
+  <div class="actions">
+    <app-button [label]="primaryLabel()" [route]="primaryRoute()" />
+    <app-button [label]="secondaryLabel()" [route]="secondaryRoute()" variant="ghost" />
+  </div>
+</section>

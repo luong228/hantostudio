@@ -1,0 +1,32 @@
+<footer class="site-footer">
+  <section>
+    <h3>{{ contentRepo.studioInfo().brandName }}</h3>
+    <p>{{ contentRepo.studioInfo().tagline }}</p>
+    <p>{{ contentRepo.studioInfo().address }}</p>
+  </section>
+
+  <section>
+    <h3>Branches</h3>
+    @for (branch of contentRepo.branches(); track branch.name) {
+      <p class="branch-name">{{ branch.name }}</p>
+      <p>{{ branch.address }}</p>
+      <a [href]="'tel:' + branch.phone.replaceAll(' ', '')">{{ branch.phone }}</a>
+    }
+  </section>
+
+  <section>
+    <h3>Contact</h3>
+    @for (channel of contentRepo.contactChannels(); track channel.label) {
+      <a [href]="channel.href" target="_blank" rel="noopener noreferrer">{{ channel.value }}</a>
+    }
+  </section>
+
+  <section>
+    <h3>Explore</h3>
+    @for (item of contentRepo.navItems(); track item.route) {
+      <a [routerLink]="item.route">{{ item.label }}</a>
+    }
+  </section>
+
+  <p class="copyright">© {{ year }} {{ contentRepo.studioInfo().brandName }}. All rights reserved.</p>
+</footer>

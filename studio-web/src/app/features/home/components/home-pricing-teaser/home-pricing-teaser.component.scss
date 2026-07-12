@@ -1,0 +1,45 @@
+.section {
+  display: grid;
+  gap: 1rem;
+}
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+article {
+  border-radius: 0.9rem;
+  border: 1px solid rgba(40, 29, 24, 0.12);
+  background: #fff;
+  padding: 1rem;
+}
+
+article.featured {
+  background: linear-gradient(155deg, #fff8f1, #f5e9de);
+  border-color: rgba(173, 131, 104, 0.45);
+}
+
+.name,
+h3,
+p {
+  margin: 0;
+}
+
+h3 {
+  margin-top: 0.35rem;
+}
+
+p {
+  margin-top: 0.4rem;
+  color: #5b4b44;
+}
+
+ul {
+  margin: 0.55rem 0 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.28rem;
+  color: #4d3f39;
+}

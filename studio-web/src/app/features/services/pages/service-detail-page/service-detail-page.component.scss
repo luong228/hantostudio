@@ -1,0 +1,50 @@
+.detail-wrap {
+  padding: 2rem clamp(1rem, 4vw, 4rem);
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  color: #8a6f62;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.lead {
+  max-width: 72ch;
+  color: #5f4f49;
+}
+
+.price {
+  font-weight: 700;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 0.75rem;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+app-conversion-banner {
+  margin-top: 0.35rem;
+}

@@ -1,0 +1,41 @@
+.section {
+  display: grid;
+  gap: 1.2rem;
+}
+
+ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.8rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  border-radius: 0.9rem;
+  border: 1px solid rgba(38, 26, 21, 0.14);
+  background: #fff;
+  padding: 1rem;
+}
+
+.step,
+h3,
+p {
+  margin: 0;
+}
+
+.step {
+  color: #9a7c6d;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+h3 {
+  margin-top: 0.3rem;
+}
+
+p {
+  margin-top: 0.5rem;
+  color: #5c4d46;
+}

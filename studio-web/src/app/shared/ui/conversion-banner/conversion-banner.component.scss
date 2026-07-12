@@ -1,0 +1,40 @@
+.conversion-banner {
+  border: 1px solid rgba(39, 27, 22, 0.15);
+  border-radius: 1rem;
+  padding: clamp(1rem, 3vw, 1.9rem);
+  background:
+    radial-gradient(circle at 86% 20%, rgba(212, 176, 149, 0.35), transparent 42%),
+    linear-gradient(145deg, #fff9f4, #f4e7dd);
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #88695b;
+  font-size: 0.72rem;
+}
+
+h2,
+.subtitle {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 0.35rem;
+  font-size: clamp(1.7rem, 1.2rem + 1.4vw, 2.3rem);
+  color: #2b1f1b;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  color: #5c4c45;
+  max-width: 62ch;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
