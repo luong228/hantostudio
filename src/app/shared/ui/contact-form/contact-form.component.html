@@ -1,0 +1,108 @@
+<div class="contact-form-container">
+  <div class="contact-form-card">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <!-- Họ và tên -->
+      <div class="form-group">
+        <label for="fullName">Họ và tên <span class="required">*</span></label>
+        <input 
+          id="fullName" 
+          type="text" 
+          formControlName="fullName" 
+          placeholder="VD: Nguyễn Thị Hoa"
+          [class.is-invalid]="isFieldInvalid('fullName')"
+        />
+        @if (isFieldInvalid('fullName')) {
+          <span class="error-msg">Vui lòng nhập họ và tên</span>
+        }
+      </div>
+
+      <!-- Số điện thoại -->
+      <div class="form-group">
+        <label for="phone">Số điện thoại <span class="required">*</span></label>
+        <input 
+          id="phone" 
+          type="tel" 
+          formControlName="phone" 
+          placeholder="VD: 0901 234 567"
+          [class.is-invalid]="isFieldInvalid('phone')"
+        />
+        @if (isFieldInvalid('phone')) {
+          <span class="error-msg">Vui lòng nhập số điện thoại hợp lệ (10 chữ số)</span>
+        }
+      </div>
+
+      <!-- Concept yêu thích -->
+      <div class="form-group">
+        <label for="preferredService">Concept yêu thích</label>
+        <select id="preferredService" formControlName="preferredService">
+          <option value="">-- Chọn dịch vụ --</option>
+          @for (service of services(); track service.id) {
+            <option [value]="service.slug">{{ service.name }}</option>
+          }
+        </select>
+      </div>
+
+      <!-- Ý tưởng concept cụ thể -->
+      <div class="form-group">
+        <label for="conceptIdea">Ý tưởng concept cụ thể (nếu có)</label>
+        <input 
+          id="conceptIdea" 
+          type="text" 
+          formControlName="conceptIdea" 
+          placeholder="VD: Áo dài sen, Mẹ và con, Retro Sài Gòn xưa..."
+        />
+      </div>
+
+      <!-- Cơ sở gần nhất -->
+      <div class="form-group">
+        <label>Cơ sở gần nhất</label>
+        <div class="branch-selector">
+          <div class="branch-card branch-card--selected">
+            <div class="branch-card__header">
+              <span class="branch-card__icon">📍</span>
+              <span class="branch-card__title">TP Hồ Chí Minh</span>
+            </div>
+            <span class="branch-card__subtitle">Tầng 3 T12-06, Khu Manhattan, Vinhomes Grand Park, Thủ Đức</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ghi chú thêm -->
+      <div class="form-group">
+        <label for="notes">Ghi chú thêm (tuỳ chọn)</label>
+        <textarea 
+          id="notes" 
+          formControlName="notes" 
+          rows="4" 
+          placeholder="VD: Muốn chụp dịp sinh nhật, cần concept Tết, đi cùng bé 3 tuổi..."
+        ></textarea>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="submit-button" [disabled]="contactForm.invalid">
+        Để ekip liên hệ với bạn →
+      </button>
+
+      <!-- Commitment text -->
+      <p class="commitment-text">
+        Lumen Atelier cam kết chỉ gọi một cuộc để tư vấn. Không spam, không làm phiền nếu bạn chưa sẵn sàng.
+      </p>
+    </form>
+  </div>
+
+  <!-- Direct contact channels -->
+  <div class="direct-contact">
+    <p class="direct-contact__label">Hoặc liên hệ trực tiếp:</p>
+    <div class="direct-contact__buttons">
+      <a href="tel:0396887597" class="direct-button">
+        <span class="direct-button__icon">📞</span> Gọi 0396 887 597
+      </a>
+      <a href="https://zalo.me/0396887597" target="_blank" rel="noopener noreferrer" class="direct-button">
+        <span class="direct-button__icon">💬</span> Nhắn Zalo
+      </a>
+      <a href="https://m.me/lumenatelier" target="_blank" rel="noopener noreferrer" class="direct-button">
+        <span class="direct-button__icon">✉️</span> Messenger
+      </a>
+    </div>
+  </div>
+</div>

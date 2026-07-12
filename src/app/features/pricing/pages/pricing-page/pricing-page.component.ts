@@ -1,15 +1,13 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { ContentRepositoryService } from '../../../../core/services/content-repository.service';
 import { SeoService } from '../../../../core/services/seo.service';
-import { ButtonComponent } from '../../../../shared/ui/button/button.component';
-import { ConversionBannerComponent } from '../../../../shared/ui/conversion-banner/conversion-banner.component';
-import { SectionHeaderComponent } from '../../../../shared/ui/section-header/section-header.component';
 
 @Component({
   selector: 'app-pricing-page',
   standalone: true,
-  imports: [DecimalPipe, ButtonComponent, SectionHeaderComponent, ConversionBannerComponent],
+  imports: [DecimalPipe, RouterLink],
   templateUrl: './pricing-page.component.html',
   styleUrl: './pricing-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -1,41 +1,266 @@
-.page-wrap {
-  padding: 3rem clamp(1rem, 4vw, 4rem);
+.pricing-page {
+  padding: 4rem clamp(1rem, 5vw, 6rem) 6rem clamp(1rem, 5vw, 6rem);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.pricing-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+// Header styles
+.pricing-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  
+  &__eyebrow {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #b89579;
+    text-transform: uppercase;
+  }
+  
+  &__title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 600;
+    color: #2a1f1a;
+    margin: 0.5rem 0;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  
+  &__subtitle {
+    font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+    color: #5d4d45;
+    font-style: italic;
+    margin: 0;
+  }
+}
+
+// Grid styles
+.pricing-grid {
   display: grid;
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+// Card base styles
+.pricing-card {
+  background: #fbf9f6;
+  border-radius: 24px;
+  border: 1px solid rgba(40, 28, 22, 0.12);
+  padding: 3rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(42, 31, 26, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(42, 31, 26, 0.08);
+  }
+  
+  &__badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #b89579;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.4rem 1.4rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(184, 149, 121, 0.3);
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+  
+  &__name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #2a1f1a;
+    margin: 0 0 0.5rem 0;
+    text-align: left;
+    letter-spacing: 0.05em;
+  }
+  
+  &__summary {
+    font-size: 0.9rem;
+    color: #6d5a50;
+    margin: 0 0 2rem 0;
+    min-height: 2.5rem;
+    line-height: 1.4;
+  }
+  
+  &__price-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(40, 28, 22, 0.08);
+    padding-bottom: 1.5rem;
+  }
+  
+  &__price {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #2a1f1a;
+    line-height: 1;
+  }
+  
+  &__price-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #99857a;
+    margin-top: 0.4rem;
+  }
+  
+  &__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    flex-grow: 1;
+  }
+  
+  &__feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    
+    &-icon {
+      color: #b89579;
+      font-weight: bold;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    
+    &-text {
+      font-size: 0.9rem;
+      color: #2a1f1a;
+      line-height: 1.4;
+    }
+  }
+  
+  &__action {
+    margin-top: auto;
+  }
+  
+  &__button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #856955;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.9rem 1.5rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    
+    &:hover {
+      background: #725744;
+    }
+    
+    &:active {
+      transform: scale(0.98);
+    }
+  }
 }
 
-.plan {
-  background: #fff;
-  border-radius: 1rem;
-  border: 1px solid rgba(36, 25, 21, 0.12);
-  padding: 1.2rem;
-  display: grid;
-  gap: 0.8rem;
+// Featured card styling (dark card in center)
+.pricing-card--featured {
+  background: #211a17;
+  border-color: #312824;
+  box-shadow: 0 8px 30px rgba(33, 26, 23, 0.15);
+  
+  .pricing-card__name {
+    color: #ffffff;
+  }
+  
+  .pricing-card__summary {
+    color: #a3938b;
+  }
+  
+  .pricing-card__price-container {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+  }
+  
+  .pricing-card__price {
+    color: #ffffff;
+  }
+  
+  .pricing-card__price-label {
+    color: #a3938b;
+  }
+  
+  .pricing-card__feature-text {
+    color: #eae3df;
+  }
+  
+  .pricing-card__feature-icon {
+    color: #dfc1a5;
+  }
+  
+  .pricing-card__button {
+    background: #dfcdb6;
+    color: #211a17;
+    
+    &:hover {
+      background: #c8b7a1;
+    }
+  }
 }
 
-.plan--highlight {
-  background: linear-gradient(160deg, #fff8f2, #f9ede5);
-  border-color: #c6a18e;
+// Footer note styles
+.pricing-footer-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #8c766b;
+  margin: 1rem auto 0 auto;
+  max-width: 800px;
+  line-height: 1.5;
+  
+  &__icon {
+    margin-right: 0.25rem;
+    display: inline-block;
+  }
 }
 
-.plan__name,
-.ideal,
-h3,
-p {
-  margin: 0;
-}
-
-ul {
-  margin: 0;
-  padding-left: 1.1rem;
-}
-
-app-conversion-banner {
-  margin-top: 0.4rem;
+// Responsive adjustments
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .pricing-card--featured {
+    order: -1; // Keep the popular one at top on mobile
+    margin-top: 1.5rem;
+  }
 }

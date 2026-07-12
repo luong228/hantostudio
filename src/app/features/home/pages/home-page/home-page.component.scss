@@ -39,6 +39,24 @@ app-home-pricing-teaser {
   grid-template-columns: 1fr;
 }
 
+.home-contact-section {
+  background: #211a17;
+  padding: 5rem clamp(1rem, 5vw, 6rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-inline: 0 !important;
+  text-align: center;
+
+  // Override SectionHeader colors for dark background
+  :ng-deep app-section-header {
+    .section-header__eyebrow { color: #c8a98a; }
+    h2 { color: #f5ede6; }
+    .section-header__subtitle { color: #a08070; }
+  }
+}
+
 @media (max-width: 980px) {
   .home-band,
   .home-band--proof,
