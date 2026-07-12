@@ -6,12 +6,22 @@
 
   <div class="grid">
     @for (service of services(); track service.id) {
-      <app-content-card
-        [title]="service.name"
-        [description]="service.shortDescription"
-        [image]="service.heroImage"
-        [meta]="'From ' + (service.startingPrice | number) + ' VND'"
-        [route]="'/dich-vu/' + service.slug" />
+      <a
+        class="service-card"
+        [routerLink]="'/dich-vu/' + service.slug"
+        [attr.aria-label]="'Xem chi tiet goi ' + service.name">
+        <img [src]="service.heroImage" [alt]="service.name" loading="lazy" />
+        <div class="service-card__overlay"></div>
+        <div class="service-card__content">
+          <p class="service-card__eyebrow">{{ getEyebrow(service) }}</p>
+          <h3>{{ service.name }}</h3>
+          <p class="service-card__subtitle">{{ service.shortDescription }}</p>
+          <div class="service-card__meta">
+            <p>Tu {{ formatPrice(service.startingPrice) }}D</p>
+            <span>Xem chi tiet -></span>
+          </div>
+        </div>
+      </a>
     }
   </div>
 </section>
