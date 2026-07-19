@@ -199,22 +199,28 @@ export const BOOKING_STEPS: BookingStep[] = [
 
 export const TESTIMONIALS: TestimonialItem[] = [
   {
-    name: 'Minh Châu',
-    sessionType: 'Buổi chụp thai sản',
-    quote: 'Tôi được hướng dẫn rõ ràng nhưng không bao giờ cảm thấy áp lực. Bộ ảnh cuối cùng thật thanh lịch và rất cá nhân.',
-    rating: 5
+    name: 'Nguyễn Thảo Linh',
+    sessionType: 'Chụp Beauty',
+    tag: 'Beauty',
+    quote: 'Ảnh chụp lên quá đẹp và tự nhiên, đúng mood mình mong muốn. Ekip nhiệt tình, hướng dẫn rất nhẹ nhàng dù mình không biết tạo dáng.',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=200&q=80'
   },
   {
-    name: 'Hoàng Nam',
-    sessionType: 'Buổi chụp chân dung cá nhân',
-    quote: 'Tôi đến để chụp ảnh doanh nhân và kết thúc với những bức ảnh tôi dùng ở khắp nơi. Quy trình cực kỳ trơn tru.',
-    rating: 5
+    name: 'Trần Minh Khôi',
+    sessionType: 'Chụp Gia đình',
+    tag: 'Gia đình',
+    quote: 'Cả gia đình mình đều rất thích không khí buổi chụp, các bé được chơi thoải mái mà vẫn có những khoảnh khắc đẹp tự nhiên.',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=200&q=80'
   },
   {
-    name: 'Gia đình Gia Bảo',
-    sessionType: 'Buổi chụp ảnh gia đình lưu truyền',
-    quote: 'Các con tôi nhanh chóng hòa vào không khí và đội ngũ xử lý mọi khoảnh khắc một cách bình tĩnh. Bộ ảnh trông thật sống động và vượt thời gian.',
-    rating: 5
+    name: 'Lê Hoàng Nam',
+    sessionType: 'Chụp Profile',
+    tag: 'Profile',
+    quote: 'Ảnh profile rất ưng, sắc nét và chuyên nghiệp. Tư vấn trang phục, concept phù hợp với công việc mình theo đuổi.',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80'
   }
 ];
 

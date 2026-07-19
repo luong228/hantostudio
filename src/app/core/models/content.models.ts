@@ -125,8 +125,10 @@ export interface BookingStep {
 export interface TestimonialItem {
   name: string;
   sessionType: string;
+  tag?: string;
   quote: string;
   rating: number;
+  image?: string;
 }
 
 export interface BranchInfo {

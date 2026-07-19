@@ -1,24 +1,98 @@
-<section class="section">
-  <app-section-header
-    eyebrow="Khách Hàng Xác Thực"
-    title="Đánh giá thật sau khi nhận bộ ảnh hoàn chỉnh"
-    subtitle="Tập trung vào 3 yếu tố chốt đơn: chất lượng ảnh, trải nghiệm chụp, tốc độ bàn giao." />
+﻿<section class="section">
 
-  <div class="proof-headline">
-    <p><strong>Đánh giá trung bình:</strong> 4.9/5 từ khách hàng đã đặt lịch</p>
-    <p><strong>Báo chí đề cập:</strong> Đang cập nhật danh sách báo chí và đối tác thương hiệu</p>
+  <!-- Header -->
+  <header class="test-hd">
+    <p class="test-hd__eyebrow">Khách Hàng Xác Thực</p>
+    <div class="test-hd__ornament" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z"/></svg>
+      <span></span>
+    </div>
+    <h2>Đánh giá thật sau khi nhận bộ ảnh hoàn chỉnh</h2>
+    <p class="test-hd__sub">
+      Sự hài lòng của bạn là minh chứng rõ ràng nhất cho chất lượng dịch vụ<br />
+      và sự tận tâm mà chúng tôi luôn theo đuổi.
+    </p>
+  </header>
+
+  <!-- Stats strip -->
+  <div class="stat-strip">
+    <div class="stat-item">
+      <div class="stat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/>
+        </svg>
+      </div>
+      <div class="stat-body">
+        <p class="stat-label">Đánh Giá Trung Bình</p>
+        <p class="stat-value">4.9<span class="stat-denom">/5</span> <span class="stat-stars">★★★★★</span></p>
+        <p class="stat-note">Dựa trên hơn 500+ đánh giá</p>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M1 4v6h6"/><path d="M23 20v-6h-6"/>
+          <path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15"/>
+        </svg>
+      </div>
+      <div class="stat-body">
+        <p class="stat-label">Tỷ Lệ Khách Hàng Quay Lại</p>
+        <p class="stat-value">92%</p>
+        <p class="stat-note">Tin tưởng và quay lại sử dụng dịch vụ</p>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+      </div>
+      <div class="stat-body">
+        <p class="stat-label">Giao Ảnh Đúng Hẹn</p>
+        <p class="stat-value">100%</p>
+        <p class="stat-note">Cam kết đúng thời gian đã hẹn</p>
+      </div>
+    </div>
   </div>
 
+  <!-- Testimonial cards -->
   <div class="grid">
     @for (item of testimonials(); track item.name + item.sessionType) {
-      <blockquote>
-        <p class="stars" aria-label="Rated {{ item.rating }} out of 5">{{ stars(item.rating) }}</p>
-        <p class="quote">“{{ item.quote }}”</p>
-        <footer>
-          <cite>{{ item.name }}</cite>
-          <span>{{ item.sessionType }}</span>
+      <blockquote class="tcard">
+        <div class="tcard__top">
+          <div class="tcard__photo">
+            @if (item.image) {
+              <img [src]="item.image" [alt]="item.name" loading="lazy" />
+            } @else {
+              <span class="tcard__initials">{{ item.name.charAt(0) }}</span>
+            }
+          </div>
+          <p class="tcard__stars" [attr.aria-label]="'Đánh giá ' + item.rating + ' trên 5'">{{ stars(item.rating) }}</p>
+        </div>
+        <p class="tcard__quote">{{ item.quote }}</p>
+        <footer class="tcard__footer">
+          <div class="tcard__meta">
+            <cite class="tcard__name">{{ item.name }}</cite>
+            <div class="tcard__tags">
+              <span class="tcard__session">{{ item.sessionType }}</span>
+              @if (item.tag) {
+                <span class="tcard__tag">{{ item.tag }}</span>
+              }
+            </div>
+          </div>
+          <span class="tcard__deco" aria-hidden="true">"</span>
         </footer>
       </blockquote>
     }
   </div>
+
+  <!-- CTA -->
+  <div class="test-cta">
+    <a class="test-cta__btn" href="https://g.page/r/hanto-studio/review" target="_blank" rel="noopener noreferrer">
+      Xem thêm đánh giá &nbsp;→
+    </a>
+  </div>
+
 </section>

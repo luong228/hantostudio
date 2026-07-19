@@ -1,11 +1,10 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { TestimonialItem } from '../../../../core/models/content.models';
-import { SectionHeaderComponent } from '../../../../shared/ui/section-header/section-header.component';
 
 @Component({
   selector: 'app-home-testimonials',
   standalone: true,
-  imports: [SectionHeaderComponent],
+  imports: [],
   templateUrl: './home-testimonials.component.html',
   styleUrl: './home-testimonials.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
