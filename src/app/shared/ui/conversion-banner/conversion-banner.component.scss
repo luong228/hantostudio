@@ -1,7 +1,7 @@
 .conversion-banner {
   border: 1px solid rgba(39, 27, 22, 0.15);
-  border-radius: 1rem;
-  padding: clamp(1rem, 3vw, 1.9rem);
+  border-radius: 1.6rem;
+  padding: clamp(1.6rem, 3vw, 3.04rem);
   background:
     radial-gradient(circle at 86% 20%, rgba(212, 176, 149, 0.35), transparent 42%),
     linear-gradient(145deg, #fff9f4, #f4e7dd);
@@ -12,7 +12,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #88695b;
-  font-size: 0.72rem;
+  font-size: 1.152rem;
 }
 
 h2,
@@ -21,20 +21,20 @@ h2,
 }
 
 h2 {
-  margin-top: 0.35rem;
-  font-size: clamp(1.7rem, 1.2rem + 1.4vw, 2.3rem);
+  margin-top: 0.56rem;
+  font-size: clamp(2.72rem, 1.92rem + 1.4vw, 3.68rem);
   color: #2b1f1b;
 }
 
 .subtitle {
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   color: #5c4c45;
   max-width: 62ch;
 }
 
 .actions {
-  margin-top: 1rem;
+  margin-top: 1.6rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.65rem;
+  gap: 1.04rem;
 }

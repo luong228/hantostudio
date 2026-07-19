@@ -1,13 +1,13 @@
 .page-wrap {
-  padding: 3rem clamp(1rem, 4vw, 4rem);
+  padding: 4.8rem clamp(1.6rem, 4vw, 6.4rem);
   display: grid;
-  gap: 1.2rem;
+  gap: 1.92rem;
 }
 
 article {
   max-width: 70ch;
   display: grid;
-  gap: 0.8rem;
+  gap: 1.28rem;
 }
 
 p {
@@ -16,5 +16,5 @@ p {
 }
 
 app-conversion-banner {
-  margin-top: 0.2rem;
+  margin-top: 0.32rem;
 }

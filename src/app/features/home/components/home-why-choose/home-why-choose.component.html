@@ -1,14 +1,23 @@
 <section class="section">
   <app-section-header
-    eyebrow="Tại Sao Chọn Studio Này"
-    title="Hướng dẫn ấm áp, thành phẩm cao cấp, không có sự gượng gạo"
+    eyebrow="Tại Sao Chọn Studio Chúng Tôi"
+    title="Ảnh đẹp không phải vì may mắn - vì có ekip lo từ đầu đến cuối"
     subtitle="Chúng tôi được biết đến với khả năng khiến khách hàng cảm thấy được quan tâm, không bị chỉ đạo quá mức." />
 
   <div class="grid">
-    @for (item of items(); track item.title) {
-      <article>
+    @for (item of items(); track item.title; let i = $index) {
+      <article class="why-card">
+        <div class="why-card__top">
+          <span class="why-card__index">0{{ i + 1 }}</span>
+          @if (item.tag) {
+            <span class="why-card__tag">{{ item.tag }}</span>
+          }
+        </div>
         <h3>{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
+        <p class="why-card__desc">{{ item.description }}</p>
+        @if (item.stat) {
+          <p class="why-card__stat">{{ item.stat }}</p>
+        }
       </article>
     }
   </div>

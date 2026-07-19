@@ -25,13 +25,13 @@ import { mapCmsSeoToSeoMeta } from './seo-mapping.util';
 
 function heroDefaults(): HomeHeroContent {
   return {
-    eyebrow: 'Studio chup anh chan dung cao cap',
-    headline: 'Anh dep tu nhien, ro than thai, de su dung ngay.',
-    subheadline: 'Chan dung, gia dinh, thai san va concept voi quy trinh ho tro tron buoi.',
-    trustLine: '4.9/5 danh gia tu khach hang that va hon 8,500 buoi chup da thuc hien.',
-    primaryCtaLabel: 'Dat lich ngay',
+    eyebrow: 'Studio chụp ảnh chân dung cao cấp',
+    headline: 'Ảnh đẹp tự nhiên, rõ thần thái, dễ sử dụng ngay.',
+    subheadline: 'Chân dung, gia đình, thai sản và concept với quy trình hỗ trợ trọn buổi.',
+    trustLine: '4.9/5 đánh giá từ khách hàng thật và hơn 8.500 buổi chụp đã thực hiện.',
+    primaryCtaLabel: 'Đặt lịch ngay',
     primaryCtaRoute: '/lien-he',
-    secondaryCtaLabel: 'Xem bang gia',
+    secondaryCtaLabel: 'Xem bảng giá',
     secondaryCtaRoute: '/bang-gia',
     heroImage: '',
     heroImageAlt: ''
@@ -40,11 +40,11 @@ function heroDefaults(): HomeHeroContent {
 
 function finalCtaDefaults(): FinalCtaContent {
   return {
-    title: 'San sang chot lich chup?',
-    subtitle: 'Gui yeu cau de studio tu van nhanh va de xuat goi phu hop.',
-    primaryLabel: 'Dat lich voi studio',
+    title: 'Sẵn sàng chốt lịch chụp?',
+    subtitle: 'Gửi yêu cầu để studio tư vấn nhanh và đề xuất gói phù hợp.',
+    primaryLabel: 'Đặt lịch với studio',
     primaryRoute: '/lien-he',
-    secondaryLabel: 'Xem dich vu',
+    secondaryLabel: 'Xem dịch vụ',
     secondaryRoute: '/dich-vu'
   };
 }

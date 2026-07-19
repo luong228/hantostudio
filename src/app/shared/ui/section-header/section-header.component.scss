@@ -1,6 +1,6 @@
 .section-header {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.8rem;
 }
 
 .section-header__eyebrow {
@@ -10,12 +10,12 @@
   text-transform: uppercase;
   letter-spacing: 0.14em;
   line-height: 1.1;
-  font-size: 0.95rem;
+  font-size: 1.52rem;
   color: #8b6a52;
 }
 
 h2 {
-  font-size: clamp(1.5rem, 1.1rem + 2vw, 2.75rem);
+  font-size: clamp(2.4rem, 1.76rem + 2vw, 4.4rem);
   margin: 0;
   color: #241915;
 }

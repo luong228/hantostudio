@@ -1,13 +1,13 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { ContentRepositoryService } from '../../../../core/services/content-repository.service';
 import { SeoService } from '../../../../core/services/seo.service';
-import { SectionHeaderComponent } from '../../../../shared/ui/section-header/section-header.component';
 import { ContactFormComponent } from '../../../../shared/ui/contact-form/contact-form.component';
 
 @Component({
   selector: 'app-contact-page',
   standalone: true,
-  imports: [SectionHeaderComponent, ContactFormComponent],
+  imports: [ContactFormComponent, RouterLink],
   templateUrl: './contact-page.component.html',
   styleUrl: './contact-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -16,10 +16,22 @@ export class ContactPageComponent {
   protected readonly repo = inject(ContentRepositoryService);
   private readonly seo = inject(SeoService);
 
+  protected readonly contactChannels = computed(() => this.repo.contactChannels());
+
   constructor() {
     this.seo.update(this.repo.seoForPath('/lien-he', {
-      title: 'Contact And Booking | HANTO Studio',
-      description: 'Start your booking inquiry and plan a photography session with our studio team.'
+      title: 'Liên Hệ Và Đặt Lịch | HANTO Studio',
+      description: 'Bắt đầu yêu cầu đặt lịch và lên kế hoạch cho buổi chụp ảnh với đội ngũ studio của chúng tôi.'
     }));
+  }
+
+  protected getChannelIcon(label: string): string {
+    const iconMap: Record<string, string> = {
+      'Điện thoại': '☎',
+      'Email': '✉',
+      'Zalo': '💬',
+      'Facebook': '👍'
+    };
+    return iconMap[label] ?? '📍';
   }
 }

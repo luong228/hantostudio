@@ -1,19 +1,19 @@
 .section {
   display: grid;
-  gap: 1.4rem;
+  gap: 2.24rem;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.15rem;
+  gap: 1.84rem;
 }
 
 .service-card {
   position: relative;
   display: block;
-  min-height: 29rem;
-  border-radius: 1.35rem;
+  min-height: 540px;
+  border-radius: 2.16rem;
   overflow: hidden;
   text-decoration: none;
   color: #fff8f1;
@@ -57,14 +57,14 @@ img {
   left: 0;
   z-index: 1;
   display: grid;
-  gap: 0.62rem;
-  padding: 1.25rem 1.25rem 1.35rem;
+  gap: 0.992rem;
+  padding: 2rem 2rem 2.16rem;
 }
 
 .service-card__eyebrow {
   margin: 0;
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.02rem;
+  font-size: 1.92rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -78,7 +78,7 @@ h3,
 }
 
 h3 {
-  font-size: clamp(1.65rem, 1.42rem + 1vw, 2.18rem);
+  font-size: 30px;
   line-height: 0.96;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -88,39 +88,39 @@ h3 {
 .service-card__subtitle {
   max-width: 34ch;
   color: rgba(252, 247, 242, 0.93);
-  font-size: 1.03rem;
+  font-size: 1.648rem;
   line-height: 1.33;
 }
 
 .service-card__meta {
-  margin-top: 0.46rem;
+  margin-top: 0.736rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
+  gap: 1.2rem;
   color: rgba(252, 246, 240, 0.98);
   font-weight: 600;
 }
 
 .service-card__meta p {
-  font-size: 1.07rem;
+  font-size: 1.712rem;
 }
 
 .service-card__meta span {
-  font-size: 1.06rem;
+  font-size: 1.696rem;
   white-space: nowrap;
 }
 
 @media (max-width: 768px) {
   .service-card {
-    min-height: 25rem;
+    min-height: 40rem;
   }
 
   h3 {
-    font-size: clamp(1.45rem, 1.2rem + 1vw, 1.86rem);
+    font-size: clamp(2.32rem, 1.92rem + 1vw, 2.976rem);
   }
 
   .service-card__subtitle {
-    font-size: 0.98rem;
+    font-size: 1.568rem;
   }
 }

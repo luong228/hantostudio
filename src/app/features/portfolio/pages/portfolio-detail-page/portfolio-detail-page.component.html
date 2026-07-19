@@ -1,22 +1,22 @@
 <section class="page-wrap">
   @if (collection(); as item) {
     <img [src]="item.coverImage" [alt]="item.title" />
-    <p class="eyebrow">{{ item.category }} collection</p>
+    <p class="eyebrow">Bộ sưu tập {{ item.category }}</p>
     <h1>{{ item.title }}</h1>
     <p class="story">{{ item.story }}</p>
-    <p class="count">{{ item.imageCount }} curated images</p>
-    <app-button label="Tu van concept tuong tu" route="/lien-he" />
+    <p class="count">{{ item.imageCount }} ảnh tuyển chọn</p>
+    <app-button label="Tư vấn concept tương tự" route="/lien-he" />
 
     <app-conversion-banner
-      title="Want this mood for your own session?"
-      subtitle="Bring a reference board or simply a feeling. We will translate it into a tailored portrait concept."
-      primaryLabel="Start your concept"
+      title="Muốn không khí này cho buổi chụp của bạn?"
+      subtitle="Mang đến một bảng tham khảo hoặc đơn giản là một cảm xúc. Chúng tôi sẽ chuyển hóa thành concept chân dung phù hợp với bạn."
+      primaryLabel="Bắt đầu concept của bạn"
       primaryRoute="/lien-he"
-      secondaryLabel="Browse more stories"
+      secondaryLabel="Xem thêm bộ sưu tập"
       secondaryRoute="/bo-suu-tap" />
   } @else {
-    <h1>Collection not found</h1>
-    <p>Please explore our latest portfolio stories.</p>
-    <a routerLink="/bo-suu-tap">Back to portfolio</a>
+    <h1>Không tìm thấy bộ sưu tập</h1>
+    <p>Vui lòng khám phá các bộ sưu tập mới nhất của chúng tôi.</p>
+    <a routerLink="/bo-suu-tap">Quay lại bộ sưu tập</a>
   }
 </section>

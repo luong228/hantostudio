@@ -1,18 +1,18 @@
 .section {
   display: grid;
-  gap: 1rem;
+  gap: 1.6rem;
 }
 
 .faq-list {
   display: grid;
-  gap: 0.7rem;
+  gap: 1.12rem;
 }
 
 article {
-  border-radius: 0.8rem;
+  border-radius: 1.28rem;
   border: 1px solid rgba(34, 23, 19, 0.14);
   background: #fffdfa;
-  padding: 0.9rem;
+  padding: 1.44rem;
 }
 
 h3,
@@ -21,6 +21,6 @@ p {
 }
 
 p {
-  margin-top: 0.45rem;
+  margin-top: 0.72rem;
   color: #5e4f48;
 }

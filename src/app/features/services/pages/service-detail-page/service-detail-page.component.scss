@@ -1,21 +1,21 @@
 .detail-wrap {
-  padding: 2rem clamp(1rem, 4vw, 4rem);
+  padding: 3.2rem clamp(1.6rem, 4vw, 6.4rem);
   display: grid;
-  gap: 1rem;
+  gap: 1.6rem;
 }
 
 .hero-image {
   width: 100%;
   max-height: 460px;
   object-fit: cover;
-  border-radius: 1rem;
+  border-radius: 1.6rem;
 }
 
 .eyebrow {
   text-transform: uppercase;
   color: #8a6f62;
   letter-spacing: 0.08em;
-  font-size: 0.78rem;
+  font-size: 1.248rem;
 }
 
 h1,
@@ -35,16 +35,16 @@ p {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.8rem;
+  gap: 1.28rem;
 }
 
 .gallery img {
   width: 100%;
-  border-radius: 0.75rem;
+  border-radius: 1.2rem;
   aspect-ratio: 4/3;
   object-fit: cover;
 }
 
 app-conversion-banner {
-  margin-top: 0.35rem;
+  margin-top: 0.56rem;
 }

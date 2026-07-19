@@ -1,15 +1,15 @@
 .page-wrap {
-  padding: 3rem clamp(1rem, 4vw, 4rem);
+  padding: 4.8rem clamp(1.6rem, 4vw, 6.4rem);
   display: grid;
-  gap: 1.4rem;
+  gap: 2.24rem;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
+  gap: 1.6rem;
 }
 
 app-conversion-banner {
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
 }

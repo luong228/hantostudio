@@ -9,6 +9,7 @@
     "build:staging": "ng build --configuration staging",
     "build:prod": "ng build --configuration production",
     "build:hosting": "ng build --configuration production",
+    "publish": "npm run build:hosting && npm run deploy:firebase",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy:firebase": "firebase deploy --only hosting"

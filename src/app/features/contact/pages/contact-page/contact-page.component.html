@@ -1,10 +1,52 @@
 <section class="contact-page">
-  <div class="contact-container">
-    <app-section-header
-      eyebrow="Liên hệ & Đăng ký"
-      title="ĐĂNG KÝ TƯ VẤN CONCEPT"
-      subtitle="Chia sẻ mong muốn của bạn, ekip sẽ thiết kế concept phù hợp nhất." />
-      
-    <app-contact-form></app-contact-form>
+  <div class="contact-grid">
+    <!-- Cột trái: Form -->
+    <div class="form-col">
+      <div class="form-header">
+        <span class="eyebrow">Để Ekip Hiểu Bạn Hơn</span>
+        <h1>Một Vài Thông Tin Nhỏ</h1>
+      </div>
+      <app-contact-form></app-contact-form>
+    </div>
+
+    <!-- Cột phải: Sidebar -->
+    <aside class="sidebar">
+      <!-- Card tối: không giới hạn thời gian -->
+      <div class="sidebar-card sidebar-card--dark">
+        <span class="card-icon">✦</span>
+        <h3>Không Giới Hạn Thời Gian</h3>
+        <p>Ekip HANTO Studio đồng hành cùng bạn đến khi bạn hài lòng với từng khung hình – không áp lực đồng hồ.</p>
+        <a routerLink="/bang-gia" class="card-link">Xem bảng giá →</a>
+      </div>
+
+      <!-- Card: đã bao gồm -->
+      <div class="sidebar-card">
+        <h3>Đã Bao Gồm Trong Mọi Gói</h3>
+        <ul class="included-list">
+          <li>Makeup &amp; làm tóc</li>
+          <li>1 layout trang phục + phụ kiện</li>
+          <li>10 ảnh chỉnh sửa kỹ lưỡng</li>
+          <li>Chăm sóc trước buổi chụp</li>
+          <li>Toàn bộ ảnh gốc trả trong ngày</li>
+        </ul>
+      </div>
+
+      <!-- Card: liên hệ nhanh -->
+      <div class="sidebar-card">
+        <h3>Liên Hệ Nhanh</h3>
+        <div class="quick-contact">
+          @for (channel of contactChannels(); track channel.label) {
+            @if (channel.label === 'Điện thoại' || channel.label === 'Zalo' || channel.label === 'Email') {
+              <a [href]="channel.href" class="quick-link"
+                 [target]="channel.label === 'Zalo' ? '_blank' : ''"
+                 [rel]="channel.label === 'Zalo' ? 'noopener noreferrer' : ''">
+                <span>{{ getChannelIcon(channel.label) }}</span>
+                <span>{{ channel.label === 'Zalo' ? 'Nhắn Zalo' : channel.value }}</span>
+              </a>
+            }
+          }
+        </div>
+      </div>
+    </aside>
   </div>
 </section>

@@ -38,7 +38,7 @@ export const PAGES: PageContent[] = [
     home: {
       hero: {
         eyebrow: 'Studio chụp ảnh chân dung cao cấp',
-        headline: 'Ảnh đẹp tự nhiên, rõ thần thái, dễ ứng dụng ngay cho công việc và kỷ niệm gia đình.',
+        headline: 'Ảnh đẹp tự nhiên, rõ thần thái, dễ ứng dụng ngay cho công việc',
         subheadline:
           'Bạn không cần biết tạo dáng. Đội ngũ sẽ hướng dẫn posing, makeup, styling và flow buổi chụp để ảnh vừa đẹp vừa thật như bạn.',
         trustLine: '4.9/5 đánh giá từ khách hàng thật, hơn 8.500 buổi chụp đã thực hiện.',
@@ -139,20 +139,20 @@ export const STUDIO_INFO: StudioInfo = {
   address: 'Tầng 3 T12-06, Khu Manhattan, Vinhomes Grand Park, Thủ Đức, Hồ Chí Minh, Việt Nam',
   openingHours: 'Thứ 3 - Chủ Nhật, 09:00-19:00',
   phone: '0396 887 597',
-  email: 'hello@lumenatelier.vn'
+  email: 'hello@hantostudio.vn'
 };
 
 export const CONTACT_CHANNELS: ContactChannel[] = [
   { label: 'Điện thoại', value: STUDIO_INFO.phone, href: 'tel:0396887597' },
-  { label: 'Email', value: STUDIO_INFO.email, href: 'mailto:hello@lumenatelier.vn' },
-  { label: 'Zalo', value: '@lumenatelier.studio', href: 'https://zalo.me/0396887597' },
-  { label: 'Facebook', value: 'HANTO Studio Studio', href: 'https://facebook.com' }
+  { label: 'Email', value: STUDIO_INFO.email, href: 'mailto:hello@hantostudio.vn' },
+  { label: 'Zalo', value: '@hantostudio', href: 'https://zalo.me/0396887597' },
+  { label: 'Facebook', value: 'HANTO Studio Studio', href: 'https://www.facebook.com/profile.php?id=61591415732605' }
 ];
 
 export const BRANCHES: BranchInfo[] = [
   {
-    name: 'Studio TP Hồ Chí Minh',
-    address: 'Tầng 3 T12-06, Khu Manhattan, Vinhomes Grand Park, Thủ Đức, Hồ Chí Minh, Việt Nam',
+    name: 'Thủ Đức',
+    address: 'Cơ sở Vinhomes Grand Park',
     phone: '0396 887 597'
   }
 ];
@@ -166,20 +166,28 @@ export const TRUST_METRICS: TrustMetric[] = [
 
 export const WHY_CHOOSE_ITEMS: WhyChooseItem[] = [
   {
-    title: 'Hướng dẫn tự nhiên trước ống kính',
-    description: 'Bạn được hướng dẫn qua những gợi ý nhỏ, rõ ràng để biểu cảm luôn chân thực, không gượng gạo.'
+    title: 'Dẫn dắt biểu cảm và tư thế trong từng khung hình',
+    description: 'Ekip hướng dẫn bạn qua từng giai đoạn với gợi ý cụ thể về góc mặt, dáng đứng và nhịp thở. Bạn không cần kinh nghiệm trước ống kính — chỉ cần xuất hiện.',
+    tag: 'Posing & Direction',
+    stat: 'Hướng dẫn tạo dáng suốt buổi chụp, không để bạn đứng lúng túng dù một giây'
   },
   {
-    title: 'Tư vấn phong cách trước buổi chụp',
-    description: 'Chúng tôi giúp bạn lên kế hoạch tông màu, chất liệu và cách phối trang phục đẹp khi lên ảnh.'
+    title: 'Tư vấn trang phục tạo hiệu ứng thẩm mỹ trên ảnh',
+    description: 'Trước buổi chụp, chúng tôi giúp bạn lựa chọn tông màu, chất vải và cách phối đồ tạo chiều sâu hình ảnh — tránh các lỗi thay đổi màu dưới ánh đèn studio.',
+    tag: 'Styling Guidance',
+    stat: 'Checklist trang phục cá nhân hóa gửi trước buổi chụp 3 ngày'
   },
   {
-    title: 'Chỉnh sửa tinh tế, giữ nguyên kết cấu da',
-    description: 'Kết cấu da vẫn tự nhiên trong khi màu sắc, độ tương phản và chi tiết rối được xử lý cẩn thận.'
+    title: 'Retouch tinh tế — da thật, không mịn nhựa',
+    description: 'Hậu kỳ giữ nguyên kết cấu da thật trong khi loại bỏ các yếu tố mất tập trung: ánh sáng không đều, tông màu lệch, chi tiết nền rối. Nhận nhận diện được chính mình.',
+    tag: 'Post-Production',
+    stat: 'Mỗi ảnh qua ít nhất 3 vòng kiểm tra chất lượng trước khi giao'
   },
   {
-    title: 'Lịch trình và liên lạc rõ ràng',
-    description: 'Không có sự mơ hồ từ lúc đặt lịch đến khi nhận ảnh. Chúng tôi đảm bảo mọi mốc thời gian rõ ràng và đúng hẹn.'
+    title: 'Lịch trình rõ ràng từ lúc đặt đến khi nhận ảnh',
+    description: 'Mọi mốc được thông báo trước: xác nhận lịch, nhắc trước buổi chụp, gửi preview và bàn giao file gốc. Không cần nhắn hỏi, mọi thông tin tự đến đúng hẹn.',
+    tag: 'Timeline & Delivery',
+    stat: 'Preview trong 48h — file gốc trong 7 ngày làm việc'
   }
 ];
 
@@ -262,7 +270,7 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Nhóm buổi chụp concept với trang phục, bối cảnh và câu chuyện được thiết kế riêng.',
     description:
       'Phù hợp với khách hàng muốn bộ ảnh mang tính chủ đề rõ ràng: áo dài, thai sản hoặc concept nghệ thuật với quy trình sản xuất trọn gói.',
-    heroImage: 'https://images.unsplash.com/photo-1494790108755-2616c5e4f49c?auto=format&fit=crop&w=1400&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?auto=format&fit=crop&w=1100&q=80',
       'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1100&q=80'

@@ -57,13 +57,18 @@
       <div class="form-group">
         <label>Cơ sở gần nhất</label>
         <div class="branch-selector">
-          <div class="branch-card branch-card--selected">
-            <div class="branch-card__header">
-              <span class="branch-card__icon">📍</span>
-              <span class="branch-card__title">TP Hồ Chí Minh</span>
-            </div>
-            <span class="branch-card__subtitle">Tầng 3 T12-06, Khu Manhattan, Vinhomes Grand Park, Thủ Đức</span>
-          </div>
+          @for (branch of branches(); track branch.name) {
+            <button type="button"
+                    class="branch-btn"
+                    [class.branch-btn--active]="contactForm.get('branch')?.value === branch.name"
+                    (click)="contactForm.get('branch')?.setValue(branch.name)">
+              <span class="branch-btn__icon">📍</span>
+              <div class="branch-btn__info">
+                <span class="branch-btn__name">{{ branch.name }}</span>
+                <span class="branch-btn__sub">{{ branch.address }}</span>
+              </div>
+            </button>
+          }
         </div>
       </div>
 
@@ -90,15 +95,4 @@
     </form>
   </div>
 
-  <!-- Direct contact channels -->
-  <div class="direct-contact">
-    <p class="direct-contact__label">Hoặc liên hệ trực tiếp:</p>
-    <div class="direct-contact__buttons">
-      @for (channel of contactChannels(); track channel.label) {
-        <a [href]="channel.href" [target]="channel.label !== 'Phone' && channel.label !== 'Email' ? '_blank' : ''" [rel]="channel.label !== 'Phone' && channel.label !== 'Email' ? 'noopener noreferrer' : ''" class="direct-button">
-          <span class="direct-button__icon">{{ getChannelIcon(channel.label) }}</span> {{ channel.value }}
-        </a>
-      }
-    </div>
-  </div>
 </div>

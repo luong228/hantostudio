@@ -124,6 +124,8 @@ export interface TrustMetric {
 export interface WhyChooseItem {
   title: string;
   description: string;
+  tag?: string;
+  stat?: string;
 }
 
 export interface BookingStep {

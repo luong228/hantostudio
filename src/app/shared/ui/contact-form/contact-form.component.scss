@@ -2,38 +2,38 @@
   width: 100%;
   max-width: 780px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.6rem;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 4rem;
 }
 
 .contact-form-card {
   background: #ffffff;
   border-radius: 36px;
   border: 1px solid rgba(40, 28, 22, 0.08);
-  padding: 3.5rem clamp(1.5rem, 5vw, 3.5rem);
+  padding: 5.6rem clamp(2.4rem, 5vw, 5.6rem);
   box-shadow: 0 10px 40px rgba(42, 31, 26, 0.04);
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 2.56rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.8rem;
 
   label {
-    font-size: 0.95rem;
+    font-size: 1.52rem;
     font-weight: 600;
     color: #2a1f1a;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.4rem;
 
     .required {
       color: #b85b30;
@@ -49,9 +49,9 @@ form {
     background: #fcfbfa;
     border: 1px solid rgba(40, 28, 22, 0.15);
     border-radius: 24px;
-    padding: 0.9rem 1.4rem;
+    padding: 1.44rem 2.24rem;
     font-family: inherit;
-    font-size: 0.95rem;
+    font-size: 1.52rem;
     color: #2a1f1a;
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -79,8 +79,8 @@ form {
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%232a1f1a' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 1.4rem center;
-    padding-right: 3rem;
+    background-position: right 2.24rem center;
+    padding-right: 4.8rem;
     cursor: pointer;
   }
 
@@ -90,55 +90,64 @@ form {
   }
 
   .error-msg {
-    font-size: 0.8rem;
+    font-size: 1.28rem;
     color: #c95642;
-    padding-left: 0.5rem;
-    margin-top: 0.1rem;
+    padding-left: 0.8rem;
+    margin-top: 0.16rem;
   }
 }
 
-// Branch Selector Card
+// Branch Selector
 .branch-selector {
-  margin-top: 0.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.12rem;
+  margin-top: 0.32rem;
 }
 
-.branch-card {
-  background: #fbf9f7;
-  border: 1px solid rgba(133, 105, 85, 0.3);
-  border-radius: 20px;
-  padding: 1.2rem 1.6rem;
+.branch-btn {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  box-shadow: 0 2px 10px rgba(133, 105, 85, 0.03);
-  
-  &--selected {
+  align-items: center;
+  gap: 1rem;
+  background: #fbf9f7;
+  border: 1px solid rgba(133, 105, 85, 0.25);
+  border-radius: 1.6rem;
+  padding: 1.44rem 1.6rem;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.18s ease, background 0.18s ease;
+
+  &:hover {
     border-color: #856955;
-    background: #FAF7F4;
-    border-width: 1.5px;
+    background: #faf7f4;
   }
 
-  &__header {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  &--active {
+    border-color: #856955;
+    border-width: 1.5px;
+    background: #faf7f4;
   }
 
   &__icon {
-    font-size: 1.1rem;
-    color: #856955;
+    font-size: 1.6rem;
+    flex-shrink: 0;
   }
 
-  &__title {
-    font-size: 1rem;
-    font-weight: 700;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.24rem;
+  }
+
+  &__name {
+    font-size: 1.44rem;
+    font-weight: 600;
     color: #2a1f1a;
   }
 
-  &__subtitle {
-    font-size: 0.85rem;
+  &__sub {
+    font-size: 1.2rem;
     color: #6d5a50;
-    line-height: 1.4;
   }
 }
 
@@ -149,12 +158,12 @@ form {
   color: #ffffff;
   border: none;
   border-radius: 30px;
-  padding: 1.1rem 2rem;
-  font-size: 1.05rem;
+  padding: 1.76rem 3.2rem;
+  font-size: 1.68rem;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.1s ease;
-  margin-top: 0.8rem;
+  margin-top: 1.28rem;
 
   &:hover:not(:disabled) {
     background: #725744;
@@ -172,7 +181,7 @@ form {
 
 .commitment-text {
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1.28rem;
   color: #8c766b;
   margin: 0;
   line-height: 1.5;
@@ -184,10 +193,10 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.6rem;
 
   &__label {
-    font-size: 0.9rem;
+    font-size: 1.44rem;
     font-weight: 600;
     color: #5d4d45;
     margin: 0;
@@ -197,7 +206,7 @@ form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 1.28rem;
     width: 100%;
   }
 }
@@ -205,19 +214,19 @@ form {
 .direct-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.8rem;
   background: rgba(133, 105, 85, 0.08);
   border: 1px solid rgba(133, 105, 85, 0.15);
   border-radius: 30px;
-  padding: 0.8rem 1.6rem;
+  padding: 1.28rem 2.56rem;
   color: #5d4d45;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1.44rem;
   font-weight: 600;
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 
   &__icon {
-    font-size: 0.95rem;
+    font-size: 1.52rem;
   }
 
   &:hover {
@@ -229,7 +238,7 @@ form {
 
 @media (max-width: 576px) {
   .contact-form-card {
-    padding: 2.2rem 1.2rem;
+    padding: 3.52rem 1.92rem;
   }
 
   .direct-contact__buttons {

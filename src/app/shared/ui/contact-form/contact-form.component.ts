@@ -15,13 +15,14 @@ export class ContactFormComponent {
   private readonly repo = inject(ContentRepositoryService);
 
   protected readonly services = computed(() => this.repo.services());
-  protected readonly contactChannels = computed(() => this.repo.contactChannels());
+  protected readonly branches = computed(() => this.repo.branches());
 
   protected readonly contactForm = this.fb.group({
     fullName: ['', [Validators.required]],
     phone: ['', [Validators.required, Validators.pattern(/^(0[3|5|7|8|9])+([0-9]{8})$/)]],
     preferredService: [''],
     conceptIdea: [''],
+    branch: [''],
     notes: ['']
   });
 

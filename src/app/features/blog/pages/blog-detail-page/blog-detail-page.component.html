@@ -1,7 +1,7 @@
 <section class="page-wrap">
   @if (post(); as item) {
     <img [src]="item.coverImage" [alt]="item.title" />
-    <p class="meta">{{ item.publishedAt }} • {{ item.readingMinutes }} min read</p>
+    <p class="meta">{{ item.publishedAt }} • {{ item.readingMinutes }} phút đọc</p>
     <h1>{{ item.title }}</h1>
     <p class="excerpt">{{ item.excerpt }}</p>
     <article>
@@ -9,16 +9,16 @@
     </article>
 
     <app-conversion-banner
-      title="Want these ideas shaped into your own portrait session?"
-      subtitle="Our team can guide concept direction and session flow based on your personality and purpose."
-      primaryLabel="Book a planning call"
+      title="Muốn những ý tưởng này được định hình cho buổi chụp của bạn?"
+      subtitle="Đội ngũ của chúng tôi có thể hướng dẫn định hướng concept và quy trình buổi chụp dựa trên cá tính và mục đích của bạn."
+      primaryLabel="Đặt lịch tư vấn"
       primaryRoute="/lien-he"
-      secondaryLabel="Explore services"
+      secondaryLabel="Khám phá dịch vụ"
       secondaryRoute="/dich-vu" />
 
-    <a routerLink="/blog">Back to journal</a>
+    <a routerLink="/blog">Quay lại nhật ký</a>
   } @else {
-    <h1>Post not found</h1>
-    <a routerLink="/blog">Back to journal</a>
+    <h1>Không tìm thấy bài viết</h1>
+    <a routerLink="/blog">Quay lại nhật ký</a>
   }
 </section>

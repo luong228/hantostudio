@@ -14,7 +14,6 @@
       [metrics]="heroMetrics()" />
   }
 
-  <app-home-pricing-teaser [plans]="featuredPlans()" />
 
   <app-home-featured-services [services]="featuredServices()" />
 
@@ -25,6 +24,8 @@
   <section class="home-band home-band--proof">
     <app-home-testimonials ngSkipHydration [testimonials]="repo.testimonials()" />
   </section>
+
+  <app-home-pricing-teaser [plans]="featuredPlans()" />
 
   <section class="home-band home-band--closing">
     <app-home-faq-preview [faqs]="featuredFaqs()" />

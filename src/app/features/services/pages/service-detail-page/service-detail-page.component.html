@@ -4,26 +4,26 @@
     <p class="eyebrow">{{ item.badges.join(' • ') }}</p>
     <h1>{{ item.name }}</h1>
     <p class="lead">{{ item.description }}</p>
-    <p class="price">Starting at {{ item.startingPrice | number }} VND</p>
+    <p class="price">Từ {{ item.startingPrice | number }} đồng</p>
 
     <div class="gallery">
       @for (image of item.gallery; track image) {
-        <img [src]="image" [alt]="item.name + ' gallery photo'" loading="lazy" />
+        <img [src]="image" [alt]="item.name + ' ảnh thư viện'" loading="lazy" />
       }
     </div>
 
-    <app-button label="Dat lich dich vu nay" route="/lien-he" />
+    <app-button label="Đặt lịch dịch vụ này" route="/lien-he" />
 
     <app-conversion-banner
-      title="Can tu van them truoc khi chot lich?"
-      subtitle="Studio se goi nhanh de tu van timeline, phong cach trang phuc va muc giao anh phu hop." 
-      primaryLabel="Goi tu van"
+      title="Cần tư vấn thêm trước khi chốt lịch?"
+      subtitle="Studio sẽ gọi nhanh để tư vấn timeline, phong cách trang phục và mức giao ảnh phù hợp."
+      primaryLabel="Gọi tư vấn"
       primaryRoute="/lien-he"
-      secondaryLabel="Quay lai danh muc dich vu"
+      secondaryLabel="Quay lại danh mục dịch vụ"
       secondaryRoute="/dich-vu" />
   } @else {
-    <h1>Service not found</h1>
-    <p>The service you requested may have been moved.</p>
-    <a routerLink="/dich-vu">Back to all services</a>
+    <h1>Không tìm thấy dịch vụ</h1>
+    <p>Dịch vụ bạn yêu cầu có thể đã được di chuyển.</p>
+    <a routerLink="/dich-vu">Quay lại tất cả dịch vụ</a>
   }
 </section>

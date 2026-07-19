@@ -1,12 +1,12 @@
 .page-wrap {
-  padding: 2.4rem clamp(1rem, 4vw, 4rem);
+  padding: 3.84rem clamp(1.6rem, 4vw, 6.4rem);
   display: grid;
-  gap: 1rem;
+  gap: 1.6rem;
 }
 
 img {
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 1.6rem;
   max-height: 500px;
   object-fit: cover;
 }
@@ -15,7 +15,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #866d61;
-  font-size: 0.78rem;
+  font-size: 1.248rem;
 }
 
 h1,
@@ -33,5 +33,5 @@ p {
 }
 
 app-conversion-banner {
-  margin-top: 0.45rem;
+  margin-top: 0.72rem;
 }
