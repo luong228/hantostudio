@@ -1,4 +1,4 @@
-// ── Shared tokens ─────────────────────────────────────
+﻿// â”€â”€ Shared tokens â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .lp-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -10,7 +10,7 @@
   border-top: 1px solid rgba(40, 28, 22, 0.08);
 
   h2 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-serif);
     font-size: clamp(2.8rem, 4vw, 4.4rem);
     font-weight: 700;
     color: var(--primary);
@@ -28,7 +28,7 @@
   max-width: 68ch;
 }
 
-// ── Buttons ───────────────────────────────────────────
+// â”€â”€ Buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -73,7 +73,7 @@
   &:hover { border-color: var(--primary); background: rgba(1, 25, 59, 0.04); }
 }
 
-// ── Hero ──────────────────────────────────────────────
+// â”€â”€ Hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .lp-hero {
   background:
     radial-gradient(at 80% 10%, rgba(186, 158, 105, 0.16), transparent 48%),
@@ -87,7 +87,7 @@
   }
 
   h1 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-serif);
     font-size: clamp(3.2rem, 5.5vw, 6.4rem);
     font-weight: 700;
     text-transform: uppercase;
@@ -141,7 +141,7 @@
   }
 }
 
-// ── Intro ─────────────────────────────────────────────
+// â”€â”€ Intro â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .lp-intro {
   .lp-container {
     display: grid;
@@ -157,7 +157,7 @@
   }
 }
 
-// ── Why ───────────────────────────────────────────────
+// â”€â”€ Why â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .lp-why {
   background: #faf8f5;
 
@@ -176,7 +176,7 @@
     gap: 0.8rem;
 
     h3 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-family: var(--font-serif);
       font-size: 2rem;
       font-weight: 700;
       color: var(--primary);
@@ -197,7 +197,7 @@
   }
 }
 
-// ── Services ──────────────────────────────────────────
+// â”€â”€ Services â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .lp-services {
   &__grid {
     display: grid;
@@ -221,7 +221,7 @@
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 
   h3 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-serif);
     font-size: 2rem;
     font-weight: 700;
     color: var(--primary);
@@ -249,7 +249,7 @@
   }
 }
 
-// ── Pricing ───────────────────────────────────────────
+// â”€â”€ Pricing â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .lp-pricing {
   background: #faf8f5;
 
@@ -309,7 +309,7 @@
   }
 
   &__price {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-serif);
     font-size: 3.6rem;
     font-weight: 700;
     color: var(--primary);
@@ -331,7 +331,7 @@
       position: relative;
 
       &::before {
-        content: '✓';
+        content: 'âœ“';
         position: absolute;
         left: 0;
         color: #a87c52;
@@ -341,7 +341,7 @@
   }
 }
 
-// ── FAQ ───────────────────────────────────────────────
+// â”€â”€ FAQ â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .lp-faq {
   &__list {
     display: grid;
@@ -380,7 +380,7 @@
       line-height: 1;
     }
 
-    details[open] &::after { content: '−'; }
+    details[open] &::after { content: 'âˆ’'; }
   }
 
   &__a {
@@ -392,7 +392,7 @@
   }
 }
 
-// ── Location ──────────────────────────────────────────
+// â”€â”€ Location â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .lp-location {
   background: #faf8f5;
 
@@ -429,7 +429,7 @@
   }
 }
 
-// ── Final CTA ─────────────────────────────────────────
+// â”€â”€ Final CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .lp-final-cta {
   background: linear-gradient(135deg, #04204e 0%, #011232 100%);
   padding: 8rem clamp(1.6rem, 5vw, 6.4rem);
@@ -438,7 +438,7 @@
     text-align: center;
 
     h2 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-family: var(--font-serif);
       font-size: clamp(2.8rem, 4vw, 4.8rem);
       font-weight: 700;
       color: #fff;
@@ -462,7 +462,7 @@
   }
 }
 
-// ── Responsive ────────────────────────────────────────
+// â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 @media (max-width: 900px) {
   .lp-why__grid,
   .lp-services__grid,
@@ -491,3 +491,4 @@
 
   .lp-section { padding: 4.8rem 0; }
 }
+

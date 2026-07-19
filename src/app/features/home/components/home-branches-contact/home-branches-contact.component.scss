@@ -1,4 +1,4 @@
-:host {
+﻿:host {
   display: block;
   height: 100%;
 }
@@ -50,7 +50,7 @@
 
 h2 {
   margin: 0;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-serif);
   font-size: clamp(3.2rem, 4vw, 5.4rem);
   line-height: 1.1;
   color: var(--primary);
@@ -108,7 +108,7 @@ h2 {
   align-items: center;
   justify-content: center;
   color: var(--primary);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-serif);
   font-size: 2.6rem;
   flex-shrink: 0;
 
@@ -137,7 +137,7 @@ h2 {
 .info-value {
   margin: 0;
   color: var(--primary);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-serif);
   font-size: clamp(2.6rem, 2vw, 3.5rem);
   line-height: 1.15;
   text-decoration: none;
@@ -176,3 +176,4 @@ h2 {
     font-size: 2.6rem;
   }
 }
+

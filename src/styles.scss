@@ -1,7 +1,8 @@
-:root {
+﻿:root {
 	--bg: #fdfcf9;
 	--primary: rgb(1, 25, 59);
 	--surface: #ffffff;
+	--font-serif: 'Cormorant Garamond', Georgia, serif;
 	--text: var(--primary);
 	--text-soft: #f9ba24;
 	--hover: rgba(1, 25, 59, 0.8);
@@ -33,7 +34,7 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-family: var(--font-serif);
 	letter-spacing: 0.01em;
 }
 
@@ -55,3 +56,4 @@ img {
 main {
 	isolation: isolate;
 }
+

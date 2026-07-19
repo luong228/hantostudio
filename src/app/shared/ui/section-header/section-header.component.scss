@@ -1,11 +1,11 @@
-.section-header {
+﻿.section-header {
   display: grid;
   gap: 0.8rem;
 }
 
 .section-header__eyebrow {
   margin: 0;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-serif);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -49,3 +49,4 @@ h2 {
     color: var(--text);
   }
 }
+

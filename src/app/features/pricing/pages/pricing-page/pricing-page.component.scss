@@ -1,4 +1,4 @@
-.pricing-page {
+﻿.pricing-page {
   padding: 6.4rem clamp(1.6rem, 5vw, 9.6rem) 9.6rem clamp(1.6rem, 5vw, 9.6rem);
   min-height: 100vh;
   display: flex;
@@ -118,7 +118,7 @@
   }
   
   &__price {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-serif);
     font-size: 4.8rem;
     font-weight: 600;
     color: var(--primary);
@@ -264,3 +264,4 @@
     margin-top: 2.4rem;
   }
 }
+
