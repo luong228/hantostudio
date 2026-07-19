@@ -154,28 +154,28 @@ export const TRUST_METRICS: TrustMetric[] = [
 
 export const WHY_CHOOSE_ITEMS: WhyChooseItem[] = [
   {
-    title: 'Dẫn dắt biểu cảm và tư thế trong từng khung hình',
-    description: 'Ekip hướng dẫn bạn qua từng giai đoạn với gợi ý cụ thể về góc mặt, dáng đứng và nhịp thở. Bạn không cần kinh nghiệm trước ống kính — chỉ cần xuất hiện.',
+    title: 'Dẫn dáng & biểu cảm tự nhiên',
+    description: 'Ekip hướng dẫn nhẹ nhàng qua từng giai đoạn để bạn luôn thoải mái, tự nhiên trước ống kính. Ảnh đẹp bắt đầu từ cảm xúc thật.',
     tag: 'Posing & Direction',
-    stat: 'Hướng dẫn tạo dáng suốt buổi chụp, không để bạn đứng lúng túng dù một giây'
+    stat: 'Hướng dẫn tận tâm suốt buổi chụp, giúp bạn tỏa sáng theo cách riêng.'
   },
   {
-    title: 'Tư vấn trang phục tạo hiệu ứng thẩm mỹ trên ảnh',
-    description: 'Trước buổi chụp, chúng tôi giúp bạn lựa chọn tông màu, chất vải và cách phối đồ tạo chiều sâu hình ảnh — tránh các lỗi thay đổi màu dưới ánh đèn studio.',
+    title: 'Tư vấn trang phục trước buổi chụp',
+    description: 'Gợi ý trang phục phù hợp với phong cách và concept, giúp bạn tự tin và nổi bật nhất trong từng khung hình.',
     tag: 'Styling Guidance',
-    stat: 'Checklist trang phục cá nhân hóa gửi trước buổi chụp 3 ngày'
+    stat: 'Checklist trang phục cá nhân hóa được gửi trước buổi chụp.'
   },
   {
-    title: 'Retouch tinh tế — da thật, không mịn nhựa',
-    description: 'Hậu kỳ giữ nguyên kết cấu da thật trong khi loại bỏ các yếu tố mất tập trung: ánh sáng không đều, tông màu lệch, chi tiết nền rối. Nhận nhận diện được chính mình.',
+    title: 'Retouch tinh tế, giữ nét thật',
+    description: 'Hậu kỳ kỹ lưỡng nhưng vẫn giữ trọn vẹp đẹp tự nhiên của bạn. Da mịn màng, bố cục hài hòa, mà vẫn là bạn — rạng rỡ và chân thật.',
     tag: 'Post-Production',
-    stat: 'Mỗi ảnh qua ít nhất 3 vòng kiểm tra chất lượng trước khi giao'
+    stat: 'Mỗi ảnh đều được chỉnh sửa cẩn thận qua ít nhất 3 vòng kiểm tra chất lượng.'
   },
   {
-    title: 'Lịch trình rõ ràng từ lúc đặt đến khi nhận ảnh',
-    description: 'Mọi mốc được thông báo trước: xác nhận lịch, nhắc trước buổi chụp, gửi preview và bàn giao file gốc. Không cần nhắn hỏi, mọi thông tin tự đến đúng hẹn.',
+    title: 'Quy trình rõ ràng, giao ảnh đúng hẹn',
+    description: 'Lịch trình minh bạch từ lúc đặt lịch đến khi nhận ảnh. Chúng tôi luôn chủ động thông báo để bạn dễ dàng sắp xếp.',
     tag: 'Timeline & Delivery',
-    stat: 'Preview trong 48h — file gốc trong 7 ngày làm việc'
+    stat: 'Preview trong 48h — nhận trọn bộ ảnh chỉ sau 7 ngày.'
   }
 ];
 
@@ -226,7 +226,7 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Chân dung editorial cho profile cá nhân, thương hiệu cá nhân và kỷ niệm cột mốc.',
     description:
       'Gói chân dung chủ lực với quy trình makeup, styling, hướng dẫn tạo dáng và retouch cao cấp để bạn lên hình tự nhiên, sáng và đúng thần thái.',
-    heroImage: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1400&q=80',
+    heroImage: '/images/chan-dung.png',
     gallery: [
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1100&q=80',
       'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=1100&q=80'
@@ -242,7 +242,7 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Ảnh gia đình tự nhiên, cảm xúc và dễ để trẻ nhỏ hợp tác trong buổi chụp.',
     description:
       'Dịch vụ dành cho gia đình muốn giữ lại khoảnh khắc thật, đội ngũ điều tiết nhịp độ và nhịp điệu để ảnh đẹp mà vẫn tự nhiên.',
-    heroImage: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1400&q=80',
+    heroImage: '/images/gia-dinh.png',
     gallery: [
       'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1100&q=80',
       'https://images.unsplash.com/photo-1519340333755-c5ac7d0f7f7e?auto=format&fit=crop&w=1100&q=80'
@@ -258,7 +258,7 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Nhóm buổi chụp concept với trang phục, bối cảnh và câu chuyện được thiết kế riêng.',
     description:
       'Phù hợp với khách hàng muốn bộ ảnh mang tính chủ đề rõ ràng: áo dài, thai sản hoặc concept nghệ thuật với quy trình sản xuất trọn gói.',
-    heroImage: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80',
+    heroImage: '/images/thai-san.png',
     gallery: [
       'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?auto=format&fit=crop&w=1100&q=80',
       'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1100&q=80'

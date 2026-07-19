@@ -1,32 +1,231 @@
-.section {
+// ─── Section header ───────────────────────────────────────────────────────────
+
+.svc-hd {
+  text-align: center;
+  margin-bottom: 5.6rem;
   display: grid;
-  gap: 2.24rem;
+  justify-items: center;
+  gap: 1.2rem;
 }
+
+.svc-hd__eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--primary);
+  opacity: 0.55;
+  margin: 0;
+}
+
+.svc-hd__ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.96rem;
+  color: var(--primary);
+  opacity: 0.28;
+
+  span {
+    display: block;
+    width: 4.4rem;
+    height: 1px;
+    background: currentColor;
+  }
+
+  svg {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.svc-hd h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 4.2vw, 5.2rem);
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.svc-hd__sub {
+  font-size: 1.44rem;
+  line-height: 1.75;
+  color: rgba(1, 25, 59, 0.55);
+  max-width: 56ch;
+  margin: 0;
+}
+
+// ─── Grid ─────────────────────────────────────────────────────────────────────
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.84rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem;
 }
 
-.service-card__overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(18, 14, 12, 0.08) 28%, rgba(18, 14, 12, 0.78) 88%),
-    radial-gradient(circle at 75% 108%, rgba(163, 101, 62, 0.34), transparent 42%);
+// ─── Card ─────────────────────────────────────────────────────────────────────
+
+.svc-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.76rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(1, 25, 59, 0.07), 0 8px 32px rgba(1, 25, 59, 0.06);
+  text-decoration: none;
+  color: var(--primary);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(1, 25, 59, 0.10), 0 16px 48px rgba(1, 25, 59, 0.12);
+  }
 }
 
-.service-card__content {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.svc-card__img {
+  width: 100%;
+  height: 400px;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .svc-card:hover & img {
+    transform: scale(1.05);
+  }
+}
+
+.svc-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 2.4rem 3rem;
+  flex: 1;
+}
+
+.svc-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  border: 1.5px solid rgba(1, 25, 59, 0.18);
+  background: #fff;
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: -2.8rem;
+  margin-bottom: 1.6rem;
+  position: relative;
   z-index: 1;
-  display: grid;
-  gap: 0.992rem;
-  padding: 2rem 2rem 2.16rem;
+
+  svg {
+    width: 2.24rem;
+    height: 2.24rem;
+  }
 }
+
+.svc-card__eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.04rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(1, 25, 59, 0.45);
+  margin: 0 0 0.8rem;
+}
+
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 2.6vw, 3.2rem);
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.15;
+  margin: 0 0 1.2rem;
+}
+
+.svc-card__desc {
+  font-size: 1.36rem;
+  line-height: 1.7;
+  color: rgba(1, 25, 59, 0.58);
+  margin: 0 0 2rem;
+  max-width: 28ch;
+}
+
+.svc-card__price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  margin-bottom: 2rem;
+  margin-top: auto;
+
+  span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(1, 25, 59, 0.40);
+  }
+
+  strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.56rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+  }
+}
+
+.svc-card__cta {
+  display: block;
+  width: 100%;
+  padding: 1.04rem 2rem;
+  border: 1.5px solid rgba(1, 25, 59, 0.28);
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--primary);
+  transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease;
+
+  .svc-card:hover & {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+}
+
+// ─── Responsive ───────────────────────────────────────────────────────────────
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-card__img {
+    height: 240px;
+  }
+}
+
 
 .service-card__eyebrow {
   margin: 0;
