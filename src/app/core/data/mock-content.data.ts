@@ -136,29 +136,24 @@ export const PAGES: PageContent[] = [
 export const STUDIO_INFO: StudioInfo = {
   brandName: 'Lumen Atelier',
   tagline: 'A portrait studio where emotional honesty meets editorial craft.',
-  address: '35 Riverstone Lane, District 3, Ho Chi Minh City',
+  address: 'Tầng 3 T12-06, Khu Manhattan, Vinhomes Grand Park, Thủ Đức, Hồ Chí Minh, Việt Nam',
   openingHours: 'Tue-Sun, 09:00-19:00',
-  phone: '+84 28 7300 8899',
+  phone: '0396 887 597',
   email: 'hello@lumenatelier.vn'
 };
 
 export const CONTACT_CHANNELS: ContactChannel[] = [
-  { label: 'Phone', value: STUDIO_INFO.phone, href: 'tel:+842873008899' },
+  { label: 'Phone', value: STUDIO_INFO.phone, href: 'tel:0396887597' },
   { label: 'Email', value: STUDIO_INFO.email, href: 'mailto:hello@lumenatelier.vn' },
-  { label: 'Instagram', value: '@lumenatelier.studio', href: 'https://instagram.com' },
+  { label: 'Zalo', value: '@lumenatelier.studio', href: 'https://zalo.me/0396887597' },
   { label: 'Facebook', value: 'Lumen Atelier Studio', href: 'https://facebook.com' }
 ];
 
 export const BRANCHES: BranchInfo[] = [
   {
-    name: 'District 3 Studio',
-    address: '35 Riverstone Lane, District 3, Ho Chi Minh City',
-    phone: '+84 28 7300 8899'
-  },
-  {
-    name: 'Thu Duc Garden Studio',
-    address: '18 Magnolia Walk, Thu Duc City, Ho Chi Minh City',
-    phone: '+84 28 7102 6622'
+    name: 'TP Hồ Chí Minh Studio',
+    address: 'Tầng 3 T12-06, Khu Manhattan, Vinhomes Grand Park, Thủ Đức, Hồ Chí Minh, Việt Nam',
+    phone: '0396 887 597'
   }
 ];
 
@@ -281,28 +276,58 @@ export const SERVICES: ServiceItem[] = [
 export const PRICING_PLANS: PricingPlan[] = [
   {
     id: 'price-essential',
-    name: 'Essential',
-    price: 3500000,
-    summary: 'A focused mini-session with premium retouching.',
-    idealFor: 'Quick profile refresh or personal portraits',
-    features: ['45-minute session', '1 look', '8 retouched images']
+    name: 'KHOANH KHẮC',
+    price: 3800000,
+    summary: 'Ghi lại một khoảnh khắc đẹp – nhẹ nhàng, trọn vẹn',
+    idealFor: 'Chụp cá nhân, chân dung cơ bản',
+    features: [
+      '1 layout makeup và làm tóc dành cho nữ',
+      '1 layout trang phục của Gạo Nâu chuẩn bị và phụ kiện kèm theo concept',
+      '10 ảnh chỉnh sửa kỹ lưỡng',
+      '1 background của Gạo Nâu khách hàng lựa chọn',
+      'Dịch vụ chăm sóc trước buổi chụp (đắp mặt nạ & massage chân)',
+      'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
+      'Không gian và bối cảnh chụp',
+      'Toàn bộ ảnh gốc',
+      'Trả toàn bộ file ảnh gốc trong ngày'
+    ]
   },
   {
     id: 'price-signature',
-    name: 'Signature',
-    price: 5600000,
-    summary: 'Our most selected package for complete storytelling.',
-    idealFor: 'Portrait and branding clients seeking variety',
-    features: ['90-minute session', '2 looks', '18 retouched images', 'Styling consultation'],
+    name: 'CÂU CHUYỆN',
+    price: 4800000,
+    summary: 'Kể câu chuyện của bạn qua từng khung hình tinh tế',
+    idealFor: 'Kể câu chuyện sâu sắc hơn, nhiều góc cạnh',
+    features: [
+      '1 layout makeup và làm tóc dành cho nữ',
+      '1 layout trang phục của Gạo Nâu chuẩn bị và phụ kiện kèm theo concept',
+      '10 ảnh chỉnh sửa kỹ lưỡng',
+      '1 background của Gạo Nâu khách hàng lựa chọn',
+      'Dịch vụ chăm sóc trước buổi chụp (đắp mặt nạ & massage chân)',
+      'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
+      'Không gian và bối cảnh chụp',
+      'Toàn bộ ảnh gốc',
+      'Trả toàn bộ file ảnh gốc trong ngày'
+    ],
     highlighted: true
   },
   {
     id: 'price-legacy',
-    name: 'Legacy',
-    price: 8500000,
-    summary: 'Full creative direction and expanded gallery delivery.',
-    idealFor: 'Family, maternity, and concept narratives',
-    features: ['2.5-hour session', 'Multiple sets', '30 retouched images', 'Premium photobook design']
+    name: 'DI SẢN',
+    price: 6800000,
+    summary: 'Tác phẩm để lưu giữ – không chỉ cho hôm nay',
+    idealFor: 'Gói cao cấp hoàn hảo cho chân dung nghệ thuật',
+    features: [
+      '1 layout makeup và làm tóc CAO CẤP dành cho nữ',
+      '1 layout trang phục của Gạo Nâu chuẩn bị và phụ kiện kèm theo concept',
+      '10 ảnh chỉnh sửa kỹ lưỡng',
+      '1 background của Gạo Nâu khách hàng lựa chọn',
+      'Dịch vụ chăm sóc trước buổi chụp (đắp mặt nạ & massage chân)',
+      'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
+      'Không gian và bối cảnh chụp',
+      'Toàn bộ ảnh gốc',
+      'Trả toàn bộ file ảnh gốc trong ngày'
+    ]
   }
 ];
 

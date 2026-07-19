@@ -1,23 +1,40 @@
-<section class="section">
-  <app-section-header
-    eyebrow="Bang gia nhanh"
-    title="Muc gia khoi diem ro rang ngay tu dau"
-    subtitle="Xem nhanh gia bat dau va cac hang muc co trong goi truoc khi dat lich tu van." />
+<section class="pricing-teaser">
+  <header class="pricing-teaser__header">
+    <span class="pricing-teaser__eyebrow">03 GÓI • BA CÂU CHUYỆN</span>
+    <h2 class="pricing-teaser__title">CÂU CHUYỆN NÀO THUỘC VỀ BẠN?</h2>
+    <p class="pricing-teaser__subtitle">Tìm gói phù hợp với câu chuyện bạn muốn kể</p>
+  </header>
 
-  <div class="plans">
+  <div class="pricing-teaser__grid">
     @for (plan of plans(); track plan.id) {
-      <article [class.featured]="plan.highlighted">
-        <p class="name">{{ plan.name }}</p>
-        <h3>Tu {{ plan.price | number }} VND</h3>
-        <p>{{ plan.summary }}</p>
-        <ul>
-          @for (feature of plan.features.slice(0, 3); track feature) {
-            <li>{{ feature }}</li>
+      <article class="plan-card" [class.plan-card--featured]="plan.highlighted">
+        @if (plan.highlighted) {
+          <span class="plan-card__badge">PHỔ BIẾN NHẤT</span>
+        }
+
+        <h3 class="plan-card__name">{{ plan.name }}</h3>
+        <p class="plan-card__summary">{{ plan.summary }}</p>
+
+        <div class="plan-card__price-wrap">
+          <span class="plan-card__price">{{ plan.price | number:'1.0-0' }}đ</span>
+          <span class="plan-card__price-label">GIÁ TRỌN GÓI</span>
+        </div>
+
+        <ul class="plan-card__features">
+          @for (feature of plan.features.slice(0, 5); track feature) {
+            <li class="plan-card__feature">
+              <span class="plan-card__check">✓</span>
+              <span>{{ feature }}</span>
+            </li>
           }
         </ul>
+
+        <a class="plan-card__btn" [routerLink]="['/bang-gia']">Xem chi tiết</a>
       </article>
     }
   </div>
 
-  <app-button label="Xem bang gia day du" route="/bang-gia" variant="ghost" />
+  <div class="pricing-teaser__cta">
+    <app-button label="Xem bảng giá đầy đủ" route="/bang-gia" variant="ghost" />
+  </div>
 </section>

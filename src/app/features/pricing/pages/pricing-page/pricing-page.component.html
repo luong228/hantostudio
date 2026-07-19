@@ -1,31 +1,47 @@
-<section class="page-wrap">
-  <app-section-header
-    eyebrow="Session Investment"
-    title="Clear tiers, intentional outcomes"
-    subtitle="Every package is built around preparation, direction, and deliverables you can actually use." />
+<section class="pricing-page">
+  <div class="pricing-container">
+    <header class="pricing-header">
+      <span class="pricing-header__eyebrow">03 GÓI • BA CÂU CHUYỆN</span>
+      <h1 class="pricing-header__title">CÂU CHUYỆN NÀO THUỘC VỀ BẠN?</h1>
+      <p class="pricing-header__subtitle">Tìm gói phù hợp với câu chuyện bạn muốn kể</p>
+    </header>
 
-  <div class="grid">
-    @for (plan of repo.pricingPlans(); track plan.id) {
-      <article class="plan" [class.plan--highlight]="plan.highlighted">
-        <p class="plan__name">{{ plan.name }}</p>
-        <h3>{{ plan.price | number }} VND</h3>
-        <p>{{ plan.summary }}</p>
-        <p class="ideal">Ideal for: {{ plan.idealFor }}</p>
-        <ul>
-          @for (feature of plan.features; track feature) {
-            <li>{{ feature }}</li>
+    <div class="pricing-grid">
+      @for (plan of repo.pricingPlans(); track plan.id) {
+        <article class="pricing-card" [class.pricing-card--featured]="plan.highlighted">
+          @if (plan.highlighted) {
+            <span class="pricing-card__badge">PHỔ BIẾN NHẤT</span>
           }
-        </ul>
-        <app-button label="Dat lich goi nay" route="/lien-he" [variant]="plan.highlighted ? 'primary' : 'ghost'" />
-      </article>
-    }
-  </div>
+          
+          <h2 class="pricing-card__name">{{ plan.name }}</h2>
+          <p class="pricing-card__summary">{{ plan.summary }}</p>
+          
+          <div class="pricing-card__price-container">
+            <span class="pricing-card__price">{{ plan.price | number:'1.0-0' }}đ</span>
+            <span class="pricing-card__price-label">GIÁ TRỌN GÓI</span>
+          </div>
+          
+          <ul class="pricing-card__features">
+            @for (feature of plan.features; track feature) {
+              <li class="pricing-card__feature">
+                <span class="pricing-card__feature-icon">✓</span>
+                <span class="pricing-card__feature-text">{{ feature }}</span>
+              </li>
+            }
+          </ul>
+          
+          <div class="pricing-card__action">
+            <a class="pricing-card__button" [routerLink]="['/lien-he']">
+              Đăng ký gói {{ plan.name }}
+            </a>
+          </div>
+        </article>
+      }
+    </div>
 
-  <app-conversion-banner
-    title="Need a custom concept quote?"
-    subtitle="Tell us your concept depth, team size, and deadline. We will build a custom production estimate."
-    primaryLabel="Request custom quote"
-    primaryRoute="/lien-he"
-    secondaryLabel="Review service types"
-    secondaryRoute="/dich-vu" />
+    <p class="pricing-footer-note">
+      <span class="pricing-footer-note__icon">📍</span>
+      Ghi chú: Giá có thể thay đổi theo concept đặc biệt và ekip lẻ. Liên hệ 0396 887 597 để được tư vấn chi tiết.
+    </p>
+  </div>
 </section>
