@@ -29,6 +29,16 @@ export class SeoService {
     }
   }
 
+  setJsonLd(data: object): void {
+    const existing = this.document.getElementById('structured-data-ld');
+    if (existing) existing.remove();
+    const script = this.document.createElement('script');
+    script.id = 'structured-data-ld';
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(data);
+    this.document.head.appendChild(script);
+  }
+
   private setCanonical(url: string): void {
     const head = this.document.head;
     let link: HTMLLinkElement | null = this.document.querySelector("link[rel='canonical']");

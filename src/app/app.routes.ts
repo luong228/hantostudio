@@ -55,6 +55,11 @@ export const routes: Routes = [
 				loadComponent: () =>
 					import('./features/contact/pages/contact-page/contact-page.component').then((m) => m.ContactPageComponent)
 			},
+			{
+				path: 'chup-hinh-studio-vinhomes-grand-park',
+				loadComponent: () =>
+					import('./features/seo-landing/vinhomes/vinhomes-landing.component').then((m) => m.VinhomesLandingComponent)
+			},
 			{ path: 'services', redirectTo: 'dich-vu', pathMatch: 'full' },
 			{ path: 'services/:slug', redirectTo: 'dich-vu/:slug', pathMatch: 'full' },
 			{ path: 'pricing', redirectTo: 'bang-gia', pathMatch: 'full' },
