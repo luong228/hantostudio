@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: studio-web
+    runtime: node
+    runtimeVersion: 18.19.0
+    plan: pro
+    buildCommand: npm ci && npm run build:prod
+    startCommand: npm run serve:ssr:studio-web
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_OPTIONS
+        value: --max-old-space-size=2048
