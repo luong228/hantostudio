@@ -1,7 +1,7 @@
 <section class="hero-cinematic" aria-labelledby="home-hero-title">
   <div class="hero-cinematic__bg">
-    <video autoplay muted loop playsinline preload="none" [poster]="heroImage()">
-      <source src="https://gaonauchupanh.vn/videos/gaonau-home-hero.mp4" type="video/mp4" />
+    <video autoplay muted loop playsinline preload="metadata" [poster]="heroImage()">
+      <source src="/videos/hero-bg.mp4" type="video/mp4" />
       <img [src]="heroImage()" [attr.alt]="heroImageAlt() || 'Portrait photography preview'" fetchpriority="high" />
     </video>
   </div>
