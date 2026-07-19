@@ -1,55 +1,93 @@
-<section class="hero-cinematic" aria-labelledby="home-hero-title">
-  <div class="hero-cinematic__bg">
-    <video autoplay muted loop playsinline preload="metadata" [poster]="heroImage()">
-      <source src="/videos/hero-bg.mp4" type="video/mp4" />
-      <img [src]="heroImage()" [attr.alt]="heroImageAlt() || 'Portrait photography preview'" fetchpriority="high" />
-    </video>
+<section class="hero-airy" aria-labelledby="home-hero-title">
+
+  <div class="hero-airy__bg" aria-hidden="true">
+    <img
+      src="/images/hero-bg.png"
+      alt=""
+      fetchpriority="high" />
+    <div class="hero-airy__overlay"></div>
   </div>
 
-  <div class="hero-cinematic__haze"></div>
+  <div class="hero-airy__body">
+    <p class="hero-eyebrow">{{ eyebrow() }}</p>
 
-  <div class="hero-cinematic__floating" aria-hidden="true">
-    <figure class="float-photo float-photo--tl">
-      <img [src]="floatingPhotoPlaceholders[0]" alt="" loading="lazy" />
-    </figure>
-    <figure class="float-photo float-photo--tr">
-      <img [src]="floatingPhotoPlaceholders[1]" alt="" loading="lazy" />
-    </figure>
-    <figure class="float-photo float-photo--ml">
-      <img [src]="floatingPhotoPlaceholders[2]" alt="" loading="lazy" />
-    </figure>
-    <figure class="float-photo float-photo--br">
-      <img [src]="floatingPhotoPlaceholders[3]" alt="" loading="lazy" />
-    </figure>
-    <figure class="float-photo float-photo--mr">
-      <img [src]="floatingPhotoPlaceholders[4]" alt="" loading="lazy" />
-    </figure>
-  </div>
+    <h1 class="hero-headline" id="home-hero-title">{{ headline() }}</h1>
 
-  <div class="hero-cinematic__content">
-    <p class="hero-badge">{{ eyebrow() }}</p>
+    <p class="hero-script">{{ trustLine() }}</p>
 
-    <h1 id="home-hero-title">
-      {{ headline() }}
-      <span>{{ trustLine() }}</span>
-    </h1>
+    <p class="hero-desc">{{ subheadline() }}</p>
 
-    <div class="hero-description-card">
-      <p>{{ subheadline() }}</p>
+    <div class="hero-promo">
+      <span class="hero-promo__text">— Ưu Đãi Khai Trương — Chụp 1 Tặng 1</span>
+      <span class="hero-promo__date">10.07 – 10.08.2025</span>
     </div>
 
     <div class="hero-ctas">
       <a class="hero-cta hero-cta--primary" [routerLink]="primaryCtaRoute()">{{ primaryCtaLabel() }}</a>
-      <a class="hero-cta hero-cta--secondary" [routerLink]="secondaryCtaRoute()">{{ secondaryCtaLabel() }}</a>
+      <a class="hero-cta hero-cta--ghost" [routerLink]="secondaryCtaRoute()">{{ secondaryCtaLabel() }}</a>
     </div>
   </div>
 
-  <div class="hero-stats" aria-label="Studio trust metrics">
-    @for (metric of metrics(); track metric.label) {
-      <article class="hero-stat-card">
-        <p class="hero-stat-card__value">{{ metric.value }}</p>
-        <p class="hero-stat-card__label">{{ metric.label }}</p>
-      </article>
-    }
+  <div class="hero-trust" aria-label="Cam kết chất lượng">
+
+    <div class="trust-item">
+      <span class="trust-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="6"/>
+          <path d="M15.48 12.89L17 22l-5-3-5 3 1.52-9.11"/>
+        </svg>
+      </span>
+      <span class="trust-text">
+        <strong>Đội Ngũ Chuyên Nghiệp</strong>
+        <span>Nhiều năm kinh nghiệm</span>
+      </span>
+    </div>
+
+    <span class="trust-sep" aria-hidden="true"></span>
+
+    <div class="trust-item">
+      <span class="trust-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+          <circle cx="12" cy="13" r="4"/>
+        </svg>
+      </span>
+      <span class="trust-text">
+        <strong>Trang Thiết Bị Hiện Đại</strong>
+        <span>Đảm bảo chất lượng hình ảnh</span>
+      </span>
+    </div>
+
+    <span class="trust-sep" aria-hidden="true"></span>
+
+    <div class="trust-item">
+      <span class="trust-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2a2 2 0 100 4 2 2 0 000-4z"/>
+          <path d="M10 6L6 12h3.5v6h5v-6H18l-4-6"/>
+        </svg>
+      </span>
+      <span class="trust-text">
+        <strong>Không Gian Chụp Cao Cấp</strong>
+        <span>Riêng tư &amp; thoải mái</span>
+      </span>
+    </div>
+
+    <span class="trust-sep" aria-hidden="true"></span>
+
+    <div class="trust-item">
+      <span class="trust-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <polyline points="9 12 11 14 15 10"/>
+        </svg>
+      </span>
+      <span class="trust-text">
+        <strong>Dịch Vụ Tận Tâm</strong>
+        <span>Đồng hành cùng bạn</span>
+      </span>
+    </div>
+
   </div>
+
 </section>

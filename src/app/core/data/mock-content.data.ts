@@ -35,11 +35,11 @@ export const PAGES: PageContent[] = [
     },
     home: {
       hero: {
-        eyebrow: 'Studio chụp ảnh chân dung cao cấp',
-        headline: 'Ảnh đẹp tự nhiên, rõ thần thái, dễ ứng dụng ngay cho công việc',
+        eyebrow: 'HANTO STUDIO',
+        headline: 'Lưu Giữ Vẻ Đẹp',
         subheadline:
-          'Bạn không cần biết tạo dáng. Đội ngũ sẽ hướng dẫn posing, makeup, styling và flow buổi chụp để ảnh vừa đẹp vừa thật như bạn.',
-        trustLine: '4.9/5 đánh giá từ khách hàng thật, hơn 8.500 buổi chụp đã thực hiện.',
+          'Mỗi bức ảnh là một dấu ấn của cảm xúc, được tạo nên bằng sự tinh tế và nghệ thuật.',
+        trustLine: 'bằng giá trị vượt thời gian',
         primaryCtaLabel: 'Đặt lịch ngay',
         primaryCtaRoute: '/lien-he',
         secondaryCtaLabel: 'Xem bảng giá',
