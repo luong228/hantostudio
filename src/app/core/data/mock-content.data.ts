@@ -253,7 +253,7 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     id: 'svc-maternity-glow',
-    slug: 'ao-dai-thai-san-concept',
+    slug: 'thai-san',
     name: 'Thai Sản',
     shortDescription: 'Nhóm buổi chụp concept với trang phục, bối cảnh và câu chuyện được thiết kế riêng.',
     description:
@@ -266,6 +266,54 @@ export const SERVICES: ServiceItem[] = [
     startingPrice: 4800000,
     durationMinutes: 100,
     badges: ['Thai sản']
+  },
+  {
+    id: 'svc-profile-linkedin',
+    slug: 'profile-ca-nhan',
+    name: 'Profile Cá Nhân & LinkedIn',
+    shortDescription: 'Ảnh profile chuyên nghiệp dùng được ngay cho LinkedIn, website và hồ sơ doanh nghiệp.',
+    description:
+      'Buổi chụp ngắn gọn, tập trung vào 1–2 bộ trang phục, ánh sáng phòng thu và góc khuôn mặt tốt nhất. Kết quả là bộ ảnh tự tin, thân thiện và đáng tin cậy.',
+    heroImage: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1400&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1100&q=80',
+      'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1100&q=80'
+    ],
+    startingPrice: 2800000,
+    durationMinutes: 60,
+    badges: ['Profile', 'Cá nhân']
+  },
+  {
+    id: 'svc-concept-art',
+    slug: 'concept-nghe-thuat',
+    name: 'Concept Nghệ Thuật',
+    shortDescription: 'Bộ ảnh mang chủ đề riêng biệt — áo dài, vintage, tối giản hay câu chuyện bạn muốn kể.',
+    description:
+      'Đội ngũ lên concept, chuẩn bị phục trang và bối cảnh theo yêu cầu. Phù hợp với khách hàng muốn một bộ ảnh mang dấu ấn nghệ thuật rõ ràng, không theo khuôn mẫu.',
+    heroImage: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1400&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1100&q=80',
+      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1100&q=80'
+    ],
+    startingPrice: 6500000,
+    durationMinutes: 150,
+    badges: ['Concept', 'Nghệ thuật']
+  },
+  {
+    id: 'svc-pre-wedding',
+    slug: 'pre-wedding',
+    name: 'Pre-Wedding',
+    shortDescription: 'Bộ ảnh cưới lãng mạn, tự nhiên — ghi lại cảm xúc trước ngày trọng đại.',
+    description:
+      'Buổi chụp pre-wedding tập trung vào sự kết nối và cảm xúc thật của hai người. Studio hỗ trợ từ chọn concept, phối trang phục đến dẫn dắt tương tác tự nhiên trước ống kính.',
+    heroImage: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1100&q=80',
+      'https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1100&q=80'
+    ],
+    startingPrice: 7200000,
+    durationMinutes: 180,
+    badges: ['Cưới', 'Pre-wedding']
   }
 ];
 

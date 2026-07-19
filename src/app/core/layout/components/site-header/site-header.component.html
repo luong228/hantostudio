@@ -1,9 +1,15 @@
-<header class="site-header">
+<header class="site-header" [class.site-header--open]="menuOpen()">
   <a class="brand" routerLink="/">
     <span class="brand__name">{{ contentRepo.studioInfo().brandName }}</span>
   </a>
 
-  <nav aria-label="Primary" class="site-nav">
+  <button class="nav-toggle" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav aria-label="Primary" class="site-nav" [class.site-nav--open]="menuOpen()">
     @for (item of contentRepo.navItems(); track item.route) {
       <a [routerLink]="item.route" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: item.route === '/' }">
         {{ item.label }}

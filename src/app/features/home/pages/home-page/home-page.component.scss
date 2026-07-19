@@ -13,7 +13,7 @@ app-home-hero-section {
 }
 
 .home-stack > :not(app-home-hero-section) {
-  margin-inline: clamp(32rem, 4vw, 6.08rem);
+  margin-inline: clamp(8.6rem, 15vw, 26.08rem);
 }
 
 app-home-pricing-teaser {
@@ -55,5 +55,16 @@ app-home-pricing-teaser {
   .home-band--proof,
   .home-band--closing {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-stack > :not(app-home-hero-section) {
+    margin-inline: 16px;
+  }
+
+  .home-contact-section {
+    padding: 5.6rem clamp(1.6rem, 5vw, 3.2rem);
+    gap: 3.2rem;
   }
 }

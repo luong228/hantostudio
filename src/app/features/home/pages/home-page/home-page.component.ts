@@ -5,6 +5,7 @@ import { HomeBookingProcessComponent } from '../../components/home-booking-proce
 import { HomeBranchesContactComponent } from '../../components/home-branches-contact/home-branches-contact.component';
 import { HomeFaqPreviewComponent } from '../../components/home-faq-preview/home-faq-preview.component';
 import { HomeFeaturedServicesComponent } from '../../components/home-featured-services/home-featured-services.component';
+import { HomeAllServicesComponent } from '../../components/home-all-services/home-all-services.component';
 import { HomeFinalCtaComponent } from '../../components/home-final-cta/home-final-cta.component';
 import { HomeHeroSectionComponent } from '../../components/home-hero-section/home-hero-section.component';
 import { HomePricingTeaserComponent } from '../../components/home-pricing-teaser/home-pricing-teaser.component';
@@ -20,6 +21,7 @@ import { SectionHeaderComponent } from '../../../../shared/ui/section-header/sec
     HomeHeroSectionComponent,
     HomePricingTeaserComponent,
     HomeFeaturedServicesComponent,
+    HomeAllServicesComponent,
     HomeWhyChooseComponent,
     HomeTestimonialsComponent,
     HomeFaqPreviewComponent,

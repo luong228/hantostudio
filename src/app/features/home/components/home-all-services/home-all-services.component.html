@@ -1,0 +1,18 @@
+<section class="section">
+  <app-section-header
+    eyebrow="Toàn bộ dịch vụ"
+    title="Các concept theo chủ đề riêng của studio"
+    subtitle="Mỗi bộ sưu tập là một hướng hình ảnh rõ ràng: mood, bộ cánh và nồng độ cảm xúc khác biệt." />
+
+  <div class="grid">
+    @for (service of services(); track service.id) {
+      <app-content-card
+        [title]="service.name"
+        [description]="service.shortDescription"
+        [image]="service.heroImage"
+        [route]="'/dich-vu/' + service.slug"
+        [eyebrow]="getEyebrow(service)"
+        [meta]="'Từ ' + formatPrice(service.startingPrice) + 'đ'" />
+    }
+  </div>
+</section>
