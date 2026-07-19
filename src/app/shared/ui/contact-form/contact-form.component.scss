@@ -30,13 +30,13 @@ form {
   label {
     font-size: 1.52rem;
     font-weight: 600;
-    color: #2a1f1a;
+    color: var(--primary);
     display: flex;
     align-items: center;
     gap: 0.4rem;
 
     .required {
-      color: #b85b30;
+      color: var(--text-soft);
       font-weight: bold;
     }
   }
@@ -46,13 +46,13 @@ form {
   select,
   textarea {
     width: 100%;
-    background: #fcfbfa;
+    background: var(--bg);
     border: 1px solid rgba(40, 28, 22, 0.15);
     border-radius: 24px;
     padding: 1.44rem 2.24rem;
     font-family: inherit;
     font-size: 1.52rem;
-    color: #2a1f1a;
+    color: var(--primary);
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
@@ -61,13 +61,13 @@ form {
     }
 
     &:focus {
-      border-color: #856955;
+      border-color: var(--primary);
       box-shadow: 0 0 0 3px rgba(133, 105, 85, 0.1);
     }
 
     &.is-invalid {
       border-color: #c95642;
-      background: #fffdfd;
+      background: var(--bg);
       
       &:focus {
         box-shadow: 0 0 0 3px rgba(201, 86, 66, 0.1);
@@ -118,12 +118,12 @@ form {
   transition: border-color 0.18s ease, background 0.18s ease;
 
   &:hover {
-    border-color: #856955;
+    border-color: var(--primary);
     background: #faf7f4;
   }
 
   &--active {
-    border-color: #856955;
+    border-color: var(--primary);
     border-width: 1.5px;
     background: #faf7f4;
   }
@@ -142,7 +142,7 @@ form {
   &__name {
     font-size: 1.44rem;
     font-weight: 600;
-    color: #2a1f1a;
+    color: var(--primary);
   }
 
   &__sub {
@@ -154,7 +154,7 @@ form {
 // Buttons
 .submit-button {
   width: 100%;
-  background: #856955;
+  background: var(--primary);
   color: #ffffff;
   border: none;
   border-radius: 30px;
@@ -166,7 +166,7 @@ form {
   margin-top: 1.28rem;
 
   &:hover:not(:disabled) {
-    background: #725744;
+    background: var(--hover);
   }
 
   &:active:not(:disabled) {
@@ -182,7 +182,7 @@ form {
 .commitment-text {
   text-align: center;
   font-size: 1.28rem;
-  color: #8c766b;
+  color: var(--text-soft);
   margin: 0;
   line-height: 1.5;
 }
@@ -230,8 +230,8 @@ form {
   }
 
   &:hover {
-    background: #856955;
-    border-color: #856955;
+    background: var(--primary);
+    border-color: var(--primary);
     color: #ffffff;
   }
 }
@@ -259,8 +259,8 @@ form {
     color: #d4c0b0;
 
     &:hover {
-      background: #856955;
-      border-color: #856955;
+      background: var(--primary);
+      border-color: var(--primary);
       color: #ffffff;
     }
   }

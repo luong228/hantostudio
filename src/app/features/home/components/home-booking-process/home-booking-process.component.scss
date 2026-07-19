@@ -23,10 +23,11 @@ li {
 h3,
 p {
   margin: 0;
+  color: #000
 }
 
 .step {
-  color: #9a7c6d;
+  color: var(--primary);
   font-weight: 700;
   letter-spacing: 0.08em;
 }

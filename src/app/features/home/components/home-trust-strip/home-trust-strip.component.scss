@@ -2,7 +2,7 @@
   margin-top: 1.92rem;
   border: 1px solid rgba(37, 25, 21, 0.12);
   border-radius: 1.6rem;
-  background: #fffdfa;
+  background: var(--primary);
   padding: 1.36rem;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

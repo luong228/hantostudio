@@ -11,17 +11,41 @@
   letter-spacing: 0.14em;
   line-height: 1.1;
   font-size: 1.52rem;
-  color: #8b6a52;
+  color: var(--primary);
 }
 
 h2 {
   font-size: clamp(2.4rem, 1.76rem + 2vw, 4.4rem);
   margin: 0;
-  color: #241915;
+  color: #000;
 }
 
 .section-header__subtitle {
   margin: 0;
   max-width: 65ch;
-  color: #5f4f49;
+  color: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  .section-header__eyebrow {
+    color: var(--text);
+  }
+
+  h2 {
+    color: var(--text-soft);
+  }
+}
+
+:host-context(.dark-section) {
+  .section-header__eyebrow {
+    color: var(--text);
+  }
+
+  h2 {
+    color: var(--text-soft);
+  }
+
+  .section-header__subtitle {
+    color: var(--text);
+  }
 }

@@ -245,7 +245,7 @@ export const SERVICES: ServiceItem[] = [
     ],
     startingPrice: 4200000,
     durationMinutes: 90,
-    badges: ['Đặt nhiều nhất', 'Hỗ trợ styling']
+    badges: ['Chân dung']
   },
   {
     id: 'svc-family-heirloom',
@@ -261,12 +261,12 @@ export const SERVICES: ServiceItem[] = [
     ],
     startingPrice: 5600000,
     durationMinutes: 120,
-    badges: ['Phổ biến', 'Sẵn sàng lên album']
+    badges: ['Gia đình']
   },
   {
     id: 'svc-maternity-glow',
     slug: 'ao-dai-thai-san-concept',
-    name: 'Áo Dài / Thai Sản / Concept',
+    name: 'Thai Sản',
     shortDescription: 'Nhóm buổi chụp concept với trang phục, bối cảnh và câu chuyện được thiết kế riêng.',
     description:
       'Phù hợp với khách hàng muốn bộ ảnh mang tính chủ đề rõ ràng: áo dài, thai sản hoặc concept nghệ thuật với quy trình sản xuất trọn gói.',
@@ -277,64 +277,70 @@ export const SERVICES: ServiceItem[] = [
     ],
     startingPrice: 4800000,
     durationMinutes: 100,
-    badges: ['Concept theo yêu cầu', 'Trọn gói styling']
+    badges: ['Thai sản']
   }
 ];
 
 export const PRICING_PLANS: PricingPlan[] = [
   {
     id: 'price-essential',
-    name: 'KHOANH KHẮC',
-    price: 3800000,
+    name: 'BASIC',
+    price: 1299000,
     summary: 'Ghi lại một khoảnh khắc đẹp – nhẹ nhàng, trọn vẹn',
     idealFor: 'Chụp cá nhân, chân dung cơ bản',
     features: [
-      '1 layout makeup và làm tóc dành cho nữ',
-      '1 layout trang phục của Gạo Nâu chuẩn bị và phụ kiện kèm theo concept',
-      '10 ảnh chỉnh sửa kỹ lưỡng',
-      '1 background của Gạo Nâu khách hàng lựa chọn',
-      'Dịch vụ chăm sóc trước buổi chụp (đắp mặt nạ & massage chân)',
+      'Chụp 120 - 160 ảnh',
+      '1 layout makeup và làm tóc dành cho nữ TIÊU CHUẨN',
+      '1 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '08 ảnh chỉnh sửa kỹ lưỡng',
+      '1 background của HANTO Studio khách hàng lựa chọn',
+      'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
       'Không gian và bối cảnh chụp',
+      'Phụ kiện tiêu chuẩn',
       'Toàn bộ ảnh gốc',
-      'Trả toàn bộ file ảnh gốc trong ngày'
     ]
   },
   {
     id: 'price-signature',
-    name: 'CÂU CHUYỆN',
-    price: 4800000,
+    name: 'VIP',
+    price: 2299000,
     summary: 'Kể câu chuyện của bạn qua từng khung hình tinh tế',
     idealFor: 'Kể câu chuyện sâu sắc hơn, nhiều góc cạnh',
     features: [
-      '1 layout makeup và làm tóc dành cho nữ',
-      '1 layout trang phục của Gạo Nâu chuẩn bị và phụ kiện kèm theo concept',
-      '10 ảnh chỉnh sửa kỹ lưỡng',
-      '1 background của Gạo Nâu khách hàng lựa chọn',
-      'Dịch vụ chăm sóc trước buổi chụp (đắp mặt nạ & massage chân)',
+      'Chụp 160 - 250 ảnh',
+      '1 layout makeup và làm tóc dành cho nữ CHUYÊN NGHIỆP',
+      '1 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '15 ảnh chỉnh sửa kỹ lưỡng',
+      '1 background của HANTO Studio khách hàng lựa chọn',
+      'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
       'Không gian và bối cảnh chụp',
       'Toàn bộ ảnh gốc',
-      'Trả toàn bộ file ảnh gốc trong ngày'
+      'Phụ kiện tiêu chuẩn',
+      'Tặng kèm Nail + Lens + Bộ ảnh beauty'
     ],
     highlighted: true
   },
   {
     id: 'price-legacy',
-    name: 'DI SẢN',
-    price: 6800000,
+    name: 'LUXURY',
+    price: 3999000,
     summary: 'Tác phẩm để lưu giữ – không chỉ cho hôm nay',
     idealFor: 'Gói cao cấp hoàn hảo cho chân dung nghệ thuật',
     features: [
-      '1 layout makeup và làm tóc CAO CẤP dành cho nữ',
-      '1 layout trang phục của Gạo Nâu chuẩn bị và phụ kiện kèm theo concept',
-      '10 ảnh chỉnh sửa kỹ lưỡng',
-      '1 background của Gạo Nâu khách hàng lựa chọn',
-      'Dịch vụ chăm sóc trước buổi chụp (đắp mặt nạ & massage chân)',
+      'Chụp ảnh không giới hạn',
+      '1 layout makeup và làm tóc CAO CẤP dành cho nữ THEO YÊU CẦU',
+      '1 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '22 ảnh chỉnh sửa kỹ lưỡng',
+      '1 background của HANTO Studio khách hàng lựa chọn',
+      'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
       'Không gian và bối cảnh chụp',
       'Toàn bộ ảnh gốc',
-      'Trả toàn bộ file ảnh gốc trong ngày'
+      'Phụ kiện cao cấp',
+      'Tặng kèm Nail + Lens',
+      'Tặng kèm bộ ảnh beauty'
     ]
   }
 ];
@@ -421,7 +427,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 'faq-locations',
     question: 'Studio có chụp ở đâu?',
-    answer: 'Hiện có 2 chi nhánh tại Quận 3 và Thủ Đức, đồng thời hỗ trợ concept ngoại cảnh theo yêu cầu.',
+    answer: 'Hiện có 1 chi nhánh tại Vinhomes Grand Park Quận 9, đồng thời hỗ trợ concept ngoại cảnh theo yêu cầu.',
     topic: 'session'
   }
 ];

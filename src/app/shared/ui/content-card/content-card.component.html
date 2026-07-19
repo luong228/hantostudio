@@ -1,11 +1,17 @@
-<article class="card">
+<a class="card" [routerLink]="route()" [attr.aria-label]="'Xem chi tiết ' + title()">
   <img [src]="image()" [alt]="title()" loading="lazy" />
-  <div class="card__body">
-    @if (meta()) {
-      <p class="card__meta">{{ meta() }}</p>
+  <div class="card__overlay"></div>
+  <div class="card__content">
+    @if (eyebrow()) {
+      <p class="card__eyebrow">{{ eyebrow() }}</p>
     }
     <h3>{{ title() }}</h3>
-    <p>{{ description() }}</p>
-    <a [routerLink]="route()">View details</a>
+    <p class="card__subtitle">{{ description() }}</p>
+    <div class="card__meta">
+      @if (meta()) {
+        <p>{{ meta() }}</p>
+      }
+      <span>{{ ctaLabel() }}</span>
+    </div>
   </div>
-</article>
+</a>

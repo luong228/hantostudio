@@ -29,14 +29,14 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #a86e46;
+  color: var(--text-soft);
 }
 
 .form-header h1 {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 4.8rem;
   font-weight: 700;
-  color: #2a1f1a;
+  color: var(--primary);
   margin: 0;
   line-height: 1.1;
   text-transform: uppercase;
@@ -64,13 +64,13 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #2a1f1a;
+    color: #000;
     margin: 0 0 1.6rem;
   }
 
   &--dark {
-    background: #7a4f2d;
-    border-color: #7a4f2d;
+    background: var(--primary);
+    border-color: var(--primary);
 
     .card-icon {
       display: block;

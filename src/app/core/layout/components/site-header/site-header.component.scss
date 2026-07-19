@@ -14,20 +14,13 @@
 .brand {
   display: grid;
   gap: 0.08rem;
-  color: #f8ede4;
+  color: #000;
   text-decoration: none;
 }
 
 .brand__name {
   font-size: 1.92rem;
   font-weight: 800;
-}
-
-.brand__sub {
-  font-size: 1.152rem;
-  color: rgba(246, 228, 213, 0.9);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 
 .site-nav {
@@ -39,7 +32,7 @@
 
 .site-nav a {
   text-decoration: none;
-  color: rgba(253, 239, 228, 0.88);
+  color: #000;
   font-size: 1.472rem;
   position: relative;
   padding-bottom: 0.32rem;
@@ -52,12 +45,12 @@
     left: 0;
     width: 0;
     height: 1.5px;
-    background: rgba(255, 220, 185, 0.85);
+    background: var(--primary);
     transition: width 0.25s ease;
   }
 
   &:hover {
-    color: #fff5ea;
+    color: #000;
 
     &::after {
       width: 100%;
@@ -66,12 +59,13 @@
 }
 
 .is-active {
-  color: #fff5ea;
+  color: #000;
   font-weight: 600;
 
   &::after {
     width: 100%;
-    background: rgba(255, 220, 185, 0.85);
+    background: var(--primary);
+
   }
 }
 
@@ -88,6 +82,7 @@
   background: rgba(83, 56, 38, 0.26);
   border-radius: 999px;
   padding: 0.672rem 1.2rem;
+  font-weight: 700;
   font-size: 1.28rem;
 }
 

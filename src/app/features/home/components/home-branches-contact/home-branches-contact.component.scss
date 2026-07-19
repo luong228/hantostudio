@@ -14,6 +14,7 @@
 
 .meta-strip p {
   margin: 0;
+  color: #000;
 }
 
 .meta-strip a {
@@ -25,6 +26,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.2rem;
+  color: #000;
 }
 
 .branches article {
@@ -41,6 +43,7 @@
 .branches a {
   margin: 0;
 }
+
 
 .branches p {
   color: #5f5048;
@@ -61,7 +64,7 @@
   border-radius: 999px;
   border: 1px solid rgba(34, 24, 20, 0.16);
   padding: 0.72rem 1.12rem;
-  color: #33241f;
+  color: var(--text-soft);
   text-decoration: none;
-  background: rgba(255, 250, 245, 0.9);
+  background: rgba(1, 25, 59, 0.9);
 }

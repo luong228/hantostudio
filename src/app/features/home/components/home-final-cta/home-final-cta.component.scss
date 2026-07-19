@@ -3,26 +3,27 @@
   padding: clamp(1.92rem, 4vw, 3.84rem);
   border: 1px solid rgba(40, 27, 22, 0.16);
   background:
-    radial-gradient(circle at 78% 18%, rgba(220, 186, 162, 0.45), transparent 42%),
-    linear-gradient(145deg, #f7ede6, #fffaf7);
+    radial-gradient(circle at 78% 18%, rgba(1, 25, 59, 0.85), transparent 42%),
+    linear-gradient(145deg, rgba(1, 25, 59, 0.85), rgb(1, 25, 59));
 }
 
 h2,
 p {
   margin: 0;
+  color: #fff;
 }
 
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 1.152rem;
-  color: #85695d;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 p {
   margin-top: 1.04rem;
   max-width: 65ch;
-  color: #5b4b44;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .actions {

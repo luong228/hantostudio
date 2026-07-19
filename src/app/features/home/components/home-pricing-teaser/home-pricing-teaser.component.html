@@ -21,7 +21,7 @@
         </div>
 
         <ul class="plan-card__features">
-          @for (feature of plan.features.slice(0, 5); track feature) {
+          @for (feature of plan.features; track feature) {
             <li class="plan-card__feature">
               <span class="plan-card__check">✓</span>
               <span>{{ feature }}</span>
@@ -29,7 +29,7 @@
           }
         </ul>
 
-        <a class="plan-card__btn" [routerLink]="['/bang-gia']">Xem chi tiết</a>
+        <a class="plan-card__btn" [routerLink]="['/lien-he']">Đặt lịch ngay →</a>
       </article>
     }
   </div>

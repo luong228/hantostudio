@@ -1,19 +1,78 @@
-<section class="detail-wrap">
-  @if (service(); as item) {
-    <img class="hero-image" [src]="item.heroImage" [alt]="item.name" />
-    <p class="eyebrow">{{ item.badges.join(' • ') }}</p>
-    <h1>{{ item.name }}</h1>
-    <p class="lead">{{ item.description }}</p>
-    <p class="price">Từ {{ item.startingPrice | number }} đồng</p>
-
-    <div class="gallery">
-      @for (image of item.gallery; track image) {
-        <img [src]="image" [alt]="item.name + ' ảnh thư viện'" loading="lazy" />
-      }
+@if (service(); as item) {
+  <section class="detail-hero">
+    <!-- Cột trái: ảnh -->
+    <div class="image-panel">
+      <img [src]="item.heroImage" [alt]="item.name" />
+      <div class="image-panel__label">
+        <span class="image-panel__eyebrow">{{ item.badges[0] || 'Concept Showcase' }}</span>
+        <p class="image-panel__name">{{ item.name }}</p>
+      </div>
     </div>
 
-    <app-button label="Đặt lịch dịch vụ này" route="/lien-he" />
+    <!-- Cột phải: nội dung -->
+    <div class="content-panel">
+      <p class="eyebrow">Dịch vụ · {{ item.badges.join(' · ') }}</p>
 
+      <h1>
+        <span class="title-main">{{ item.name }}</span>
+        <span class="title-sub">Tại HANTO Studio</span>
+      </h1>
+
+      <p class="lead">{{ item.description }}</p>
+
+      <div class="actions">
+        <a class="btn-primary" routerLink="/lien-he">Đặt lịch dịch vụ này →</a>
+        <a class="btn-outline" routerLink="/bang-gia">Xem bảng giá</a>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="price-row">
+        <span class="price-label">Giá từ</span>
+        <span class="price-value">{{ formatPrice(item.startingPrice) }}đ</span>
+      </div>
+    </div>
+  </section>
+
+  @if (item.gallery.length) {
+    <section class="gallery-section">
+      <div class="gallery-section__header">
+        <span class="gallery-section__eyebrow">Bộ ảnh thực tế</span>
+        <h2 class="gallery-section__title">Thư viện ảnh</h2>
+        <span class="gallery-section__count">{{ slideIndex() + 1 }} / {{ item.gallery.length }}</span>
+      </div>
+
+      <div class="slider">
+        <div class="slider__track"
+             [style.transform]="'translateX(-' + slideIndex() * 100 + '%)'">
+          @for (img of item.gallery; track img; let i = $index) {
+            <figure class="slider__slide">
+              <img [src]="img" [alt]="item.name + ' ảnh ' + (i + 1)" loading="lazy" />
+            </figure>
+          }
+        </div>
+
+        @if (item.gallery.length > 1) {
+          <button class="slider__btn slider__btn--prev"
+                  (click)="prev(item.gallery.length)"
+                  aria-label="Ảnh trước">‹</button>
+          <button class="slider__btn slider__btn--next"
+                  (click)="next(item.gallery.length)"
+                  aria-label="Ảnh tiếp theo">›</button>
+          <div class="slider__dots">
+            @for (img of item.gallery; track img; let i = $index) {
+              <button class="slider__dot"
+                      [class.slider__dot--active]="i === slideIndex()"
+                      (click)="goTo(i)"
+                      [attr.aria-label]="'Xem ảnh ' + (i + 1)"></button>
+            }
+          </div>
+        }
+      </div>
+    </section>
+  }
+
+  <div class="banner-wrap">
     <app-conversion-banner
       title="Cần tư vấn thêm trước khi chốt lịch?"
       subtitle="Studio sẽ gọi nhanh để tư vấn timeline, phong cách trang phục và mức giao ảnh phù hợp."
@@ -21,9 +80,11 @@
       primaryRoute="/lien-he"
       secondaryLabel="Quay lại danh mục dịch vụ"
       secondaryRoute="/dich-vu" />
-  } @else {
+  </div>
+} @else {
+  <section class="detail-hero detail-hero--error">
     <h1>Không tìm thấy dịch vụ</h1>
     <p>Dịch vụ bạn yêu cầu có thể đã được di chuyển.</p>
     <a routerLink="/dich-vu">Quay lại tất cả dịch vụ</a>
-  }
-</section>
+  </section>
+}

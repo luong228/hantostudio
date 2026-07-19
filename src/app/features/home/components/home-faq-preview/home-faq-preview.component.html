@@ -7,8 +7,8 @@
   <div class="faq-list">
     @for (item of faqs(); track item.id) {
       <article>
-        <h3>{{ item.question }}</h3>
-        <p>{{ item.answer }}</p>
+        <h3 class="faq-question">{{ item.question }}</h3>
+        <p class="faq-answer">{{ item.answer }}</p>
       </article>
     }
   </div>

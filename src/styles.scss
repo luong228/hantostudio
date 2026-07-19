@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
 :root {
-	--bg: #f9f2eb;
+	--bg: #fdfdfd;
+	--primary: rgb(1, 25, 59);
 	--surface: #ffffff;
-	--text: #2a1f1a;
-	--text-soft: #5d4d45;
+	--text: #fff;
+	--text-soft: #f9ba24;
+	--hover: rgba(1, 25, 59, 0.8);
 	--line: rgba(40, 28, 22, 0.12);
 }
 
@@ -21,8 +23,8 @@ body {
 	margin: 0;
 	padding: 0;
 	background:
-		radial-gradient(circle at 18% 0%, rgba(222, 193, 168, 0.32), transparent 36%),
-		radial-gradient(circle at 86% 18%, rgba(231, 214, 197, 0.38), transparent 42%),
+		radial-gradient(circle at 18% 0%, rgba(1, 25, 59, 0.04), transparent 36%),
+		radial-gradient(circle at 86% 18%, rgba(1, 25, 59, 0.03), transparent 42%),
 		var(--bg);
 	color: var(--text);
 	font-family: 'Montserrat', 'Segoe UI', sans-serif;

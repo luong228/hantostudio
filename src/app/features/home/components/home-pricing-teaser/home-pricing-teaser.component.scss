@@ -19,14 +19,14 @@
   font-size: 1.28rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: #b89579;
+  color: var(--text-soft);
   text-transform: uppercase;
 }
 
 .pricing-teaser__title {
   font-size: clamp(2.88rem, 3.5vw, 4.8rem);
   font-weight: 600;
-  color: #2a1f1a;
+  color: var(--primary);
   margin: 0.64rem 0;
   line-height: 1.2;
   text-transform: uppercase;
@@ -42,8 +42,8 @@
 // Grid
 .pricing-teaser__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.88rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3.2rem;
   width: 100%;
   align-items: stretch;
 }
@@ -53,7 +53,7 @@
   background: #fbf9f6;
   border-radius: 24px;
   border: 1px solid rgba(40, 28, 22, 0.12);
-  padding: 3.84rem 3.2rem;
+  padding: 4.8rem 3.52rem;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -61,8 +61,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(42, 31, 26, 0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(42, 31, 26, 0.08);
   }
 
   &__badge {
@@ -70,7 +70,7 @@
     top: -13px;
     left: 50%;
     transform: translateX(-50%);
-    background: #b89579;
+    background: var(--text-soft);
     color: #ffffff;
     font-size: 1.152rem;
     font-weight: 700;
@@ -83,94 +83,94 @@
   }
 
   &__name {
-    font-size: 2.24rem;
+    font-size: 2.56rem;
     font-weight: 600;
-    color: #2a1f1a;
-    margin: 0 0 0.64rem 0;
-    letter-spacing: 0.04em;
+    color: var(--primary);
+    margin: 0 0 0.8rem 0;
+    letter-spacing: 0.05em;
   }
 
   &__summary {
-    font-size: 1.408rem;
+    font-size: 1.44rem;
     color: #6d5a50;
-    margin: 0 0 2.4rem 0;
+    margin: 0 0 3.2rem 0;
     line-height: 1.4;
-    min-height: 3.84rem;
+    min-height: 4rem;
   }
 
   &__price-wrap {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2.4rem;
-    padding-bottom: 1.92rem;
+    margin-bottom: 3.2rem;
+    padding-bottom: 2.4rem;
     border-bottom: 1px solid rgba(40, 28, 22, 0.08);
   }
 
   &__price {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 4.16rem;
+    font-size: 4.8rem;
     font-weight: 600;
-    color: #2a1f1a;
+    color: var(--primary);
     line-height: 1;
   }
 
   &__price-label {
-    font-size: 1.088rem;
+    font-size: 1.12rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     color: #99857a;
-    margin-top: 0.48rem;
+    margin-top: 0.64rem;
   }
 
   &__features {
     list-style: none;
     padding: 0;
-    margin: 0 0 3.2rem 0;
+    margin: 0 0 4.8rem 0;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.44rem;
     flex-grow: 1;
   }
 
   &__feature {
     display: flex;
     align-items: flex-start;
-    gap: 1.04rem;
-    font-size: 1.408rem;
-    color: #2a1f1a;
+    gap: 1.2rem;
+    font-size: 1.44rem;
+    color: var(--primary);
     line-height: 1.4;
   }
 
   &__check {
-    color: #b89579;
+    color: var(--text-soft);
     font-weight: bold;
-    font-size: 1.44rem;
+    font-size: 1.52rem;
     flex-shrink: 0;
-    margin-top: 0.08rem;
+    margin-top: 0.16rem;
   }
 
   &__btn {
     display: block;
     width: 100%;
     text-align: center;
-    background: #856955;
+    background: var(--primary);
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.44rem;
+    font-size: 1.52rem;
     font-weight: 600;
-    padding: 1.36rem 2.4rem;
+    padding: 1.44rem 2.4rem;
     border-radius: 30px;
     margin-top: auto;
     transition: background-color 0.2s ease;
 
     &:hover {
-      background: #725744;
+      background: var(--hover);
     }
   }
 
   // Featured / dark card
   &--featured {
-    background: #211a17;
+    background: var(--primary);
     border-color: #312824;
     box-shadow: 0 8px 30px rgba(33, 26, 23, 0.15);
 
@@ -184,7 +184,7 @@
 
     .plan-card__btn {
       background: #dfcdb6;
-      color: #211a17;
+      color: var(--primary);
 
       &:hover {
         background: #c8b7a1;

@@ -15,4 +15,6 @@ export class ContentCardComponent {
   readonly image = input.required<string>();
   readonly route = input.required<string>();
   readonly meta = input<string>('');
+  readonly eyebrow = input<string>('');
+  readonly ctaLabel = input<string>('Xem chi tiết →');
 }

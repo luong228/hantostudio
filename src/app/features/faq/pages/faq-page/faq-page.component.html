@@ -7,8 +7,8 @@
   <div class="faq-list">
     @for (item of repo.faqItems(); track item.id) {
       <details>
-        <summary>{{ item.question }}</summary>
-        <p>{{ item.answer }}</p>
+        <summary class="faq-question">{{ item.question }}</summary>
+        <p class="faq-answer">{{ item.answer }}</p>
       </details>
     }
   </div>
