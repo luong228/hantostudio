@@ -1,27 +1,90 @@
 <section class="section">
-  <app-section-header
-    eyebrow="Chi Nhánh Và Liên Hệ"
-    title="2 chi nhánh, hotline rõ ràng, mở cửa mỗi ngày"
-    subtitle="Bạn có thể đặt lịch qua hotline, Zalo, Facebook hoặc đến trực tiếp studio theo khung giờ hoạt động." />
+  <header class="contact-hd">
+    <p class="contact-hd__eyebrow">Chi Nhánh & Liên Hệ</p>
+    <div class="contact-hd__ornament" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z" /></svg>
+      <span></span>
+    </div>
+    <h2>Chúng tôi luôn sẵn sàng lắng nghe và đồng hành cùng bạn</h2>
+    <p class="contact-hd__sub">
+      Dù bạn cần tư vấn, đặt lịch hay chỉ đơn giản là muốn trao đổi ý tưởng,
+      đội ngũ {{ studioInfo().brandName }} luôn ở đây để hỗ trợ bạn tận tình nhất.
+    </p>
+  </header>
 
-  <div class="meta-strip">
-    <p><strong>Hotline: </strong> <a [href]="'tel:' + studioInfo().phone.replaceAll(' ', '')">{{ studioInfo().phone }}</a></p>
-    <p><strong>Giờ mở cửa:</strong> {{ studioInfo().openingHours }}</p>
-  </div>
-
-  <div class="branches">
-    @for (branch of branches(); track branch.name) {
-      <article>
-        <h3>{{ branch.name }}</h3>
-        <p>{{ branch.address }}</p>
-        <a [href]="'tel:' + branch.phone.replaceAll(' ', '')">{{ branch.phone }}</a>
+  <div class="panel">
+    <div class="panel-grid panel-grid--2">
+      <article class="info-card">
+        <span class="info-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.1 4.18 2 2 0 0 1 4.09 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.1 9.91a16 16 0 0 0 6 6l1.27-1.24a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+        </span>
+        <div class="info-body">
+          <p class="info-label">Hotline tư vấn</p>
+          <a class="info-value" [href]="'tel:' + studioInfo().phone.replaceAll(' ', '')">{{ studioInfo().phone }}</a>
+          <p class="info-note">(8:00 – 21:00 mỗi ngày)</p>
+        </div>
       </article>
-    }
-  </div>
 
-  <div class="channels">
-    @for (channel of channels(); track channel.label) {
-      <a [href]="channel.href" target="_blank" rel="noopener noreferrer">{{ channel.label }}: {{ channel.value }}</a>
-    }
+      <article class="info-card">
+        <span class="info-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+        </span>
+        <div class="info-body">
+          <p class="info-label">Giờ làm việc</p>
+          <p class="info-value">{{ studioInfo().openingHours }}</p>
+          <p class="info-note">Tất cả các ngày trong tuần</p>
+        </div>
+      </article>
+    </div>
+
+    <article class="info-card info-card--full">
+      <span class="info-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+      </span>
+      <div class="info-body">
+        <p class="info-label">Địa chỉ studio</p>
+        <p class="info-value">{{ studioInfo().address }}</p>
+      </div>
+    </article>
+
+    <div class="panel-grid panel-grid--2">
+      <article class="info-card">
+        <span class="info-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16v16H4z" />
+            <path d="M4 7l8 6 8-6" />
+          </svg>
+        </span>
+        <div class="info-body">
+          <p class="info-label">Email</p>
+          <a class="info-value info-value--small" [href]="channelHref('Email')">{{ channelValue('Email') }}</a>
+        </div>
+      </article>
+
+      <article class="info-card">
+        <span class="info-icon" aria-hidden="true">Z</span>
+        <div class="info-body">
+          <p class="info-label">Zalo</p>
+          <a class="info-value info-value--small" [href]="channelHref('Zalo')" target="_blank" rel="noopener noreferrer">{{ channelValue('Zalo') }}</a>
+        </div>
+      </article>
+    </div>
+
+    <article class="info-card info-card--full">
+      <span class="info-icon" aria-hidden="true">f</span>
+      <div class="info-body">
+        <p class="info-label">Facebook</p>
+        <a class="info-value info-value--small" [href]="channelHref('Facebook')" target="_blank" rel="noopener noreferrer">{{ channelValue('Facebook') }}</a>
+      </div>
+    </article>
   </div>
 </section>

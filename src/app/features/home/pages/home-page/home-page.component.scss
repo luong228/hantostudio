@@ -33,6 +33,8 @@ app-home-pricing-teaser {
 
 .home-band--closing {
   grid-template-columns: 1.05fr 0.95fr;
+  gap: 0;
+  align-items: stretch;
 }
 
 .home-band--final {

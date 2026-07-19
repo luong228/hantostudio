@@ -1,17 +1,59 @@
 <section class="section">
-  <app-section-header
-    eyebrow="Câu Hỏi Nhanh"
-    title="Giải đáp trước khi đặt lịch: cọc, lịch chụp, giao ảnh, địa điểm"
-    subtitle="Những thông tin quan trọng nhất để bạn quyết định nhanh và yên tâm." />
+  <header class="faq-hd">
+    <p class="faq-hd__eyebrow">Câu Hỏi Nhanh</p>
+    <div class="faq-hd__ornament" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z" /></svg>
+      <span></span>
+    </div>
+    <h2>Những câu hỏi khách hàng thường gặp</h2>
+    <p class="faq-hd__sub">
+      Chúng tôi hiểu rằng trước khi quyết định, bạn sẽ có nhiều băn khoăn.
+      Dưới đây là những câu hỏi phổ biến nhất mà khách hàng của HANTO Studio hay thắc mắc.
+    </p>
+  </header>
 
   <div class="faq-list">
-    @for (item of faqs(); track item.id) {
-      <article>
-        <h3 class="faq-question">{{ item.question }}</h3>
-        <p class="faq-answer">{{ item.answer }}</p>
+    @for (item of faqs(); track item.id; let i = $index) {
+      <article class="faq-item" [class.faq-item--open]="isOpen(item.id, i)">
+        <button class="faq-trigger" type="button" (click)="toggleFaq(item.id, i)">
+          <span class="faq-icon" aria-hidden="true">
+            @switch (i) {
+              @case (0) {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <path d="M16 2v4M8 2v4M3 10h18" />
+                </svg>
+              }
+              @case (1) {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 4l3 4h4l-3.2 4.8L17 20l-5-3.4L7 20l1.2-7.2L5 8h4z" />
+                </svg>
+              }
+              @case (2) {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <circle cx="8" cy="10" r="1.5" />
+                  <path d="M21 15l-5-4-4 3-2-1.5L3 18" />
+                </svg>
+              }
+              @default {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v10M9 10h6M9 14h6" />
+                </svg>
+              }
+            }
+          </span>
+          <span class="faq-question">{{ item.question }}</span>
+          <span class="faq-toggle" aria-hidden="true">{{ isOpen(item.id, i) ? '−' : '+' }}</span>
+        </button>
+        @if (isOpen(item.id, i)) {
+          <p class="faq-answer">{{ item.answer }}</p>
+        }
       </article>
     }
   </div>
 
-  <app-button label="Xem tất cả câu hỏi" route="/cau-hoi-thuong-gap" variant="ghost" />
+  <a class="faq-cta" href="/cau-hoi-thuong-gap">Xem thêm câu hỏi &nbsp;→</a>
 </section>
