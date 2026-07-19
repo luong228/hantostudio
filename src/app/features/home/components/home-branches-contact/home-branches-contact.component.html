@@ -1,12 +1,12 @@
 <section class="section">
   <app-section-header
-    eyebrow="Chi nhanh va lien he"
-    title="2 chi nhanh, hotline ro rang, mo cua moi ngay"
-    subtitle="Ban co the dat lich qua hotline, Zalo, Facebook hoac den truc tiep studio theo khung gio hoat dong." />
+    eyebrow="Chi Nhánh Và Liên Hệ"
+    title="2 chi nhánh, hotline rõ ràng, mở cửa mỗi ngày"
+    subtitle="Bạn có thể đặt lịch qua hotline, Zalo, Facebook hoặc đến trực tiếp studio theo khung giờ hoạt động." />
 
   <div class="meta-strip">
     <p><strong>Hotline:</strong> <a [href]="'tel:' + studioInfo().phone.replaceAll(' ', '')">{{ studioInfo().phone }}</a></p>
-    <p><strong>Gio mo cua:</strong> {{ studioInfo().openingHours }}</p>
+    <p><strong>Giờ mở cửa:</strong> {{ studioInfo().openingHours }}</p>
   </div>
 
   <div class="branches">

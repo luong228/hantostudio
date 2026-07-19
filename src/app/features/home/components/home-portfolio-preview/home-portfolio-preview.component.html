@@ -1,17 +1,27 @@
 <section class="section">
   <app-section-header
-    eyebrow="Bo suu tap dac biet"
-    title="Cac collection theo chu de rieng cua studio"
-    subtitle="Moi bo suu tap la mot huong hinh anh ro rang: mood, bo canh va nong do cam xuc khac biet." />
+    eyebrow="Bộ sưu tập nổi bật"
+    title="Các concept theo chủ đề riêng của studio"
+    subtitle="Mỗi bộ sưu tập là một hướng hình ảnh rõ ràng: mood, bộ cánh và nồng độ cảm xúc khác biệt." />
 
   <div class="grid">
     @for (collection of collections(); track collection.id) {
-      <app-content-card
-        [title]="collection.title"
-        [description]="collection.teaser"
-        [image]="collection.coverImage"
-        [meta]="collection.category + ' • ' + collection.imageCount + ' anh'"
-        [route]="'/bo-suu-tap/' + collection.slug" />
+      <a
+        class="collection-card"
+        [routerLink]="'/bo-suu-tap/' + collection.slug"
+        [attr.aria-label]="'Xem bộ sưu tập ' + collection.title">
+        <img [src]="collection.coverImage" [alt]="collection.title" loading="lazy" />
+        <div class="collection-card__overlay"></div>
+        <div class="collection-card__content">
+          <p class="collection-card__eyebrow">{{ collection.category.toUpperCase() }}</p>
+          <h3>{{ collection.title }}</h3>
+          <p class="collection-card__subtitle">{{ collection.teaser }}</p>
+          <div class="collection-card__meta">
+            <p>{{ collection.imageCount }} ảnh</p>
+            <span>Xem bộ ảnh →</span>
+          </div>
+        </div>
+      </a>
     }
   </div>
 </section>

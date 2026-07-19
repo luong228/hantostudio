@@ -18,11 +18,9 @@ export class BlogPageComponent {
   private readonly seo = inject(SeoService);
 
   constructor() {
-    this.repo
-      .pageSeo$('/blog', {
-        title: 'Photography Journal | Lumen Atelier',
-        description: 'Practical insights and inspiration for preparing elegant, meaningful photo sessions.'
-      })
-      .subscribe((meta) => this.seo.update(meta));
+    this.seo.update(this.repo.seoForPath('/blog', {
+      title: 'Photography Journal | HANTO Studio',
+      description: 'Practical insights and inspiration for preparing elegant, meaningful photo sessions.'
+    }));
   }
 }

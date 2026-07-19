@@ -17,11 +17,9 @@ export class AboutPageComponent {
   private readonly seo = inject(SeoService);
 
   constructor() {
-    this.repo
-      .pageSeo$('/about', {
-        title: 'About The Studio | Lumen Atelier',
-        description: 'Meet the team and philosophy behind our warm, premium photography experience.'
-      })
-      .subscribe((meta) => this.seo.update(meta));
+    this.seo.update(this.repo.seoForPath('/about', {
+      title: 'About The Studio | HANTO Studio',
+      description: 'Meet the team and philosophy behind our warm, premium photography experience.'
+    }));
   }
 }

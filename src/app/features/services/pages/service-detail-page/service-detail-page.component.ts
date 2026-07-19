@@ -25,12 +25,9 @@ export class ServiceDetailPageComponent {
   });
 
   constructor() {
-    this.repo.prefetchServiceBySlug(this.slug);
-    this.repo
-      .serviceSeo$(this.slug, {
-        title: 'Service Details | Lumen Atelier',
-        description: 'Explore this photography service and booking details.'
-      })
-      .subscribe((meta) => this.seo.update(meta));
+    this.seo.update(this.repo.seoForServiceSlug(this.slug, {
+      title: 'Service Details | HANTO Studio',
+      description: 'Explore this photography service and booking details.'
+    }));
   }
 }

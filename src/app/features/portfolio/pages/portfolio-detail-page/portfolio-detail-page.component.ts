@@ -24,12 +24,9 @@ export class PortfolioDetailPageComponent {
   });
 
   constructor() {
-    this.repo.prefetchPortfolioBySlug(this.slug);
-    this.repo
-      .portfolioSeo$(this.slug, {
-        title: 'Portfolio Collection | Lumen Atelier',
-        description: 'Explore this full collection and session story.'
-      })
-      .subscribe((meta) => this.seo.update(meta));
+    this.seo.update(this.repo.seoForPortfolioSlug(this.slug, {
+      title: 'Portfolio Collection | HANTO Studio',
+      description: 'Explore this full collection and session story.'
+    }));
   }
 }

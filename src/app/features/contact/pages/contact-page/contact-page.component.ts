@@ -17,11 +17,9 @@ export class ContactPageComponent {
   private readonly seo = inject(SeoService);
 
   constructor() {
-    this.repo
-      .pageSeo$('/lien-he', {
-        title: 'Contact And Booking | Lumen Atelier',
-        description: 'Start your booking inquiry and plan a photography session with our studio team.'
-      })
-      .subscribe((meta) => this.seo.update(meta));
+    this.seo.update(this.repo.seoForPath('/lien-he', {
+      title: 'Contact And Booking | HANTO Studio',
+      description: 'Start your booking inquiry and plan a photography session with our studio team.'
+    }));
   }
 }

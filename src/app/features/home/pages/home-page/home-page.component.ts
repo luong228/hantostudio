@@ -48,12 +48,10 @@ export class HomePageComponent {
   protected readonly finalCtaContent = computed(() => this.homeContent()?.finalCta);
 
   constructor() {
-    this.repo
-      .pageSeo$('/', {
-        title: 'Lumen Atelier | Premium Portrait And Family Photography Studio',
-        description:
-          'Premium portrait, profile, family, maternity, and concept photography crafted with warmth and precision.'
-      })
-      .subscribe((meta) => this.seo.update(meta));
+    this.seo.update(this.repo.seoForPath('/', {
+      title: 'HANTO Studio | Premium Portrait And Family Photography Studio',
+      description:
+        'Premium portrait, profile, family, maternity, and concept photography crafted with warmth and precision.'
+    }));
   }
 }

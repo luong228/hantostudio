@@ -1,8 +1,8 @@
 <section class="page-wrap">
   <app-section-header
-    eyebrow="Danh muc dich vu"
-    title="Chon nhom chup dung nhu cau: chan dung, gia dinh, concept"
-    subtitle="Moi dich vu deu co huong dan truoc buoi chup, ekip ho tro tai set va quy trinh giao anh ro rang." />
+    eyebrow="Danh Mục Dịch Vụ"
+    title="Chọn nhóm chụp đúng nhu cầu: chân dung, gia đình, concept"
+    subtitle="Mỗi dịch vụ đều có hướng dẫn trước buổi chụp, ekip hỗ trợ tại set và quy trình giao ảnh rõ ràng." />
 
   <div class="grid">
     @for (service of repo.services(); track service.id) {
@@ -10,16 +10,16 @@
         [title]="service.name"
         [description]="service.shortDescription"
         [image]="service.heroImage"
-        [meta]="service.durationMinutes + ' minutes'"
+        [meta]="service.durationMinutes + ' phút'"
         [route]="'/dich-vu/' + service.slug" />
     }
   </div>
 
   <app-conversion-banner
-    title="Chua chac nen chon goi nao?"
-    subtitle="Gui muc tieu chup va timeline, studio se de xuat format phu hop de toi uu chi phi va ket qua."
-    primaryLabel="Tu van nhanh"
+    title="Chưa chắc nên chọn gói nào?"
+    subtitle="Gửi mục tiêu chụp và timeline, studio sẽ đề xuất format phù hợp để tối ưu chi phí và kết quả."
+    primaryLabel="Tư vấn nhanh"
     primaryRoute="/lien-he"
-    secondaryLabel="Xem bo suu tap"
+    secondaryLabel="Xem bộ sưu tập"
     secondaryRoute="/bo-suu-tap" />
 </section>

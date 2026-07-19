@@ -1,8 +1,8 @@
 <section class="page-wrap">
   <app-section-header
-    eyebrow="Studio Journal"
-    title="Practical guidance before your camera day"
-    subtitle="Use these notes to prepare outfits, expectations, and timing with less uncertainty." />
+    eyebrow="Nhật Ký Studio"
+    title="Hướng dẫn thực tế trước ngày chụp"
+    subtitle="Dùng những chia sẻ này để chuẩn bị trang phục, kỳ vọng và lịch trình một cách chắc chắn hơn." />
 
   <div class="grid">
     @for (post of repo.blogPosts(); track post.id) {
@@ -10,16 +10,16 @@
         [title]="post.title"
         [description]="post.excerpt"
         [image]="post.coverImage"
-        [meta]="post.publishedAt + ' • ' + post.readingMinutes + ' min read'"
+        [meta]="post.publishedAt + ' • ' + post.readingMinutes + ' phút đọc'"
         [route]="'/blog/' + post.slug" />
     }
   </div>
 
   <app-conversion-banner
-    title="Ready to move from reading to planning?"
-    subtitle="Send your goals and we will suggest the right session format and preparation checklist."
-    primaryLabel="Plan my session"
+    title="Sẵn sàng chuyển từ đọc sang lên kế hoạch?"
+    subtitle="Gửi mục tiêu của bạn và chúng tôi sẽ gợi ý format buổi chụp phù hợp và checklist chuẩn bị."
+    primaryLabel="Lên kế hoạch buổi chụp"
     primaryRoute="/lien-he"
-    secondaryLabel="See services"
+    secondaryLabel="Xem dịch vụ"
     secondaryRoute="/dich-vu" />
 </section>

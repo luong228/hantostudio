@@ -18,12 +18,10 @@ export class ServicesPageComponent {
   private readonly seo = inject(SeoService);
 
   constructor() {
-    this.repo
-      .pageSeo$('/dich-vu', {
-        title: 'Photography Services | Lumen Atelier',
-        description:
-          'Explore premium photography services tailored for portraits, family stories, maternity moments, and personal branding.'
-      })
-      .subscribe((meta) => this.seo.update(meta));
+    this.seo.update(this.repo.seoForPath('/dich-vu', {
+      title: 'Photography Services | HANTO Studio',
+      description:
+        'Explore premium photography services tailored for portraits, family stories, maternity moments, and personal branding.'
+    }));
   }
 }

@@ -1,8 +1,8 @@
 <section class="page-wrap">
   <app-section-header
-    eyebrow="Portfolio Archive"
-    title="Browse complete sets to evaluate consistency, not just hero shots"
-    subtitle="Use these stories to choose the visual direction that feels closest to your own vision." />
+    eyebrow="Lưu Trữ Bộ Sưu Tập"
+    title="Xem bộ ảnh hoàn chỉnh để đánh giá sự nhất quán, không chỉ ảnh đại diện"
+    subtitle="Dùng những câu chuyện này để chọn hướng hình ảnh phù hợp nhất với tầm nhìn của bạn." />
 
   <div class="grid">
     @for (collection of repo.portfolioCollections(); track collection.id) {
@@ -10,16 +10,16 @@
         [title]="collection.title"
         [description]="collection.teaser"
         [image]="collection.coverImage"
-        [meta]="collection.category + ' • ' + collection.imageCount + ' photos'"
+        [meta]="collection.category + ' • ' + collection.imageCount + ' ảnh'"
           [route]="'/bo-suu-tap/' + collection.slug" />
     }
   </div>
 
   <app-conversion-banner
-    title="Found a mood that feels right?"
-    subtitle="Send us your favorite collection references and we will build a tailored session plan."
-    primaryLabel="Start planning"
+    title="Tìm thấy phong cách phù hợp với bạn?"
+    subtitle="Gửi cho chúng tôi những bộ sưu tập yêu thích và chúng tôi sẽ xây dựng kế hoạch buổi chụp phù hợp."
+    primaryLabel="Bắt đầu lên kế hoạch"
       primaryRoute="/lien-he"
-    secondaryLabel="View services"
+    secondaryLabel="Xem dịch vụ"
       secondaryRoute="/dich-vu" />
 </section>

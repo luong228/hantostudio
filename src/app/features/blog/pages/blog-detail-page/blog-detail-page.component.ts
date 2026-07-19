@@ -23,12 +23,9 @@ export class BlogDetailPageComponent {
   });
 
   constructor() {
-    this.repo.prefetchBlogBySlug(this.slug);
-    this.repo
-      .blogSeo$(this.slug, {
-        title: 'Journal Post | Lumen Atelier',
-        description: 'Read session guidance and photography insights from our studio team.'
-      })
-      .subscribe((meta) => this.seo.update(meta));
+    this.seo.update(this.repo.seoForBlogSlug(this.slug, {
+      title: 'Journal Post | HANTO Studio',
+      description: 'Read session guidance and photography insights from our studio team.'
+    }));
   }
 }

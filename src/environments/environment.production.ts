@@ -6,7 +6,7 @@ export const environment: AppEnvironment = {
   appBaseUrl: 'https://hantostudio-a133e.web.app',
   cms: {
     provider: 'strapi',
-    useMock: false,
+    useMock: true,
     apiBaseUrl: 'https://hantostudio-a133e.web.app/api',
     graphqlUrl: 'https://hantostudio-a133e.web.app/graphql'
   }

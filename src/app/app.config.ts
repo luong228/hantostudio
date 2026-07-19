@@ -7,7 +7,6 @@ import {
 } from '@angular/router';
 
 import { routes } from './app.routes';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
 import { provideStudioContentRepository } from './core/cms/repositories/studio-content.providers';
 
@@ -21,7 +20,6 @@ export const appConfig: ApplicationConfig = {
       withViewTransitions()
     ),
     ...provideStudioContentRepository(),
-    provideHttpClient(),
-    provideClientHydration(withEventReplay())
+    provideHttpClient()
   ]
 };

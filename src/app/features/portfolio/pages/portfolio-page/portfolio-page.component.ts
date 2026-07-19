@@ -18,11 +18,9 @@ export class PortfolioPageComponent {
   private readonly seo = inject(SeoService);
 
   constructor() {
-    this.repo
-      .pageSeo$('/bo-suu-tap', {
-        title: 'Portfolio Collections | Lumen Atelier',
-        description: 'Browse curated studio collections featuring portrait, family, maternity, and creative concept sessions.'
-      })
-      .subscribe((meta) => this.seo.update(meta));
+    this.seo.update(this.repo.seoForPath('/bo-suu-tap', {
+      title: 'Portfolio Collections | HANTO Studio',
+      description: 'Browse curated studio collections featuring portrait, family, maternity, and creative concept sessions.'
+    }));
   }
 }

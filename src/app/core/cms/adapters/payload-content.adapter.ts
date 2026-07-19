@@ -59,7 +59,7 @@ export function mapPayloadPage(doc: CmsPage): PageContent {
     title: doc.title,
     seo: mapCmsSeoToSeoMeta(doc.seo, {
       title: doc.title,
-      description: `${doc.title} at Lumen Atelier.`
+      description: `${doc.title} at HANTO Studio.`
     }),
     home: {
       hero: {
@@ -101,7 +101,7 @@ export function mapPayloadService(doc: CmsService): ServiceItem {
     durationMinutes: doc.durationMinutes,
     badges: doc.badges ?? [],
     seo: mapCmsSeoToSeoMeta(doc.seo, {
-      title: `${doc.name} | Lumen Atelier`,
+      title: `${doc.name} | HANTO Studio`,
       description: doc.shortDescription,
       image: doc.heroImage?.url
     })
@@ -118,7 +118,7 @@ export function mapPayloadPricing(doc: CmsPricingPackage): PricingPlan {
     features: doc.features ?? [],
     highlighted: doc.highlighted,
     seo: mapCmsSeoToSeoMeta(doc.seo, {
-      title: `${doc.name} Pricing | Lumen Atelier`,
+      title: `${doc.name} Pricing | HANTO Studio`,
       description: doc.summary
     })
   };
@@ -135,7 +135,7 @@ export function mapPayloadPortfolio(doc: CmsPortfolioCollection): PortfolioColle
     story: doc.story,
     imageCount: doc.imageCount,
     seo: mapCmsSeoToSeoMeta(doc.seo, {
-      title: `${doc.title} | Portfolio | Lumen Atelier`,
+      title: `${doc.title} | Portfolio | HANTO Studio`,
       description: doc.teaser,
       image: doc.coverImage?.url
     })
@@ -154,7 +154,7 @@ export function mapPayloadBlog(doc: CmsBlogPost): BlogPost {
     readingMinutes: doc.readingMinutes,
     tags: doc.tags ?? [],
     seo: mapCmsSeoToSeoMeta(doc.seo, {
-      title: `${doc.title} | Journal | Lumen Atelier`,
+      title: `${doc.title} | Journal | HANTO Studio`,
       description: doc.excerpt,
       image: doc.coverImage?.url
     })
@@ -168,7 +168,7 @@ export function mapPayloadFaq(doc: CmsFaqItem): FaqItem {
     answer: doc.answer,
     topic: doc.topic,
     seo: mapCmsSeoToSeoMeta(doc.seo, {
-      title: `${doc.question} | FAQ | Lumen Atelier`,
+      title: `${doc.question} | FAQ | HANTO Studio`,
       description: doc.answer
     })
   };

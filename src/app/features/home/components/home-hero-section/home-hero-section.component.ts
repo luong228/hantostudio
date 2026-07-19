@@ -26,7 +26,7 @@ export class HomeHeroSectionComponent {
   protected readonly floatingPhotoPlaceholders = [
     'https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=760&q=80',
     'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=760&q=80',
-    'https://images.unsplash.com/photo-1542204625-de293a3b5b7c?auto=format&fit=crop&w=760&q=80',
+    'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=760&q=80',
     'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=760&q=80',
     'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=760&q=80'
   ] as const;

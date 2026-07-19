@@ -61,7 +61,7 @@ export function mapStrapiPage(entity: StrapiEntity<CmsPage>): PageContent {
     title: cms.title,
     seo: mapCmsSeoToSeoMeta(cms.seo, {
       title: cms.title,
-      description: `${cms.title} at Lumen Atelier.`
+      description: `${cms.title} at HANTO Studio.`
     }),
     home: {
       hero: {
@@ -104,7 +104,7 @@ export function mapStrapiService(entity: StrapiEntity<CmsService>): ServiceItem 
     durationMinutes: cms.durationMinutes,
     badges: cms.badges ?? [],
     seo: mapCmsSeoToSeoMeta(cms.seo, {
-      title: `${cms.name} | Lumen Atelier`,
+      title: `${cms.name} | HANTO Studio`,
       description: cms.shortDescription,
       image: cms.heroImage?.url
     })
@@ -122,7 +122,7 @@ export function mapStrapiPricing(entity: StrapiEntity<CmsPricingPackage>): Prici
     features: cms.features ?? [],
     highlighted: cms.highlighted,
     seo: mapCmsSeoToSeoMeta(cms.seo, {
-      title: `${cms.name} Pricing | Lumen Atelier`,
+      title: `${cms.name} Pricing | HANTO Studio`,
       description: cms.summary
     })
   };
@@ -140,7 +140,7 @@ export function mapStrapiPortfolio(entity: StrapiEntity<CmsPortfolioCollection>)
     story: cms.story,
     imageCount: cms.imageCount,
     seo: mapCmsSeoToSeoMeta(cms.seo, {
-      title: `${cms.title} | Portfolio | Lumen Atelier`,
+      title: `${cms.title} | Portfolio | HANTO Studio`,
       description: cms.teaser,
       image: cms.coverImage?.url
     })
@@ -160,7 +160,7 @@ export function mapStrapiBlog(entity: StrapiEntity<CmsBlogPost>): BlogPost {
     readingMinutes: cms.readingMinutes,
     tags: cms.tags ?? [],
     seo: mapCmsSeoToSeoMeta(cms.seo, {
-      title: `${cms.title} | Journal | Lumen Atelier`,
+      title: `${cms.title} | Journal | HANTO Studio`,
       description: cms.excerpt,
       image: cms.coverImage?.url
     })
@@ -175,7 +175,7 @@ export function mapStrapiFaq(entity: StrapiEntity<CmsFaqItem>): FaqItem {
     answer: cms.answer,
     topic: cms.topic,
     seo: mapCmsSeoToSeoMeta(cms.seo, {
-      title: `${cms.question} | FAQ | Lumen Atelier`,
+      title: `${cms.question} | FAQ | HANTO Studio`,
       description: cms.answer
     })
   };

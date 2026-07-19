@@ -135,7 +135,7 @@ export class HttpStudioContentRepository implements StudioContentRepository {
 
   getStudioInfo(): Observable<StudioInfo> {
     return this.placeholder('studio information single type', {
-      brandName: 'Lumen Atelier',
+      brandName: 'HANTO Studio',
       tagline: '',
       address: '',
       openingHours: '',

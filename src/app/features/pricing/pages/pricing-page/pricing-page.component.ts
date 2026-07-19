@@ -17,11 +17,9 @@ export class PricingPageComponent {
   private readonly seo = inject(SeoService);
 
   constructor() {
-    this.repo
-      .pageSeo$('/bang-gia', {
-        title: 'Session Pricing | Lumen Atelier',
-        description: 'Transparent package pricing for premium photography sessions with styling and retouching.'
-      })
-      .subscribe((meta) => this.seo.update(meta));
+    this.seo.update(this.repo.seoForPath('/bang-gia', {
+      title: 'Session Pricing | HANTO Studio',
+      description: 'Transparent package pricing for premium photography sessions with styling and retouching.'
+    }));
   }
 }

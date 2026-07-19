@@ -17,11 +17,9 @@ export class FaqPageComponent {
   private readonly seo = inject(SeoService);
 
   constructor() {
-    this.repo
-      .pageSeo$('/cau-hoi-thuong-gap', {
-        title: 'Frequently Asked Questions | Lumen Atelier',
-        description: 'Find answers on booking, session flow, pricing, and delivery timelines.'
-      })
-      .subscribe((meta) => this.seo.update(meta));
+    this.seo.update(this.repo.seoForPath('/cau-hoi-thuong-gap', {
+      title: 'Frequently Asked Questions | HANTO Studio',
+      description: 'Find answers on booking, session flow, pricing, and delivery timelines.'
+    }));
   }
 }

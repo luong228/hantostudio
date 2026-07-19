@@ -16,12 +16,12 @@ import {
 import { NavItem } from '../models/site.models';
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Dich Vu', route: '/dich-vu' },
-  { label: 'Bang Gia', route: '/bang-gia' },
-  { label: 'Bo Suu Tap', route: '/bo-suu-tap' },
+  { label: 'Dịch Vụ', route: '/dich-vu' },
+  { label: 'Bảng Giá', route: '/bang-gia' },
+  { label: 'Bộ Sưu Tập', route: '/bo-suu-tap' },
   { label: 'Blog', route: '/blog' },
-  { label: 'Cau Hoi Thuong Gap', route: '/cau-hoi-thuong-gap' },
-  { label: 'Lien He', route: '/lien-he' }
+  { label: 'Câu Hỏi Thường Gặp', route: '/cau-hoi-thuong-gap' },
+  { label: 'Liên Hệ', route: '/lien-he' }
 ];
 
 export const PAGES: PageContent[] = [
@@ -29,34 +29,34 @@ export const PAGES: PageContent[] = [
     id: 'page-home',
     slug: 'home',
     path: '/',
-    title: 'Lumen Atelier | Premium Portrait And Family Photography Studio',
+    title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung Và Gia Đình Cao Cấp',
     seo: {
-      title: 'Lumen Atelier | Premium Portrait And Family Photography Studio',
-      description: 'Premium portrait, profile, family, maternity, and concept photography crafted with warmth and precision.',
-      keywords: 'portrait studio, family photography, maternity photos, profile photo studio'
+      title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung Và Gia Đình Cao Cấp',
+      description: 'Studio chụp ảnh chân dung, profile, gia đình, thai sản và concept cao cấp với sự ấm áp và tinh tế.',
+      keywords: 'studio chụp ảnh chân dung, chụp ảnh gia đình, ảnh thai sản, studio chụp ảnh profile'
     },
     home: {
       hero: {
-        eyebrow: 'Studio chup anh chan dung cao cap',
-        headline: 'Anh dep tu nhien, ro than thai, de ung dung ngay cho cong viec va ky niem gia dinh.',
+        eyebrow: 'Studio chụp ảnh chân dung cao cấp',
+        headline: 'Ảnh đẹp tự nhiên, rõ thần thái, dễ ứng dụng ngay cho công việc và kỷ niệm gia đình.',
         subheadline:
-          'Ban khong can biet tao dang. Doi ngu se huong dan posing, makeup, styling va flow buoi chup de anh vua dep vua that nhu ban.',
-        trustLine: '4.9/5 danh gia tu khach hang that, hon 8,500 buoi chup da thuc hien.',
-        primaryCtaLabel: 'Dat lich ngay',
+          'Bạn không cần biết tạo dáng. Đội ngũ sẽ hướng dẫn posing, makeup, styling và flow buổi chụp để ảnh vừa đẹp vừa thật như bạn.',
+        trustLine: '4.9/5 đánh giá từ khách hàng thật, hơn 8.500 buổi chụp đã thực hiện.',
+        primaryCtaLabel: 'Đặt lịch ngay',
         primaryCtaRoute: '/lien-he',
-        secondaryCtaLabel: 'Xem bang gia',
+        secondaryCtaLabel: 'Xem bảng giá',
         secondaryCtaRoute: '/bang-gia',
         heroImage:
           'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=80',
-        heroImageAlt: 'Client portrait during a premium studio photography session'
+        heroImageAlt: 'Chân dung khách hàng trong buổi chụp ảnh studio cao cấp'
       },
       finalCta: {
-        title: 'San sang chot lich chup phu hop voi ban?',
+        title: 'Sẵn sàng chốt lịch chụp phù hợp với bạn?',
         subtitle:
-          'Nhan tu van nhanh trong ngay de chon goi, concept va khung gio toi uu cho muc tieu cua ban.',
-        primaryLabel: 'Dat lich voi studio',
+          'Nhận tư vấn nhanh trong ngày để chọn gói, concept và khung giờ tối ưu cho mục tiêu của bạn.',
+        primaryLabel: 'Đặt lịch với studio',
         primaryRoute: '/lien-he',
-        secondaryLabel: 'Xem toan bo dich vu',
+        secondaryLabel: 'Xem toàn bộ dịch vụ',
         secondaryRoute: '/dich-vu'
       }
     }
@@ -65,159 +65,159 @@ export const PAGES: PageContent[] = [
     id: 'page-services',
     slug: 'services',
     path: '/dich-vu',
-    title: 'Photography Services | Lumen Atelier',
+    title: 'Dịch Vụ Chụp Ảnh | HANTO Studio',
     seo: {
-      title: 'Photography Services | Lumen Atelier',
-      description: 'Explore premium photography services tailored for portraits, family stories, maternity moments, and personal branding.'
+      title: 'Dịch Vụ Chụp Ảnh | HANTO Studio',
+      description: 'Khám phá các dịch vụ chụp ảnh cao cấp được thiết kế riêng cho chân dung, câu chuyện gia đình, khoảnh khắc thai sản và thương hiệu cá nhân.'
     }
   },
   {
     id: 'page-pricing',
     slug: 'pricing',
     path: '/bang-gia',
-    title: 'Session Pricing | Lumen Atelier',
+    title: 'Bảng Giá | HANTO Studio',
     seo: {
-      title: 'Session Pricing | Lumen Atelier',
-      description: 'Transparent package pricing for premium photography sessions with styling and retouching.'
+      title: 'Bảng Giá | HANTO Studio',
+      description: 'Bảng giá minh bạch cho các gói chụp ảnh cao cấp bao gồm styling và chỉnh sửa ảnh.'
     }
   },
   {
     id: 'page-portfolio',
     slug: 'portfolio',
     path: '/bo-suu-tap',
-    title: 'Portfolio Collections | Lumen Atelier',
+    title: 'Bộ Sưu Tập | HANTO Studio',
     seo: {
-      title: 'Portfolio Collections | Lumen Atelier',
-      description: 'Browse curated studio collections featuring portrait, family, maternity, and creative concept sessions.'
+      title: 'Bộ Sưu Tập | HANTO Studio',
+      description: 'Khám phá các bộ sưu tập được tuyển chọn từ studio với chân dung, gia đình, thai sản và concept sáng tạo.'
     }
   },
   {
     id: 'page-about',
     slug: 'about',
     path: '/about',
-    title: 'About The Studio | Lumen Atelier',
+    title: 'Về Studio | HANTO Studio',
     seo: {
-      title: 'About The Studio | Lumen Atelier',
-      description: 'Meet the team and philosophy behind our warm, premium photography experience.'
+      title: 'Về Studio | HANTO Studio',
+      description: 'Gặp gỡ đội ngũ và triết lý đằng sau trải nghiệm chụp ảnh ấm áp và cao cấp của chúng tôi.'
     }
   },
   {
     id: 'page-blog',
     slug: 'blog',
     path: '/blog',
-    title: 'Photography Journal | Lumen Atelier',
+    title: 'Nhật Ký Nhiếp Ảnh | HANTO Studio',
     seo: {
-      title: 'Photography Journal | Lumen Atelier',
-      description: 'Practical insights and inspiration for preparing elegant, meaningful photo sessions.'
+      title: 'Nhật Ký Nhiếp Ảnh | HANTO Studio',
+      description: 'Những chia sẻ thực tế và cảm hứng để chuẩn bị cho buổi chụp ảnh thanh lịch và ý nghĩa.'
     }
   },
   {
     id: 'page-faq',
     slug: 'faq',
     path: '/cau-hoi-thuong-gap',
-    title: 'Frequently Asked Questions | Lumen Atelier',
+    title: 'Câu Hỏi Thường Gặp | HANTO Studio',
     seo: {
-      title: 'Frequently Asked Questions | Lumen Atelier',
-      description: 'Find answers on booking, session flow, pricing, and delivery timelines.'
+      title: 'Câu Hỏi Thường Gặp | HANTO Studio',
+      description: 'Tìm câu trả lời về đặt lịch, quy trình buổi chụp, bảng giá và thời gian giao ảnh.'
     }
   },
   {
     id: 'page-contact',
     slug: 'contact',
     path: '/lien-he',
-    title: 'Contact And Booking | Lumen Atelier',
+    title: 'Liên Hệ Và Đặt Lịch | HANTO Studio',
     seo: {
-      title: 'Contact And Booking | Lumen Atelier',
-      description: 'Start your booking inquiry and plan a photography session with our studio team.'
+      title: 'Liên Hệ Và Đặt Lịch | HANTO Studio',
+      description: 'Bắt đầu yêu cầu đặt lịch và lên kế hoạch cho buổi chụp ảnh với đội ngũ studio của chúng tôi.'
     }
   }
 ];
 
 export const STUDIO_INFO: StudioInfo = {
-  brandName: 'Lumen Atelier',
-  tagline: 'A portrait studio where emotional honesty meets editorial craft.',
+  brandName: 'HANTO Studio',
+  tagline: 'Studio chân dung nơi sự chân thật cảm xúc gặp gỡ nghệ thuật editorial.',
   address: 'Tầng 3 T12-06, Khu Manhattan, Vinhomes Grand Park, Thủ Đức, Hồ Chí Minh, Việt Nam',
-  openingHours: 'Tue-Sun, 09:00-19:00',
+  openingHours: 'Thứ 3 - Chủ Nhật, 09:00-19:00',
   phone: '0396 887 597',
   email: 'hello@lumenatelier.vn'
 };
 
 export const CONTACT_CHANNELS: ContactChannel[] = [
-  { label: 'Phone', value: STUDIO_INFO.phone, href: 'tel:0396887597' },
+  { label: 'Điện thoại', value: STUDIO_INFO.phone, href: 'tel:0396887597' },
   { label: 'Email', value: STUDIO_INFO.email, href: 'mailto:hello@lumenatelier.vn' },
   { label: 'Zalo', value: '@lumenatelier.studio', href: 'https://zalo.me/0396887597' },
-  { label: 'Facebook', value: 'Lumen Atelier Studio', href: 'https://facebook.com' }
+  { label: 'Facebook', value: 'HANTO Studio Studio', href: 'https://facebook.com' }
 ];
 
 export const BRANCHES: BranchInfo[] = [
   {
-    name: 'TP Hồ Chí Minh Studio',
+    name: 'Studio TP Hồ Chí Minh',
     address: 'Tầng 3 T12-06, Khu Manhattan, Vinhomes Grand Park, Thủ Đức, Hồ Chí Minh, Việt Nam',
     phone: '0396 887 597'
   }
 ];
 
 export const TRUST_METRICS: TrustMetric[] = [
-  { label: 'Client satisfaction', value: '4.9 / 5', detail: 'from verified reviews and referral clients' },
-  { label: 'Years in studio craft', value: '11+', detail: 'directing portrait-led sessions every week' },
-  { label: 'Sessions delivered', value: '8,500+', detail: 'professionals, families, founders, and creatives' },
-  { label: 'Operating studios', value: '2', detail: 'designed for controlled light and quiet workflow' }
+  { label: 'Mức độ hài lòng', value: '4.9 / 5', detail: 'từ đánh giá thực và khách hàng giới thiệu' },
+  { label: 'Năm kinh nghiệm', value: '11+', detail: 'trực tiếp dẫn dắt buổi chụp chân dung mỗi tuần' },
+  { label: 'Buổi chụp đã thực hiện', value: '8.500+', detail: 'chuyên gia, gia đình, nhà sáng lập và người sáng tạo' },
+  { label: 'Studio đang hoạt động', value: '2', detail: 'được thiết kế cho ánh sáng kiểm soát và quy trình yên tĩnh' }
 ];
 
 export const WHY_CHOOSE_ITEMS: WhyChooseItem[] = [
   {
-    title: 'Direction that feels natural on camera',
-    description: 'You are coached in small, clear prompts so expression stays authentic, never forced.'
+    title: 'Hướng dẫn tự nhiên trước ống kính',
+    description: 'Bạn được hướng dẫn qua những gợi ý nhỏ, rõ ràng để biểu cảm luôn chân thực, không gượng gạo.'
   },
   {
-    title: 'Pre-session styling guidance',
-    description: 'We help you plan wardrobe tones, textures, and combinations that photograph beautifully.'
+    title: 'Tư vấn phong cách trước buổi chụp',
+    description: 'Chúng tôi giúp bạn lên kế hoạch tông màu, chất liệu và cách phối trang phục đẹp khi lên ảnh.'
   },
   {
-    title: 'Refined retouch without plastic skin',
-    description: 'Skin texture stays believable while color, contrast, and distractions are cleaned with care.'
+    title: 'Chỉnh sửa tinh tế, giữ nguyên kết cấu da',
+    description: 'Kết cấu da vẫn tự nhiên trong khi màu sắc, độ tương phản và chi tiết rối được xử lý cẩn thận.'
   },
   {
-    title: 'Clear timeline and communication',
-    description: 'No guesswork between booking and delivery. We keep every milestone visible and on schedule.'
+    title: 'Lịch trình và liên lạc rõ ràng',
+    description: 'Không có sự mơ hồ từ lúc đặt lịch đến khi nhận ảnh. Chúng tôi đảm bảo mọi mốc thời gian rõ ràng và đúng hẹn.'
   }
 ];
 
 export const BOOKING_STEPS: BookingStep[] = [
   {
     step: '01',
-    title: 'Consult and align vision',
-    description: 'We map your purpose, preferred mood, and intended use of images before booking.'
+    title: 'Tư vấn và thống nhất ý tưởng',
+    description: 'Chúng tôi xác định mục đích, phong cách mong muốn và cách sử dụng ảnh trước khi đặt lịch.'
   },
   {
     step: '02',
-    title: 'Session day with guided pacing',
-    description: 'You are directed through expression, movement, and posture while staying fully comfortable.'
+    title: 'Ngày chụp với nhịp dẫn dắt chuyên nghiệp',
+    description: 'Bạn được hướng dẫn về biểu cảm, chuyển động và tư thế trong khi luôn cảm thấy thoải mái.'
   },
   {
     step: '03',
-    title: 'Select and receive final set',
-    description: 'Pick your favorite frames from preview proofing and receive polished finals on timeline.'
+    title: 'Chọn ảnh và nhận bộ ảnh hoàn thiện',
+    description: 'Chọn những khung hình yêu thích từ bản xem trước và nhận ảnh đã chỉnh sửa hoàn thiện đúng hẹn.'
   }
 ];
 
 export const TESTIMONIALS: TestimonialItem[] = [
   {
-    name: 'Minh Chau',
-    sessionType: 'Maternity Glow Session',
-    quote: 'I was guided clearly but never overwhelmed. The final set felt elegant and truly personal.',
+    name: 'Minh Châu',
+    sessionType: 'Buổi chụp thai sản',
+    quote: 'Tôi được hướng dẫn rõ ràng nhưng không bao giờ cảm thấy áp lực. Bộ ảnh cuối cùng thật thanh lịch và rất cá nhân.',
     rating: 5
   },
   {
-    name: 'Hoang Nam',
-    sessionType: 'Profile Portrait Session',
-    quote: 'I came for business portraits and ended up with images I now use everywhere. Process was incredibly smooth.',
+    name: 'Hoàng Nam',
+    sessionType: 'Buổi chụp chân dung cá nhân',
+    quote: 'Tôi đến để chụp ảnh doanh nhân và kết thúc với những bức ảnh tôi dùng ở khắp nơi. Quy trình cực kỳ trơn tru.',
     rating: 5
   },
   {
-    name: 'Gia Bao Family',
-    sessionType: 'Family Heirloom Session',
-    quote: 'Our kids settled quickly and the team handled every moment calmly. The gallery feels alive and timeless.',
+    name: 'Gia đình Gia Bảo',
+    sessionType: 'Buổi chụp ảnh gia đình lưu truyền',
+    quote: 'Các con tôi nhanh chóng hòa vào không khí và đội ngũ xử lý mọi khoảnh khắc một cách bình tĩnh. Bộ ảnh trông thật sống động và vượt thời gian.',
     rating: 5
   }
 ];
@@ -226,10 +226,10 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'svc-portrait-signature',
     slug: 'chan-dung',
-    name: 'Chup Anh Chan Dung',
-    shortDescription: 'Chan dung editorial cho profile ca nhan, thuong hieu ca nhan va ky niem cot moc.',
+    name: 'Chụp Ảnh Chân Dung',
+    shortDescription: 'Chân dung editorial cho profile cá nhân, thương hiệu cá nhân và kỷ niệm cột mốc.',
     description:
-      'Goi chan dung chu luc voi quy trinh makeup, styling, huong dan tao dang va retouch cao cap de ban len hinh tu nhien, sang va dung than thai.',
+      'Gói chân dung chủ lực với quy trình makeup, styling, hướng dẫn tạo dáng và retouch cao cấp để bạn lên hình tự nhiên, sáng và đúng thần thái.',
     heroImage: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1400&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1100&q=80',
@@ -237,15 +237,15 @@ export const SERVICES: ServiceItem[] = [
     ],
     startingPrice: 4200000,
     durationMinutes: 90,
-    badges: ['Dat nhieu nhat', 'Ho tro styling']
+    badges: ['Đặt nhiều nhất', 'Hỗ trợ styling']
   },
   {
     id: 'svc-family-heirloom',
     slug: 'gia-dinh',
-    name: 'Chup Anh Gia Dinh',
-    shortDescription: 'Anh gia dinh tu nhien, cam xuc va de tre nho hop tac trong buoi chup.',
+    name: 'Chụp Ảnh Gia Đình',
+    shortDescription: 'Ảnh gia đình tự nhiên, cảm xúc và dễ để trẻ nhỏ hợp tác trong buổi chụp.',
     description:
-      'Dich vu danh cho gia dinh muon giu lai khoanh khac that, doi ngu dieu tiet nhan do va nhac nhip de anh dep ma van tu nhien.',
+      'Dịch vụ dành cho gia đình muốn giữ lại khoảnh khắc thật, đội ngũ điều tiết nhịp độ và nhịp điệu để ảnh đẹp mà vẫn tự nhiên.',
     heroImage: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1400&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1100&q=80',
@@ -253,15 +253,15 @@ export const SERVICES: ServiceItem[] = [
     ],
     startingPrice: 5600000,
     durationMinutes: 120,
-    badges: ['Pho bien', 'San sang len album']
+    badges: ['Phổ biến', 'Sẵn sàng lên album']
   },
   {
     id: 'svc-maternity-glow',
     slug: 'ao-dai-thai-san-concept',
-    name: 'Ao Dai / Thai San / Concept',
-    shortDescription: 'Nhom buoi chup concept voi trang phuc, bo canh va cau chuyen duoc thiet ke rieng.',
+    name: 'Áo Dài / Thai Sản / Concept',
+    shortDescription: 'Nhóm buổi chụp concept với trang phục, bối cảnh và câu chuyện được thiết kế riêng.',
     description:
-      'Phu hop voi khach hang muon bo anh mang tinh chu de ro rang: ao dai, thai san hoac concept nghe thuat voi quy trinh san xuat tron goi.',
+      'Phù hợp với khách hàng muốn bộ ảnh mang tính chủ đề rõ ràng: áo dài, thai sản hoặc concept nghệ thuật với quy trình sản xuất trọn gói.',
     heroImage: 'https://images.unsplash.com/photo-1494790108755-2616c5e4f49c?auto=format&fit=crop&w=1400&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?auto=format&fit=crop&w=1100&q=80',
@@ -269,7 +269,7 @@ export const SERVICES: ServiceItem[] = [
     ],
     startingPrice: 4800000,
     durationMinutes: 100,
-    badges: ['Concept theo yeu cau', 'Tron goi styling']
+    badges: ['Concept theo yêu cầu', 'Trọn gói styling']
   }
 ];
 
@@ -335,31 +335,31 @@ export const PORTFOLIO_COLLECTIONS: PortfolioCollection[] = [
   {
     id: 'pf-city-editorial',
     slug: 'city-editorial',
-    title: 'City Editorial Light',
+    title: 'Ánh Sáng Editorial Đô Thị',
     category: 'portrait',
     coverImage: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1400&q=80',
-    teaser: 'Soft urban tones with confident, modern styling.',
-    story: 'Built around architecture and natural reflections, this collection highlights structured lines and expressive portraits.',
+    teaser: 'Tông màu đô thị nhẹ nhàng với phong cách tự tin, hiện đại.',
+    story: 'Được xây dựng quanh kiến trúc và phản chiếu tự nhiên, bộ sưu tập này làm nổi bật đường nét có cấu trúc và chân dung biểu cảm.',
     imageCount: 42
   },
   {
     id: 'pf-home-warmth',
     slug: 'home-warmth',
-    title: 'Home Warmth Family Story',
+    title: 'Hơi Ấm Gia Đình',
     category: 'family',
     coverImage: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1400&q=80',
-    teaser: 'Everyday affection captured in golden window light.',
-    story: 'A home-based family session that celebrates tenderness, playful chaos, and intergenerational connection.',
+    teaser: 'Tình cảm thường ngày được ghi lại trong ánh sáng vàng từ cửa sổ.',
+    story: 'Một buổi chụp gia đình tại nhà tôn vinh sự dịu dàng, những khoảnh khắc vui đùa và sự kết nối giữa các thế hệ.',
     imageCount: 57
   },
   {
     id: 'pf-silhouette-bloom',
     slug: 'silhouette-bloom',
-    title: 'Silhouette Bloom',
+    title: 'Bóng Hình Nở Rộ',
     category: 'maternity',
     coverImage: 'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?auto=format&fit=crop&w=1400&q=80',
-    teaser: 'Minimalist silhouettes with poetic mood and grace.',
-    story: 'A calm studio concept focused on shape, posture, and the emotional anticipation of new life.',
+    teaser: 'Bóng hình tối giản với tâm trạng thơ mộng và duyên dáng.',
+    story: 'Một concept studio bình yên tập trung vào hình dáng, tư thế và cảm xúc chờ đón sự sống mới.',
     imageCount: 36
   }
 ];
@@ -368,10 +368,10 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'blog-what-to-wear',
     slug: 'what-to-wear-for-portrait-session',
-    title: 'What To Wear For A Portrait Session That Feels Timeless',
-    excerpt: 'A practical framework for choosing outfits that elevate your photos without feeling overstyled.',
+    title: 'Mặc Gì Cho Buổi Chụp Chân Dung Để Ảnh Đẹp Mãi Theo Thời Gian',
+    excerpt: 'Hướng dẫn thực tế để chọn trang phục giúp ảnh đẹp hơn mà không bị cảm giác quá cầu kỳ.',
     content:
-      'Choose textures over loud prints, coordinate tones rather than matching exactly, and prioritize silhouettes you can move in naturally. Bring one structured look and one relaxed look for visual depth.',
+      'Chọn chất liệu thay vì họa tiết nổi bật, phối tông màu thay vì đồng phục hoàn toàn, và ưu tiên dáng trang phục bạn có thể tự do cử động. Mang một bộ trang trọng và một bộ năng động để tạo chiều sâu hình ảnh.',
     coverImage: 'https://images.unsplash.com/photo-1464863979621-258859e62245?auto=format&fit=crop&w=1400&q=80',
     publishedAt: '2026-06-02',
     readingMinutes: 6,
@@ -380,10 +380,10 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'blog-family-session-flow',
     slug: 'family-session-flow-with-kids',
-    title: 'How We Keep Family Sessions Relaxed Even With Little Kids',
-    excerpt: 'Our session flow is designed to preserve energy, mood, and genuine moments.',
+    title: 'Làm Thế Nào Chúng Tôi Giữ Buổi Chụp Gia Đình Thoải Mái Dù Có Trẻ Nhỏ',
+    excerpt: 'Quy trình buổi chụp của chúng tôi được thiết kế để giữ năng lượng, tâm trạng và những khoảnh khắc chân thực.',
     content:
-      'We begin with movement, then pause for close portraits, and finish with playful interactions. This rhythm helps children settle naturally and keeps expressions authentic.',
+      'Chúng tôi bắt đầu với những cử động, rồi dừng lại để chụp chân dung gần, và kết thúc bằng những tương tác vui chơi. Nhịp độ này giúp trẻ nhỏ tự nhiên hòa vào và giữ biểu cảm chân thực.',
     coverImage: 'https://images.unsplash.com/photo-1519340333755-c5ac7d0f7f7e?auto=format&fit=crop&w=1400&q=80',
     publishedAt: '2026-05-12',
     readingMinutes: 5,
@@ -394,26 +394,26 @@ export const BLOG_POSTS: BlogPost[] = [
 export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 'faq-booking-deposit',
-    question: 'Dat lich chup nhu the nao?',
-    answer: 'Dat coc 30% de giu lich. Studio se khoa khung gio va gui checklist chuan bi ngay sau khi xac nhan.',
+    question: 'Đặt lịch chụp như thế nào?',
+    answer: 'Đặt cọc 30% để giữ lịch. Studio sẽ khóa khung giờ và gửi checklist chuẩn bị ngay sau khi xác nhận.',
     topic: 'booking'
   },
   {
     id: 'faq-session-duration',
-    question: 'Co can dat coc truoc khong?',
-    answer: 'Co. Muc coc 30% giup studio bo tri ekip, makeup va set chup theo lich cua ban.',
+    question: 'Có cần đặt cọc trước không?',
+    answer: 'Có. Mức cọc 30% giúp studio bố trí ekip, makeup và set chụp theo lịch của bạn.',
     topic: 'pricing'
   },
   {
     id: 'faq-turnaround',
-    question: 'Bao lau nhan anh?',
-    answer: 'Anh preview gui sau 2-3 ngay. Anh retouch ban chinh duoc ban giao trong 7-10 ngay lam viec.',
+    question: 'Bao lâu nhận ảnh?',
+    answer: 'Ảnh preview gửi sau 2-3 ngày. Ảnh retouch bản chính được bàn giao trong 7-10 ngày làm việc.',
     topic: 'delivery'
   },
   {
     id: 'faq-locations',
-    question: 'Studio co chup o dau?',
-    answer: 'Hien co 2 chi nhanh tai Quan 3 va Thu Duc, dong thoi ho tro concept ngoai canh theo yeu cau.',
+    question: 'Studio có chụp ở đâu?',
+    answer: 'Hiện có 2 chi nhánh tại Quận 3 và Thủ Đức, đồng thời hỗ trợ concept ngoại cảnh theo yêu cầu.',
     topic: 'session'
   }
 ];
