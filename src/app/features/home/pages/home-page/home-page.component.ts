@@ -7,7 +7,6 @@ import { HomeFaqPreviewComponent } from '../../components/home-faq-preview/home-
 import { HomeFeaturedServicesComponent } from '../../components/home-featured-services/home-featured-services.component';
 import { HomeFinalCtaComponent } from '../../components/home-final-cta/home-final-cta.component';
 import { HomeHeroSectionComponent } from '../../components/home-hero-section/home-hero-section.component';
-import { HomePortfolioPreviewComponent } from '../../components/home-portfolio-preview/home-portfolio-preview.component';
 import { HomePricingTeaserComponent } from '../../components/home-pricing-teaser/home-pricing-teaser.component';
 import { HomeTestimonialsComponent } from '../../components/home-testimonials/home-testimonials.component';
 import { HomeWhyChooseComponent } from '../../components/home-why-choose/home-why-choose.component';
@@ -22,7 +21,6 @@ import { SectionHeaderComponent } from '../../../../shared/ui/section-header/sec
     HomePricingTeaserComponent,
     HomeFeaturedServicesComponent,
     HomeWhyChooseComponent,
-    HomePortfolioPreviewComponent,
     HomeTestimonialsComponent,
     HomeFaqPreviewComponent,
     HomeBranchesContactComponent,
@@ -40,7 +38,6 @@ export class HomePageComponent {
   private readonly seo = inject(SeoService);
   protected readonly featuredServices = computed(() => this.repo.services().slice(0, 3));
   protected readonly featuredPlans = computed(() => this.repo.pricingPlans().slice(0, 3));
-  protected readonly featuredCollections = computed(() => this.repo.portfolioCollections().slice(0, 3));
   protected readonly featuredFaqs = computed(() => this.repo.faqItems().slice(0, 4));
   protected readonly heroMetrics = computed(() => this.repo.trustMetrics().slice(0, 4));
   protected readonly homeContent = computed(() => this.repo.homePageContent());

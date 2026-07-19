@@ -5,7 +5,6 @@ import {
   ContactChannel,
   FaqItem,
   PageContent,
-  PortfolioCollection,
   PricingPlan,
   ServiceItem,
   StudioInfo,
@@ -18,7 +17,6 @@ import { NavItem } from '../models/site.models';
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Dịch Vụ', route: '/dich-vu' },
   { label: 'Bảng Giá', route: '/bang-gia' },
-  { label: 'Bộ Sưu Tập', route: '/bo-suu-tap' },
   { label: 'Blog', route: '/blog' },
   { label: 'Câu Hỏi Thường Gặp', route: '/cau-hoi-thuong-gap' },
   { label: 'Liên Hệ', route: '/lien-he' }
@@ -79,16 +77,6 @@ export const PAGES: PageContent[] = [
     seo: {
       title: 'Bảng Giá | HANTO Studio',
       description: 'Bảng giá minh bạch cho các gói chụp ảnh cao cấp bao gồm styling và chỉnh sửa ảnh.'
-    }
-  },
-  {
-    id: 'page-portfolio',
-    slug: 'portfolio',
-    path: '/bo-suu-tap',
-    title: 'Bộ Sưu Tập | HANTO Studio',
-    seo: {
-      title: 'Bộ Sưu Tập | HANTO Studio',
-      description: 'Khám phá các bộ sưu tập được tuyển chọn từ studio với chân dung, gia đình, thai sản và concept sáng tạo.'
     }
   },
   {
@@ -342,39 +330,6 @@ export const PRICING_PLANS: PricingPlan[] = [
       'Tặng kèm Nail + Lens',
       'Tặng kèm bộ ảnh beauty'
     ]
-  }
-];
-
-export const PORTFOLIO_COLLECTIONS: PortfolioCollection[] = [
-  {
-    id: 'pf-city-editorial',
-    slug: 'city-editorial',
-    title: 'Ánh Sáng Editorial Đô Thị',
-    category: 'portrait',
-    coverImage: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1400&q=80',
-    teaser: 'Tông màu đô thị nhẹ nhàng với phong cách tự tin, hiện đại.',
-    story: 'Được xây dựng quanh kiến trúc và phản chiếu tự nhiên, bộ sưu tập này làm nổi bật đường nét có cấu trúc và chân dung biểu cảm.',
-    imageCount: 42
-  },
-  {
-    id: 'pf-home-warmth',
-    slug: 'home-warmth',
-    title: 'Hơi Ấm Gia Đình',
-    category: 'family',
-    coverImage: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1400&q=80',
-    teaser: 'Tình cảm thường ngày được ghi lại trong ánh sáng vàng từ cửa sổ.',
-    story: 'Một buổi chụp gia đình tại nhà tôn vinh sự dịu dàng, những khoảnh khắc vui đùa và sự kết nối giữa các thế hệ.',
-    imageCount: 57
-  },
-  {
-    id: 'pf-silhouette-bloom',
-    slug: 'silhouette-bloom',
-    title: 'Bóng Hình Nở Rộ',
-    category: 'maternity',
-    coverImage: 'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?auto=format&fit=crop&w=1400&q=80',
-    teaser: 'Bóng hình tối giản với tâm trạng thơ mộng và duyên dáng.',
-    story: 'Một concept studio bình yên tập trung vào hình dáng, tư thế và cảm xúc chờ đón sự sống mới.',
-    imageCount: 36
   }
 ];
 

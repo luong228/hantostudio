@@ -6,7 +6,6 @@ import {
   FaqItem,
   NavItem,
   PageContent,
-  PortfolioCollection,
   PricingPlan,
   ServiceItem,
   StudioInfo,
@@ -24,9 +23,6 @@ export interface StudioContentRepository {
   getServiceBySlug(slug: string): Observable<ServiceItem | null>;
 
   listPricingPackages(): Observable<PricingPlan[]>;
-
-  listPortfolioCollections(): Observable<PortfolioCollection[]>;
-  getPortfolioCollectionBySlug(slug: string): Observable<PortfolioCollection | null>;
 
   listBlogPosts(): Observable<BlogPost[]>;
   getBlogPostBySlug(slug: string): Observable<BlogPost | null>;

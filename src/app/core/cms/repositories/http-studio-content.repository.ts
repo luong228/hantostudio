@@ -10,7 +10,6 @@ import {
   FaqItem,
   NavItem,
   PageContent,
-  PortfolioCollection,
   PricingPlan,
   ServiceItem,
   StudioInfo,
@@ -23,7 +22,6 @@ import {
   mapPayloadBranch,
   mapPayloadFaq,
   mapPayloadPage,
-  mapPayloadPortfolio,
   mapPayloadPricing,
   mapPayloadService,
   mapPayloadTestimonial
@@ -33,7 +31,6 @@ import {
   mapStrapiBranch,
   mapStrapiFaq,
   mapStrapiPage,
-  mapStrapiPortfolio,
   mapStrapiPricing,
   mapStrapiService,
   mapStrapiTestimonial
@@ -43,7 +40,6 @@ import {
   CmsBranch,
   CmsFaqItem,
   CmsPage,
-  CmsPortfolioCollection,
   CmsPricingPackage,
   CmsService,
   CmsTestimonial
@@ -84,17 +80,6 @@ export class HttpStudioContentRepository implements StudioContentRepository {
       return this.fetchStrapiCollection<CmsPricingPackage, PricingPlan>('pricing-packages', mapStrapiPricing);
     }
     return this.fetchPayloadCollection<CmsPricingPackage, PricingPlan>('pricing-packages', mapPayloadPricing);
-  }
-
-  listPortfolioCollections(): Observable<PortfolioCollection[]> {
-    if (this.provider === 'strapi') {
-      return this.fetchStrapiCollection<CmsPortfolioCollection, PortfolioCollection>('portfolio-collections', mapStrapiPortfolio);
-    }
-    return this.fetchPayloadCollection<CmsPortfolioCollection, PortfolioCollection>('portfolio-collections', mapPayloadPortfolio);
-  }
-
-  getPortfolioCollectionBySlug(slug: string): Observable<PortfolioCollection | null> {
-    return this.listPortfolioCollections().pipe(map((items) => items.find((item) => item.slug === slug) ?? null));
   }
 
   listBlogPosts(): Observable<BlogPost[]> {

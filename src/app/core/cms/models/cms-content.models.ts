@@ -65,18 +65,6 @@ export interface CmsPricingPackage {
   seo?: CmsSeoField;
 }
 
-export interface CmsPortfolioCollection {
-  id: string;
-  slug: string;
-  title: string;
-  category: 'portrait' | 'family' | 'maternity' | 'concept' | 'profile';
-  coverImage?: CmsImageField;
-  teaser: string;
-  story: string;
-  imageCount: number;
-  seo?: CmsSeoField;
-}
-
 export interface CmsBlogPost {
   id: string;
   slug: string;

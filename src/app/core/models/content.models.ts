@@ -67,18 +67,6 @@ export interface PricingPlan {
   seo?: SeoMeta;
 }
 
-export interface PortfolioCollection {
-  id: string;
-  slug: string;
-  title: string;
-  category: 'portrait' | 'family' | 'maternity' | 'concept' | 'profile';
-  coverImage: string;
-  teaser: string;
-  story: string;
-  imageCount: number;
-  seo?: SeoMeta;
-}
-
 export interface BlogPost {
   id: string;
   slug: string;

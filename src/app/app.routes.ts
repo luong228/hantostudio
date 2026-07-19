@@ -29,20 +29,6 @@ export const routes: Routes = [
 					import('./features/pricing/pages/pricing-page/pricing-page.component').then((m) => m.PricingPageComponent)
 			},
 			{
-				path: 'bo-suu-tap',
-				loadComponent: () =>
-					import('./features/portfolio/pages/portfolio-page/portfolio-page.component').then(
-						(m) => m.PortfolioPageComponent
-					)
-			},
-			{
-				path: 'bo-suu-tap/:slug',
-				loadComponent: () =>
-					import('./features/portfolio/pages/portfolio-detail-page/portfolio-detail-page.component').then(
-						(m) => m.PortfolioDetailPageComponent
-					)
-			},
-			{
 				path: 'about',
 				loadComponent: () =>
 					import('./features/about/pages/about-page/about-page.component').then((m) => m.AboutPageComponent)

@@ -8,7 +8,6 @@ import {
   FAQ_ITEMS,
   NAV_ITEMS,
   PAGES,
-  PORTFOLIO_COLLECTIONS,
   PRICING_PLANS,
   SERVICES,
   STUDIO_INFO,
@@ -23,7 +22,6 @@ import {
   FaqItem,
   NavItem,
   PageContent,
-  PortfolioCollection,
   PricingPlan,
   ServiceItem,
   StudioInfo,
@@ -54,14 +52,6 @@ export class MockStudioContentRepository implements StudioContentRepository {
 
   listPricingPackages(): Observable<PricingPlan[]> {
     return of(PRICING_PLANS);
-  }
-
-  listPortfolioCollections(): Observable<PortfolioCollection[]> {
-    return of(PORTFOLIO_COLLECTIONS);
-  }
-
-  getPortfolioCollectionBySlug(slug: string): Observable<PortfolioCollection | null> {
-    return of(PORTFOLIO_COLLECTIONS.find((item) => item.slug === slug) ?? null);
   }
 
   listBlogPosts(): Observable<BlogPost[]> {

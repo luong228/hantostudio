@@ -14,10 +14,6 @@ export const ROUTE_SEO_MAP: RouteSeoConfig = {
     title: 'Session Pricing | HANTO Studio',
     description: 'Transparent package pricing for premium photography sessions with styling and retouching.'
   },
-  '/bo-suu-tap': {
-    title: 'Portfolio Collections | HANTO Studio',
-    description: 'Browse curated studio collections featuring portrait, family, maternity, and creative concept sessions.'
-  },
   '/about': {
     title: 'About The Studio | HANTO Studio',
     description: 'Meet the team and philosophy behind our warm, premium photography experience.'

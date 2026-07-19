@@ -5,7 +5,6 @@ import {
   FinalCtaContent,
   HomeHeroContent,
   PageContent,
-  PortfolioCollection,
   PricingPlan,
   ServiceItem,
   TestimonialItem
@@ -15,7 +14,6 @@ import {
   CmsBranch,
   CmsFaqItem,
   CmsPage,
-  CmsPortfolioCollection,
   CmsPricingPackage,
   CmsService,
   CmsTestimonial
@@ -120,24 +118,6 @@ export function mapPayloadPricing(doc: CmsPricingPackage): PricingPlan {
     seo: mapCmsSeoToSeoMeta(doc.seo, {
       title: `${doc.name} Pricing | HANTO Studio`,
       description: doc.summary
-    })
-  };
-}
-
-export function mapPayloadPortfolio(doc: CmsPortfolioCollection): PortfolioCollection {
-  return {
-    id: doc.id,
-    slug: doc.slug,
-    title: doc.title,
-    category: doc.category,
-    coverImage: doc.coverImage?.url ?? '',
-    teaser: doc.teaser,
-    story: doc.story,
-    imageCount: doc.imageCount,
-    seo: mapCmsSeoToSeoMeta(doc.seo, {
-      title: `${doc.title} | Portfolio | HANTO Studio`,
-      description: doc.teaser,
-      image: doc.coverImage?.url
     })
   };
 }

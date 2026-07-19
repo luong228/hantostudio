@@ -9,7 +9,6 @@ import {
   HomePageContent,
   NavItem,
   PageContent,
-  PortfolioCollection,
   PricingPlan,
   SeoMeta,
   ServiceItem,
@@ -41,7 +40,6 @@ export class ContentRepositoryService {
   readonly branches = toSignal(this.repository.listBranches(), { initialValue: [] as BranchInfo[] });
   readonly services = toSignal(this.repository.listServices(), { initialValue: [] as ServiceItem[] });
   readonly pricingPlans = toSignal(this.repository.listPricingPackages(), { initialValue: [] as PricingPlan[] });
-  readonly portfolioCollections = toSignal(this.repository.listPortfolioCollections(), { initialValue: [] as PortfolioCollection[] });
   readonly blogPosts = toSignal(this.repository.listBlogPosts(), { initialValue: [] as BlogPost[] });
   readonly faqItems = toSignal(this.repository.listFaqItems(), { initialValue: [] as FaqItem[] });
   readonly trustMetrics = toSignal(this.repository.listTrustMetrics(), { initialValue: [] as TrustMetric[] });
@@ -61,10 +59,6 @@ export class ContentRepositoryService {
     return this.services().find((item) => item.slug === slug) ?? null;
   }
 
-  portfolioBySlug(slug: string): PortfolioCollection | null {
-    return this.portfolioCollections().find((item) => item.slug === slug) ?? null;
-  }
-
   postBySlug(slug: string): BlogPost | null {
     return this.blogPosts().find((item) => item.slug === slug) ?? null;
   }
@@ -75,10 +69,6 @@ export class ContentRepositoryService {
 
   seoForServiceSlug(slug: string, fallback: SeoMeta): SeoMeta {
     return resolveDetailSeo(fallback, this.serviceBySlug(slug)?.seo);
-  }
-
-  seoForPortfolioSlug(slug: string, fallback: SeoMeta): SeoMeta {
-    return resolveDetailSeo(fallback, this.portfolioBySlug(slug)?.seo);
   }
 
   seoForBlogSlug(slug: string, fallback: SeoMeta): SeoMeta {

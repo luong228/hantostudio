@@ -5,7 +5,6 @@ import {
   FinalCtaContent,
   HomeHeroContent,
   PageContent,
-  PortfolioCollection,
   PricingPlan,
   ServiceItem,
   TestimonialItem
@@ -15,7 +14,6 @@ import {
   CmsBranch,
   CmsFaqItem,
   CmsPage,
-  CmsPortfolioCollection,
   CmsPricingPackage,
   CmsService,
   CmsTestimonial
@@ -124,25 +122,6 @@ export function mapStrapiPricing(entity: StrapiEntity<CmsPricingPackage>): Prici
     seo: mapCmsSeoToSeoMeta(cms.seo, {
       title: `${cms.name} Pricing | HANTO Studio`,
       description: cms.summary
-    })
-  };
-}
-
-export function mapStrapiPortfolio(entity: StrapiEntity<CmsPortfolioCollection>): PortfolioCollection {
-  const cms = entity.attributes;
-  return {
-    id: String(entity.id),
-    slug: cms.slug,
-    title: cms.title,
-    category: cms.category,
-    coverImage: cms.coverImage?.url ?? '',
-    teaser: cms.teaser,
-    story: cms.story,
-    imageCount: cms.imageCount,
-    seo: mapCmsSeoToSeoMeta(cms.seo, {
-      title: `${cms.title} | Portfolio | HANTO Studio`,
-      description: cms.teaser,
-      image: cms.coverImage?.url
     })
   };
 }
