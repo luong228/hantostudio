@@ -94,15 +94,11 @@
   <div class="direct-contact">
     <p class="direct-contact__label">Hoặc liên hệ trực tiếp:</p>
     <div class="direct-contact__buttons">
-      <a href="tel:0396887597" class="direct-button">
-        <span class="direct-button__icon">📞</span> Gọi 0396 887 597
-      </a>
-      <a href="https://zalo.me/0396887597" target="_blank" rel="noopener noreferrer" class="direct-button">
-        <span class="direct-button__icon">💬</span> Nhắn Zalo
-      </a>
-      <a href="https://m.me/lumenatelier" target="_blank" rel="noopener noreferrer" class="direct-button">
-        <span class="direct-button__icon">✉️</span> Messenger
-      </a>
+      @for (channel of contactChannels(); track channel.label) {
+        <a [href]="channel.href" [target]="channel.label !== 'Phone' && channel.label !== 'Email' ? '_blank' : ''" [rel]="channel.label !== 'Phone' && channel.label !== 'Email' ? 'noopener noreferrer' : ''" class="direct-button">
+          <span class="direct-button__icon">{{ getChannelIcon(channel.label) }}</span> {{ channel.value }}
+        </a>
+      }
     </div>
   </div>
 </div>

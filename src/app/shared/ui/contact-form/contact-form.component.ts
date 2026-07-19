@@ -15,6 +15,7 @@ export class ContactFormComponent {
   private readonly repo = inject(ContentRepositoryService);
 
   protected readonly services = computed(() => this.repo.services());
+  protected readonly contactChannels = computed(() => this.repo.contactChannels());
 
   protected readonly contactForm = this.fb.group({
     fullName: ['', [Validators.required]],
@@ -29,13 +30,23 @@ export class ContactFormComponent {
     return !!(field && field.invalid && (field.dirty || field.touched));
   }
 
+  protected getChannelIcon(label: string): string {
+    const iconMap: Record<string, string> = {
+      'Phone': '📞',
+      'Email': '✉️',
+      'Zalo': '💬',
+      'Facebook': '👍'
+    };
+    return iconMap[label] || '📍';
+  }
+
   protected onSubmit(): void {
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();
       return;
     }
 
-    console.log('Contact Form Submitted:', this.contactForm.value);
+    
     alert('Cảm ơn bạn! Yêu cầu liên hệ đã được gửi thành công. Ekip sẽ gọi điện tư vấn cho bạn sớm nhất.');
     this.contactForm.reset({
       fullName: '',

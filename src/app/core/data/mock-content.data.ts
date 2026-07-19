@@ -145,7 +145,7 @@ export const STUDIO_INFO: StudioInfo = {
 export const CONTACT_CHANNELS: ContactChannel[] = [
   { label: 'Phone', value: STUDIO_INFO.phone, href: 'tel:0396887597' },
   { label: 'Email', value: STUDIO_INFO.email, href: 'mailto:hello@lumenatelier.vn' },
-  { label: 'Instagram', value: '@lumenatelier.studio', href: 'https://instagram.com' },
+  { label: 'Zalo', value: '@lumenatelier.studio', href: 'https://zalo.me/0396887597' },
   { label: 'Facebook', value: 'Lumen Atelier Studio', href: 'https://facebook.com' }
 ];
 
