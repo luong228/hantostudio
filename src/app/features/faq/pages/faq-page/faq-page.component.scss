@@ -1,41 +1,299 @@
-.page-wrap {
-  padding: 4.8rem clamp(1.6rem, 4vw, 6.4rem);
-  display: grid;
-  gap: 1.92rem;
+﻿:host {
+  display: block;
 }
 
+// ── Page shell ────────────────────────────────────────────────────────────────
+
+.page {
+  max-width: 88rem;
+  margin-inline: auto;
+  padding: 6.4rem clamp(2.4rem, 6vw, 8rem) 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+// ── Header ────────────────────────────────────────────────────────────────────
+
+.faq-hd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.faq-hd__eyebrow {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--primary);
+  opacity: 0.5;
+}
+
+.faq-hd__ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.88rem;
+  color: var(--primary);
+  opacity: 0.28;
+
+  span {
+    display: block;
+    width: 3.2rem;
+    height: 1px;
+    background: currentColor;
+  }
+
+  svg {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+  }
+}
+
+.faq-hd__title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(4rem, 6vw, 7.2rem);
+  line-height: 1.1;
+  color: var(--primary);
+  text-wrap: balance;
+}
+
+.faq-hd__sub {
+  margin: 0;
+  max-width: 58ch;
+  font-size: 1.44rem;
+  line-height: 1.78;
+  color: rgba(1, 25, 59, 0.54);
+}
+
+// ── FAQ list ──────────────────────────────────────────────────────────────────
+
 .faq-list {
-  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   gap: 1.2rem;
 }
 
-.faq-question{
-  color: var(--primary);
+// ── FAQ item card ─────────────────────────────────────────────────────────────
 
+.faq-item {
+  background: #ffffff;
+  border-radius: 2rem;
+  border: 1px solid rgba(1, 25, 59, 0.08);
+  box-shadow: 0 4px 18px rgba(1, 25, 59, 0.04);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+
+  &--open {
+    box-shadow: 0 6px 24px rgba(1, 25, 59, 0.08);
+    border-color: rgba(1, 25, 59, 0.12);
+  }
 }
+
+// ── Trigger button ────────────────────────────────────────────────────────────
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px solid rgba(1, 25, 59, 0.35);
+    outline-offset: -2px;
+  }
+}
+
+.faq-trigger__num {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 3.2rem;
+  line-height: 1;
+  color: rgba(1, 25, 59, 0.26);
+  min-width: 4rem;
+  flex-shrink: 0;
+  transition: color 0.18s ease;
+
+  .faq-item--open & {
+    color: rgba(1, 25, 59, 0.55);
+  }
+}
+
+.faq-trigger__sep {
+  width: 1px;
+  height: 2.6rem;
+  background: rgba(1, 25, 59, 0.13);
+  flex-shrink: 0;
+}
+
+.faq-trigger__q {
+  flex: 1;
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
+  line-height: 1.45;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.faq-trigger__icon {
+  flex-shrink: 0;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(1, 25, 59, 0.15);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(1, 25, 59, 0.50);
+  transition: background 0.18s ease, border-color 0.18s ease;
+
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .faq-item--open & {
+    background: rgba(209, 225, 245, 0.35);
+    border-color: rgba(1, 25, 59, 0.20);
+  }
+}
+
+// ── Answer panel ──────────────────────────────────────────────────────────────
 
 .faq-answer {
-  color:  #000;
+  // indent to align text below the question (past num + gap + sep + gap)
+  padding: 0.4rem 2.4rem 2.8rem calc(2.4rem + 4rem + 2rem + 1px + 2rem);
+  border-top: 1px solid rgba(1, 25, 59, 0.07);
+
+  p {
+    margin: 0;
+    font-size: 1.52rem;
+    line-height: 1.78;
+    color: rgba(1, 25, 59, 0.58);
+  }
 }
 
+// ── Bottom CTA ────────────────────────────────────────────────────────────────
 
-details {
-  border: 1px solid rgba(36, 25, 21, 0.15);
-  border-radius: 1.2rem;
-  padding: 1.36rem 1.6rem;
-  background: #fff;
+.faq-cta {
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.4rem;
+  background: #ffffff;
+  border-radius: 2rem;
+  border: 1px solid rgba(1, 25, 59, 0.08);
+  box-shadow: 0 4px 18px rgba(1, 25, 59, 0.04);
 }
 
-summary {
-  cursor: pointer;
+.faq-cta__icon {
+  flex-shrink: 0;
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(1, 25, 59, 0.10);
+  background: rgba(209, 225, 245, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(1, 25, 59, 0.55);
+
+  svg { width: 2.4rem; height: 2.4rem; }
+}
+
+.faq-cta__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.32rem;
+}
+
+.faq-cta__title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 2rem;
   font-weight: 600;
+  color: var(--primary);
+  line-height: 1.3;
 }
 
-p {
-  margin-bottom: 0;
-  color: #5a4a44;
+.faq-cta__sub {
+  margin: 0;
+  font-size: 1.4rem;
+  color: rgba(1, 25, 59, 0.54);
+  line-height: 1.55;
 }
 
-app-conversion-banner {
-  margin-top: 0.72rem;
+.faq-cta__btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.72rem;
+  padding: 1.12rem 2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(1, 25, 59, 0.28);
+  background: transparent;
+  color: var(--primary);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.18s ease, border-color 0.18s ease;
+
+  &:hover {
+    background: rgba(1, 25, 59, 0.04);
+    border-color: rgba(1, 25, 59, 0.45);
+  }
+
+  svg { width: 1.4rem; height: 1.4rem; }
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+
+@media (max-width: 640px) {
+  .faq-trigger {
+    gap: 1.4rem;
+    padding: 2rem 1.6rem;
+  }
+
+  .faq-trigger__num {
+    font-size: 2.6rem;
+    min-width: 3.2rem;
+  }
+
+  .faq-answer {
+    padding: 0.4rem 1.6rem 2.4rem 1.6rem;
+  }
+
+  .faq-cta {
+    flex-wrap: wrap;
+    padding: 2rem 1.6rem;
+    gap: 1.4rem;
+  }
+
+  .faq-cta__btn {
+    width: 100%;
+    justify-content: center;
+  }
 }

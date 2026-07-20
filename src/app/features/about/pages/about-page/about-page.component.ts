@@ -18,8 +18,8 @@ export class AboutPageComponent {
 
   constructor() {
     this.seo.update(this.repo.seoForPath('/about', {
-      title: 'About The Studio | HANTO Studio',
-      description: 'Meet the team and philosophy behind our warm, premium photography experience.'
+      title: 'Về Chúng Tôi | HANTO Studio',
+      description: 'Tìm hiểu về đội ngũ và triết lý đằng sau những trải nghiệm chụp ảnh ấm áp và đẳng cấp của HANTO Studio.'
     }));
   }
 }

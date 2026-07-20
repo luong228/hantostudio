@@ -19,8 +19,8 @@ export class BlogPageComponent {
 
   constructor() {
     this.seo.update(this.repo.seoForPath('/blog', {
-      title: 'Photography Journal | HANTO Studio',
-      description: 'Practical insights and inspiration for preparing elegant, meaningful photo sessions.'
+      title: 'Nhật Ký Nhiếp Ảnh | HANTO Studio',
+      description: 'Những chia sẻ thực tế và nguồn cảm hứng để chuẩn bị cho buổi chụp ảnh đẹp và đầy ý nghĩa.'
     }));
   }
 }

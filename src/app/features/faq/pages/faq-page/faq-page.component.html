@@ -1,23 +1,73 @@
-<section class="page-wrap">
-  <app-section-header
-    eyebrow="Câu Hỏi Thường Gặp"
-    title="Giải đáp giúp bạn đặt lịch dễ dàng hơn"
-    subtitle="Nếu bạn vẫn cần thêm thông tin, hãy gửi câu hỏi và chúng tôi sẽ trả lời trực tiếp." />
+<div class="page">
 
-  <div class="faq-list">
-    @for (item of repo.faqItems(); track item.id) {
-      <details>
-        <summary class="faq-question">{{ item.question }}</summary>
-        <p class="faq-answer">{{ item.answer }}</p>
-      </details>
+  <!-- ── Header ─────────────────────────────────────────────────── -->
+  <header class="faq-hd">
+    <p class="faq-hd__eyebrow">FAQ</p>
+    <div class="faq-hd__ornament" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z" /></svg>
+      <span></span>
+    </div>
+    <h1 class="faq-hd__title">Giải đáp nhanh<br>trước khi bạn đặt lịch chụp</h1>
+    <p class="faq-hd__sub">
+      Chúng tôi hiểu rằng trước khi đặt lịch, bạn sẽ có nhiều băn khoăn.<br>
+      Dưới đây là những câu hỏi phổ biến nhất của khách hàng tại HANTO Studio.<br>
+      Hy vọng phần giải đáp này sẽ giúp bạn an tâm và chuẩn bị tốt hơn cho buổi chụp.
+    </p>
+  </header>
+
+  <!-- ── Accordion ──────────────────────────────────────────────── -->
+  <ul class="faq-list" role="list">
+    @for (item of repo.faqItems(); track item.id; let i = $index) {
+      <li class="faq-item" [class.faq-item--open]="openId() === item.id">
+        <button
+          class="faq-trigger"
+          (click)="toggle(item.id)"
+          [attr.aria-expanded]="openId() === item.id"
+          [attr.aria-controls]="'faq-ans-' + item.id">
+          <span class="faq-trigger__num" aria-hidden="true">{{ fmt(i) }}</span>
+          <span class="faq-trigger__sep" aria-hidden="true"></span>
+          <span class="faq-trigger__q">{{ item.question }}</span>
+          <span class="faq-trigger__icon" aria-hidden="true">
+            @if (openId() === item.id) {
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M5 12h14"/>
+              </svg>
+            } @else {
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            }
+          </span>
+        </button>
+        @if (openId() === item.id) {
+          <div class="faq-answer" [id]="'faq-ans-' + item.id" role="region">
+            <p>{{ item.answer }}</p>
+          </div>
+        }
+      </li>
     }
+  </ul>
+
+  <!-- ── Bottom CTA ─────────────────────────────────────────────── -->
+  <div class="faq-cta" role="complementary">
+    <div class="faq-cta__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/>
+        <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+      </svg>
+    </div>
+    <div class="faq-cta__body">
+      <p class="faq-cta__title">Vẫn còn câu hỏi?</p>
+      <p class="faq-cta__sub">Liên hệ studio để được hỗ trợ nhanh trong ngày.</p>
+    </div>
+    <a routerLink="/lien-he" class="faq-cta__btn">
+      Liên hệ ngay
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
   </div>
 
-  <app-conversion-banner
-    title="Vẫn đang phân vân? Hãy để chúng tôi tư vấn trong một cuộc gọi nhanh"
-    subtitle="Chúng tôi sẽ giúp bạn chọn gói, định hướng styling và thời gian lý tưởng."
-    primaryLabel="Hỏi đội ngũ chúng tôi"
-    primaryRoute="/lien-he"
-    secondaryLabel="Xem bảng giá"
-    secondaryRoute="/bang-gia" />
-</section>
+</div>

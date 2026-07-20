@@ -18,8 +18,8 @@ export class PricingPageComponent {
 
   constructor() {
     this.seo.update(this.repo.seoForPath('/bang-gia', {
-      title: 'Session Pricing | HANTO Studio',
-      description: 'Transparent package pricing for premium photography sessions with styling and retouching.'
+      title: 'Bảng Giá Dịch Vụ | HANTO Studio',
+      description: 'Bảng giá minh bạch cho các gói chụp ảnh cao cấp bao gồm tư vấn phong cách và chỉnh sửa ảnh chuyên nghiệp.'
     }));
   }
 }

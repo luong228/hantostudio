@@ -46,9 +46,9 @@ export class HomePageComponent {
 
   constructor() {
     this.seo.update(this.repo.seoForPath('/', {
-      title: 'HANTO Studio | Premium Portrait And Family Photography Studio',
+      title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung & Gia Đình Cao Cấp',
       description:
-        'Premium portrait, profile, family, maternity, and concept photography crafted with warmth and precision.'
+        'Chụp ảnh chân dung, hồ sơ cá nhân, gia đình, thai sản và concept được thực hiện với sự ấm áp và tỉ mỉ từng chi tiết.'
     }));
   }
 }

@@ -19,9 +19,8 @@ export class ServicesPageComponent {
 
   constructor() {
     this.seo.update(this.repo.seoForPath('/dich-vu', {
-      title: 'Photography Services | HANTO Studio',
-      description:
-        'Explore premium photography services tailored for portraits, family stories, maternity moments, and personal branding.'
+      title: 'Dịch Vụ Chụp Ảnh | HANTO Studio',
+      description: 'Khám phá các dịch vụ chụp ảnh cao cấp dành cho chân dung cá nhân, gia đình, thai sản và concept sáng tạo.'
     }));
   }
 }

@@ -24,8 +24,8 @@ export class BlogDetailPageComponent {
 
   constructor() {
     this.seo.update(this.repo.seoForBlogSlug(this.slug, {
-      title: 'Journal Post | HANTO Studio',
-      description: 'Read session guidance and photography insights from our studio team.'
+      title: 'Bài Viết | HANTO Studio',
+      description: 'Đọc hướng dẫn và chia sẻ từ đội ngũ studio về phong cách chụp ảnh và cách chuẩn bị cho buổi chụp ý nghĩa.'
     }));
   }
 }
