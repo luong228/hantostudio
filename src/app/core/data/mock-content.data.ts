@@ -183,17 +183,17 @@ export const BOOKING_STEPS: BookingStep[] = [
   {
     step: '01',
     title: 'Tư vấn và thống nhất ý tưởng',
-    description: 'Chúng tôi xác định mục đích, phong cách mong muốn và cách sử dụng ảnh trước khi đặt lịch.'
+    description: 'Chúng tôi lắng nghe câu chuyện và mong muốn của bạn, từ đó tư vấn concept, phong cách và lên kế hoạch chụp phù hợp nhất.'
   },
   {
     step: '02',
-    title: 'Ngày chụp với nhịp dẫn dắt chuyên nghiệp',
-    description: 'Bạn được hướng dẫn về biểu cảm, chuyển động và tư thế trong khi luôn cảm thấy thoải mái.'
+    title: 'Ngày chụp với ekip hướng dẫn chi tiết',
+    description: 'Ekip hỗ trợ từ trang phục, tạo dáng đến cảm xúc, giúp bạn thoải mái và tự tin để có những khoảnh khắc tự nhiên, đẹp nhất.'
   },
   {
     step: '03',
     title: 'Chọn ảnh và nhận bộ ảnh hoàn thiện',
-    description: 'Chọn những khung hình yêu thích từ bản xem trước và nhận ảnh đã chỉnh sửa hoàn thiện đúng hẹn.'
+    description: 'Bạn được xem và chọn những bức ảnh yêu thích. Chúng tôi chỉnh sửa tỉ mỉ và bàn giao sản phẩm chỉnh chu, đúng hẹn.'
   }
 ];
 

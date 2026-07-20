@@ -1,9 +1,19 @@
 <section class="cta">
-  <p class="eyebrow">Last Step</p>
-  <h2 id="final-cta-title">{{ title() }}</h2>
-  <p>{{ subtitle() }}</p>
-  <div class="actions">
-    <app-button [label]="primaryLabel()" [route]="primaryRoute()" />
-    <app-button [label]="secondaryLabel()" [route]="secondaryRoute()" variant="ghost" />
+  <div class="cta__content">
+    <header class="cta__hd">
+      <p class="cta__eyebrow">Last Step</p>
+      <div class="cta__ornament" aria-hidden="true">
+        <span></span>
+        <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z" /></svg>
+        <span></span>
+      </div>
+    </header>
+    <h2 id="final-cta-title">{{ title() }}</h2>
+    <p class="cta__sub">{{ subtitle() }}</p>
+    <div class="cta__actions">
+      <app-button [label]="primaryLabel()" [route]="primaryRoute()" />
+      <app-button [label]="secondaryLabel()" [route]="secondaryRoute()" variant="ghost" />
+    </div>
   </div>
+  <div class="cta__deco" aria-hidden="true"></div>
 </section>

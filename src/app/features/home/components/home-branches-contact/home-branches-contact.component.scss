@@ -103,7 +103,8 @@ h2 {
   width: 4.6rem;
   height: 4.6rem;
   border-radius: 999px;
-  border: 1px solid rgba(1, 25, 59, 0.18);
+  border: 1px solid rgba(1, 25, 59, 0.14);
+  background: rgba(246, 224, 200, 0.4);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -115,6 +116,28 @@ h2 {
   svg {
     width: 2.2rem;
     height: 2.2rem;
+  }
+}
+
+.info-icon--zalo {
+  background: #0068ff;
+  border-color: #0068ff;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.12rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  border-radius: 1.2rem;
+}
+
+.info-icon--facebook {
+  background: #1877f2;
+  border-color: #1877f2;
+  color: #fff;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
   }
 }
 
@@ -138,7 +161,7 @@ h2 {
   margin: 0;
   color: var(--primary);
   font-family: var(--font-serif);
-  font-size: clamp(2.6rem, 2vw, 3.5rem);
+  font-size: clamp(1.1rem, 2.2vw, 2rem);
   line-height: 1.15;
   text-decoration: none;
   overflow-wrap: anywhere;

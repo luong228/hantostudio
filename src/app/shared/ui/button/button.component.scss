@@ -5,8 +5,8 @@
   border-radius: 999px;
   padding: 1.12rem 1.92rem;
   border: 1px solid transparent;
-  background: var(--text-soft);
-  color: #000;
+  background: var(--primary);
+  color: #ffffff;
   cursor: pointer;
   text-decoration: none;
   transition: transform 180ms ease, opacity 180ms ease;
@@ -17,7 +17,7 @@
 }
 
 .btn--ghost {
-  border-color: #3f2f2b;
+  border-color: var(--primary);
   background: transparent;
-  color: #3f2f2b;
+  color: var(--primary);
 }
