@@ -9,7 +9,7 @@
 }
 
 .test-hd__eyebrow {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1.12rem;
   font-weight: 700;
   letter-spacing: 0.26em;
@@ -94,7 +94,7 @@
 }
 
 .stat-label {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -215,7 +215,7 @@
 }
 
 .tcard__name {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: 1.28rem;
@@ -267,7 +267,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.64rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1.28rem;
   font-weight: 600;
   letter-spacing: 0.07em;

@@ -139,7 +139,7 @@ export const CONTACT_CHANNELS: ContactChannel[] = [
 
 export const BRANCHES: BranchInfo[] = [
   {
-    name: 'Thủ Đức',
+    name: 'Vinhomes Grand Park, Thủ Đức',
     address: 'Cơ sở Vinhomes Grand Park',
     phone: '0396 887 597'
   }

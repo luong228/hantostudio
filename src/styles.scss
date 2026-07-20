@@ -3,6 +3,7 @@
 	--primary: rgb(1, 25, 59);
 	--surface: #ffffff;
 	--font-serif: 'Cormorant Garamond', Georgia, serif;
+	--font-sans-serif: 'Montserrat', 'Segoe UI', sans-serif;
 	--text: var(--primary);
 	--text-soft: #f9ba24;
 	--hover: rgba(1, 25, 59, 0.8);
@@ -23,7 +24,7 @@ body {
 	padding: 0;
 	background: var(--bg);
 	color: var(--primary);
-	font-family: 'Montserrat', 'Segoe UI', sans-serif;
+	font-family: var(--font-sans-serif);
 }
 
 body {
@@ -46,7 +47,7 @@ input,
 button,
 textarea,
 select {
-	font-family: 'Montserrat', 'Segoe UI', sans-serif;
+	font-family: var(--font-sans-serif);
 }
 
 img {

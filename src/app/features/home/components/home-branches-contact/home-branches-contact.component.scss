@@ -19,7 +19,7 @@
 
 .contact-hd__eyebrow {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1.12rem;
   font-weight: 700;
   letter-spacing: 0.26em;
@@ -123,7 +123,7 @@ h2 {
   background: #0068ff;
   border-color: #0068ff;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1.12rem;
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -149,7 +149,7 @@ h2 {
 
 .info-label {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -168,7 +168,7 @@ h2 {
 }
 
 .info-value--small {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.45;

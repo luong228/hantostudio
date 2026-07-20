@@ -27,7 +27,7 @@ form {
 }
 
 .cf-label {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1.04rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -150,7 +150,7 @@ textarea.cf-input {
   border-radius: 999px;
   background: var(--primary);
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1.52rem;
   font-weight: 600;
   letter-spacing: 0.06em;

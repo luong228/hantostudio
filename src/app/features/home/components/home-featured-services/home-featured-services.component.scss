@@ -9,7 +9,7 @@
 }
 
 .svc-hd__eyebrow {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1.12rem;
   font-weight: 700;
   letter-spacing: 0.26em;
@@ -135,7 +135,7 @@
 }
 
 .svc-card__eyebrow {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1.04rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -170,7 +170,7 @@ h3 {
   margin-top: auto;
 
   span {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-sans-serif);
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -193,7 +193,7 @@ h3 {
   padding: 1.04rem 2rem;
   border: 1.5px solid rgba(1, 25, 59, 0.28);
   border-radius: 999px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.07em;
