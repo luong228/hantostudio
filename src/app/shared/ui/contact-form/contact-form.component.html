@@ -1,98 +1,106 @@
-<div class="contact-form-container">
-  <div class="contact-form-card">
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-      <!-- Họ và tên -->
-      <div class="form-group">
-        <label for="fullName">Họ và tên <span class="required">*</span></label>
-        <input 
-          id="fullName" 
-          type="text" 
-          formControlName="fullName" 
-          placeholder="VD: Nguyễn Thị Hoa"
-          [class.is-invalid]="isFieldInvalid('fullName')"
-        />
-        @if (isFieldInvalid('fullName')) {
-          <span class="error-msg">Vui lòng nhập họ và tên</span>
-        }
-      </div>
+<div class="cf-card">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
 
-      <!-- Số điện thoại -->
-      <div class="form-group">
-        <label for="phone">Số điện thoại <span class="required">*</span></label>
-        <input 
-          id="phone" 
-          type="tel" 
-          formControlName="phone" 
-          placeholder="VD: 0901 234 567"
-          [class.is-invalid]="isFieldInvalid('phone')"
-        />
-        @if (isFieldInvalid('phone')) {
-          <span class="error-msg">Vui lòng nhập số điện thoại hợp lệ (10 chữ số)</span>
-        }
+    <!-- Họ và tên -->
+    <div class="cf-field">
+      <label class="cf-label" for="cf-fullName">Họ và tên của bạn</label>
+      <div class="cf-wrap" [class.cf-wrap--err]="isFieldInvalid('fullName')">
+        <svg class="cf-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <input id="cf-fullName" type="text" formControlName="fullName"
+               class="cf-input" placeholder="Nhập họ và tên của bạn" autocomplete="name" />
       </div>
+      @if (isFieldInvalid('fullName')) {
+        <span class="cf-err" role="alert">Vui lòng nhập họ và tên</span>
+      }
+    </div>
 
-      <!-- Concept yêu thích -->
-      <div class="form-group">
-        <label for="preferredService">Concept yêu thích</label>
-        <select id="preferredService" formControlName="preferredService">
-          <option value="">-- Chọn dịch vụ --</option>
+    <!-- Số điện thoại -->
+    <div class="cf-field">
+      <label class="cf-label" for="cf-phone">Số điện thoại</label>
+      <div class="cf-wrap" [class.cf-wrap--err]="isFieldInvalid('phone')">
+        <svg class="cf-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <input id="cf-phone" type="tel" formControlName="phone"
+               class="cf-input" placeholder="Nhập số điện thoại của bạn" autocomplete="tel" />
+      </div>
+      @if (isFieldInvalid('phone')) {
+        <span class="cf-err" role="alert">Vui lòng nhập số điện thoại hợp lệ (10 chữ số)</span>
+      }
+    </div>
+
+    <!-- Concept yêu thích -->
+    <div class="cf-field">
+      <label class="cf-label" for="cf-service">Concept yêu thích</label>
+      <div class="cf-wrap cf-wrap--select">
+        <svg class="cf-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        <select id="cf-service" formControlName="preferredService" class="cf-input cf-select">
+          <option value="">Chân dung cá nhân, Gia đình, Beauty, Thai sản...</option>
           @for (service of services(); track service.id) {
             <option [value]="service.slug">{{ service.name }}</option>
           }
         </select>
+        <svg class="cf-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
       </div>
+    </div>
 
-      <!-- Ý tưởng concept cụ thể -->
-      <div class="form-group">
-        <label for="conceptIdea">Ý tưởng concept cụ thể (nếu có)</label>
-        <input 
-          id="conceptIdea" 
-          type="text" 
-          formControlName="conceptIdea" 
-          placeholder="VD: Áo dài sen, Mẹ và con, Retro Sài Gòn xưa..."
-        />
+    <!-- Ý tưởng concept cụ thể -->
+    <div class="cf-field">
+      <label class="cf-label" for="cf-idea">Ý tưởng concept cụ thể <span class="cf-label__opt">(nếu có)</span></label>
+      <div class="cf-wrap cf-wrap--ta">
+        <svg class="cf-ico cf-ico--top" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+          <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+        </svg>
+        <textarea id="cf-idea" formControlName="conceptIdea" class="cf-input" rows="2"
+                  placeholder="Mô tả ý tưởng, phong cách, màu sắc bạn mong muốn..."></textarea>
       </div>
+    </div>
 
-      <!-- Cơ sở gần nhất -->
-      <div class="form-group">
-        <label>Cơ sở gần nhất</label>
-        <div class="branch-selector">
+    <!-- Studio gần bạn nhất -->
+    <div class="cf-field">
+      <label class="cf-label" for="cf-branch">Studio gần bạn nhất</label>
+      <div class="cf-wrap cf-wrap--select">
+        <svg class="cf-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+        <select id="cf-branch" formControlName="branch" class="cf-input cf-select">
+          <option value="">Chọn studio thuận tiện nhất</option>
           @for (branch of branches(); track branch.name) {
-            <button type="button"
-                    class="branch-btn"
-                    [class.branch-btn--active]="contactForm.get('branch')?.value === branch.name"
-                    (click)="contactForm.get('branch')?.setValue(branch.name)">
-              <span class="branch-btn__icon">📍</span>
-              <div class="branch-btn__info">
-                <span class="branch-btn__name">{{ branch.name }}</span>
-                <span class="branch-btn__sub">{{ branch.address }}</span>
-              </div>
-            </button>
+            <option [value]="branch.name">{{ branch.name }}</option>
           }
-        </div>
+        </select>
+        <svg class="cf-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
       </div>
+    </div>
 
-      <!-- Ghi chú thêm -->
-      <div class="form-group">
-        <label for="notes">Ghi chú thêm (tuỳ chọn)</label>
-        <textarea 
-          id="notes" 
-          formControlName="notes" 
-          rows="4" 
-          placeholder="VD: Muốn chụp dịp sinh nhật, cần concept Tết, đi cùng bé 3 tuổi..."
-        ></textarea>
+    <!-- Ghi chú thêm -->
+    <div class="cf-field">
+      <label class="cf-label" for="cf-notes">Ghi chú thêm <span class="cf-label__opt">(nếu có)</span></label>
+      <div class="cf-wrap cf-wrap--ta">
+        <svg class="cf-ico cf-ico--top" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <textarea id="cf-notes" formControlName="notes" class="cf-input" rows="2"
+                  placeholder="Chia sẻ thêm thông tin để chúng tôi tư vấn tốt hơn..."></textarea>
       </div>
+    </div>
 
-      <!-- Submit button -->
-      <button type="submit" class="submit-button" [disabled]="contactForm.invalid">
-        Để ekip liên hệ với bạn →
-      </button>
+    <!-- Submit -->
+    <button type="submit" class="cf-submit">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" aria-hidden="true">
+        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"/>
+      </svg>
+      Để ekip liên hệ với bạn
+    </button>
 
-      <!-- Commitment text -->
-      <p class="commitment-text">
-        HANTO Studio cam kết chỉ gọi một cuộc để tư vấn. Không spam, không làm phiền nếu bạn chưa sẵn sàng.
-      </p>
-    </form>
-  </div>
-
+  </form>
 </div>

@@ -12,7 +12,6 @@ import { HomePricingTeaserComponent } from '../../components/home-pricing-teaser
 import { HomeTestimonialsComponent } from '../../components/home-testimonials/home-testimonials.component';
 import { HomeWhyChooseComponent } from '../../components/home-why-choose/home-why-choose.component';
 import { ContactFormComponent } from '../../../../shared/ui/contact-form/contact-form.component';
-import { SectionHeaderComponent } from '../../../../shared/ui/section-header/section-header.component';
 
 @Component({
   selector: 'app-home-page',
@@ -28,8 +27,7 @@ import { SectionHeaderComponent } from '../../../../shared/ui/section-header/sec
     HomeBranchesContactComponent,
     HomeBookingProcessComponent,
     HomeFinalCtaComponent,
-    ContactFormComponent,
-    SectionHeaderComponent
+    ContactFormComponent
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',

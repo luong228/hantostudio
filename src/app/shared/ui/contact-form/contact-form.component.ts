@@ -54,6 +54,7 @@ export class ContactFormComponent {
       phone: '',
       preferredService: '',
       conceptIdea: '',
+      branch: '',
       notes: ''
     });
   }

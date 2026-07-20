@@ -51,11 +51,99 @@
     }
   </section>
 
-  <section class="home-contact-section dark-section">
-    <app-section-header
-      eyebrow="Liên hệ & Đăng ký"
-      title="ĐĂNG KÝ TƯ VẤN CONCEPT"
-      subtitle="Đội ngũ của HANTO Studio sẽ liên hệ trực tiếp để đồng hành cùng bạn." />
+  <section class="home-contact-section" aria-labelledby="cs-heading">
+    <aside class="cs-intro">
+      <p class="cs-intro__eyebrow">Liên hệ &amp; Đăng ký</p>
+      <div class="cs-ornament" aria-hidden="true">
+        <span></span>
+        <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z" /></svg>
+        <span></span>
+      </div>
+      <h2 id="cs-heading" class="cs-intro__title">Đăng ký tư vấn concept phù hợp với buổi chụp của bạn</h2>
+      <p class="cs-intro__sub">Chúng tôi luôn sẵn sàng lắng nghe và đồng hành cùng bạn để tạo nên những bức ảnh đẹp và đầy cảm xúc.</p>
+    </aside>
+
     <app-contact-form></app-contact-form>
+
+    <aside class="cs-sidebar">
+      <div class="cs-sidebar__top">
+        <div class="cs-sidebar__si">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/>
+            <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+          </svg>
+        </div>
+        <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn</p>
+      </div>
+
+      <div class="cs-divider" aria-hidden="true">
+        <span></span>
+        <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z" /></svg>
+        <span></span>
+      </div>
+
+      <div class="cs-info">
+        <div class="cs-info__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div class="cs-info__body">
+          <p class="cs-info__label">Hotline tư vấn</p>
+          <p class="cs-info__val">{{ repo.branches()[0]?.phone }}</p>
+          <p class="cs-info__sub">(8:00 – 21:00 mỗi ngày)</p>
+        </div>
+      </div>
+
+      <div class="cs-divider" aria-hidden="true">
+        <span></span>
+        <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z" /></svg>
+        <span></span>
+      </div>
+
+      <div class="cs-info">
+        <div class="cs-info__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="cs-info__body">
+          <p class="cs-info__label">Thời gian phản hồi</p>
+          <p class="cs-info__val cs-info__val--sm">Trong vòng 15 phút trong giờ làm việc</p>
+        </div>
+      </div>
+
+      <div class="cs-divider" aria-hidden="true">
+        <span></span>
+        <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z" /></svg>
+        <span></span>
+      </div>
+
+      <div class="cs-info">
+        <div class="cs-info__icon cs-info__icon--zalo"><span>Zalo</span></div>
+        <div class="cs-info__body">
+          <p class="cs-info__label">Zalo hỗ trợ</p>
+          <p class="cs-info__val">{{ repo.branches()[0]?.phone }}</p>
+        </div>
+      </div>
+
+      <div class="cs-divider" aria-hidden="true">
+        <span></span>
+        <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z" /></svg>
+        <span></span>
+      </div>
+
+      <div class="cs-info">
+        <div class="cs-info__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="cs-info__body">
+          <p class="cs-info__val cs-info__val--sm">Đội ngũ sẽ liên hệ trong ngày</p>
+        </div>
+      </div>
+    </aside>
   </section>
 </div>
