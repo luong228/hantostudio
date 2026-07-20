@@ -1,37 +1,528 @@
-.site-footer {
-  margin-top: 8rem;
-  padding: 4rem clamp(1.6rem, 3vw, 4.8rem);
-  background: #2d1f1a;
-  color: #f6ece6;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2.4rem;
-}
-
-h3 {
-  margin-top: 0;
-}
-
-a {
+:host {
   display: block;
-  color: #f8dfd1;
-  text-decoration: none;
-  margin-bottom: 0.64rem;
 }
 
-p {
-  margin: 0.56rem 0;
+// ── Top separator ──────────────────────────────────────────────────────────────
+
+.footer__sep {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding-inline: clamp(3.2rem, 7vw, 9.6rem);
+  color: var(--primary);
+  opacity: 0.15;
+
+  span {
+    flex: 1;
+    height: 1px;
+    background: currentColor;
+  }
+
+  svg {
+    width: 11px;
+    height: 11px;
+    flex-shrink: 0;
+  }
 }
 
-.branch-name {
-  margin-top: 1.2rem;
+// ── Main grid ─────────────────────────────────────────────────────────────────
+
+.footer__main {
+  display: grid;
+  grid-template-columns: 1.35fr repeat(4, 1fr);
+  gap: 4.8rem;
+  padding: 4.8rem clamp(3.2rem, 7vw, 9.6rem) 4.4rem;
+}
+
+// ── Brand column ──────────────────────────────────────────────────────────────
+
+.fb {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.fb__mark {
+  margin: 0;
+  position: relative;
+  width: 8rem;
+  height: 10.4rem;
+  color: var(--primary);
+}
+
+.fb__oval {
+  width: 100%;
+  height: 100%;
+}
+
+.fb__h {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 5.4rem;
+  line-height: 1;
+  color: var(--primary);
+  pointer-events: none;
+  user-select: none;
+}
+
+.fb__name {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.fb__ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--primary);
+  opacity: 0.20;
+
+  span {
+    display: block;
+    width: 2.4rem;
+    height: 1px;
+    background: currentColor;
+  }
+
+  svg {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+.fb__desc {
+  margin: 0;
+  font-size: 1.36rem;
+  line-height: 1.78;
+  color: rgba(1, 25, 59, 0.54);
+  max-width: 30ch;
+}
+
+// ── Footer column (shared) ────────────────────────────────────────────────────
+
+.fc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.fc__head {
+  margin: 0;
+  font-family: var(--font-sans-serif);
+  font-size: 1.04rem;
   font-weight: 700;
-  color: #f6ece6;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--primary);
 }
 
-.copyright {
-  grid-column: 1 / -1;
-  margin-top: 1.6rem;
+.fc__divider {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--primary);
+  opacity: 0.18;
+  margin-bottom: 0.4rem;
+
+  span {
+    flex: 1;
+    height: 1px;
+    background: currentColor;
+  }
+
+  svg {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+  }
+}
+
+// ── Branch items ──────────────────────────────────────────────────────────────
+
+.fc-branch {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.fc-branch__ico {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  color: rgba(1, 25, 59, 0.38);
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.fc-branch__name {
+  margin: 0 0 0.32rem;
+  font-family: var(--font-sans-serif);
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.fc-branch__addr {
+  margin: 0;
+  font-size: 1.32rem;
+  line-height: 1.65;
+  color: rgba(1, 25, 59, 0.54);
+}
+
+// ── Contact items ─────────────────────────────────────────────────────────────
+
+.fc-contact {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.fc-contact__ico {
+  flex-shrink: 0;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(1, 25, 59, 0.10);
+  background: rgba(209, 225, 245, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(1, 25, 59, 0.55);
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &--zalo {
+    background: rgb(0, 104, 255);
+    border-color: rgb(0, 104, 255);
+    color: #fff;
+    font-family: var(--font-sans-serif);
+    font-size: 1.0rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  &--fb {
+    background: rgb(24, 119, 242);
+    border-color: rgb(24, 119, 242);
+    color: #fff;
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+}
+
+.fc-contact__label {
+  margin: 0;
+  font-family: var(--font-sans-serif);
+  font-size: 0.96rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(1, 25, 59, 0.46);
+}
+
+.fc-contact__val {
+  display: block;
+  margin: 0.2rem 0 0;
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.18s ease;
+
+  &:hover {
+    color: rgba(1, 25, 59, 0.7);
+  }
+}
+
+.fc-contact__sub {
+  margin: 0.2rem 0 0;
+  font-size: 1.2rem;
+  color: rgba(1, 25, 59, 0.40);
+}
+
+.fc-contact__sep {
+  height: 1px;
+  background: rgba(1, 25, 59, 0.07);
+  margin-block: 0.2rem;
+}
+
+// ── Nav links ─────────────────────────────────────────────────────────────────
+
+.fc-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.72rem;
   font-size: 1.44rem;
-  color: #e6c5b3;
+  color: rgba(1, 25, 59, 0.62);
+  text-decoration: none;
+  line-height: 1.6;
+  transition: color 0.18s ease;
+
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    flex-shrink: 0;
+    color: rgba(1, 25, 59, 0.28);
+    transition: color 0.18s ease;
+  }
+
+  &:hover {
+    color: var(--primary);
+
+    svg {
+      color: rgba(1, 25, 59, 0.55);
+    }
+  }
+}
+
+// ── Hours items ───────────────────────────────────────────────────────────────
+
+.fc-hours {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.fc-hours__ico {
+  flex-shrink: 0;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(1, 25, 59, 0.10);
+  background: rgba(209, 225, 245, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(1, 25, 59, 0.55);
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.fc-hours__title {
+  margin: 0;
+  font-size: 1.44rem;
+  font-weight: 500;
+  color: var(--primary);
+  line-height: 1.4;
+}
+
+.fc-hours__sub {
+  margin: 0.2rem 0 0;
+  font-size: 1.28rem;
+  color: rgba(1, 25, 59, 0.46);
+}
+
+// ── CTA card ──────────────────────────────────────────────────────────────────
+
+.fc-cta {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.44rem 1.52rem;
+  margin-top: 0.6rem;
+  border-radius: 1.6rem;
+  border: 1px solid rgba(1, 25, 59, 0.12);
+  background: rgba(1, 25, 59, 0.03);
+  text-decoration: none;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: rgba(1, 25, 59, 0.06);
+  }
+}
+
+.fc-cta__spark {
+  flex-shrink: 0;
+  color: rgba(1, 25, 59, 0.55);
+  line-height: 0;
+}
+
+.fc-cta__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.fc-cta__title {
+  margin: 0;
+  font-size: 1.36rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.35;
+}
+
+.fc-cta__sub {
+  margin: 0.24rem 0 0;
+  font-size: 1.2rem;
+  color: rgba(1, 25, 59, 0.48);
+  line-height: 1.5;
+}
+
+.fc-cta__arrow {
+  flex-shrink: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(1, 25, 59, 0.14);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(1, 25, 59, 0.50);
+
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
+
+// ── Bottom bar ────────────────────────────────────────────────────────────────
+
+.footer__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem clamp(3.2rem, 7vw, 9.6rem) 2.4rem;
+  border-top: 1px solid rgba(1, 25, 59, 0.08);
+  background: rgba(1, 25, 59, 0.015);
+}
+
+.footer-bar__brand {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-shrink: 0;
+}
+
+.footer-bar__logo {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(1, 25, 59, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--primary);
+  user-select: none;
+}
+
+.footer-bar__copy {
+  margin: 0;
+  font-size: 1.28rem;
+  color: rgba(1, 25, 59, 0.46);
+  white-space: nowrap;
+}
+
+.footer-bar__links {
+  display: flex;
+  align-items: center;
+  gap: 1.04rem;
+
+  a {
+    font-size: 1.24rem;
+    color: rgba(1, 25, 59, 0.50);
+    text-decoration: none;
+    transition: color 0.18s ease;
+    white-space: nowrap;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  span {
+    color: rgba(1, 25, 59, 0.22);
+    font-size: 1.1rem;
+  }
+}
+
+.footer-bar__social {
+  display: flex;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.fsoc {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(1, 25, 59, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(1, 25, 59, 0.50);
+  text-decoration: none;
+  transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &:hover {
+    border-color: rgba(1, 25, 59, 0.32);
+    color: var(--primary);
+    background: rgba(1, 25, 59, 0.04);
+  }
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+
+@media (max-width: 1280px) {
+  .footer__main {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.6rem 4.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__main {
+    grid-template-columns: 1fr;
+    padding: 4rem clamp(2.4rem, 5vw, 4rem) 3.2rem;
+    gap: 3.2rem;
+  }
+
+  .footer__bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+    padding: 2.4rem clamp(2.4rem, 5vw, 4rem);
+  }
+
+  .footer-bar__copy {
+    white-space: normal;
+  }
+
+  .footer-bar__links {
+    flex-wrap: wrap;
+    gap: 0.8rem 1rem;
+  }
 }

@@ -1,32 +1,215 @@
-<footer class="site-footer">
-  <section>
-    <h3>{{ contentRepo.studioInfo().brandName }}</h3>
-    <p>{{ contentRepo.studioInfo().tagline }}</p>
-    <p>{{ contentRepo.studioInfo().address }}</p>
-  </section>
+<!-- Top separator -->
+<div class="footer__sep" aria-hidden="true">
+  <span></span>
+  <svg viewBox="0 0 20 12" fill="currentColor"><path d="M10 0 L14 6 L10 12 L6 6 Z"/></svg>
+  <span></span>
+</div>
 
-  <section>
-    <h3>Branches</h3>
+<!-- Main grid -->
+<div class="footer__main">
+
+  <!-- ── Brand ── -->
+  <div class="fb">
+    <figure class="fb__mark" aria-label="HANTO Studio logo mark">
+      <svg class="fb__oval" viewBox="0 0 72 96" fill="none" aria-hidden="true">
+        <ellipse cx="36" cy="43" rx="31" ry="39" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M27 79 C30 76 33 75 36 75.5 C39 75 42 76 45 79" stroke="currentColor" stroke-width="0.9" fill="none"/>
+        <path d="M23 83 C28 79.5 32 78 36 78.5 C40 78 44 79.5 49 83" stroke="currentColor" stroke-width="0.65" fill="none" opacity="0.5"/>
+        <line x1="36" y1="82" x2="36" y2="87" stroke="currentColor" stroke-width="0.85"/>
+        <line x1="29" y1="86" x2="27" y2="90" stroke="currentColor" stroke-width="0.65" opacity="0.5"/>
+        <line x1="43" y1="86" x2="45" y2="90" stroke="currentColor" stroke-width="0.65" opacity="0.5"/>
+      </svg>
+      <span class="fb__h" aria-hidden="true">H</span>
+    </figure>
+    <p class="fb__name">HANTO Studio</p>
+    <div class="fb__ornament" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z"/></svg>
+      <span></span>
+    </div>
+    <p class="fb__desc">{{ contentRepo.studioInfo().tagline }}</p>
+  </div>
+
+  <!-- ── Chi nhánh ── -->
+  <div class="fc">
+    <h3 class="fc__head">Chi nhánh</h3>
+    <div class="fc__divider" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z"/></svg>
+      <span></span>
+    </div>
     @for (branch of contentRepo.branches(); track branch.name) {
-      <p class="branch-name">{{ branch.name }}</p>
-      <p>{{ branch.address }}</p>
-      <a [href]="'tel:' + branch.phone.replaceAll(' ', '')">{{ branch.phone }}</a>
+      <div class="fc-branch">
+        <div class="fc-branch__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <p class="fc-branch__name">{{ branch.name }}</p>
+          <p class="fc-branch__addr">{{ branch.address }}</p>
+        </div>
+      </div>
     }
-  </section>
+  </div>
 
-  <section>
-    <h3>Contact</h3>
-    @for (channel of contentRepo.contactChannels(); track channel.label) {
-      <a [href]="channel.href" target="_blank" rel="noopener noreferrer">{{ channel.value }}</a>
+  <!-- ── Liên hệ ── -->
+  <div class="fc">
+    <h3 class="fc__head">Liên hệ</h3>
+    <div class="fc__divider" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z"/></svg>
+      <span></span>
+    </div>
+    @for (channel of contentRepo.contactChannels(); track channel.label; let last = $last) {
+      <div class="fc-contact">
+        <div class="fc-contact__ico"
+             [class.fc-contact__ico--zalo]="channel.label === 'Zalo'"
+             [class.fc-contact__ico--fb]="channel.label === 'Facebook'"
+             aria-hidden="true">
+          @switch (channel.label) {
+            @case ('Điện thoại') {
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            }
+            @case ('Email') {
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            }
+            @case ('Zalo') {
+              <span>Zalo</span>
+            }
+            @case ('Facebook') {
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            }
+            @default {
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+              </svg>
+            }
+          }
+        </div>
+        <div>
+          <p class="fc-contact__label">{{ channel.label }}</p>
+          <a class="fc-contact__val" [href]="channel.href" target="_blank" rel="noopener">{{ channel.value }}</a>
+          @if (channel.label === 'Điện thoại') {
+            <p class="fc-contact__sub">(9:00 – 19:00 mỗi ngày)</p>
+          }
+        </div>
+      </div>
+      @if (!last) {
+        <div class="fc-contact__sep" aria-hidden="true"></div>
+      }
     }
-  </section>
+  </div>
 
-  <section>
-    <h3>Explore</h3>
+  <!-- ── Khám phá ── -->
+  <div class="fc">
+    <h3 class="fc__head">Khám phá</h3>
+    <div class="fc__divider" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z"/></svg>
+      <span></span>
+    </div>
     @for (item of contentRepo.navItems(); track item.route) {
-      <a [routerLink]="item.route">{{ item.label }}</a>
+      <a class="fc-nav-link" [routerLink]="item.route">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+        {{ item.label }}
+      </a>
     }
-  </section>
+  </div>
 
-  <p class="copyright">© {{ year }} {{ contentRepo.studioInfo().brandName }}. All rights reserved.</p>
-</footer>
+  <!-- ── Giờ hoạt động ── -->
+  <div class="fc">
+    <h3 class="fc__head">Giờ hoạt động</h3>
+    <div class="fc__divider" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z"/></svg>
+      <span></span>
+    </div>
+    <div class="fc-hours">
+      <div class="fc-hours__ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+      </div>
+      <div>
+        <p class="fc-hours__title">Thứ 2 – Chủ nhật</p>
+        <p class="fc-hours__sub">9:00 – 19:00</p>
+      </div>
+    </div>
+    <div class="fc-hours">
+      <div class="fc-hours__ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+      </div>
+      <div>
+        <p class="fc-hours__title">Làm việc cả ngày lễ</p>
+        <p class="fc-hours__sub">(Có cần đặt lịch trước)</p>
+      </div>
+    </div>
+    <a routerLink="/lien-he" class="fc-cta">
+      <span class="fc-cta__spark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+          <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"/>
+        </svg>
+      </span>
+      <div class="fc-cta__body">
+        <p class="fc-cta__title">Đặt lịch tư vấn miễn phí</p>
+        <p class="fc-cta__sub">Chúng tôi luôn sẵn sàng lắng nghe bạn.</p>
+      </div>
+      <span class="fc-cta__arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+
+</div>
+
+<!-- Bottom bar -->
+<div class="footer__bar">
+  <div class="footer-bar__brand">
+    <div class="footer-bar__logo" aria-hidden="true">H</div>
+    <p class="footer-bar__copy">© {{ year }} HANTO Studio. All rights reserved.</p>
+  </div>
+  <nav class="footer-bar__links" aria-label="Legal links">
+    <a href="#">Chính sách bảo mật</a>
+    <span aria-hidden="true">|</span>
+    <a href="#">Điều khoản sử dụng</a>
+    <span aria-hidden="true">|</span>
+    <a href="#">Chính sách hoàn tiền</a>
+  </nav>
+  <div class="footer-bar__social">
+    <a href="#" class="fsoc" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+    </a>
+    <a href="#" class="fsoc" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
+      </svg>
+    </a>
+    <a href="#" class="fsoc" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+        <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
+    <a href="#" class="fsoc" aria-label="Pinterest">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.77 1.26-5.32 1.26-5.32s-.32-.64-.32-1.58c0-1.49.87-2.6 1.94-2.6.91 0 1.36.69 1.36 1.51 0 .92-.58 2.3-.89 3.58-.25 1.08.53 1.96 1.6 1.96 1.91 0 3.19-2.44 3.19-5.33 0-2.2-1.49-3.74-3.62-3.74-2.46 0-3.9 1.85-3.9 3.75 0 .74.28 1.53.64 1.97.07.09.08.17.06.26-.07.27-.21.85-.24.97-.04.15-.13.19-.29.11-1.04-.49-1.69-2.02-1.69-3.25 0-2.64 1.92-5.07 5.53-5.07 2.9 0 5.16 2.07 5.16 4.83 0 2.88-1.81 5.19-4.33 5.19-.85 0-1.64-.44-1.91-.96l-.52 1.95c-.19.72-.69 1.63-1.02 2.18.77.24 1.58.37 2.42.37 5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+      </svg>
+    </a>
+  </div>
+</div>
