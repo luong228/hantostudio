@@ -30,8 +30,8 @@ export const PAGES: PageContent[] = [
     title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung Và Gia Đình Cao Cấp',
     seo: {
       title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung Và Gia Đình Cao Cấp',
-      description: 'Studio chụp ảnh chân dung, profile, gia đình, thai sản và concept cao cấp với sự ấm áp và tinh tế.',
-      keywords: 'studio chụp ảnh chân dung, chụp ảnh gia đình, ảnh thai sản, studio chụp ảnh profile'
+      description: 'Studio chụp ảnh chân dung, profile, gia đình, mẹ bầu và concept cao cấp với sự ấm áp và tinh tế.',
+      keywords: 'studio chụp ảnh chân dung, chụp ảnh gia đình, ảnh mẹ bầu, studio chụp ảnh profile'
     },
     home: {
       hero: {
@@ -66,7 +66,7 @@ export const PAGES: PageContent[] = [
     title: 'Dịch Vụ Chụp Ảnh | HANTO Studio',
     seo: {
       title: 'Dịch Vụ Chụp Ảnh | HANTO Studio',
-      description: 'Khám phá các dịch vụ chụp ảnh cao cấp được thiết kế riêng cho chân dung, câu chuyện gia đình, khoảnh khắc thai sản và thương hiệu cá nhân.'
+      description: 'Khám phá các dịch vụ chụp ảnh cao cấp được thiết kế riêng cho chân dung, câu chuyện gia đình, khoảnh khắc mẹ bầu và thương hiệu cá nhân.'
     }
   },
   {
@@ -237,7 +237,7 @@ export const SERVICES: ServiceItem[] = [
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1100&q=80',
       'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=1100&q=80'
     ],
-    startingPrice: 4200000,
+    startingPrice: 1290000,
     durationMinutes: 90,
     badges: ['Chân dung']
   },
@@ -253,25 +253,25 @@ export const SERVICES: ServiceItem[] = [
       'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1100&q=80',
       'https://images.unsplash.com/photo-1519340333755-c5ac7d0f7f7e?auto=format&fit=crop&w=1100&q=80'
     ],
-    startingPrice: 5600000,
+    startingPrice: 1290000,
     durationMinutes: 120,
     badges: ['Gia đình']
   },
   {
     id: 'svc-maternity-glow',
     slug: 'thai-san',
-    name: 'Thai Sản',
+    name: 'Mẹ bầu',
     shortDescription: 'Nhóm buổi chụp concept với trang phục, bối cảnh và câu chuyện được thiết kế riêng.',
     description:
-      'Phù hợp với khách hàng muốn bộ ảnh mang tính chủ đề rõ ràng: áo dài, thai sản hoặc concept nghệ thuật với quy trình sản xuất trọn gói.',
+      'Phù hợp với khách hàng muốn bộ ảnh mang tính chủ đề rõ ràng: áo dài, mẹ bầu hoặc concept nghệ thuật với quy trình sản xuất trọn gói.',
     heroImage: '/images/thai-san.png',
     gallery: [
       'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?auto=format&fit=crop&w=1100&q=80',
       'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1100&q=80'
     ],
-    startingPrice: 4800000,
+    startingPrice: 1290000,
     durationMinutes: 100,
-    badges: ['Thai sản']
+    badges: ['Mẹ bầu']
   },
   {
     id: 'svc-profile-linkedin',
@@ -285,7 +285,7 @@ export const SERVICES: ServiceItem[] = [
       'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1100&q=80',
       'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1100&q=80'
     ],
-    startingPrice: 2800000,
+    startingPrice: 1290000,
     durationMinutes: 60,
     badges: ['Profile', 'Cá nhân']
   },
@@ -301,7 +301,7 @@ export const SERVICES: ServiceItem[] = [
       'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1100&q=80',
       'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1100&q=80'
     ],
-    startingPrice: 6500000,
+    startingPrice: 1290000,
     durationMinutes: 150,
     badges: ['Concept', 'Nghệ thuật']
   },
@@ -317,7 +317,7 @@ export const SERVICES: ServiceItem[] = [
       'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1100&q=80',
       'https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1100&q=80'
     ],
-    startingPrice: 7200000,
+    startingPrice: 1290000,
     durationMinutes: 180,
     badges: ['Cưới', 'Pre-wedding']
   }

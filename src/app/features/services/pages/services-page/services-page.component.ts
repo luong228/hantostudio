@@ -20,7 +20,7 @@ export class ServicesPageComponent {
   constructor() {
     this.seo.update(this.repo.seoForPath('/dich-vu', {
       title: 'Dịch Vụ Chụp Ảnh | HANTO Studio',
-      description: 'Khám phá các dịch vụ chụp ảnh cao cấp dành cho chân dung cá nhân, gia đình, thai sản và concept sáng tạo.'
+      description: 'Khám phá các dịch vụ chụp ảnh cao cấp dành cho chân dung cá nhân, gia đình, mẹ bầu và concept sáng tạo.'
     }));
   }
 }

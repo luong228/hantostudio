@@ -24,7 +24,7 @@ function heroDefaults(): HomeHeroContent {
   return {
     eyebrow: 'Studio chụp ảnh chân dung cao cấp',
     headline: 'Ảnh đẹp tự nhiên, rõ thần thái, dễ sử dụng ngay.',
-    subheadline: 'Chân dung, gia đình, thai sản và concept với quy trình hỗ trợ trọn buổi.',
+    subheadline: 'Chân dung, gia đình, mẹ bầu và concept với quy trình hỗ trợ trọn buổi.',
     trustLine: '4.9/5 đánh giá từ khách hàng thật và hơn 8.500 buổi chụp đã thực hiện.',
     primaryCtaLabel: 'Đặt lịch ngay',
     primaryCtaRoute: '/lien-he',

@@ -48,7 +48,7 @@ export class HomePageComponent {
     this.seo.update(this.repo.seoForPath('/', {
       title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung & Gia Đình Cao Cấp',
       description:
-        'Chụp ảnh chân dung, hồ sơ cá nhân, gia đình, thai sản và concept được thực hiện với sự ấm áp và tỉ mỉ từng chi tiết.'
+        'Chụp ảnh chân dung, hồ sơ cá nhân, gia đình, mẹ bầu và concept được thực hiện với sự ấm áp và tỉ mỉ từng chi tiết.'
     }));
   }
 }

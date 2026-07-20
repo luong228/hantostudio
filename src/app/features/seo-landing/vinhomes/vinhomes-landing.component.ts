@@ -36,7 +36,7 @@ export class VinhomesLandingComponent {
     },
     {
       q: 'Studio chụp được loại ảnh nào tại Vinhomes Grand Park?',
-      a: 'HANTO Studio chuyên chụp chân dung cá nhân, profile LinkedIn/doanh nhân, ảnh gia đình, thai sản, concept nghệ thuật và pre-wedding — tất cả trong môi trường studio kiểm soát ánh sáng chuyên nghiệp.'
+      a: 'HANTO Studio chuyên chụp chân dung cá nhân, profile LinkedIn/doanh nhân, ảnh gia đình, mẹ bầu, concept nghệ thuật và pre-wedding — tất cả trong môi trường studio kiểm soát ánh sáng chuyên nghiệp.'
     },
     {
       q: 'HANTO Studio có hỗ trợ trang phục và makeup không?',
@@ -51,7 +51,7 @@ export class VinhomesLandingComponent {
   constructor() {
     this.seo.update({
       title: 'Chụp Hình Studio Tại Vinhomes Grand Park – HANTO Studio Thủ Đức',
-      description: 'Studio chụp hình chuyên nghiệp tại Vinhomes Grand Park, Thủ Đức. Chụp chân dung, gia đình, profile, thai sản, concept. Gói từ 1.299.000đ. Đặt lịch: 0396 887 597.',
+      description: 'Studio chụp hình chuyên nghiệp tại Vinhomes Grand Park, Thủ Đức. Chụp chân dung, gia đình, profile, mẹ bầu, concept. Gói từ 1.299.000đ. Đặt lịch: 0396 887 597.',
       keywords: 'chụp hình studio vinhomes grand park, studio chụp ảnh vinhomes grand park, chụp ảnh thủ đức, studio chụp ảnh quận 9, chụp hình chân dung vinhomes',
       canonicalUrl: 'https://hantostudio.vn/chup-hinh-studio-vinhomes-grand-park',
       image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80'
@@ -65,7 +65,7 @@ export class VinhomesLandingComponent {
           '@id': 'https://hantostudio.vn/#business',
           name: 'HANTO Studio',
           alternateName: 'HANTO Photography Studio',
-          description: 'Studio chụp ảnh chân dung cao cấp tại Vinhomes Grand Park, Thủ Đức, TP.HCM. Chuyên chụp chân dung, gia đình, thai sản, profile và concept.',
+          description: 'Studio chụp ảnh chân dung cao cấp tại Vinhomes Grand Park, Thủ Đức, TP.HCM. Chuyên chụp chân dung, gia đình, mẹ bầu, profile và concept.',
           url: 'https://hantostudio.vn',
           telephone: '+84396887597',
           email: 'hello@hantostudio.vn',
@@ -103,7 +103,7 @@ export class VinhomesLandingComponent {
           name: 'Chụp Hình Studio Tại Vinhomes Grand Park',
           provider: { '@type': 'LocalBusiness', name: 'HANTO Studio' },
           areaServed: 'Vinhomes Grand Park, Thủ Đức, TP.HCM',
-          description: 'Dịch vụ chụp hình studio chuyên nghiệp: chân dung, gia đình, thai sản, profile, concept nghệ thuật.',
+          description: 'Dịch vụ chụp hình studio chuyên nghiệp: chân dung, gia đình, mẹ bầu, profile, concept nghệ thuật.',
           offers: {
             '@type': 'AggregateOffer',
             lowPrice: '1299000',
