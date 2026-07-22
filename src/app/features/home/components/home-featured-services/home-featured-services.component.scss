@@ -96,6 +96,7 @@
     object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
+    object-position: top center;
   }
 
   .svc-card:hover & img {
@@ -210,7 +211,7 @@ h3 {
 
 // â”€â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
-@media (max-width: 900px) {
+@media (max-width: 1124px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -223,6 +224,10 @@ h3 {
 
   .svc-card__img {
     height: 240px;
+
+    img {
+      object-position: top center;
+    }
   }
 }
 
