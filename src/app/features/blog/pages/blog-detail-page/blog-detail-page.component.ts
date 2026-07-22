@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { environment } from '../../../../../environments/environment';
 import { ContentRepositoryService } from '../../../../core/services/content-repository.service';
 import { SeoService } from '../../../../core/services/seo.service';
 import { ConversionBannerComponent } from '../../../../shared/ui/conversion-banner/conversion-banner.component';
@@ -25,7 +26,8 @@ export class BlogDetailPageComponent {
   constructor() {
     this.seo.update(this.repo.seoForBlogSlug(this.slug, {
       title: 'Bài Viết | HANTO Studio',
-      description: 'Đọc hướng dẫn và chia sẻ từ đội ngũ studio về phong cách chụp ảnh và cách chuẩn bị cho buổi chụp ý nghĩa.'
+      description: 'Đọc hướng dẫn và chia sẻ từ đội ngũ studio về phong cách chụp ảnh và cách chuẩn bị cho buổi chụp ý nghĩa.',
+      canonicalUrl: `${environment.appBaseUrl}/blog/${this.slug}`
     }));
   }
 }

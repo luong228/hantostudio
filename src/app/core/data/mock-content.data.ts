@@ -1,4 +1,5 @@
-﻿import {
+﻿import { environment } from '../../../environments/environment';
+import {
   BlogPost,
   BookingStep,
   BranchInfo,
@@ -31,7 +32,8 @@ export const PAGES: PageContent[] = [
     seo: {
       title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung Và Gia Đình Cao Cấp',
       description: 'Studio chụp ảnh chân dung, profile, gia đình, mẹ bầu và concept cao cấp với sự ấm áp và tinh tế.',
-      keywords: 'studio chụp ảnh chân dung, chụp ảnh gia đình, ảnh mẹ bầu, studio chụp ảnh profile'
+      keywords: 'studio chụp ảnh chân dung, chụp ảnh gia đình, ảnh mẹ bầu, studio chụp ảnh profile',
+      canonicalUrl: `${environment.appBaseUrl}/`
     },
     home: {
       hero: {
@@ -66,7 +68,8 @@ export const PAGES: PageContent[] = [
     title: 'Dịch Vụ Chụp Ảnh | HANTO Studio',
     seo: {
       title: 'Dịch Vụ Chụp Ảnh | HANTO Studio',
-      description: 'Khám phá các dịch vụ chụp ảnh cao cấp được thiết kế riêng cho chân dung, câu chuyện gia đình, khoảnh khắc mẹ bầu và thương hiệu cá nhân.'
+      description: 'Khám phá các dịch vụ chụp ảnh cao cấp được thiết kế riêng cho chân dung, câu chuyện gia đình, khoảnh khắc mẹ bầu và thương hiệu cá nhân.',
+      canonicalUrl: `${environment.appBaseUrl}/dich-vu`
     }
   },
   {
@@ -76,7 +79,8 @@ export const PAGES: PageContent[] = [
     title: 'Bảng Giá | HANTO Studio',
     seo: {
       title: 'Bảng Giá | HANTO Studio',
-      description: 'Bảng giá minh bạch cho các gói chụp ảnh cao cấp bao gồm styling và chỉnh sửa ảnh.'
+      description: 'Bảng giá minh bạch cho các gói chụp ảnh cao cấp bao gồm styling và chỉnh sửa ảnh.',
+      canonicalUrl: `${environment.appBaseUrl}/bang-gia`
     }
   },
   {
@@ -86,7 +90,8 @@ export const PAGES: PageContent[] = [
     title: 'Về Studio | HANTO Studio',
     seo: {
       title: 'Về Studio | HANTO Studio',
-      description: 'Gặp gỡ đội ngũ và triết lý đằng sau trải nghiệm chụp ảnh ấm áp và cao cấp của chúng tôi.'
+      description: 'Gặp gỡ đội ngũ và triết lý đằng sau trải nghiệm chụp ảnh ấm áp và cao cấp của chúng tôi.',
+      canonicalUrl: `${environment.appBaseUrl}/about`
     }
   },
   {
@@ -96,7 +101,8 @@ export const PAGES: PageContent[] = [
     title: 'Nhật Ký Nhiếp Ảnh | HANTO Studio',
     seo: {
       title: 'Nhật Ký Nhiếp Ảnh | HANTO Studio',
-      description: 'Những chia sẻ thực tế và cảm hứng để chuẩn bị cho buổi chụp ảnh thanh lịch và ý nghĩa.'
+      description: 'Những chia sẻ thực tế và cảm hứng để chuẩn bị cho buổi chụp ảnh thanh lịch và ý nghĩa.',
+      canonicalUrl: `${environment.appBaseUrl}/blog`
     }
   },
   {
@@ -106,7 +112,8 @@ export const PAGES: PageContent[] = [
     title: 'Câu Hỏi Thường Gặp | HANTO Studio',
     seo: {
       title: 'Câu Hỏi Thường Gặp | HANTO Studio',
-      description: 'Tìm câu trả lời về đặt lịch, quy trình buổi chụp, bảng giá và thời gian giao ảnh.'
+      description: 'Tìm câu trả lời về đặt lịch, quy trình buổi chụp, bảng giá và thời gian giao ảnh.',
+      canonicalUrl: `${environment.appBaseUrl}/cau-hoi-thuong-gap`
     }
   },
   {
@@ -116,7 +123,8 @@ export const PAGES: PageContent[] = [
     title: 'Liên Hệ Và Đặt Lịch | HANTO Studio',
     seo: {
       title: 'Liên Hệ Và Đặt Lịch | HANTO Studio',
-      description: 'Bắt đầu yêu cầu đặt lịch và lên kế hoạch cho buổi chụp ảnh với đội ngũ studio của chúng tôi.'
+      description: 'Bắt đầu yêu cầu đặt lịch và lên kế hoạch cho buổi chụp ảnh với đội ngũ studio của chúng tôi.',
+      canonicalUrl: `${environment.appBaseUrl}/lien-he`
     }
   }
 ];
