@@ -16,7 +16,7 @@ export class VinhomesDepLandingComponent {
   readonly faqs = [
     {
       q: 'Studio chụp ảnh đẹp ở Vinhomes Grand Park ở đâu?',
-      a: 'HANTO Studio nằm tại Tầng 3, T12-06, Khu Manhattan, Vinhomes Grand Park, Thủ Đức — studio ánh sáng chuyên nghiệp ngay trong khu đô thị, không cần di chuyển xa để có bộ ảnh đẹp chuẩn chỉnh.'
+      a: 'HANTO Studio nằm tại Tầng 3, T12-06, Khu Manhattan, Vinhomes Grand Park, Thủ Đức - studio ánh sáng chuyên nghiệp ngay trong khu đô thị, không cần di chuyển xa để có bộ ảnh đẹp chuẩn chỉnh.'
     },
     {
       q: 'Điều gì làm cho ảnh chụp tại HANTO Studio đẹp hơn ngoài trời?',
@@ -24,7 +24,7 @@ export class VinhomesDepLandingComponent {
     },
     {
       q: 'Ảnh tại HANTO Studio được retouch như thế nào để đẹp?',
-      a: 'Retouch tại HANTO Studio giữ làn da tự nhiên, không xóa quá tay — chỉnh màu theo tone nhất quán, làm mịn nhẹ và cân chỉnh sáng theo từng ảnh. Bạn nhận ảnh đẹp mà vẫn là chính mình.'
+      a: 'Retouch tại HANTO Studio giữ làn da tự nhiên, không xóa quá tay - chỉnh màu theo tone nhất quán, làm mịn nhẹ và cân chỉnh sáng theo từng ảnh. Bạn nhận ảnh đẹp mà vẫn là chính mình.'
     },
     {
       q: 'Mình không biết tạo dáng thì có chụp ảnh đẹp được không?',
@@ -32,7 +32,7 @@ export class VinhomesDepLandingComponent {
     },
     {
       q: 'Makeup ảnh hưởng thế nào đến việc ảnh có đẹp hay không?',
-      a: 'Makeup phù hợp ánh sáng studio rất khác makeup ngoài trời. HANTO Studio có makeup artist chuyên làm makeup "for camera" — tông màu, highlight và contour được điều chỉnh để lens ghi lại chuẩn nhất, tránh bị bóng hoặc mất chi tiết.'
+      a: 'Makeup phù hợp ánh sáng studio rất khác makeup ngoài trời. HANTO Studio có makeup artist chuyên làm makeup "for camera" - tông màu, highlight và contour được điều chỉnh để lens ghi lại chuẩn nhất, tránh bị bóng hoặc mất chi tiết.'
     },
     {
       q: 'Bao nhiêu ảnh đẹp tôi nhận được sau buổi chụp tại Vinhomes Grand Park?',
@@ -44,7 +44,7 @@ export class VinhomesDepLandingComponent {
     },
     {
       q: 'Chụp ảnh gia đình ở studio Vinhomes Grand Park có đẹp không khi có trẻ nhỏ?',
-      a: 'Rất đẹp và tự nhiên. Ekip HANTO Studio có kinh nghiệm dẫn dắt trẻ em và gia đình — biết cách tạo không khí vui, thoải mái để trẻ không căng thẳng trước máy ảnh. Những khoảnh khắc tự nhiên nhất thường cho ra ảnh đẹp nhất.'
+      a: 'Rất đẹp và tự nhiên. Ekip HANTO Studio có kinh nghiệm dẫn dắt trẻ em và gia đình - biết cách tạo không khí vui, thoải mái để trẻ không căng thẳng trước máy ảnh. Những khoảnh khắc tự nhiên nhất thường cho ra ảnh đẹp nhất.'
     }
   ];
 

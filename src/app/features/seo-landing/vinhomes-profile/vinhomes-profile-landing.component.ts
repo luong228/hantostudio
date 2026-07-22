@@ -60,7 +60,7 @@ export class VinhomesProfileLandingComponent {
               name: 'Ảnh profile dùng cho LinkedIn có cần retouch không?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Có. Tất cả gói tại HANTO Studio đều bao gồm ảnh retouch hoàn chỉnh — chỉnh sáng, màu da, chi tiết nhỏ — nhưng giữ nguyên thần thái tự nhiên, không làm mất nhận diện của bạn.'
+                text: 'Có. Tất cả gói tại HANTO Studio đều bao gồm ảnh retouch hoàn chỉnh - chỉnh sáng, màu da, chi tiết nhỏ - nhưng giữ nguyên thần thái tự nhiên, không làm mất nhận diện của bạn.'
               }
             },
             {

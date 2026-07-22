@@ -52,7 +52,7 @@ export class VinhomesDoanhNhanLandingComponent {
               name: 'Chụp ảnh doanh nhân tại HANTO Studio khác gì ảnh thẻ thông thường?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Ảnh doanh nhân tại HANTO Studio được chụp theo phong cách editorial — concept riêng theo lĩnh vực nghề nghiệp, ánh sáng và góc máy thiết kế để toát lên vị thế và thần thái. Khác hoàn toàn với ảnh thẻ hay ảnh selfie.'
+                text: 'Ảnh doanh nhân tại HANTO Studio được chụp theo phong cách editorial - concept riêng theo lĩnh vực nghề nghiệp, ánh sáng và góc máy thiết kế để toát lên vị thế và thần thái. Khác hoàn toàn với ảnh thẻ hay ảnh selfie.'
               }
             },
             {
@@ -60,7 +60,7 @@ export class VinhomesDoanhNhanLandingComponent {
               name: 'Tôi có thể chụp ảnh doanh nhân buổi tối hoặc cuối tuần không?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Có. HANTO Studio mở cửa từ 09:00 đến 19:00 thứ 2 đến chủ nhật, kể cả cuối tuần — phù hợp với lịch bận rộn của doanh nhân.'
+                text: 'Có. HANTO Studio mở cửa từ 09:00 đến 19:00 thứ 2 đến chủ nhật, kể cả cuối tuần - phù hợp với lịch bận rộn của doanh nhân.'
               }
             },
             {

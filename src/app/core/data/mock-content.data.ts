@@ -141,7 +141,7 @@ export const STUDIO_INFO: StudioInfo = {
 export const CONTACT_CHANNELS: ContactChannel[] = [
   { label: 'Điện thoại', value: STUDIO_INFO.phone, href: 'tel:0396887597' },
   { label: 'Email', value: STUDIO_INFO.email, href: 'mailto:hantostudiobyhangtu@gmail.com' },
-  { label: 'Zalo', value: '@hantostudio', href: 'https://zalo.me/0396887597' },
+  { label: 'Zalo', value: '0396887597', href: 'https://zalo.me/0396887597' },
   { label: 'Facebook', value: 'HANTO Studio Studio', href: 'https://www.facebook.com/profile.php?id=61591415732605' }
 ];
 
@@ -175,7 +175,7 @@ export const WHY_CHOOSE_ITEMS: WhyChooseItem[] = [
   },
   {
     title: 'Retouch tinh tế, giữ nét thật',
-    description: 'Hậu kỳ kỹ lưỡng nhưng vẫn giữ trọn vẹp đẹp tự nhiên của bạn. Da mịn màng, bố cục hài hòa, mà vẫn là bạn — rạng rỡ và chân thật.',
+    description: 'Hậu kỳ kỹ lưỡng nhưng vẫn giữ trọn vẹp đẹp tự nhiên của bạn. Da mịn màng, bố cục hài hòa, mà vẫn là bạn - rạng rỡ và chân thật.',
     tag: 'Post-Production',
     stat: 'Mỗi ảnh đều được chỉnh sửa cẩn thận qua ít nhất 3 vòng kiểm tra chất lượng.'
   },
@@ -183,7 +183,7 @@ export const WHY_CHOOSE_ITEMS: WhyChooseItem[] = [
     title: 'Quy trình rõ ràng, giao ảnh đúng hẹn',
     description: 'Lịch trình minh bạch từ lúc đặt lịch đến khi nhận ảnh. Chúng tôi luôn chủ động thông báo để bạn dễ dàng sắp xếp.',
     tag: 'Timeline & Delivery',
-    stat: 'Preview trong 48h — nhận trọn bộ ảnh chỉ sau 7 ngày.'
+    stat: 'Preview trong 48h - nhận trọn bộ ảnh chỉ sau 7 ngày.'
   }
 ];
 
@@ -237,7 +237,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'svc-portrait-signature',
     slug: 'chan-dung',
     name: 'Chụp Ảnh Chân Dung',
-    shortDescription: 'Chân dung editorial — profile & thương hiệu.',
+    shortDescription: 'Chân dung editorial - profile & thương hiệu.',
     description:
       'Gói chân dung chủ lực với quy trình makeup, styling, hướng dẫn tạo dáng và retouch cao cấp để bạn lên hình tự nhiên, sáng và đúng thần thái.',
     heroImage: '/images/chan-dung2.jpg',
@@ -253,7 +253,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'svc-doanh-nhan',
     slug: 'doanh-nhan',
     name: 'Doanh Nhân',
-    shortDescription: 'Ảnh profile doanh nhân — tự tin, chuyên nghiệp, đúng tầm vóc.',
+    shortDescription: 'Ảnh profile doanh nhân - tự tin, chuyên nghiệp, đúng tầm vóc.',
     description:
       'Gói chụp ảnh chuyên biệt cho doanh nhân, giám đốc và chuyên gia muốn có bộ ảnh profile thương hiệu cá nhân cao cấp. Tư vấn concept riêng theo lĩnh vực, ánh sáng editorial, retouch tinh tế giữ nguyên thần thái. Phù hợp cho LinkedIn, website công ty, hồ sơ năng lực và tài liệu truyền thông.',
     heroImage: '/images/doanh-nhan.jpg',
@@ -526,7 +526,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'seo-vinhomes-dep',
     slug: 'studio-chup-anh-dep-vinhomes-grand-park',
-    title: 'Studio Chụp Ảnh Đẹp Ở Vinhomes Grand Park — Hướng Dẫn Đầy Đủ',
+    title: 'Studio Chụp Ảnh Đẹp Ở Vinhomes Grand Park - Hướng Dẫn Đầy Đủ',
     excerpt:
       'Tất cả những gì bạn cần biết trước khi đặt lịch tại studio chụp ảnh đẹp ở Vinhomes Grand Park: ánh sáng, makeup, tạo dáng và cách chọn gói phù hợp.',
     content: '',
@@ -584,7 +584,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'chup-anh-doanh-nhan-vinhomes-grand-park',
     title: 'Chụp Ảnh Doanh Nhân Tại Vinhomes Grand Park – HANTO Studio',
     excerpt:
-      'HANTO Studio – chụp ảnh doanh nhân, CEO, founder tại Vinhomes Grand Park. Bộ ảnh thương hiệu cá nhân cao cấp — editorial, concept riêng, tone nhất quán. Đặt lịch ngay.',
+      'HANTO Studio – chụp ảnh doanh nhân, CEO, founder tại Vinhomes Grand Park. Bộ ảnh thương hiệu cá nhân cao cấp - editorial, concept riêng, tone nhất quán. Đặt lịch ngay.',
     content: '',
     coverImage:
       'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1400&q=80',

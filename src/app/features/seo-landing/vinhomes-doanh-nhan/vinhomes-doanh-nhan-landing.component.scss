@@ -1,5 +1,5 @@
 // ── Doanh Nhân / Executive SEO Landing Page ──────────────────────────────────
-// Hero uses .art-hero--executive: deep charcoal gradient — colder, sharper than
+// Hero uses .art-hero--executive: deep charcoal gradient - colder, sharper than
 // the navy used on the profile page, signalling executive authority.
 
 :host { display: block; }
@@ -55,7 +55,7 @@
   padding: 5.6rem 0 4.8rem;
   background: linear-gradient(170deg, #f8f5f0 0%, #fdfcfa 50%, #f4f0ec 100%);
 
-  // Executive variant — deep charcoal, colder and sharper for B2B authority
+  // Executive variant - deep charcoal, colder and sharper for B2B authority
   &--executive {
     background: linear-gradient(155deg, #141a22 0%, #1e2a38 45%, #0e1720 100%);
 

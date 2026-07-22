@@ -186,12 +186,18 @@ app-home-pricing-teaser {
   svg { width: 2rem; height: 2rem; }
 
   &--zalo {
-    background: rgb(0, 104, 255);
-    border-color: rgb(0, 104, 255);
-    color: #fff;
-    font-family: var(--font-sans-serif);
-    font-size: 1.12rem;
-    font-weight: 700;
+    background: transparent;
+    border: none;
+    padding: 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 999px;
+    }
   }
 }
 

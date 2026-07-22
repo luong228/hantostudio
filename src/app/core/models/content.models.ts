@@ -80,7 +80,7 @@ export interface BlogPost {
   publishedAt: string;
   readingMinutes: number;
   tags: string[];
-  /** Optional override route — used for SEO landing pages displayed in the blog listing */
+  /** Optional override route - used for SEO landing pages displayed in the blog listing */
   route?: string;
   seo?: SeoMeta;
 }
