@@ -11,7 +11,7 @@
         [description]="post.excerpt"
         [image]="post.coverImage"
         [meta]="post.publishedAt + ' • ' + post.readingMinutes + ' phút đọc'"
-        [route]="'/blog/' + post.slug" />
+        [route]="post.route ?? '/blog/' + post.slug" />
     }
   </div>
 

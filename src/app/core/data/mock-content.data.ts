@@ -506,29 +506,20 @@ export const PRICING_PLANS: PricingPlan[] = [
 ];
 
 export const BLOG_POSTS: BlogPost[] = [
+  // ── SEO landing pages ────────────────────────────────────────────────────────
   {
-    id: 'blog-what-to-wear',
-    slug: 'what-to-wear-for-portrait-session',
-    title: 'Mặc Gì Cho Buổi Chụp Chân Dung Để Ảnh Đẹp Mãi Theo Thời Gian',
-    excerpt: 'Hướng dẫn thực tế để chọn trang phục giúp ảnh đẹp hơn mà không bị cảm giác quá cầu kỳ.',
-    content:
-      'Chọn chất liệu thay vì họa tiết nổi bật, phối tông màu thay vì đồng phục hoàn toàn, và ưu tiên dáng trang phục bạn có thể tự do cử động. Mang một bộ trang trọng và một bộ năng động để tạo chiều sâu hình ảnh.',
-    coverImage: 'https://images.unsplash.com/photo-1464863979621-258859e62245?auto=format&fit=crop&w=1400&q=80',
-    publishedAt: '2026-06-02',
-    readingMinutes: 6,
-    tags: ['styling', 'portrait', 'preparation']
-  },
-  {
-    id: 'blog-family-session-flow',
-    slug: 'family-session-flow-with-kids',
-    title: 'Làm Thế Nào Chúng Tôi Giữ Buổi Chụp Gia Đình Thoải Mái Dù Có Trẻ Nhỏ',
-    excerpt: 'Quy trình buổi chụp của chúng tôi được thiết kế để giữ năng lượng, tâm trạng và những khoảnh khắc chân thực.',
-    content:
-      'Chúng tôi bắt đầu với những cử động, rồi dừng lại để chụp chân dung gần, và kết thúc bằng những tương tác vui chơi. Nhịp độ này giúp trẻ nhỏ tự nhiên hòa vào và giữ biểu cảm chân thực.',
-    coverImage: 'https://images.unsplash.com/photo-1519340333755-c5ac7d0f7f7e?auto=format&fit=crop&w=1400&q=80',
-    publishedAt: '2026-05-12',
-    readingMinutes: 5,
-    tags: ['family', 'behind-the-scenes']
+    id: 'seo-vinhomes-dep',
+    slug: 'studio-chup-anh-dep-vinhomes-grand-park',
+    title: 'Studio Chụp Ảnh Đẹp Ở Vinhomes Grand Park — Hướng Dẫn Đầy Đủ',
+    excerpt:
+      'Tất cả những gì bạn cần biết trước khi đặt lịch tại studio chụp ảnh đẹp ở Vinhomes Grand Park: ánh sáng, makeup, tạo dáng và cách chọn gói phù hợp.',
+    content: '',
+    coverImage:
+      'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=1400&q=80',
+    publishedAt: '2026-07-22',
+    readingMinutes: 8,
+    tags: ['vinhomes', 'hướng-dẫn', 'địa-điểm'],
+    route: '/studio-chup-anh-dep-vinhomes-grand-park'
   }
 ];
 
