@@ -24,7 +24,7 @@
     <app-home-testimonials ngSkipHydration [testimonials]="repo.testimonials()" />
   </section>
   
-  <app-home-all-services [services]="repo.services()" />
+  <app-home-all-services [services]="repo.services().reverse().slice(0, 6)" />
 
 
   <app-home-pricing-teaser [plans]="featuredPlans()" />

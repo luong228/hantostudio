@@ -212,7 +212,7 @@ export const TESTIMONIALS: TestimonialItem[] = [
     tag: 'Beauty',
     quote: 'Ảnh chụp lên quá đẹp và tự nhiên, đúng mood mình mong muốn. Ekip nhiệt tình, hướng dẫn rất nhẹ nhàng dù mình không biết tạo dáng.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=200&q=80'
+    image: 'https://lh3.googleusercontent.com/a-/ALV-UjWkuY20VotlrKEjbx33BgPxkki4qowloKF_Roz006wSfZl_Xwy5=w72-h72-p-rp-mo-br100'
   },
   {
     name: 'Trần Minh Khôi',
@@ -240,12 +240,12 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Chân dung editorial — profile & thương hiệu.',
     description:
       'Gói chân dung chủ lực với quy trình makeup, styling, hướng dẫn tạo dáng và retouch cao cấp để bạn lên hình tự nhiên, sáng và đúng thần thái.',
-    heroImage: '/images/chan-dung.png',
+    heroImage: '/images/chan-dung2.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1100&q=80',
-      'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=1100&q=80'
+      '/images/chan-dung.jpg',
+      '/images/chan-dung1.jpg',
     ],
-    startingPrice: 1290000,
+    startingPrice: 1299000,
     durationMinutes: 90,
     badges: ['Chân dung']
   },
@@ -256,12 +256,11 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Ảnh gia đình tự nhiên, thân thiện trẻ nhỏ.',
     description:
       'Dịch vụ dành cho gia đình muốn giữ lại khoảnh khắc thật, đội ngũ điều tiết nhịp độ và nhịp điệu để ảnh đẹp mà vẫn tự nhiên.',
-    heroImage: '/images/gia-dinh.png',
+    heroImage: '/images/me-bau1.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1100&q=80',
-      'https://images.unsplash.com/photo-1519340333755-c5ac7d0f7f7e?auto=format&fit=crop&w=1100&q=80'
+     '/images/me-bau1.jpg',
     ],
-    startingPrice: 1290000,
+    startingPrice: 1299000,
     durationMinutes: 120,
     badges: ['Gia đình']
   },
@@ -272,28 +271,27 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Ảnh mẹ bầu nhẹ nhàng, đầy cảm xúc.',
     description:
       'Phù hợp với khách hàng muốn bộ ảnh mang tính chủ đề rõ ràng: áo dài, mẹ bầu hoặc concept nghệ thuật với quy trình sản xuất trọn gói.',
-    heroImage: '/images/thai-san.png',
+    heroImage: '/images/me-bau.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?auto=format&fit=crop&w=1100&q=80',
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1100&q=80'
+      '/images/me-bau1.jpg',
+      '/images/me-bau2.jpg'
     ],
-    startingPrice: 1290000,
+    startingPrice: 1299000,
     durationMinutes: 100,
     badges: ['Mẹ bầu']
   },
   {
-    id: 'svc-profile-linkedin',
+    id: 'svc-profile',
     slug: 'profile-ca-nhan',
-    name: 'Profile Cá Nhân & LinkedIn',
-    shortDescription: 'Ảnh profile chuyên nghiệp cho LinkedIn & website.',
+    name: 'Profile Cá Nhân',
+    shortDescription: 'Ảnh profile chuyên nghiệp cho cá nhân & website.',
     description:
       'Buổi chụp ngắn gọn, tập trung vào 1–2 bộ trang phục, ánh sáng phòng thu và góc khuôn mặt tốt nhất. Kết quả là bộ ảnh tự tin, thân thiện và đáng tin cậy.',
-    heroImage: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1400&q=80',
+    heroImage: '/images/ca-nhan.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1100&q=80',
-      'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1100&q=80'
+      '/images/ca-nhan1.jpg',
     ],
-    startingPrice: 1290000,
+    startingPrice: 1299000,
     durationMinutes: 60,
     badges: ['Profile', 'Cá nhân']
   },
@@ -304,30 +302,43 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Bộ ảnh theo concept & chủ đề riêng.',
     description:
       'Đội ngũ lên concept, chuẩn bị phục trang và bối cảnh theo yêu cầu. Phù hợp với khách hàng muốn một bộ ảnh mang dấu ấn nghệ thuật rõ ràng, không theo khuôn mẫu.',
-    heroImage: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1400&q=80',
+    heroImage: '/images/nghe-thuat.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1100&q=80',
-      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1100&q=80'
+      
     ],
-    startingPrice: 1290000,
+    startingPrice: 1299000,
     durationMinutes: 150,
     badges: ['Concept', 'Nghệ thuật']
   },
   {
-    id: 'svc-pre-wedding',
-    slug: 'pre-wedding',
-    name: 'Pre-Wedding',
-    shortDescription: 'Ảnh cưới lãng mạn trước ngày trọng đại.',
+    id: 'svc-sinh-nhat',
+    slug: 'sinh-nhat',
+    name: 'Sinh nhật',
+    shortDescription: 'Ảnh sinh nhật đẹp trước ngày trọng đại.',
     description:
-      'Buổi chụp pre-wedding tập trung vào sự kết nối và cảm xúc thật của hai người. Studio hỗ trợ từ chọn concept, phối trang phục đến dẫn dắt tương tác tự nhiên trước ống kính.',
-    heroImage: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1100&q=80',
-      'https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1100&q=80'
+      'Buổi chụp sinh nhật tập trung vào sự kết nối và cảm xúc thật của hai người. Studio hỗ trợ từ chọn concept, phối trang phục đến dẫn dắt tương tác tự nhiên trước ống kính.',
+      heroImage: '/images/sinh-nhat.jpg',
+      gallery: [
+      '/images/sinh-nhat1.jpg',
     ],
-    startingPrice: 1290000,
+    startingPrice: 1299000,
     durationMinutes: 180,
-    badges: ['Cưới', 'Pre-wedding']
+    badges: ['Sinh nhật']
+  },
+  {
+    id: 'svc-doanh-nhan',
+    slug: 'doanh-nhan',
+    name: 'Doanh Nhân',
+    shortDescription: 'Ảnh profile doanh nhân — tự tin, chuyên nghiệp, đúng tầm vóc.',
+    description:
+      'Gói chụp ảnh chuyên biệt cho doanh nhân, giám đốc và chuyên gia muốn có bộ ảnh profile thương hiệu cá nhân cao cấp. Tư vấn concept riêng theo lĩnh vực, ánh sáng editorial, retouch tinh tế giữ nguyên thần thái. Phù hợp cho LinkedIn, website công ty, hồ sơ năng lực và tài liệu truyền thông.',
+    heroImage: '/images/doanh-nhan.jpg',
+    gallery: [
+      '/images/doanh-nhan1.jpg',
+    ],
+    startingPrice: 1299000,
+    durationMinutes: 90,
+    badges: ['Doanh nhân', 'Profile']
   }
 ];
 
@@ -519,11 +530,67 @@ export const BLOG_POSTS: BlogPost[] = [
       'Tất cả những gì bạn cần biết trước khi đặt lịch tại studio chụp ảnh đẹp ở Vinhomes Grand Park: ánh sáng, makeup, tạo dáng và cách chọn gói phù hợp.',
     content: '',
     coverImage:
-      'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=1400&q=80',
+      'https://s6.imgcdn.dev/YHNyi0.jpg',
     publishedAt: '2026-07-22',
     readingMinutes: 8,
     tags: ['vinhomes', 'hướng-dẫn', 'địa-điểm'],
     route: '/studio-chup-anh-dep-vinhomes-grand-park'
+  },
+  {
+    id: 'seo-vinhomes-nghe-thuat',
+    slug: 'studio-chup-anh-nghe-thuat-vinhomes-grand-park',
+    title: 'Studio Chụp Ảnh Nghệ Thuật Tại Vinhomes Grand Park – HANTO Studio',
+    excerpt:
+      'HANTO Studio – studio chụp ảnh nghệ thuật cao cấp ngay trong Vinhomes Grand Park, Quận 9. Chân dung cá nhân, gia đình, couple. Ánh sáng chuyên nghiệp, concept riêng, retouch tinh tế.',
+    content: '',
+    coverImage:
+      'https://s6.imgcdn.dev/YHNyi0.jpg',
+    publishedAt: '2026-07-22',
+    readingMinutes: 8,
+    tags: ['vinhomes', 'nghệ-thuật', 'chân-dung', 'gia-đình'],
+    route: '/studio-chup-anh-nghe-thuat-vinhomes-grand-park'
+  },
+  {
+    id: 'seo-vinhomes-gia-dinh',
+    slug: 'chup-anh-gia-dinh-vinhomes-grand-park',
+    title: 'Chụp Ảnh Gia Đình Tại Vinhomes Grand Park – HANTO Studio',
+    excerpt:
+      'HANTO Studio – studio chụp ảnh gia đình tại Vinhomes Grand Park, Quận 9. Lưu giữ khoảnh khắc cả nhà bằng ảnh nghệ thuật ấm áp, chân thực. Ekip kiên nhẫn, phù hợp cả trẻ nhỏ.',
+    content: '',
+    coverImage:
+      'https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=1400&q=80',
+    publishedAt: '2026-07-22',
+    readingMinutes: 9,
+    tags: ['vinhomes', 'gia-đình', 'kỷ-niệm', 'trẻ-em'],
+    route: '/chup-anh-gia-dinh-vinhomes-grand-park'
+  },
+  {
+    id: 'seo-profile-quan-9',
+    slug: 'chup-anh-profile-ca-nhan-quan-9',
+    title: 'Chụp Ảnh Profile Cá Nhân Tại Quận 9 – HANTO Studio',
+    excerpt:
+      'HANTO Studio – chụp ảnh profile cá nhân, doanh nhân cao cấp tại Quận 9. Ảnh LinkedIn, thương hiệu cá nhân, đồng bộ team. Concept riêng, retouch tinh tế. Đặt lịch ngay.',
+    content: '',
+    coverImage:
+      'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1400&q=80',
+    publishedAt: '2026-07-22',
+    readingMinutes: 8,
+    tags: ['profile', 'doanh-nhân', 'linkedin', 'thương-hiệu-cá-nhân'],
+    route: '/chup-anh-profile-ca-nhan-quan-9'
+  },
+  {
+    id: 'seo-doanh-nhan-vinhomes',
+    slug: 'chup-anh-doanh-nhan-vinhomes-grand-park',
+    title: 'Chụp Ảnh Doanh Nhân Tại Vinhomes Grand Park – HANTO Studio',
+    excerpt:
+      'HANTO Studio – chụp ảnh doanh nhân, CEO, founder tại Vinhomes Grand Park. Bộ ảnh thương hiệu cá nhân cao cấp — editorial, concept riêng, tone nhất quán. Đặt lịch ngay.',
+    content: '',
+    coverImage:
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1400&q=80',
+    publishedAt: '2026-07-22',
+    readingMinutes: 9,
+    tags: ['doanh-nhân', 'vinhomes', 'thương-hiệu-cá-nhân', 'executive'],
+    route: '/chup-anh-doanh-nhan-vinhomes-grand-park'
   }
 ];
 

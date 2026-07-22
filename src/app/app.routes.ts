@@ -60,6 +60,26 @@ export const routes: Routes = [
 				loadComponent: () =>
 					import('./features/seo-landing/vinhomes-dep/vinhomes-dep-landing.component').then((m) => m.VinhomesDepLandingComponent)
 			},
+			{
+				path: 'studio-chup-anh-nghe-thuat-vinhomes-grand-park',
+				loadComponent: () =>
+					import('./features/seo-landing/vinhomes-nghe-thuat/vinhomes-nghe-thuat-landing.component').then((m) => m.VinhomesNgheThuatLandingComponent)
+			},
+			{
+				path: 'chup-anh-gia-dinh-vinhomes-grand-park',
+				loadComponent: () =>
+					import('./features/seo-landing/vinhomes-gia-dinh/vinhomes-gia-dinh-landing.component').then((m) => m.VinhomesGiaDinhLandingComponent)
+			},
+			{
+				path: 'chup-anh-profile-ca-nhan-quan-9',
+				loadComponent: () =>
+					import('./features/seo-landing/vinhomes-profile/vinhomes-profile-landing.component').then((m) => m.VinhomesProfileLandingComponent)
+			},
+			{
+				path: 'chup-anh-doanh-nhan-vinhomes-grand-park',
+				loadComponent: () =>
+					import('./features/seo-landing/vinhomes-doanh-nhan/vinhomes-doanh-nhan-landing.component').then((m) => m.VinhomesDoanhNhanLandingComponent)
+			},
 			{ path: 'services', redirectTo: 'dich-vu', pathMatch: 'full' },
 			{ path: 'services/:slug', redirectTo: 'dich-vu/:slug', pathMatch: 'full' },
 			{ path: 'pricing', redirectTo: 'bang-gia', pathMatch: 'full' },

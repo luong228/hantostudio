@@ -65,7 +65,7 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://hantostudio.vn/dich-vu/pre-wedding</loc>
+    <loc>https://hantostudio.vn/dich-vu/sinh-nhat</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -76,6 +76,34 @@
     <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://hantostudio.vn/studio-chup-anh-nghe-thuat-vinhomes-grand-park</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://hantostudio.vn/chup-anh-gia-dinh-vinhomes-grand-park</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hantostudio.vn/chup-anh-profile-ca-nhan-quan-9</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hantostudio.vn/chup-anh-doanh-nhan-vinhomes-grand-park</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

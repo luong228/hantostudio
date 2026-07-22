@@ -1,0 +1,418 @@
+// ── Family SEO Landing Page ───────────────────────────────────────────────────
+// Shares the same .art- design system as vinhomes-nghe-thuat landing page.
+
+:host { display: block; }
+
+// ── Shared container ──────────────────────────────────────────────────────────
+
+.art-container {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: clamp(2rem, 5vw, 4.8rem);
+}
+
+// ── Buttons ───────────────────────────────────────────────────────────────────
+
+.btn-primary {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-family: var(--font-sans-serif);
+  font-size: 1.44rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 1.16rem 2.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover { opacity: 0.88; }
+}
+
+.btn-ghost {
+  display: inline-block;
+  border: 1.5px solid rgba(1, 25, 59, 0.3);
+  color: var(--primary);
+  font-family: var(--font-sans-serif);
+  font-size: 1.44rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 1.12rem 2.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+}
+
+// ── Hero ──────────────────────────────────────────────────────────────────────
+
+.art-hero {
+  padding: 5.6rem 0 4.8rem;
+  background: linear-gradient(170deg, #f8f5f0 0%, #fdfcfa 50%, #f4f0ec 100%);
+}
+
+.art-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.56rem;
+  font-family: var(--font-sans-serif);
+  font-size: 1.24rem;
+  color: rgba(1, 25, 59, 0.46);
+  margin-bottom: 2.4rem;
+
+  a {
+    color: rgba(1, 25, 59, 0.56);
+    text-decoration: none;
+    transition: color 0.18s ease;
+
+    &:hover { color: var(--primary); }
+  }
+}
+
+.art-hero__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.art-hero__tag {
+  display: inline-block;
+  background: rgba(1, 25, 59, 0.07);
+  color: var(--primary);
+  font-family: var(--font-sans-serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.32rem 1rem;
+  border-radius: 999px;
+}
+
+.art-hero__date,
+.art-hero__read {
+  font-family: var(--font-sans-serif);
+  font-size: 1.28rem;
+  color: rgba(1, 25, 59, 0.48);
+}
+
+.art-hero__sep { color: rgba(1, 25, 59, 0.28); }
+
+.art-hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(3.2rem, 4.5vw, 6rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--primary);
+  margin: 0 0 2.4rem;
+  text-wrap: balance;
+}
+
+.art-hero__lead {
+  font-family: var(--font-sans-serif);
+  font-size: clamp(1.52rem, 1.8vw, 1.72rem);
+  line-height: 1.75;
+  color: rgba(1, 25, 59, 0.68);
+  margin: 0 0 3.2rem;
+  max-width: 66ch;
+}
+
+.art-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+// ── Article body ──────────────────────────────────────────────────────────────
+
+.art-body {
+  padding: 5.6rem 0;
+  background: #fff;
+}
+
+.art-prose {
+  h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.4rem, 2.8vw, 3.6rem);
+    font-weight: 600;
+    color: var(--primary);
+    margin: 4.8rem 0 1.6rem;
+    line-height: 1.2;
+
+    &:first-child { margin-top: 0; }
+  }
+
+  h3 {
+    font-family: var(--font-sans-serif);
+    font-size: clamp(1.6rem, 1.8vw, 2rem);
+    font-weight: 700;
+    color: var(--primary);
+    margin: 3.2rem 0 1.2rem;
+    line-height: 1.3;
+  }
+
+  p {
+    font-family: var(--font-sans-serif);
+    font-size: 1.52rem;
+    line-height: 1.85;
+    color: rgba(1, 25, 59, 0.72);
+    margin: 0 0 1.8rem;
+  }
+
+  em {
+    font-style: italic;
+    color: rgba(1, 25, 59, 0.8);
+  }
+
+  strong { color: var(--primary); }
+
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+
+    &:hover { opacity: 0.72; }
+  }
+}
+
+.art-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  li {
+    font-family: var(--font-sans-serif);
+    font-size: 1.52rem;
+    line-height: 1.7;
+    color: rgba(1, 25, 59, 0.72);
+    padding-left: 1.6rem;
+    position: relative;
+
+    &::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: rgba(1, 25, 59, 0.35);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+  }
+}
+
+// ── Pricing strip ─────────────────────────────────────────────────────────────
+
+.art-pricing {
+  padding: 6.4rem 0;
+  background: linear-gradient(170deg, #f8f5f0 0%, #fdfcfa 50%, #f4f0ec 100%);
+}
+
+.art-pricing__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 2.8vw, 3.6rem);
+  font-weight: 600;
+  color: var(--primary);
+  text-align: center;
+  margin: 0 0 4rem;
+}
+
+.art-pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.art-price-card {
+  background: #fff;
+  border: 1.5px solid rgba(1, 25, 59, 0.09);
+  border-radius: 2rem;
+  padding: 3.6rem 2.8rem;
+  position: relative;
+
+  &__badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary);
+    color: #fff;
+    font-family: var(--font-sans-serif);
+    font-size: 1.08rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.4rem 1.4rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  &__name {
+    font-family: var(--font-sans-serif);
+    font-size: 1.12rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(1, 25, 59, 0.5);
+    margin: 0 0 0.8rem;
+  }
+
+  &__price {
+    font-family: var(--font-sans-serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0 0 2rem;
+    line-height: 1;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    li {
+      font-family: var(--font-sans-serif);
+      font-size: 1.36rem;
+      color: rgba(1, 25, 59, 0.66);
+      padding-left: 1.6rem;
+      position: relative;
+
+      &::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        opacity: 0.6;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  &--featured {
+    background: var(--primary);
+    border-color: var(--primary);
+    padding-top: 4.8rem;
+
+    .art-price-card__name { color: rgba(255, 255, 255, 0.55); }
+    .art-price-card__price { color: #fff; }
+
+    ul li {
+      color: rgba(255, 255, 255, 0.82);
+
+      &::before { color: #fff; opacity: 0.7; }
+    }
+  }
+}
+
+.art-pricing__note {
+  font-family: var(--font-sans-serif);
+  font-size: 1.36rem;
+  color: rgba(1, 25, 59, 0.52);
+  text-align: center;
+  margin: 0;
+
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}
+
+// ── Final CTA ─────────────────────────────────────────────────────────────────
+
+.art-cta {
+  padding: 6.4rem 0;
+  background: var(--primary);
+
+  &__inner {
+    text-align: center;
+  }
+
+  h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.8rem, 3.5vw, 5rem);
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 2rem;
+    line-height: 1.2;
+  }
+
+  p {
+    font-family: var(--font-sans-serif);
+    font-size: 1.52rem;
+    line-height: 1.78;
+    color: rgba(255, 255, 255, 0.72);
+    max-width: 60ch;
+    margin: 0 auto 3.2rem;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 2.4rem;
+
+    .btn-primary {
+      background: #fff;
+      color: var(--primary);
+
+      &:hover { opacity: 0.9; }
+    }
+
+    .btn-ghost {
+      border-color: rgba(255, 255, 255, 0.4);
+      color: #fff;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.12);
+        color: #fff;
+      }
+    }
+  }
+
+  &__addr {
+    font-family: var(--font-sans-serif);
+    font-size: 1.28rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+  }
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+
+@media (max-width: 900px) {
+  .art-pricing__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .art-hero  { padding: 4rem 0 3.6rem; }
+  .art-body  { padding: 4rem 0; }
+
+  .art-pricing__grid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 40rem;
+    margin-inline: auto;
+  }
+
+  .art-hero__ctas,
+  .art-cta__btns { flex-direction: column; align-items: stretch; text-align: center; }
+}
