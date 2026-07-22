@@ -37,7 +37,7 @@ export class HomePageComponent {
   protected readonly repo = inject(ContentRepositoryService);
   private readonly seo = inject(SeoService);
   protected readonly featuredServices = computed(() => this.repo.services().slice(0, 3));
-  protected readonly featuredPlans = computed(() => this.repo.pricingPlans().slice(0, 3));
+  protected readonly featuredPlans = computed(() => this.repo.pricingPlans());
   protected readonly featuredFaqs = computed(() => this.repo.faqItems().slice(0, 4));
   protected readonly heroMetrics = computed(() => this.repo.trustMetrics().slice(0, 4));
   protected readonly homeContent = computed(() => this.repo.homePageContent());

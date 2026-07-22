@@ -1,47 +1,27 @@
 <section class="pricing-page">
   <div class="pricing-container">
+
     <header class="pricing-header">
-      <span class="pricing-header__eyebrow">03 GÓI • BA CÂU CHUYỆN</span>
-      <h1 class="pricing-header__title">CÂU CHUYỆN NÀO THUỘC VỀ BẠN?</h1>
-      <p class="pricing-header__subtitle">Tìm gói phù hợp với câu chuyện bạn muốn kể</p>
+      <span class="pricing-header__eyebrow">BẢNG GIÁ DỊCH VỤ</span>
+      <div class="pricing-header__ornament" aria-hidden="true">
+        <span></span>
+        <svg viewBox="0 0 16 10" fill="currentColor" width="10" height="10"><path d="M8 0 L11 5 L8 10 L5 5 Z"/></svg>
+        <span></span>
+      </div>
+      <h1 class="pricing-header__title">Bảng Giá Dịch Vụ Chụp Ảnh<br>Minh Bạch – Trọn Gói</h1>
+      <p class="pricing-header__subtitle">
+        Không phát sinh chi phí ngoài bảng giá. Mỗi gói đều bao gồm đủ ekip,<br>
+        tư vấn concept và chỉnh sửa chuyên nghiệp để bạn nhận được bộ ảnh đẹp nhất.
+      </p>
     </header>
 
-    <div class="pricing-grid">
-      @for (plan of repo.pricingPlans(); track plan.id) {
-        <article class="pricing-card" [class.pricing-card--featured]="plan.highlighted">
-          @if (plan.highlighted) {
-            <span class="pricing-card__badge">PHỔ BIẾN NHẤT</span>
-          }
-          
-          <h2 class="pricing-card__name">{{ plan.name }}</h2>
-          <p class="pricing-card__summary">{{ plan.summary }}</p>
-          
-          <div class="pricing-card__price-container">
-            <span class="pricing-card__price">{{ plan.price | number:'1.0-0' }}đ</span>
-            <span class="pricing-card__price-label">GIÁ TRỌN GÓI</span>
-          </div>
-          
-          <ul class="pricing-card__features">
-            @for (feature of plan.features; track feature) {
-              <li class="pricing-card__feature">
-                <span class="pricing-card__feature-icon">✓</span>
-                <span class="pricing-card__feature-text">{{ feature }}</span>
-              </li>
-            }
-          </ul>
-          
-          <div class="pricing-card__action">
-            <a class="pricing-card__button" [routerLink]="['/lien-he']">
-              Đăng ký gói {{ plan.name }}
-            </a>
-          </div>
-        </article>
-      }
-    </div>
+    <app-pricing-cards [plans]="repo.pricingPlans()" [showTrust]="true" />
 
     <p class="pricing-footer-note">
-      <span class="pricing-footer-note__icon">📍</span>
-      Ghi chú: Giá có thể thay đổi theo concept đặc biệt và ekip lẻ. Liên hệ 0396 887 597 để được tư vấn chi tiết.
+      Giá có thể thay đổi theo concept đặc biệt và ekip lẻ.
+      Liên hệ <a href="tel:0396887597">0396 887 597</a> để được tư vấn chi tiết.
     </p>
+
   </div>
 </section>
+

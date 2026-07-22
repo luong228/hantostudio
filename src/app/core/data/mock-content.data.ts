@@ -324,12 +324,14 @@ export const SERVICES: ServiceItem[] = [
 ];
 
 export const PRICING_PLANS: PricingPlan[] = [
+  // ── Nữ ──────────────────────────────────────────────────────────────────
   {
-    id: 'price-essential',
+    id: 'nu-basic',
     name: 'BASIC',
     price: 1299000,
-    summary: 'Ghi lại một khoảnh khắc đẹp – nhẹ nhàng, trọn vẹn',
+    summary: 'Ghi lại những khoảnh khắc đẹp tự nhiên, nhẹ nhàng và trong trẻo.',
     idealFor: 'Chụp cá nhân, chân dung cơ bản',
+    category: 'nu',
     features: [
       'Chụp 120 - 160 ảnh',
       '1 layout makeup và làm tóc dành cho nữ TIÊU CHUẨN',
@@ -339,16 +341,18 @@ export const PRICING_PLANS: PricingPlan[] = [
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
       'Không gian và bối cảnh chụp',
-      'Phụ kiện tiêu chuẩn',
+      'Phụ kiện TIÊU CHUẨN',
       'Toàn bộ ảnh gốc',
-    ]
+    ],
   },
   {
-    id: 'price-signature',
+    id: 'nu-vip',
     name: 'VIP',
     price: 2299000,
-    summary: 'Kể câu chuyện của bạn qua từng khung hình tinh tế',
+    summary: 'Kể câu chuyện của bạn qua từng khung hình tinh tế và cảm xúc.',
     idealFor: 'Kể câu chuyện sâu sắc hơn, nhiều góc cạnh',
+    category: 'nu',
+    highlighted: true,
     features: [
       'Chụp 160 - 250 ảnh',
       '1 layout makeup và làm tóc dành cho nữ CHUYÊN NGHIỆP',
@@ -359,32 +363,146 @@ export const PRICING_PLANS: PricingPlan[] = [
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
       'Không gian và bối cảnh chụp',
       'Toàn bộ ảnh gốc',
-      'Phụ kiện tiêu chuẩn',
-      'Tặng kèm Nail + Lens + Bộ ảnh beauty'
+      'Phụ kiện CAO CẤP',
+      'Tặng kèm Nail hoặc Lens + Bộ ảnh beauty'
     ],
-    highlighted: true
   },
   {
-    id: 'price-legacy',
+    id: 'nu-luxury',
     name: 'LUXURY',
     price: 3999000,
-    summary: 'Tác phẩm để lưu giữ – không chỉ cho hôm nay',
+    summary: 'Trải nghiệm cao cấp – Tôn vinh vẻ đẹp rạng rỡ và đẳng cấp của bạn.',
     idealFor: 'Gói cao cấp hoàn hảo cho chân dung nghệ thuật',
+    category: 'nu',
     features: [
       'Chụp ảnh không giới hạn',
       '1 layout makeup và làm tóc CAO CẤP dành cho nữ THEO YÊU CẦU',
-      '1 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '2 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
       '22 ảnh chỉnh sửa kỹ lưỡng',
       '1 background của HANTO Studio khách hàng lựa chọn',
+      'Clip quay hậu trường đã edit',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
       'Không gian và bối cảnh chụp',
       'Toàn bộ ảnh gốc',
-      'Phụ kiện cao cấp',
+      'Phụ kiện CAO CẤP',
       'Tặng kèm Nail + Lens',
       'Tặng kèm bộ ảnh beauty'
-    ]
-  }
+    ],
+  },
+
+  // ── Nam ──────────────────────────────────────────────────────────────────
+  {
+    id: 'nam-vip',
+    name: 'VIP',
+    price: 999000,
+    summary: 'Phong cách nam tính, tự tin – từng khoảnh khắc đều toát lên cá tính.',
+    idealFor: 'Chụp cá nhân, chân dung nam chuyên nghiệp',
+    category: 'nam',
+    features: [
+      'Chụp 80 - 120 ảnh',
+      '1 layout makeup và làm tóc dành cho nam TIÊU CHUẨN',
+      '1 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '08 ảnh chỉnh sửa kỹ lưỡng',
+      '1 background của HANTO Studio khách hàng lựa chọn',
+      'Dịch vụ chăm sóc trước buổi chụp',
+      'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
+      'Không gian và bối cảnh chụp',
+      'Phụ kiện tiêu chuẩn',
+      'Toàn bộ ảnh gốc',
+    ],
+  },
+  {
+    id: 'nam-luxury',
+    name: 'LUXURY',
+    price: 1599000,
+    summary: 'Đẳng cấp và tinh tế – tôn vinh phong thái riêng của người đàn ông.',
+    idealFor: 'Gói cao cấp cho chân dung nam nghệ thuật',
+    category: 'nam',
+    highlighted: true,
+    features: [
+      'Chụp 120-180 ảnh',
+      '1 layout makeup và làm tóc dành cho nam CHUYÊN NGHIỆP',
+      '1 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '15 ảnh chỉnh sửa kỹ lưỡng',
+      '1 background của HANTO Studio khách hàng lựa chọn',
+      'Miễn phí chỉnh trang cho bé dưới 7 tuổi',
+      'Clip quay hậu trường đã edit',
+      'Dịch vụ chăm sóc trước buổi chụp',
+      'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
+      'Không gian và bối cảnh chụp',
+      'Phụ kiện CAO CẤP',
+      'Toàn bộ ảnh gốc',
+    ],
+  },
+
+  // ── Gia đình ─────────────────────────────────────────────────────────────
+  {
+    id: 'giadinh-2',
+    name: '2 NGƯỜI',
+    price: 2239000,
+    summary: 'Khoảnh khắc ngọt ngào của hai trái tim trong cùng một khung hình.',
+    idealFor: 'Cặp đôi, gia đình 2 thành viên',
+    category: 'gia-dinh',
+    features: [
+      'Chụp 80 - 120 ảnh',
+      '2 layout makeup và làm tóc CHUYÊN NGHIỆP',
+      '2 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '15 ảnh chỉnh sửa kỹ lưỡng',
+      '2 background của HANTO Studio khách hàng lựa chọn',
+      'Miễn phí chỉnh trang cho bé dưới 7 tuổi',
+      'Dịch vụ chăm sóc trước buổi chụp',
+      'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
+      'Không gian và bối cảnh chụp',
+      'Phụ kiện TIÊU CHUẨN',
+      'Toàn bộ ảnh gốc',
+      'Tặng kèm 1 ảnh in 30x40cm và 1 khung gỗ'
+    ],
+  },
+  {
+    id: 'giadinh-3',
+    name: '3 NGƯỜI',
+    price: 3239000,
+    summary: 'Yêu thương trọn vẹn – lưu giữ từng khoảnh khắc của cả gia đình.',
+    idealFor: 'Gia đình 3 thành viên',
+    category: 'gia-dinh',
+    highlighted: true,
+    features: [
+      'Chụp 120 - 160 ảnh',
+      '3 layout makeup và làm tóc CHUYÊN NGHIỆP',
+      '3 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '15 ảnh chỉnh sửa kỹ lưỡng',
+      '3 background của HANTO Studio khách hàng lựa chọn',
+      'Miễn phí chỉnh trang cho bé dưới 7 tuổi',
+      'Dịch vụ chăm sóc trước buổi chụp',
+      'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
+      'Không gian và bối cảnh chụp',
+      'Phụ kiện TIÊU CHUẨN',
+      'Toàn bộ ảnh gốc',
+      'Tặng kèm 1 ảnh in 30x40cm và 1 khung gỗ'
+    ],
+  },
+  {
+    id: 'giadinh-4',
+    name: '4 NGƯỜI',
+    price: 4239000,
+    summary: 'Ký ức gia đình đong đầy cảm xúc – trân trọng từng khoảnh khắc bên nhau.',
+    idealFor: 'Gia đình 4 thành viên trở lên',
+    category: 'gia-dinh',
+    features: [
+      'Chụp ảnh không giới hạn',
+      '4 layout makeup và làm tóc CHUYÊN NGHIỆP',
+      '4 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '15 ảnh chỉnh sửa kỹ lưỡng',
+      '4 background của HANTO Studio khách hàng lựa chọn',
+      'Dịch vụ chăm sóc trước buổi chụp',
+      'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
+      'Không gian và bối cảnh chụp',
+      'Phụ kiện TIÊU CHUẨN',
+      'Toàn bộ ảnh gốc',
+      'Tặng kèm 2 ảnh in 30x40cm và 2 khung gỗ'
+    ],
+  },
 ];
 
 export const BLOG_POSTS: BlogPost[] = [

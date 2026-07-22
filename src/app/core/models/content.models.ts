@@ -56,6 +56,8 @@ export interface ServiceItem {
   seo?: SeoMeta;
 }
 
+export type PricingCategory = 'nu' | 'nam' | 'gia-dinh';
+
 export interface PricingPlan {
   id: string;
   name: string;
@@ -64,6 +66,7 @@ export interface PricingPlan {
   idealFor: string;
   features: string[];
   highlighted?: boolean;
+  category?: PricingCategory;
   seo?: SeoMeta;
 }
 

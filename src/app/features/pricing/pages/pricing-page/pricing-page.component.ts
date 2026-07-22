@@ -1,13 +1,12 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { DecimalPipe } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { ContentRepositoryService } from '../../../../core/services/content-repository.service';
 import { SeoService } from '../../../../core/services/seo.service';
+import { PricingCardsComponent } from '../../../../shared/ui/pricing-cards/pricing-cards.component';
 
 @Component({
   selector: 'app-pricing-page',
   standalone: true,
-  imports: [DecimalPipe, RouterLink],
+  imports: [PricingCardsComponent],
   templateUrl: './pricing-page.component.html',
   styleUrl: './pricing-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

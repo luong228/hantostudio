@@ -161,7 +161,7 @@ h2 {
   margin: 0;
   color: var(--primary);
   font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 2.2vw, 2rem);
+  font-size: clamp(1.44rem, 2.2vw, 2rem);
   line-height: 1.15;
   text-decoration: none;
   overflow-wrap: anywhere;
@@ -186,17 +186,119 @@ h2 {
   }
 }
 
+@media (max-width: 768px) {
+  .section {
+    gap: 2rem;
+  }
+
+  .contact-hd {
+    gap: 0.8rem;
+  }
+
+  h2 {
+    font-size: clamp(2.6rem, 6vw, 3.8rem);
+  }
+
+  .contact-hd__sub {
+    font-size: 1.36rem;
+    line-height: 1.7;
+  }
+
+  .panel {
+    gap: 1rem;
+  }
+
+  .panel-grid {
+    gap: 1rem;
+  }
+
+  .info-card {
+    padding: 1.4rem;
+    gap: 1rem;
+  }
+
+  .info-icon {
+    width: 4rem;
+    height: 4rem;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .info-value {
+    font-size: clamp(1.44rem, 3.5vw, 1.8rem);
+  }
+
+  .info-value--small {
+    font-size: 1.4rem;
+  }
+
+  .info-note {
+    font-size: 1.12rem;
+  }
+}
+
 @media (max-width: 640px) {
   .panel-grid--2 {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 480px) {
+  .section {
+    gap: 1.6rem;
+  }
+
+  h2 {
+    font-size: clamp(2.4rem, 7.5vw, 3.2rem);
+  }
+
+  .contact-hd__eyebrow {
+    font-size: 1.04rem;
+    letter-spacing: 0.2em;
+  }
+
+  .contact-hd__sub {
+    font-size: 1.28rem;
+    line-height: 1.65;
+  }
 
   .info-card {
     padding: 1.2rem;
+    gap: 0.88rem;
+  }
+
+  .info-icon {
+    width: 3.6rem;
+    height: 3.6rem;
+
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+
+  .info-icon--zalo {
+    font-size: 1rem;
+  }
+
+  .info-label {
+    font-size: 0.96rem;
   }
 
   .info-value {
-    font-size: 2.6rem;
+    font-size: 1.44rem;
+  }
+
+  .info-value--small {
+    font-size: 1.32rem;
+    line-height: 1.4;
+  }
+
+  .info-note {
+    font-size: 1.08rem;
   }
 }
 

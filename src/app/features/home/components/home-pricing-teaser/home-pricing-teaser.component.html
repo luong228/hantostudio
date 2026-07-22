@@ -1,40 +1,19 @@
-<section class="pricing-teaser">
-  <header class="pricing-teaser__header">
-    <span class="pricing-teaser__eyebrow">03 GÓI • BA CÂU CHUYỆN</span>
-    <h2 class="pricing-teaser__title">CÂU CHUYỆN NÀO THUỘC VỀ BẠN?</h2>
-    <p class="pricing-teaser__subtitle">Tìm gói phù hợp với câu chuyện bạn muốn kể</p>
+﻿<section class="pricing">
+
+  <header class="pricing__header">
+    <span class="pricing__eyebrow">BẢNG GIÁ DỊCH VỤ</span>
+    <div class="pricing__ornament" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 16 10" fill="currentColor" width="10" height="10"><path d="M8 0 L11 5 L8 10 L5 5 Z"/></svg>
+      <span></span>
+    </div>
+    <h2 class="pricing__title">Chọn gói chụp phù hợp với mục tiêu<br>và phong cách của bạn</h2>
+    <p class="pricing__subtitle">
+      Mỗi khoảnh khắc đều xứng đáng được lưu giữ theo cách đẹp nhất.<br>
+      Khám phá các gói dịch vụ được thiết kế riêng, phù hợp với nhu cầu và phong cách của bạn.
+    </p>
   </header>
 
-  <div class="pricing-teaser__grid">
-    @for (plan of plans(); track plan.id) {
-      <article class="plan-card" [class.plan-card--featured]="plan.highlighted">
-        @if (plan.highlighted) {
-          <span class="plan-card__badge">PHỔ BIẾN NHẤT</span>
-        }
+  <app-pricing-cards [plans]="plans()" />
 
-        <h3 class="plan-card__name">{{ plan.name }}</h3>
-        <p class="plan-card__summary">{{ plan.summary }}</p>
-
-        <div class="plan-card__price-wrap">
-          <span class="plan-card__price">{{ plan.price | number:'1.0-0' }}đ</span>
-          <span class="plan-card__price-label">GIÁ TRỌN GÓI</span>
-        </div>
-
-        <ul class="plan-card__features">
-          @for (feature of plan.features; track feature) {
-            <li class="plan-card__feature">
-              <span class="plan-card__check">✓</span>
-              <span>{{ feature }}</span>
-            </li>
-          }
-        </ul>
-
-        <a class="plan-card__btn" [routerLink]="['/lien-he']">Đặt lịch ngay →</a>
-      </article>
-    }
-  </div>
-
-  <div class="pricing-teaser__cta">
-    <app-button label="Xem bảng giá đầy đủ" route="/bang-gia" variant="ghost" />
-  </div>
 </section>

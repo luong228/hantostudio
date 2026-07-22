@@ -1,163 +1,11 @@
-﻿// ── Pricing Teaser ───────────────────────────────────────────────────────────
-// Card/tab/trust styles live in shared PricingCardsComponent.
+// ── Shared Pricing Cards ─────────────────────────────────────────────────────
+// Used by HomePricingTeaserComponent and PricingPageComponent.
 
 :host { display: block; }
 
-.pricing {
-  position: relative;
-  padding: 7.2rem 0 5.6rem;
-  background: linear-gradient(170deg, #f8f5f0 0%, #fdfcfa 40%, #f4f0ec 100%);
-}
-
-// ── Header ────────────────────────────────────────────────────────────────────
-
-.pricing__header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.pricing__eyebrow {
-  display: inline-block;
-  font-family: var(--font-sans-serif);
-  font-size: 1.12rem;
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--primary);
-  opacity: 0.55;
-  margin-bottom: 1.2rem;
-}
-
-.pricing__ornament {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-  color: var(--primary);
-  opacity: 0.25;
-  margin-bottom: 1.6rem;
-
-  span {
-    display: block;
-    width: 2.8rem;
-    height: 1px;
-    background: currentColor;
-  }
-}
-
-.pricing__title {
-  font-family: var(--font-serif);
-  font-size: clamp(3rem, 3.8vw, 5.6rem);
-  font-weight: 600;
-  color: var(--primary);
-  line-height: 1.2;
-  margin: 0 0 2rem;
-}
-
-.pricing__subtitle {
-  font-family: var(--font-sans-serif);
-  font-size: 1.44rem;
-  line-height: 1.7;
-  color: rgba(1, 25, 59, 0.52);
-  margin: 0;
-}
-
-// ── Responsive ────────────────────────────────────────────────────────────────
-
-@media (max-width: 768px) {
-  .pricing {
-    padding: 5.6rem 0 4.4rem;
-  }
-
-  .pricing__header {
-    margin-bottom: 3.2rem;
-  }
-
-  .pricing__title {
-    font-size: clamp(2.6rem, 6vw, 4rem);
-  }
-
-  .pricing__subtitle {
-    font-size: 1.36rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .pricing {
-    padding: 4.8rem 0 3.6rem;
-  }
-
-  .pricing__title {
-    font-size: clamp(2.4rem, 8vw, 3.4rem);
-  }
-
-  .pricing__subtitle {
-    font-size: 1.28rem;
-  }
-
-  .pricing__eyebrow {
-    font-size: 1.04rem;
-    letter-spacing: 0.22em;
-  }
-}
-
-
-// ── Header ────────────────────────────────────────────────────────────────────
-
-.pricing__header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.pricing__eyebrow {
-  display: inline-block;
-  font-family: var(--font-sans-serif);
-  font-size: 1.12rem;
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--primary);
-  opacity: 0.55;
-  margin-bottom: 1.2rem;
-}
-
-.pricing__ornament {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-  color: var(--primary);
-  opacity: 0.25;
-  margin-bottom: 1.6rem;
-
-  span {
-    display: block;
-    width: 2.8rem;
-    height: 1px;
-    background: currentColor;
-  }
-}
-
-.pricing__title {
-  font-family: var(--font-serif);
-  font-size: clamp(3rem, 3.8vw, 5.6rem);
-  font-weight: 600;
-  color: var(--primary);
-  line-height: 1.2;
-  margin: 0 0 2rem;
-}
-
-.pricing__subtitle {
-  font-family: var(--font-sans-serif);
-  font-size: 1.44rem;
-  line-height: 1.7;
-  color: rgba(1, 25, 59, 0.52);
-  margin: 0;
-}
-
 // ── Tabs ──────────────────────────────────────────────────────────────────────
 
-.pricing__tabs {
+.pc-tabs {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,10 +14,9 @@
   border: 1.5px solid rgba(1, 25, 59, 0.16);
   border-radius: 999px;
   padding: 0.3rem;
-  gap: 0;
 }
 
-.pricing__tab {
+.pc-tab {
   font-family: var(--font-sans-serif);
   font-size: 1.44rem;
   font-weight: 600;
@@ -195,11 +42,12 @@
 
 // ── Grid ──────────────────────────────────────────────────────────────────────
 
-.pricing__grid {
+.pc-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2.4rem;
   align-items: stretch;
+  padding-top: 1.6rem;
 
   &--two {
     grid-template-columns: repeat(2, minmax(0, 36rem));
@@ -209,7 +57,7 @@
 
 // ── Plan Card ─────────────────────────────────────────────────────────────────
 
-.plan-card {
+.pc-card {
   background: #fff;
   border-radius: 2rem;
   border: 1.5px solid rgba(1, 25, 59, 0.09);
@@ -243,7 +91,7 @@
   }
 
   &__name {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans-serif);
     font-size: 3.2rem;
     font-weight: 600;
     color: var(--primary);
@@ -286,7 +134,7 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: rgba(1, 25, 59, 0.4);
-    margin-top: 0.64rem;
+    margin-top: 1.64rem;
   }
 
   &__divider {
@@ -349,7 +197,7 @@
     }
   }
 
-  // ── Featured (dark) card ────────────────────────────────────────────────────
+  // ── Featured (dark) card ──────────────────────────────────────────────────
   &--featured {
     background: var(--primary);
     border-color: var(--primary);
@@ -360,21 +208,21 @@
       box-shadow: 0 20px 56px rgba(1, 25, 59, 0.28);
     }
 
-    .plan-card__name        { color: #fff; }
-    .plan-card__tagline     { color: rgba(255, 255, 255, 0.52); }
-    .plan-card__price       { color: #fff; }
-    .plan-card__price-label { color: rgba(255, 255, 255, 0.42); }
-    .plan-card__divider     { background: rgba(255, 255, 255, 0.1); }
-    .plan-card__feat        { color: rgba(255, 255, 255, 0.88); }
-    .plan-card__check       { color: rgba(255, 255, 255, 0.65); opacity: 1; }
+    .pc-card__name        { color: #fff; }
+    .pc-card__tagline     { color: rgba(255, 255, 255, 0.52); }
+    .pc-card__price       { color: #fff; }
+    .pc-card__price-label { color: rgba(255, 255, 255, 0.42); }
+    .pc-card__divider     { background: rgba(255, 255, 255, 0.1); }
+    .pc-card__feat        { color: rgba(255, 255, 255, 0.88); }
+    .pc-card__check       { color: rgba(255, 255, 255, 0.65); opacity: 1; }
 
-    .plan-card__badge {
+    .pc-card__badge {
       background: var(--primary);
       color: #fff;
       border: 1.5px solid rgba(255, 255, 255, 0.35);
     }
 
-    .plan-card__cta {
+    .pc-card__cta {
       border-color: rgba(255, 255, 255, 0.3);
       color: #fff;
       background: rgba(255, 255, 255, 0.1);
@@ -389,7 +237,7 @@
 
 // ── Trust bar ─────────────────────────────────────────────────────────────────
 
-.pricing__trust {
+.pc-trust {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -398,21 +246,21 @@
   margin-top: 5.6rem;
 }
 
-.pricing__trust-sep {
+.pc-trust__sep {
   width: 1px;
   height: 4rem;
   background: rgba(1, 25, 59, 0.1);
   flex-shrink: 0;
 }
 
-.pricing__trust-item {
+.pc-trust__item {
   display: flex;
   align-items: center;
   gap: 1.4rem;
   padding: 1.2rem 3.6rem;
 }
 
-.pricing__trust-icon {
+.pc-trust__icon {
   flex-shrink: 0;
   width: 3.6rem;
   height: 3.6rem;
@@ -422,7 +270,7 @@
   svg { width: 100%; height: 100%; }
 }
 
-.pricing__trust-text {
+.pc-trust__text {
   strong {
     display: block;
     font-family: var(--font-sans-serif);
@@ -445,7 +293,7 @@
 
 // ── Privacy note ──────────────────────────────────────────────────────────────
 
-.pricing__privacy {
+.pc-privacy {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -465,17 +313,13 @@
 // ── Responsive ────────────────────────────────────────────────────────────────
 
 @media (max-width: 1024px) {
-  .pricing__grid {
-    gap: 2rem;
-  }
-
-  .plan-card {
-    padding: 4rem 2.8rem 3.2rem;
-  }
+  .pc-grid { gap: 2rem; }
+  .pc-card { padding: 4rem 2.8rem 3.2rem; }
+  .pc-card--featured { padding-top: 5.6rem; }
 }
 
 @media (max-width: 900px) {
-  .pricing__grid {
+  .pc-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
     &--two {
@@ -485,28 +329,24 @@
 }
 
 @media (max-width: 640px) {
-  .pricing__grid,
-  .pricing__grid--two {
+  .pc-grid,
+  .pc-grid--two {
     grid-template-columns: minmax(0, 1fr);
     gap: 2.4rem;
   }
 
-  .plan-card__tagline {
-    min-height: unset;
-  }
+  .pc-card__tagline { min-height: unset; }
 
-  .pricing__trust {
+  .pc-trust {
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
     padding: 0 2rem;
   }
 
-  .pricing__trust-sep {
-    display: none;
-  }
+  .pc-trust__sep { display: none; }
 
-  .pricing__trust-item {
+  .pc-trust__item {
     padding: 1.6rem 0;
     border-bottom: 1px solid rgba(1, 25, 59, 0.07);
     width: 100%;
@@ -516,35 +356,21 @@
 }
 
 @media (max-width: 480px) {
-  .pricing__title {
-    font-size: clamp(2.8rem, 8.5vw, 4rem);
-  }
+  .pc-tabs { margin-bottom: 3.6rem; }
 
-  .pricing__tab {
+  .pc-tab {
     padding: 0.88rem 1.6rem;
     font-size: 1.32rem;
   }
 
-  .plan-card {
+  .pc-card {
     padding: 4rem 2.4rem 3.2rem;
 
-    &__price {
-      font-size: 4.4rem;
-    }
+    &__price { font-size: 4.4rem; }
+    &__tagline { font-size: 1.32rem; }
+    &__feat { font-size: 1.32rem; }
+    &__cta { font-size: 1.36rem; }
   }
+
+  .pc-card--featured { padding-top: 5.2rem; }
 }
-
-@media (max-width: 900px) {
-  .pricing-teaser__grid {
-    grid-template-columns: 1fr;
-    max-width: 440px;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  .plan-card--featured {
-    order: -1;
-    margin-top: 1.92rem;
-  }
-}
-

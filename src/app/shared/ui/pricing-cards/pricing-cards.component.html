@@ -1,0 +1,107 @@
+<!-- Category tabs -->
+<div class="pc-tabs" role="tablist" aria-label="Hạng mục chụp">
+  @for (tab of tabs; track tab.id) {
+    <button
+      class="pc-tab"
+      [class.pc-tab--active]="activeCategory() === tab.id"
+      (click)="setCategory(tab.id)"
+      role="tab"
+      [attr.aria-selected]="activeCategory() === tab.id">
+      {{ tab.label }}
+    </button>
+  }
+</div>
+
+<!-- Plan cards -->
+<div class="pc-grid" [class.pc-grid--two]="activePlans().length === 2">
+  @for (plan of activePlans(); track plan.id) {
+    <article class="pc-card" [class.pc-card--featured]="plan.highlighted">
+      @if (plan.highlighted) {
+        <div class="pc-card__badge">+ ĐƯỢC CHỌN NHIỀU</div>
+      }
+
+      <h3 class="pc-card__name">{{ plan.name }}</h3>
+      <p class="pc-card__tagline">{{ plan.summary }}</p>
+
+      <div class="pc-card__price-wrap">
+        <span class="pc-card__price">{{ plan.price | number:'1.0-0' }}đ</span>
+        <span class="pc-card__price-label">GIÁ TRỌN GÓI</span>
+      </div>
+
+      <div class="pc-card__divider" aria-hidden="true"></div>
+
+      <ul class="pc-card__features">
+        @for (feat of plan.features; track feat) {
+          <li class="pc-card__feat">
+            <span class="pc-card__check" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="10" cy="10" r="8.5"/>
+                <path d="M6.5 10.5l2.5 2.5 4.5-5.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span>{{ feat }}</span>
+          </li>
+        }
+      </ul>
+
+      <a class="pc-card__cta" [routerLink]="['/lien-he']">Đăng ký gói {{ plan.name }}</a>
+    </article>
+  }
+</div>
+
+<!-- Trust bar -->
+@if (showTrust()) {
+  <div class="pc-trust" aria-label="Cam kết dịch vụ">
+    <div class="pc-trust__item">
+      <span class="pc-trust__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+          <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/>
+          <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+        </svg>
+      </span>
+      <div class="pc-trust__text">
+        <strong>HỖ TRỢ TƯ VẤN CONCEPT</strong>
+        <span>Tư vấn ý tưởng phù hợp với bạn</span>
+      </div>
+    </div>
+
+    <div class="pc-trust__sep" aria-hidden="true"></div>
+
+    <div class="pc-trust__item">
+      <span class="pc-trust__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2a3 3 0 0 1 3 3v1h3l1 14H5L6 6h3V5a3 3 0 0 1 3-3z"/>
+          <path d="M9 10a3 3 0 0 0 6 0"/>
+        </svg>
+      </span>
+      <div class="pc-trust__text">
+        <strong>EKIP HƯỚNG DẪN TẠO DÁNG</strong>
+        <span>Đồng hành từ đầu đến cuối buổi chụp</span>
+      </div>
+    </div>
+
+    <div class="pc-trust__sep" aria-hidden="true"></div>
+
+    <div class="pc-trust__item">
+      <span class="pc-trust__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+          <circle cx="12" cy="13" r="4"/>
+        </svg>
+      </span>
+      <div class="pc-trust__text">
+        <strong>GIAO ẢNH ĐÚNG HẸN</strong>
+        <span>Cam kết chất lượng &amp; thời gian</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="pc-privacy">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <path d="M9 12l2 2 4-4"/>
+    </svg>
+    Bảo mật thông tin khách hàng tuyệt đối
+  </p>
+}
