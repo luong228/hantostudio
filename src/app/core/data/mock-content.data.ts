@@ -215,20 +215,20 @@ export const TESTIMONIALS: TestimonialItem[] = [
     image: 'https://lh3.googleusercontent.com/a-/ALV-UjWkuY20VotlrKEjbx33BgPxkki4qowloKF_Roz006wSfZl_Xwy5=w72-h72-p-rp-mo-br100'
   },
   {
-    name: 'Trần Minh Khôi',
+    name: 'Xuân Thu',
     sessionType: 'Chụp Gia đình',
     tag: 'Gia đình',
     quote: 'Cả gia đình mình đều rất thích không khí buổi chụp, các bé được chơi thoải mái mà vẫn có những khoảnh khắc đẹp tự nhiên.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=200&q=80'
+    image: 'https://lh3.googleusercontent.com/a-/ALV-UjVYiLZGcCxv04EDLX9oC7SoNQ-QZybLCjT2ohytTlAsePDDMIfh=w72-h72-p-rp-mo-br100'
   },
   {
-    name: 'Lê Hoàng Nam',
+    name: 'Huỳnh Thiên Long',
     sessionType: 'Chụp Profile',
     tag: 'Profile',
     quote: 'Ảnh profile rất ưng, sắc nét và chuyên nghiệp. Tư vấn trang phục, concept phù hợp với công việc mình theo đuổi.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80'
+    image: '/images/ca-nhan.jpg'
   }
 ];
 
