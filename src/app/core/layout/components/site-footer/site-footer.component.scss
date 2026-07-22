@@ -496,10 +496,19 @@
 
 // ── Responsive ────────────────────────────────────────────────────────────────
 
+// Large tablet – 3 columns
 @media (max-width: 1280px) {
   .footer__main {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr 1fr;
     gap: 3.6rem 4.8rem;
+  }
+}
+
+// Tablet portrait – 2 columns
+@media (max-width: 900px) {
+  .footer__main {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem 4rem;
   }
 }
 

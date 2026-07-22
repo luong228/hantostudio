@@ -283,6 +283,11 @@
 }
 
 @media (max-width: 480px) {
+  .hero-airy {
+    padding-top: 11.2rem;
+    padding-bottom: 2.4rem;
+  }
+
   .hero-headline {
     font-size: clamp(4.8rem, 14vw, 7.2rem);
   }
@@ -291,8 +296,13 @@
     font-size: clamp(2.2rem, 6vw, 3.2rem);
   }
 
+  .hero-desc {
+    font-size: 1.36rem;
+  }
+
   .hero-trust {
     gap: 2rem 2.4rem;
+    margin-top: 4rem;
   }
 }
 
