@@ -30,9 +30,11 @@ export const PAGES: PageContent[] = [
     id: 'page-home',
     slug: 'home',
     path: '/',
-    title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung Và Gia Đình Cao Cấp',
+    title:
+      'HANTO Studio | Studio chuyên chụp ảnh profile, beauty, nghệ thuật, sinh nhật, couple và gia đình',
     seo: {
-      title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung Và Gia Đình Cao Cấp',
+      title:
+        'HANTO Studio | Studio chuyên chụp ảnh profile, beauty, nghệ thuật, sinh nhật, couple và gia đình',
       description:
         'Studio chụp ảnh chân dung, profile, gia đình, mẹ bầu và concept cao cấp với sự ấm áp và tinh tế.',
       keywords: 'studio chụp ảnh chân dung, chụp ảnh gia đình, ảnh mẹ bầu, studio chụp ảnh profile',
