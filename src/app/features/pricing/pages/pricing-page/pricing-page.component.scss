@@ -4,7 +4,9 @@
 .pricing-page {
   padding: 7.2rem clamp(1.6rem, 5vw, 9.6rem) 9.6rem;
   min-height: 100vh;
-  background: linear-gradient(170deg, #f8f5f0 0%, #fdfcfa 40%, #f4f0ec 100%);
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0.72) 100%),
+    url('/images/hanto-clean-background.png') center / cover no-repeat;
 }
 
 .pricing-container {

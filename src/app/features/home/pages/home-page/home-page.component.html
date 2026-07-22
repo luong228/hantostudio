@@ -37,17 +37,6 @@
       [studioInfo]="repo.studioInfo()" />
   </section>
 
-  <section class="home-band home-band--final">
-    @if (finalCtaContent(); as cta) {
-      <app-home-final-cta
-        [title]="cta.title"
-        [subtitle]="cta.subtitle"
-        [primaryLabel]="cta.primaryLabel"
-        [primaryRoute]="cta.primaryRoute"
-        [secondaryLabel]="cta.secondaryLabel"
-        [secondaryRoute]="cta.secondaryRoute" />
-    }
-  </section>
 
   <section class="home-contact-section" aria-labelledby="cs-heading">
     <aside class="cs-intro">
