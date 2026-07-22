@@ -250,6 +250,21 @@ export const SERVICES: ServiceItem[] = [
     badges: ['Chân dung']
   },
   {
+    id: 'svc-doanh-nhan',
+    slug: 'doanh-nhan',
+    name: 'Doanh Nhân',
+    shortDescription: 'Ảnh profile doanh nhân — tự tin, chuyên nghiệp, đúng tầm vóc.',
+    description:
+      'Gói chụp ảnh chuyên biệt cho doanh nhân, giám đốc và chuyên gia muốn có bộ ảnh profile thương hiệu cá nhân cao cấp. Tư vấn concept riêng theo lĩnh vực, ánh sáng editorial, retouch tinh tế giữ nguyên thần thái. Phù hợp cho LinkedIn, website công ty, hồ sơ năng lực và tài liệu truyền thông.',
+    heroImage: '/images/doanh-nhan.jpg',
+    gallery: [
+      '/images/doanh-nhan1.jpg',
+    ],
+    startingPrice: 1299000,
+    durationMinutes: 90,
+    badges: ['Doanh nhân', 'Profile']
+  },
+  {
     id: 'svc-family-heirloom',
     slug: 'gia-dinh',
     name: 'Chụp Ảnh Gia Đình',
@@ -263,22 +278,6 @@ export const SERVICES: ServiceItem[] = [
     startingPrice: 1299000,
     durationMinutes: 120,
     badges: ['Gia đình']
-  },
-  {
-    id: 'svc-maternity-glow',
-    slug: 'thai-san',
-    name: 'Mẹ bầu',
-    shortDescription: 'Ảnh mẹ bầu nhẹ nhàng, đầy cảm xúc.',
-    description:
-      'Phù hợp với khách hàng muốn bộ ảnh mang tính chủ đề rõ ràng: áo dài, mẹ bầu hoặc concept nghệ thuật với quy trình sản xuất trọn gói.',
-    heroImage: '/images/me-bau.jpg',
-    gallery: [
-      '/images/me-bau1.jpg',
-      '/images/me-bau2.jpg'
-    ],
-    startingPrice: 1299000,
-    durationMinutes: 100,
-    badges: ['Mẹ bầu']
   },
   {
     id: 'svc-profile',
@@ -311,6 +310,22 @@ export const SERVICES: ServiceItem[] = [
     badges: ['Concept', 'Nghệ thuật']
   },
   {
+    id: 'svc-maternity-glow',
+    slug: 'thai-san',
+    name: 'Mẹ bầu',
+    shortDescription: 'Ảnh mẹ bầu nhẹ nhàng, đầy cảm xúc.',
+    description:
+      'Phù hợp với khách hàng muốn bộ ảnh mang tính chủ đề rõ ràng: áo dài, mẹ bầu hoặc concept nghệ thuật với quy trình sản xuất trọn gói.',
+    heroImage: '/images/me-bau.jpg',
+    gallery: [
+      '/images/me-bau1.jpg',
+      '/images/me-bau2.jpg'
+    ],
+    startingPrice: 1299000,
+    durationMinutes: 100,
+    badges: ['Mẹ bầu']
+  },
+  {
     id: 'svc-sinh-nhat',
     slug: 'sinh-nhat',
     name: 'Sinh nhật',
@@ -325,21 +340,7 @@ export const SERVICES: ServiceItem[] = [
     durationMinutes: 180,
     badges: ['Sinh nhật']
   },
-  {
-    id: 'svc-doanh-nhan',
-    slug: 'doanh-nhan',
-    name: 'Doanh Nhân',
-    shortDescription: 'Ảnh profile doanh nhân — tự tin, chuyên nghiệp, đúng tầm vóc.',
-    description:
-      'Gói chụp ảnh chuyên biệt cho doanh nhân, giám đốc và chuyên gia muốn có bộ ảnh profile thương hiệu cá nhân cao cấp. Tư vấn concept riêng theo lĩnh vực, ánh sáng editorial, retouch tinh tế giữ nguyên thần thái. Phù hợp cho LinkedIn, website công ty, hồ sơ năng lực và tài liệu truyền thông.',
-    heroImage: '/images/doanh-nhan.jpg',
-    gallery: [
-      '/images/doanh-nhan1.jpg',
-    ],
-    startingPrice: 1299000,
-    durationMinutes: 90,
-    badges: ['Doanh nhân', 'Profile']
-  }
+  
 ];
 
 export const PRICING_PLANS: PricingPlan[] = [
