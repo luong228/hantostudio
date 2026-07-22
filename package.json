@@ -12,7 +12,9 @@
     "publish": "npm run build:hosting && npm run deploy:firebase",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy:firebase": "firebase deploy --only hosting"
+    "deploy:firebase": "firebase deploy --only hosting",
+    "format": "prettier --write \"src/**/*.{ts,html,scss,json}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,html,scss,json}\""
   },
   "private": true,
   "packageManager": "npm@11.4.2",

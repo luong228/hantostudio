@@ -142,7 +142,7 @@ export const CONTACT_CHANNELS: ContactChannel[] = [
   { label: 'Điện thoại', value: STUDIO_INFO.phone, href: 'tel:0385356679' },
   { label: 'Email', value: STUDIO_INFO.email, href: 'mailto:hantostudiobyhangtu@gmail.com' },
   { label: 'Zalo', value: '0385356679', href: 'https://zalo.me/0385356679' },
-  { label: 'Facebook', value: 'HANTO Studio Studio', href: 'https://www.facebook.com/profile.php?id=61591415732605' }
+  { label: 'Facebook', value: 'HANTO Studio', href: 'https://www.facebook.com/profile.php?id=61591415732605' }
 ];
 
 export const BRANCHES: BranchInfo[] = [
@@ -402,8 +402,8 @@ export const PRICING_PLANS: PricingPlan[] = [
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
       'Toàn bộ ảnh gốc',
-      '<mark>Clip quay hậu trường đã edit</mark>',
       'Phụ kiện <mark>CAO CẤP</mark>',
+      '<mark>Clip quay hậu trường đã edit</mark>',
       'Tặng kèm <mark>Nail + Lens</mark>',
       'Tặng kèm <mark>bộ ảnh beauty</mark>'
     ],
@@ -425,8 +425,8 @@ export const PRICING_PLANS: PricingPlan[] = [
       '1 background của HANTO Studio khách hàng lựa chọn',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
-      'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Toàn bộ ảnh gốc',
+      'Phụ kiện <mark>TIÊU CHUẨN</mark>',
     ],
   },
   {
@@ -445,8 +445,8 @@ export const PRICING_PLANS: PricingPlan[] = [
       '1 background của HANTO Studio khách hàng lựa chọn',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
-      'Phụ kiện <mark>CAO CẤP</mark>',
       'Toàn bộ ảnh gốc',
+      'Phụ kiện <mark>CAO CẤP</mark>',
       '<mark>Clip quay hậu trường đã edit</mark>',
     ],
   },
@@ -468,8 +468,8 @@ export const PRICING_PLANS: PricingPlan[] = [
       '<mark>Miễn phí chỉnh trang cho bé dưới 7 tuổi</mark>',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
-      'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Toàn bộ ảnh gốc',
+      'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Tặng kèm <mark>1 ảnh in 30x40cm</mark>',
       'Tặng kèm <mark>1 khung gỗ</mark>'
     ],
@@ -491,8 +491,8 @@ export const PRICING_PLANS: PricingPlan[] = [
       '<mark>Miễn phí chỉnh trang cho bé dưới 7 tuổi</mark>',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
-      'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Toàn bộ ảnh gốc',
+      'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Tặng kèm <mark>1 ảnh in 30x40cm</mark>',
       'Tặng kèm <mark>1 khung gỗ</mark>'
     ],
@@ -513,8 +513,8 @@ export const PRICING_PLANS: PricingPlan[] = [
       '<mark>Miễn phí chỉnh trang cho bé dưới 7 tuổi</mark>',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
-      'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Toàn bộ ảnh gốc',
+      'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Tặng kèm <mark>2 ảnh in 30x40cm</mark>',
       'Tặng kèm <mark>2 khung gỗ</mark>'
     ],
