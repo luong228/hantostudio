@@ -68,71 +68,55 @@
 // â”€â”€â”€ Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 .svc-card {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   border-radius: 1.76rem;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 2px 12px rgba(1, 25, 59, 0.07), 0 8px 32px rgba(1, 25, 59, 0.06);
+  min-height: 48rem;
+  display: flex;
   text-decoration: none;
-  color: var(--primary);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  transition: transform 0.26s ease, box-shadow 0.26s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.50) 42%,
+      rgba(0, 0, 0, 0.06) 100%
+    );
+  }
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(1, 25, 59, 0.10), 0 16px 48px rgba(1, 25, 59, 0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.30);
   }
 }
 
-.svc-card__img {
+.svc-card__bg {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 400px;
-  flex-shrink: 0;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-    object-position: top center;
-  }
-
-  .svc-card:hover & img {
-    transform: scale(1.05);
-  }
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-.svc-card__body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0 2.4rem 3rem;
-  flex: 1;
+.svc-card:hover .svc-card__bg {
+  transform: scale(1.05);
 }
 
-.svc-card__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 5.6rem;
-  height: 5.6rem;
-  border-radius: 50%;
-  border: 1.5px solid rgba(1, 25, 59, 0.18);
-  background: #fff;
-  color: var(--primary);
-  flex-shrink: 0;
-  margin-top: -2.8rem;
-  margin-bottom: 1.6rem;
+.svc-card__content {
   position: relative;
   z-index: 1;
-
-  svg {
-    width: 2.24rem;
-    height: 2.24rem;
-  }
+  margin-top: auto;
+  padding: 2.4rem 2.4rem 2.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.56rem;
 }
 
 .svc-card__eyebrow {
@@ -141,71 +125,46 @@
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(1, 25, 59, 0.45);
-  margin: 0 0 0.8rem;
+  color: rgba(250, 240, 231, 0.70);
+  margin: 0;
 }
 
 h3 {
   font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 2.6vw, 3.2rem);
-  font-weight: 600;
-  color: var(--primary);
-  line-height: 1.15;
-  margin: 0 0 1.2rem;
+  font-size: clamp(2.8rem, 3vw, 4rem);
+  font-weight: 700;
+  line-height: 0.96;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  text-wrap: balance;
 }
 
 .svc-card__desc {
-  font-size: 1.36rem;
-  line-height: 1.7;
-  color: rgba(1, 25, 59, 0.58);
-  margin: 1rem 0 1rem;
-  max-width: 28ch;
+  font-size: 1.52rem;
+  line-height: 1.45;
+  color: rgba(252, 247, 242, 0.82);
+  margin: 0;
 }
 
-.svc-card__price {
+.svc-card__meta {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.2rem;
-  margin-bottom: 2rem;
-  margin-top: auto;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 0.48rem;
+  color: rgba(252, 246, 240, 0.95);
+  font-weight: 600;
+
+  p {
+    font-size: 1.6rem;
+    margin: 0;
+  }
 
   span {
-    font-family: var(--font-sans-serif);
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(1, 25, 59, 0.40);
-  }
-
-  strong {
-    font-family: var(--font-sans-serif);
-    font-size: 2.56rem;
-    font-weight: 700;
-    color: var(--primary);
-    line-height: 1;
-  }
-}
-
-.svc-card__cta {
-  display: block;
-  width: 100%;
-  padding: 1.04rem 2rem;
-  border: 1.5px solid rgba(1, 25, 59, 0.28);
-  border-radius: 999px;
-  font-family: var(--font-sans-serif);
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--primary);
-  transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease;
-
-  .svc-card:hover & {
-    background: var(--primary);
-    color: #fff;
-    border-color: var(--primary);
+    font-size: 1.44rem;
+    white-space: nowrap;
   }
 }
 
@@ -222,12 +181,8 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .svc-card__img {
-    height: 240px;
-
-    img {
-      object-position: top center;
-    }
+  .svc-card {
+    min-height: 38rem;
   }
 }
 

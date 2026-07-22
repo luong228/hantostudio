@@ -17,12 +17,13 @@
 
   <app-home-featured-services [services]="featuredServices()" />
 
-  
   <app-home-why-choose [items]="repo.whyChooseItems()" />
   
-  
-  
-  <app-home-all-services [services]="repo.services().reverse().slice(0, 6)" />
+  <app-home-featured-services
+    [services]="repo.services().reverse().slice(0, 6)"
+    eyebrow="Toàn Bộ Dịch Vụ"
+    title="Các concept theo chủ đề riêng"
+    subtitle="Mỗi bộ sưu tập là đều có hướng rõ ràng: thanh lịch, nhẹ nhàng và chuyên nghiệp." />
 
   <section class="home-band home-band--proof">
     <app-home-testimonials ngSkipHydration [testimonials]="repo.testimonials()" />
@@ -37,7 +38,6 @@
       [channels]="repo.contactChannels()"
       [studioInfo]="repo.studioInfo()" />
   </section>
-
 
   <section class="home-contact-section" aria-labelledby="cs-heading">
     <aside class="cs-intro">
