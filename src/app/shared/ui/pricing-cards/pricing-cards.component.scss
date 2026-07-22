@@ -161,6 +161,24 @@
     font-size: 1.4rem;
     line-height: 1.5;
     color: var(--primary);
+
+    ::ng-deep {
+        mark {
+            display: inline-block;
+            background: rgba(1, 25, 59, 0.08);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.88em;
+            padding: 0.15em 0.6em;
+            border-radius: 0.4rem;
+            border: 1px solid rgba(1, 25, 59, 0.18);
+            letter-spacing: 0.01em;
+            vertical-align: 0.08em;
+            white-space: nowrap;
+            line-height: 1.4;
+        }
+    }
+    
   }
 
   &__check {
@@ -214,6 +232,11 @@
     .pc-card__price-label { color: rgba(255, 255, 255, 0.42); }
     .pc-card__divider     { background: rgba(255, 255, 255, 0.1); }
     .pc-card__feat        { color: rgba(255, 255, 255, 0.88); }
+    .pc-card__feat ::ng-deep mark {
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.35);
+    }
     .pc-card__check       { color: rgba(255, 255, 255, 0.65); opacity: 1; }
 
     .pc-card__badge {

@@ -43,40 +43,10 @@
   gap: 1.2rem;
 }
 
-.fb__mark {
-  margin: 0;
-  position: relative;
-  width: 8rem;
-  height: 10.4rem;
-  color: var(--primary);
-}
-
-.fb__oval {
-  width: 100%;
-  height: 100%;
-}
-
-.fb__h {
-  position: absolute;
-  top: 42%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 5.4rem;
-  line-height: 1;
-  color: var(--primary);
-  pointer-events: none;
-  user-select: none;
-}
-
-.fb__name {
-  margin: 0;
-  font-family: var(--font-serif);
-  font-size: 3.2rem;
-  font-weight: 600;
-  color: var(--primary);
-  line-height: 1.1;
+.fb__logo {
+  display: block;
+  height: 14rem;
+  width: auto;
 }
 
 .fb__ornament {
@@ -419,19 +389,10 @@
 }
 
 .footer-bar__logo {
-  width: 3.6rem;
-  height: 3.6rem;
-  border-radius: 999px;
-  border: 1px solid rgba(1, 25, 59, 0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 2rem;
-  line-height: 1;
-  color: var(--primary);
-  user-select: none;
+  display: block;
+  height: 4.4rem;
+  width: auto;
+  flex-shrink: 0;
 }
 
 .footer-bar__copy {

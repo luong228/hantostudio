@@ -1,0 +1,37 @@
+<ul class="faq-accordion" role="list">
+  @for (item of items(); track item.id; let i = $index) {
+    <li class="faq-accordion__item" [class.faq-accordion__item--open]="isOpen(item.id, i)">
+      <button
+        class="faq-accordion__trigger"
+        type="button"
+        (click)="toggle(item.id, i)"
+        [attr.aria-expanded]="isOpen(item.id, i)"
+        [attr.aria-controls]="'faq-' + item.id">
+        @if (numbered()) {
+          <span class="faq-accordion__num" aria-hidden="true">{{ fmt(i) }}</span>
+          <span class="faq-accordion__sep" aria-hidden="true"></span>
+        }
+        <span class="faq-accordion__q">{{ item.question }}</span>
+        <span class="faq-accordion__icon" aria-hidden="true">
+          @if (isOpen(item.id, i)) {
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M5 12h14"/>
+            </svg>
+          } @else {
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+          }
+        </span>
+      </button>
+      @if (isOpen(item.id, i)) {
+        <div class="faq-accordion__answer"
+             [class.faq-accordion__answer--plain]="!numbered()"
+             [id]="'faq-' + item.id"
+             role="region">
+          <p>{{ item.answer }}</p>
+        </div>
+      }
+    </li>
+  }
+</ul>

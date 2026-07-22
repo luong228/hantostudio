@@ -25,7 +25,6 @@ import { ContactFormComponent } from '../../../../shared/ui/contact-form/contact
     HomeTestimonialsComponent,
     HomeFaqPreviewComponent,
     HomeBranchesContactComponent,
-    HomeBookingProcessComponent,
     HomeFinalCtaComponent,
     ContactFormComponent
   ],
