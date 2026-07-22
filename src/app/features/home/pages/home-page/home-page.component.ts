@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { environment } from '../../../../../environments/environment';
 import { ContentRepositoryService } from '../../../../core/services/content-repository.service';
 import { SeoService } from '../../../../core/services/seo.service';
 import { HomeBookingProcessComponent } from '../../components/home-booking-process/home-booking-process.component';
@@ -23,15 +24,16 @@ import { ContactFormComponent } from '../../../../shared/ui/contact-form/contact
     HomeTestimonialsComponent,
     HomeFaqPreviewComponent,
     HomeBranchesContactComponent,
-    ContactFormComponent
+    ContactFormComponent,
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePageComponent {
   protected readonly repo = inject(ContentRepositoryService);
   private readonly seo = inject(SeoService);
+  protected readonly cdn = environment.cdnBaseUrl;
   protected readonly featuredServices = computed(() => this.repo.services().slice(0, 3));
   protected readonly featuredPlans = computed(() => this.repo.pricingPlans());
   protected readonly featuredFaqs = computed(() => this.repo.faqItems().slice(0, 4));
@@ -41,10 +43,12 @@ export class HomePageComponent {
   protected readonly finalCtaContent = computed(() => this.homeContent()?.finalCta);
 
   constructor() {
-    this.seo.update(this.repo.seoForPath('/', {
-      title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung & Gia Đình Cao Cấp',
-      description:
-        'Chụp ảnh chân dung, hồ sơ cá nhân, gia đình, mẹ bầu và concept được thực hiện với sự ấm áp và tỉ mỉ từng chi tiết.'
-    }));
+    this.seo.update(
+      this.repo.seoForPath('/', {
+        title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung & Gia Đình Cao Cấp',
+        description:
+          'Chụp ảnh chân dung, hồ sơ cá nhân, gia đình, mẹ bầu và concept được thực hiện với sự ấm áp và tỉ mỉ từng chi tiết.',
+      }),
+    );
   }
 }

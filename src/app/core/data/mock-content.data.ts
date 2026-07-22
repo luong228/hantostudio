@@ -1,4 +1,6 @@
 ﻿import { environment } from '../../../environments/environment';
+
+const cdn = environment.cdnBaseUrl;
 import {
   BlogPost,
   BookingStep,
@@ -11,7 +13,7 @@ import {
   StudioInfo,
   TestimonialItem,
   TrustMetric,
-  WhyChooseItem
+  WhyChooseItem,
 } from '../models/content.models';
 import { NavItem } from '../models/site.models';
 
@@ -20,7 +22,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Bảng Giá', route: '/bang-gia' },
   { label: 'Blog', route: '/blog' },
   { label: 'Câu Hỏi Thường Gặp', route: '/cau-hoi-thuong-gap' },
-  { label: 'Liên Hệ', route: '/lien-he' }
+  { label: 'Liên Hệ', route: '/lien-he' },
 ];
 
 export const PAGES: PageContent[] = [
@@ -31,9 +33,10 @@ export const PAGES: PageContent[] = [
     title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung Và Gia Đình Cao Cấp',
     seo: {
       title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung Và Gia Đình Cao Cấp',
-      description: 'Studio chụp ảnh chân dung, profile, gia đình, mẹ bầu và concept cao cấp với sự ấm áp và tinh tế.',
+      description:
+        'Studio chụp ảnh chân dung, profile, gia đình, mẹ bầu và concept cao cấp với sự ấm áp và tinh tế.',
       keywords: 'studio chụp ảnh chân dung, chụp ảnh gia đình, ảnh mẹ bầu, studio chụp ảnh profile',
-      canonicalUrl: `${environment.appBaseUrl}/`
+      canonicalUrl: `${environment.appBaseUrl}/`,
     },
     home: {
       hero: {
@@ -48,7 +51,7 @@ export const PAGES: PageContent[] = [
         secondaryCtaRoute: '/bang-gia',
         heroImage:
           'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=80',
-        heroImageAlt: 'Chân dung khách hàng trong buổi chụp ảnh studio cao cấp'
+        heroImageAlt: 'Chân dung khách hàng trong buổi chụp ảnh studio cao cấp',
       },
       finalCta: {
         title: 'Sẵn sàng chốt lịch chụp phù hợp với bạn?',
@@ -57,9 +60,9 @@ export const PAGES: PageContent[] = [
         primaryLabel: 'Đặt lịch với studio',
         primaryRoute: '/lien-he',
         secondaryLabel: 'Xem toàn bộ dịch vụ',
-        secondaryRoute: '/dich-vu'
-      }
-    }
+        secondaryRoute: '/dich-vu',
+      },
+    },
   },
   {
     id: 'page-services',
@@ -68,9 +71,10 @@ export const PAGES: PageContent[] = [
     title: 'Dịch Vụ Chụp Ảnh | HANTO Studio',
     seo: {
       title: 'Dịch Vụ Chụp Ảnh | HANTO Studio',
-      description: 'Khám phá các dịch vụ chụp ảnh cao cấp được thiết kế riêng cho chân dung, câu chuyện gia đình, khoảnh khắc mẹ bầu và thương hiệu cá nhân.',
-      canonicalUrl: `${environment.appBaseUrl}/dich-vu`
-    }
+      description:
+        'Khám phá các dịch vụ chụp ảnh cao cấp được thiết kế riêng cho chân dung, câu chuyện gia đình, khoảnh khắc mẹ bầu và thương hiệu cá nhân.',
+      canonicalUrl: `${environment.appBaseUrl}/dich-vu`,
+    },
   },
   {
     id: 'page-pricing',
@@ -79,9 +83,10 @@ export const PAGES: PageContent[] = [
     title: 'Bảng Giá | HANTO Studio',
     seo: {
       title: 'Bảng Giá | HANTO Studio',
-      description: 'Bảng giá minh bạch cho các gói chụp ảnh cao cấp bao gồm styling và chỉnh sửa ảnh.',
-      canonicalUrl: `${environment.appBaseUrl}/bang-gia`
-    }
+      description:
+        'Bảng giá minh bạch cho các gói chụp ảnh cao cấp bao gồm styling và chỉnh sửa ảnh.',
+      canonicalUrl: `${environment.appBaseUrl}/bang-gia`,
+    },
   },
   {
     id: 'page-about',
@@ -90,9 +95,10 @@ export const PAGES: PageContent[] = [
     title: 'Về Studio | HANTO Studio',
     seo: {
       title: 'Về Studio | HANTO Studio',
-      description: 'Gặp gỡ đội ngũ và triết lý đằng sau trải nghiệm chụp ảnh ấm áp và cao cấp của chúng tôi.',
-      canonicalUrl: `${environment.appBaseUrl}/about`
-    }
+      description:
+        'Gặp gỡ đội ngũ và triết lý đằng sau trải nghiệm chụp ảnh ấm áp và cao cấp của chúng tôi.',
+      canonicalUrl: `${environment.appBaseUrl}/about`,
+    },
   },
   {
     id: 'page-blog',
@@ -101,9 +107,10 @@ export const PAGES: PageContent[] = [
     title: 'Nhật Ký Nhiếp Ảnh | HANTO Studio',
     seo: {
       title: 'Nhật Ký Nhiếp Ảnh | HANTO Studio',
-      description: 'Những chia sẻ thực tế và cảm hứng để chuẩn bị cho buổi chụp ảnh thanh lịch và ý nghĩa.',
-      canonicalUrl: `${environment.appBaseUrl}/blog`
-    }
+      description:
+        'Những chia sẻ thực tế và cảm hứng để chuẩn bị cho buổi chụp ảnh thanh lịch và ý nghĩa.',
+      canonicalUrl: `${environment.appBaseUrl}/blog`,
+    },
   },
   {
     id: 'page-faq',
@@ -112,9 +119,10 @@ export const PAGES: PageContent[] = [
     title: 'Câu Hỏi Thường Gặp | HANTO Studio',
     seo: {
       title: 'Câu Hỏi Thường Gặp | HANTO Studio',
-      description: 'Tìm câu trả lời về đặt lịch, quy trình buổi chụp, bảng giá và thời gian giao ảnh.',
-      canonicalUrl: `${environment.appBaseUrl}/cau-hoi-thuong-gap`
-    }
+      description:
+        'Tìm câu trả lời về đặt lịch, quy trình buổi chụp, bảng giá và thời gian giao ảnh.',
+      canonicalUrl: `${environment.appBaseUrl}/cau-hoi-thuong-gap`,
+    },
   },
   {
     id: 'page-contact',
@@ -123,10 +131,11 @@ export const PAGES: PageContent[] = [
     title: 'Liên Hệ Và Đặt Lịch | HANTO Studio',
     seo: {
       title: 'Liên Hệ Và Đặt Lịch | HANTO Studio',
-      description: 'Bắt đầu yêu cầu đặt lịch và lên kế hoạch cho buổi chụp ảnh với đội ngũ studio của chúng tôi.',
-      canonicalUrl: `${environment.appBaseUrl}/lien-he`
-    }
-  }
+      description:
+        'Bắt đầu yêu cầu đặt lịch và lên kế hoạch cho buổi chụp ảnh với đội ngũ studio của chúng tôi.',
+      canonicalUrl: `${environment.appBaseUrl}/lien-he`,
+    },
+  },
 ];
 
 export const STUDIO_INFO: StudioInfo = {
@@ -135,74 +144,101 @@ export const STUDIO_INFO: StudioInfo = {
   address: 'Tầng 3 T12-06, Khu Manhattan, Vinhomes Grand Park, Thủ Đức, Hồ Chí Minh, Việt Nam',
   openingHours: 'Thứ 2 - Chủ Nhật, 09:00-19:00',
   phone: '0385 356 679',
-  email: 'hantostudiobyhangtu@gmail.com'
+  email: 'hantostudiobyhangtu@gmail.com',
 };
 
 export const CONTACT_CHANNELS: ContactChannel[] = [
   { label: 'Điện thoại', value: STUDIO_INFO.phone, href: 'tel:0385356679' },
   { label: 'Email', value: STUDIO_INFO.email, href: 'mailto:hantostudiobyhangtu@gmail.com' },
   { label: 'Zalo', value: '0385356679', href: 'https://zalo.me/0385356679' },
-  { label: 'Facebook', value: 'HANTO Studio', href: 'https://www.facebook.com/profile.php?id=61591415732605' }
+  {
+    label: 'Facebook',
+    value: 'HANTO Studio',
+    href: 'https://www.facebook.com/profile.php?id=61591415732605',
+  },
 ];
 
 export const BRANCHES: BranchInfo[] = [
   {
     name: 'Vinhomes Grand Park, Thủ Đức',
     address: 'Cơ sở Vinhomes Grand Park',
-    phone: '0385 356 679'
-  }
+    phone: '0385 356 679',
+  },
 ];
 
 export const TRUST_METRICS: TrustMetric[] = [
-  { label: 'Mức độ hài lòng', value: '4.9 / 5', detail: 'từ đánh giá thực và khách hàng giới thiệu' },
-  { label: 'Năm kinh nghiệm', value: '11+', detail: 'trực tiếp dẫn dắt buổi chụp chân dung mỗi tuần' },
-  { label: 'Buổi chụp đã thực hiện', value: '8.500+', detail: 'chuyên gia, gia đình, nhà sáng lập và người sáng tạo' },
-  { label: 'Studio đang hoạt động', value: '2', detail: 'được thiết kế cho ánh sáng kiểm soát và quy trình yên tĩnh' }
+  {
+    label: 'Mức độ hài lòng',
+    value: '4.9 / 5',
+    detail: 'từ đánh giá thực và khách hàng giới thiệu',
+  },
+  {
+    label: 'Năm kinh nghiệm',
+    value: '11+',
+    detail: 'trực tiếp dẫn dắt buổi chụp chân dung mỗi tuần',
+  },
+  {
+    label: 'Buổi chụp đã thực hiện',
+    value: '8.500+',
+    detail: 'chuyên gia, gia đình, nhà sáng lập và người sáng tạo',
+  },
+  {
+    label: 'Studio đang hoạt động',
+    value: '2',
+    detail: 'được thiết kế cho ánh sáng kiểm soát và quy trình yên tĩnh',
+  },
 ];
 
 export const WHY_CHOOSE_ITEMS: WhyChooseItem[] = [
   {
     title: 'Dẫn dáng & biểu cảm tự nhiên',
-    description: 'Ekip hướng dẫn nhẹ nhàng qua từng giai đoạn để bạn luôn thoải mái, tự nhiên trước ống kính. Ảnh đẹp bắt đầu từ cảm xúc thật.',
+    description:
+      'Ekip hướng dẫn nhẹ nhàng qua từng giai đoạn để bạn luôn thoải mái, tự nhiên trước ống kính. Ảnh đẹp bắt đầu từ cảm xúc thật.',
     tag: 'Posing & Direction',
-    stat: 'Hướng dẫn tận tâm suốt buổi chụp, giúp bạn tỏa sáng theo cách riêng.'
+    stat: 'Hướng dẫn tận tâm suốt buổi chụp, giúp bạn tỏa sáng theo cách riêng.',
   },
   {
     title: 'Tư vấn trang phục trước buổi chụp',
-    description: 'Gợi ý trang phục phù hợp với phong cách và concept, giúp bạn tự tin và nổi bật nhất trong từng khung hình.',
+    description:
+      'Gợi ý trang phục phù hợp với phong cách và concept, giúp bạn tự tin và nổi bật nhất trong từng khung hình.',
     tag: 'Styling Guidance',
-    stat: 'Checklist trang phục cá nhân hóa được gửi trước buổi chụp.'
+    stat: 'Checklist trang phục cá nhân hóa được gửi trước buổi chụp.',
   },
   {
     title: 'Retouch tinh tế, giữ nét thật',
-    description: 'Hậu kỳ kỹ lưỡng nhưng vẫn giữ trọn vẹp đẹp tự nhiên của bạn. Da mịn màng, bố cục hài hòa, mà vẫn là bạn - rạng rỡ và chân thật.',
+    description:
+      'Hậu kỳ kỹ lưỡng nhưng vẫn giữ trọn vẹp đẹp tự nhiên của bạn. Da mịn màng, bố cục hài hòa, mà vẫn là bạn - rạng rỡ và chân thật.',
     tag: 'Post-Production',
-    stat: 'Mỗi ảnh đều được chỉnh sửa cẩn thận qua ít nhất 3 vòng kiểm tra chất lượng.'
+    stat: 'Mỗi ảnh đều được chỉnh sửa cẩn thận qua ít nhất 3 vòng kiểm tra chất lượng.',
   },
   {
     title: 'Quy trình rõ ràng, giao ảnh đúng hẹn',
-    description: 'Lịch trình minh bạch từ lúc đặt lịch đến khi nhận ảnh. Chúng tôi luôn chủ động thông báo để bạn dễ dàng sắp xếp.',
+    description:
+      'Lịch trình minh bạch từ lúc đặt lịch đến khi nhận ảnh. Chúng tôi luôn chủ động thông báo để bạn dễ dàng sắp xếp.',
     tag: 'Timeline & Delivery',
-    stat: 'Preview trong 48h - nhận trọn bộ ảnh chỉ sau 7 ngày.'
-  }
+    stat: 'Preview trong 48h - nhận trọn bộ ảnh chỉ sau 7 ngày.',
+  },
 ];
 
 export const BOOKING_STEPS: BookingStep[] = [
   {
     step: '01',
     title: 'Tư vấn và thống nhất ý tưởng',
-    description: 'Chúng tôi lắng nghe câu chuyện và mong muốn của bạn, từ đó tư vấn concept, phong cách và lên kế hoạch chụp phù hợp nhất.'
+    description:
+      'Chúng tôi lắng nghe câu chuyện và mong muốn của bạn, từ đó tư vấn concept, phong cách và lên kế hoạch chụp phù hợp nhất.',
   },
   {
     step: '02',
     title: 'Ngày chụp với ekip hướng dẫn chi tiết',
-    description: 'Ekip hỗ trợ từ trang phục, tạo dáng đến cảm xúc, giúp bạn thoải mái và tự tin để có những khoảnh khắc tự nhiên, đẹp nhất.'
+    description:
+      'Ekip hỗ trợ từ trang phục, tạo dáng đến cảm xúc, giúp bạn thoải mái và tự tin để có những khoảnh khắc tự nhiên, đẹp nhất.',
   },
   {
     step: '03',
     title: 'Chọn ảnh và nhận bộ ảnh hoàn thiện',
-    description: 'Bạn được xem và chọn những bức ảnh yêu thích. Chúng tôi chỉnh sửa tỉ mỉ và bàn giao sản phẩm chỉnh chu, đúng hẹn.'
-  }
+    description:
+      'Bạn được xem và chọn những bức ảnh yêu thích. Chúng tôi chỉnh sửa tỉ mỉ và bàn giao sản phẩm chỉnh chu, đúng hẹn.',
+  },
 ];
 
 export const TESTIMONIALS: TestimonialItem[] = [
@@ -210,26 +246,31 @@ export const TESTIMONIALS: TestimonialItem[] = [
     name: 'Nguyễn Thảo Linh',
     sessionType: 'Chụp Beauty',
     tag: 'Beauty',
-    quote: 'Ảnh chụp lên quá đẹp và tự nhiên, đúng mood mình mong muốn. Ekip nhiệt tình, hướng dẫn rất nhẹ nhàng dù mình không biết tạo dáng.',
+    quote:
+      'Ảnh chụp lên quá đẹp và tự nhiên, đúng mood mình mong muốn. Ekip nhiệt tình, hướng dẫn rất nhẹ nhàng dù mình không biết tạo dáng.',
     rating: 5,
-    image: 'https://lh3.googleusercontent.com/a-/ALV-UjWkuY20VotlrKEjbx33BgPxkki4qowloKF_Roz006wSfZl_Xwy5=w72-h72-p-rp-mo-br100'
+    image:
+      'https://lh3.googleusercontent.com/a-/ALV-UjWkuY20VotlrKEjbx33BgPxkki4qowloKF_Roz006wSfZl_Xwy5=w72-h72-p-rp-mo-br100',
   },
   {
     name: 'Xuân Thu',
     sessionType: 'Chụp Gia đình',
     tag: 'Gia đình',
-    quote: 'Cả gia đình mình đều rất thích không khí buổi chụp, các bé được chơi thoải mái mà vẫn có những khoảnh khắc đẹp tự nhiên.',
+    quote:
+      'Cả gia đình mình đều rất thích không khí buổi chụp, các bé được chơi thoải mái mà vẫn có những khoảnh khắc đẹp tự nhiên.',
     rating: 5,
-    image: 'https://lh3.googleusercontent.com/a-/ALV-UjVYiLZGcCxv04EDLX9oC7SoNQ-QZybLCjT2ohytTlAsePDDMIfh=w72-h72-p-rp-mo-br100'
+    image:
+      'https://lh3.googleusercontent.com/a-/ALV-UjVYiLZGcCxv04EDLX9oC7SoNQ-QZybLCjT2ohytTlAsePDDMIfh=w72-h72-p-rp-mo-br100',
   },
   {
     name: 'Huỳnh Thiên Long',
     sessionType: 'Chụp Profile',
     tag: 'Profile',
-    quote: 'Ảnh profile rất ưng, sắc nét và chuyên nghiệp. Tư vấn trang phục, concept phù hợp với công việc mình theo đuổi.',
+    quote:
+      'Ảnh profile rất ưng, sắc nét và chuyên nghiệp. Tư vấn trang phục, concept phù hợp với công việc mình theo đuổi.',
     rating: 5,
-    image: '/images/ca-nhan.jpg'
-  }
+    image: `${cdn}/images/ca-nhan.jpg`,
+  },
 ];
 
 export const SERVICES: ServiceItem[] = [
@@ -240,14 +281,11 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Chân dung editorial - profile & thương hiệu.',
     description:
       'Gói chân dung chủ lực với quy trình makeup, styling, hướng dẫn tạo dáng và retouch cao cấp để bạn lên hình tự nhiên, sáng và đúng thần thái.',
-    heroImage: '/images/chan-dung2.jpg',
-    gallery: [
-      '/images/chan-dung.jpg',
-      '/images/chan-dung1.jpg',
-    ],
+    heroImage: `${cdn}/images/chan-dung2.jpg`,
+    gallery: [`${cdn}/images/chan-dung.jpg`, `${cdn}/images/chan-dung1.jpg`],
     startingPrice: 1299000,
     durationMinutes: 90,
-    badges: ['Chân dung']
+    badges: ['Chân dung'],
   },
   {
     id: 'svc-doanh-nhan',
@@ -256,13 +294,11 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Ảnh profile doanh nhân - tự tin, chuyên nghiệp, đúng tầm vóc.',
     description:
       'Gói chụp ảnh chuyên biệt cho doanh nhân, giám đốc và chuyên gia muốn có bộ ảnh profile thương hiệu cá nhân cao cấp. Tư vấn concept riêng theo lĩnh vực, ánh sáng editorial, retouch tinh tế giữ nguyên thần thái. Phù hợp cho LinkedIn, website công ty, hồ sơ năng lực và tài liệu truyền thông.',
-    heroImage: '/images/doanh-nhan.jpg',
-    gallery: [
-      '/images/doanh-nhan1.jpg',
-    ],
+    heroImage: `${cdn}/images/doanh-nhan.jpg`,
+    gallery: [`${cdn}/images/doanh-nhan1.jpg`],
     startingPrice: 1299000,
     durationMinutes: 90,
-    badges: ['Doanh nhân', 'Profile']
+    badges: ['Doanh nhân', 'Profile'],
   },
   {
     id: 'svc-family-heirloom',
@@ -271,13 +307,11 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Ảnh gia đình tự nhiên, thân thiện trẻ nhỏ.',
     description:
       'Dịch vụ dành cho gia đình muốn giữ lại khoảnh khắc thật, đội ngũ điều tiết nhịp độ và nhịp điệu để ảnh đẹp mà vẫn tự nhiên.',
-    heroImage: '/images/me-bau1.jpg',
-    gallery: [
-     '/images/me-bau1.jpg',
-    ],
+    heroImage: `${cdn}/images/me-bau1.jpg`,
+    gallery: [`${cdn}/images/me-bau1.jpg`],
     startingPrice: 1299000,
     durationMinutes: 120,
-    badges: ['Gia đình']
+    badges: ['Gia đình'],
   },
   {
     id: 'svc-profile',
@@ -286,13 +320,11 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Ảnh profile chuyên nghiệp cho cá nhân & website.',
     description:
       'Buổi chụp ngắn gọn, tập trung vào 1–2 bộ trang phục, ánh sáng phòng thu và góc khuôn mặt tốt nhất. Kết quả là bộ ảnh tự tin, thân thiện và đáng tin cậy.',
-    heroImage: '/images/ca-nhan.jpg',
-    gallery: [
-      '/images/ca-nhan1.jpg',
-    ],
+    heroImage: `${cdn}/images/ca-nhan.jpg`,
+    gallery: [`${cdn}/images/ca-nhan1.jpg`],
     startingPrice: 1299000,
     durationMinutes: 60,
-    badges: ['Profile', 'Cá nhân']
+    badges: ['Profile', 'Cá nhân'],
   },
   {
     id: 'svc-concept-art',
@@ -301,13 +333,11 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Bộ ảnh theo concept & chủ đề riêng.',
     description:
       'Đội ngũ lên concept, chuẩn bị phục trang và bối cảnh theo yêu cầu. Phù hợp với khách hàng muốn một bộ ảnh mang dấu ấn nghệ thuật rõ ràng, không theo khuôn mẫu.',
-    heroImage: '/images/nghe-thuat.jpg',
-    gallery: [
-      
-    ],
+    heroImage: `${cdn}/images/nghe-thuat.jpg`,
+    gallery: [],
     startingPrice: 1299000,
     durationMinutes: 150,
-    badges: ['Concept', 'Nghệ thuật']
+    badges: ['Concept', 'Nghệ thuật'],
   },
   {
     id: 'svc-maternity-glow',
@@ -316,14 +346,11 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Ảnh mẹ bầu nhẹ nhàng, đầy cảm xúc.',
     description:
       'Phù hợp với khách hàng muốn bộ ảnh mang tính chủ đề rõ ràng: áo dài, mẹ bầu hoặc concept nghệ thuật với quy trình sản xuất trọn gói.',
-    heroImage: '/images/me-bau.jpg',
-    gallery: [
-      '/images/me-bau1.jpg',
-      '/images/me-bau2.jpg'
-    ],
+    heroImage: `${cdn}/images/me-bau.jpg`,
+    gallery: [`${cdn}/images/me-bau1.jpg`, `${cdn}/images/me-bau2.jpg`],
     startingPrice: 1299000,
     durationMinutes: 100,
-    badges: ['Mẹ bầu']
+    badges: ['Mẹ bầu'],
   },
   {
     id: 'svc-sinh-nhat',
@@ -332,15 +359,12 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: 'Ảnh sinh nhật đẹp trước ngày trọng đại.',
     description:
       'Buổi chụp sinh nhật tập trung vào sự kết nối và cảm xúc thật của hai người. Studio hỗ trợ từ chọn concept, phối trang phục đến dẫn dắt tương tác tự nhiên trước ống kính.',
-      heroImage: '/images/sinh-nhat.jpg',
-      gallery: [
-      '/images/sinh-nhat1.jpg',
-    ],
+    heroImage: `${cdn}/images/sinh-nhat.jpg`,
+    gallery: [`${cdn}/images/sinh-nhat1.jpg`],
     startingPrice: 1299000,
     durationMinutes: 180,
-    badges: ['Sinh nhật']
+    badges: ['Sinh nhật'],
   },
-  
 ];
 
 export const PRICING_PLANS: PricingPlan[] = [
@@ -383,7 +407,7 @@ export const PRICING_PLANS: PricingPlan[] = [
       'Toàn bộ ảnh gốc',
       'Phụ kiện <mark>CAO CẤP</mark>',
       'Tặng kèm <mark>Nail hoặc Lens</mark>',
-      'Tặng kèm <mark>Bộ ảnh beauty</mark>'
+      'Tặng kèm <mark>Bộ ảnh beauty</mark>',
     ],
   },
   {
@@ -405,7 +429,7 @@ export const PRICING_PLANS: PricingPlan[] = [
       'Phụ kiện <mark>CAO CẤP</mark>',
       '<mark>Clip quay hậu trường đã edit</mark>',
       'Tặng kèm <mark>Nail + Lens</mark>',
-      'Tặng kèm <mark>bộ ảnh beauty</mark>'
+      'Tặng kèm <mark>bộ ảnh beauty</mark>',
     ],
   },
 
@@ -471,7 +495,7 @@ export const PRICING_PLANS: PricingPlan[] = [
       'Toàn bộ ảnh gốc',
       'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Tặng kèm <mark>1 ảnh in 30x40cm</mark>',
-      'Tặng kèm <mark>1 khung gỗ</mark>'
+      'Tặng kèm <mark>1 khung gỗ</mark>',
     ],
   },
   {
@@ -494,7 +518,7 @@ export const PRICING_PLANS: PricingPlan[] = [
       'Toàn bộ ảnh gốc',
       'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Tặng kèm <mark>1 ảnh in 30x40cm</mark>',
-      'Tặng kèm <mark>1 khung gỗ</mark>'
+      'Tặng kèm <mark>1 khung gỗ</mark>',
     ],
   },
   {
@@ -516,7 +540,7 @@ export const PRICING_PLANS: PricingPlan[] = [
       'Toàn bộ ảnh gốc',
       'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Tặng kèm <mark>2 ảnh in 30x40cm</mark>',
-      'Tặng kèm <mark>2 khung gỗ</mark>'
+      'Tặng kèm <mark>2 khung gỗ</mark>',
     ],
   },
 ];
@@ -530,12 +554,11 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       'Tất cả những gì bạn cần biết trước khi đặt lịch tại studio chụp ảnh đẹp ở Vinhomes Grand Park: ánh sáng, makeup, tạo dáng và cách chọn gói phù hợp.',
     content: '',
-    coverImage:
-      'https://s6.imgcdn.dev/YHNyi0.jpg',
+    coverImage: 'https://s6.imgcdn.dev/YHNyi0.jpg',
     publishedAt: '2026-07-22',
     readingMinutes: 8,
     tags: ['vinhomes', 'hướng-dẫn', 'địa-điểm'],
-    route: '/studio-chup-anh-dep-vinhomes-grand-park'
+    route: '/studio-chup-anh-dep-vinhomes-grand-park',
   },
   {
     id: 'seo-vinhomes-nghe-thuat',
@@ -544,12 +567,11 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       'HANTO Studio – studio chụp ảnh nghệ thuật cao cấp ngay trong Vinhomes Grand Park, Quận 9. Chân dung cá nhân, gia đình, couple. Ánh sáng chuyên nghiệp, concept riêng, retouch tinh tế.',
     content: '',
-    coverImage:
-      'https://s6.imgcdn.dev/YHNyi0.jpg',
+    coverImage: 'https://s6.imgcdn.dev/YHNyi0.jpg',
     publishedAt: '2026-07-22',
     readingMinutes: 8,
     tags: ['vinhomes', 'nghệ-thuật', 'chân-dung', 'gia-đình'],
-    route: '/studio-chup-anh-nghe-thuat-vinhomes-grand-park'
+    route: '/studio-chup-anh-nghe-thuat-vinhomes-grand-park',
   },
   {
     id: 'seo-vinhomes-gia-dinh',
@@ -563,7 +585,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedAt: '2026-07-22',
     readingMinutes: 9,
     tags: ['vinhomes', 'gia-đình', 'kỷ-niệm', 'trẻ-em'],
-    route: '/chup-anh-gia-dinh-vinhomes-grand-park'
+    route: '/chup-anh-gia-dinh-vinhomes-grand-park',
   },
   {
     id: 'seo-profile-quan-9',
@@ -577,7 +599,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedAt: '2026-07-22',
     readingMinutes: 8,
     tags: ['profile', 'doanh-nhân', 'linkedin', 'thương-hiệu-cá-nhân'],
-    route: '/chup-anh-profile-ca-nhan-quan-9'
+    route: '/chup-anh-profile-ca-nhan-quan-9',
   },
   {
     id: 'seo-doanh-nhan-vinhomes',
@@ -591,33 +613,36 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedAt: '2026-07-22',
     readingMinutes: 9,
     tags: ['doanh-nhân', 'vinhomes', 'thương-hiệu-cá-nhân', 'executive'],
-    route: '/chup-anh-doanh-nhan-vinhomes-grand-park'
-  }
+    route: '/chup-anh-doanh-nhan-vinhomes-grand-park',
+  },
 ];
 
 export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 'faq-booking-deposit',
     question: 'Đặt lịch chụp như thế nào?',
-    answer: 'Đặt cọc 30% để giữ lịch. Studio sẽ khóa khung giờ và gửi checklist chuẩn bị ngay sau khi xác nhận.',
-    topic: 'booking'
+    answer:
+      'Đặt cọc 30% để giữ lịch. Studio sẽ khóa khung giờ và gửi checklist chuẩn bị ngay sau khi xác nhận.',
+    topic: 'booking',
   },
   {
     id: 'faq-session-duration',
     question: 'Có cần đặt cọc trước không?',
     answer: 'Có. Mức cọc 30% giúp studio bố trí ekip, makeup và set chụp theo lịch của bạn.',
-    topic: 'pricing'
+    topic: 'pricing',
   },
   {
     id: 'faq-turnaround',
     question: 'Bao lâu nhận ảnh?',
-    answer: 'Ảnh preview gửi sau 2-3 ngày. Ảnh retouch bản chính được bàn giao trong 7-10 ngày làm việc.',
-    topic: 'delivery'
+    answer:
+      'Ảnh preview gửi sau 2-3 ngày. Ảnh retouch bản chính được bàn giao trong 7-10 ngày làm việc.',
+    topic: 'delivery',
   },
   {
     id: 'faq-locations',
     question: 'Studio có chụp ở đâu?',
-    answer: 'Hiện có 1 chi nhánh tại Vinhomes Grand Park Quận 9, đồng thời hỗ trợ concept ngoại cảnh theo yêu cầu.',
-    topic: 'session'
-  }
+    answer:
+      'Hiện có 1 chi nhánh tại Vinhomes Grand Park Quận 9, đồng thời hỗ trợ concept ngoại cảnh theo yêu cầu.',
+    topic: 'session',
+  },
 ];

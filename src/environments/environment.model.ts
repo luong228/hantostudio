@@ -11,5 +11,6 @@ export interface AppEnvironment {
   production: boolean;
   name: 'development' | 'staging' | 'production' | 'local';
   appBaseUrl: string;
+  cdnBaseUrl: string;
   cms: CmsEnvironmentConfig;
 }

@@ -4,10 +4,11 @@ export const environment: AppEnvironment = {
   production: true,
   name: 'production',
   appBaseUrl: 'https://hantostudio.vn',
+  cdnBaseUrl: 'https://cdn.hantostudio.vn',
   cms: {
     provider: 'strapi',
     useMock: true,
     apiBaseUrl: 'https://hantostudio-a133e.web.app/api',
-    graphqlUrl: 'https://hantostudio-a133e.web.app/graphql'
-  }
+    graphqlUrl: 'https://hantostudio-a133e.web.app/graphql',
+  },
 };
