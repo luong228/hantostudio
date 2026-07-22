@@ -134,14 +134,14 @@ export const STUDIO_INFO: StudioInfo = {
   tagline: 'Studio chân dung nơi sự chân thật cảm xúc gặp gỡ nghệ thuật editorial.',
   address: 'Tầng 3 T12-06, Khu Manhattan, Vinhomes Grand Park, Thủ Đức, Hồ Chí Minh, Việt Nam',
   openingHours: 'Thứ 2 - Chủ Nhật, 09:00-19:00',
-  phone: '0396 887 597',
+  phone: '0385 356 679',
   email: 'hantostudiobyhangtu@gmail.com'
 };
 
 export const CONTACT_CHANNELS: ContactChannel[] = [
-  { label: 'Điện thoại', value: STUDIO_INFO.phone, href: 'tel:0396887597' },
+  { label: 'Điện thoại', value: STUDIO_INFO.phone, href: 'tel:0385356679' },
   { label: 'Email', value: STUDIO_INFO.email, href: 'mailto:hantostudiobyhangtu@gmail.com' },
-  { label: 'Zalo', value: '0396887597', href: 'https://zalo.me/0396887597' },
+  { label: 'Zalo', value: '0385356679', href: 'https://zalo.me/0385356679' },
   { label: 'Facebook', value: 'HANTO Studio Studio', href: 'https://www.facebook.com/profile.php?id=61591415732605' }
 ];
 
@@ -149,7 +149,7 @@ export const BRANCHES: BranchInfo[] = [
   {
     name: 'Vinhomes Grand Park, Thủ Đức',
     address: 'Cơ sở Vinhomes Grand Park',
-    phone: '0396 887 597'
+    phone: '0385 356 679'
   }
 ];
 
