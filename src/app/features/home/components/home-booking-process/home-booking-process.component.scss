@@ -1,293 +1,124 @@
-﻿:host {
-  display: block;
+﻿:host { display: block; }
+
+.booking-process {
+  padding-block: 7.2rem 8rem;
+  border-radius: 3.2rem;
+  overflow: hidden;
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0.72) 100%),
+    url('/images/hanto-clean-background.png') center / cover no-repeat;
 }
 
-.section {
-  display: grid;
-  gap: 0;
-  padding-block: 7.2rem 8rem;
-  background: linear-gradient(160deg, #faf9f6 0%, #f7f3ed 100%);
-  border-radius: 3.2rem;
-  overflow: visible;
-}
+// ── Header ────────────────────────────────────────────────────────────────────
 
 .booking-hd {
-  display: grid;
-  justify-items: center;
   text-align: center;
-  gap: 1.2rem;
   margin-bottom: 6.4rem;
   padding-inline: 1.6rem;
-}
 
-.booking-hd__eyebrow {
-  margin: 0;
-  font-family: var(--font-sans-serif);
-  font-size: 1.12rem;
-  font-weight: 700;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  color: var(--primary);
-  opacity: 0.55;
-}
-
-.booking-hd__ornament {
-  display: flex;
-  align-items: center;
-  gap: 0.96rem;
-  color: var(--primary);
-  opacity: 0.28;
-
-  span {
-    display: block;
-    width: 4.4rem;
-    height: 1px;
-    background: currentColor;
+  &__eyebrow {
+    margin: 0 0 1.2rem;
+    font-family: var(--font-sans-serif);
+    font-size: 1.12rem;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--primary);
+    opacity: 0.55;
   }
 
-  svg {
-    width: 10px;
-    height: 10px;
+  &__ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.96rem;
+    color: var(--primary);
+    opacity: 0.28;
+    margin-bottom: 1.6rem;
+
+    span { display: block; width: 4.4rem; height: 1px; background: currentColor; }
+    svg  { width: 10px; height: 10px; flex-shrink: 0; }
+  }
+
+  h2 {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 4vw, 5.6rem);
+    line-height: 1.1;
+    color: var(--primary);
+    text-wrap: balance;
   }
 }
 
-h2 {
-  margin: 0;
-  font-family: var(--font-serif);
-  font-size: clamp(4rem, 5.6vw, 7.6rem);
-  line-height: 1.02;
-  color: var(--primary);
-  text-wrap: balance;
-}
+// ── Steps grid ────────────────────────────────────────────────────────────────
 
-.booking-hd__sub {
-  margin: 0;
-  max-width: 56ch;
-  font-size: 1.44rem;
-  line-height: 1.72;
-  color: rgba(1, 25, 59, 0.56);
-}
-
-.timeline {
+.booking-steps {
   list-style: none;
+  padding: 0 2.4rem;
   margin: 0;
-  // top padding accommodates the portrait images floating above each card
-  padding: 36rem 2.4rem 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2.4rem;
-  overflow: visible;
 }
 
-.step-card {
-  position: relative;
-  border-radius: 2.4rem;
+.booking-step {
+  background: #fff;
   border: 1px solid rgba(1, 25, 59, 0.08);
-  background: #ffffff;
-  box-shadow: 0 8px 32px rgba(1, 25, 59, 0.07);
-  // top padding: half-badge offset (4rem) + gap (2rem) + content clearance
-  padding: 10rem 2.4rem 3.2rem;
-  text-align: center;
-  overflow: visible;
-}
-
-.step-card__media {
-  position: absolute;
-  left: 50%;
-  // anchor the image bottom to the card top — always at the junction
-  bottom: 100%;
-  transform: translateX(-50%);
-  width: min(92%, 30rem);
-  // portrait ratio — taller than wide, like the reference arch photos
-  aspect-ratio: 0.9 / 1;
-  border-radius: 20rem 20rem 1.2rem 1.2rem;
-  border: 1px solid rgba(1, 25, 59, 0.07);
-  background: #f4f0ea;
-  overflow: hidden;
-  box-shadow: 0 14px 36px rgba(1, 25, 59, 0.12);
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-  }
-}
-
-.step-card__num {
-  position: absolute;
-  left: 50%;
-  // center the badge on the junction between image bottom and card top
-  top: 0;
-  transform: translateX(-50%) translateY(-50%);
-  width: 8.8rem;
-  height: 8.8rem;
-  border-radius: 999px;
-  border: 1.5px solid rgba(1, 25, 59, 0.13);
-  background: #ffffff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 4.8rem;
-  font-style: italic;
-  line-height: 1;
-  color: var(--primary);
-  box-shadow: 0 4px 20px rgba(1, 25, 59, 0.10);
-  z-index: 2;
-}
-
-.step-card__connector {
-  // just a glowing dot between cards — no horizontal line
-  position: absolute;
-  right: -2rem;
-  // vertically aligned with the center of the num badge (badge is at top:0 with -50% translateY,
-  // so its center is at 0 relative to card top)
-  top: 0;
-  transform: translateY(-50%);
-  width: 1.6rem;
-  height: 1.6rem;
-  border-radius: 999px;
-  background: radial-gradient(circle at center,
-    rgba(96, 142, 202, 1) 0 36%,
-    rgba(220, 234, 250, 1) 56% 100%);
-  border: 1.5px solid rgba(95, 140, 195, 0.45);
-  box-shadow: 0 0 10px rgba(95, 138, 192, 0.36);
-  z-index: 3;
-}
-
-.step-card__icon {
-  width: 6rem;
-  height: 6rem;
-  margin: 0 auto 1.6rem;
-  border-radius: 999px;
-  border: 1px solid rgba(126, 158, 202, 0.34);
-  background: rgba(209, 225, 245, 0.42);
+  border-radius: 2rem;
+  padding: 3.2rem 2.4rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(1, 25, 59, 0.68);
+  flex-direction: column;
+  gap: 1.6rem;
+  box-shadow: 0 4px 20px rgba(1, 25, 59, 0.05);
 
-  svg {
-    width: 2.8rem;
-    height: 2.8rem;
-  }
-}
-
-.title {
-  margin: 0;
-  font-family: var(--font-serif);
-  font-size: clamp(2.8rem, 2.3vw, 4rem);
-  line-height: 1.2;
-  color: var(--primary);
-  text-wrap: balance;
-}
-
-.description {
-  margin: 1.2rem 0 0;
-  font-size: 1.4rem;
-  line-height: 1.75;
-  color: rgba(1, 25, 59, 0.58);
-}
-
-.step-card__ornament {
-  margin-top: 1.6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
-  color: rgba(67, 112, 168, 0.55);
-
-  span {
+  &__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 4rem;
-    height: 1px;
-    background: currentColor;
+    height: 4rem;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-family: var(--font-sans-serif);
+    font-size: 1.36rem;
+    font-weight: 700;
+    flex-shrink: 0;
   }
 
-  svg {
-    width: 11px;
-    height: 11px;
+  &__body {
+    h3 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 2vw, 2.8rem);
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0 0 0.8rem;
+      line-height: 1.2;
+    }
+
+    p {
+      font-family: var(--font-sans-serif);
+      font-size: 1.44rem;
+      line-height: 1.72;
+      color: rgba(1, 25, 59, 0.56);
+      margin: 0;
+    }
   }
 }
 
-@media (max-width: 1200px) {
-  .step-card__connector {
-    display: none;
-  }
-}
+// ── Responsive ────────────────────────────────────────────────────────────────
 
-@media (max-width: 980px) {
-  .section {
-    padding-block: 4rem 6.4rem;
-    border-radius: 2rem;
-  }
-
-  // Single-column: floating portrait images would overlap adjacent cards.
-  // Switch to a card-centric layout where the badge is in normal flow.
-  .timeline {
-    grid-template-columns: 1fr;
-    padding: 0 1.6rem;
-    gap: 2.4rem;
-  }
-
-  .step-card {
+@media (max-width: 900px) {
+  .booking-steps {
+    grid-template-columns: minmax(0, 1fr);
     max-width: 52rem;
     margin-inline: auto;
-    padding: 2rem 2.4rem 3.2rem;
   }
 
-  // Hide floating images in single-column (overlap-free alternative)
-  .step-card__media {
-    display: none;
-  }
-
-  // Make number badge a static centered element
-  .step-card__num {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    display: flex;
-    width: 7.2rem;
-    height: 7.2rem;
-    font-size: 4rem;
-    margin: 0 auto 1.6rem;
-    box-shadow: 0 4px 16px rgba(1, 25, 59, 0.08);
-  }
-
-  .step-card__connector {
-    display: none;
-  }
+  .booking-process { border-radius: 2rem; }
 }
 
-@media (max-width: 640px) {
-  h2 {
-    font-size: clamp(3.6rem, 9.5vw, 5.4rem);
-    line-height: 1.08;
-  }
-
-  .timeline {
-    padding-inline: 1.2rem;
-    gap: 1.6rem;
-  }
-
-  .step-card {
-    padding: 1.6rem 2rem 2.4rem;
-  }
-
-  .step-card__num {
-    width: 6.4rem;
-    height: 6.4rem;
-    font-size: 3.6rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .step-card__icon {
-    width: 5.2rem;
-    height: 5.2rem;
-    margin-bottom: 1.2rem;
-
-    svg { width: 2.2rem; height: 2.2rem; }
-  }
+@media (max-width: 480px) {
+  .booking-process { padding-block: 4.8rem 6.4rem; }
+  .booking-hd { margin-bottom: 4rem; }
 }
-

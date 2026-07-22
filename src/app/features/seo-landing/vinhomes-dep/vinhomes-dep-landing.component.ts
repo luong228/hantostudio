@@ -68,7 +68,7 @@ export class VinhomesDepLandingComponent {
           description: 'Studio chụp ảnh đẹp chuyên nghiệp tại Vinhomes Grand Park, Thủ Đức, TP.HCM. Ánh sáng kiểm soát hoàn toàn, makeup for camera, retouch tự nhiên.',
           url: 'https://hantostudio.vn',
           telephone: '+84396887597',
-          email: 'hello@hantostudio.vn',
+          email: 'hantostudiobyhangtu@gmail.com',
           image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=1200&q=80',
           priceRange: '₫₫',
           address: {

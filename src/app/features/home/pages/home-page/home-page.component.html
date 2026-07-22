@@ -37,19 +37,6 @@
       [studioInfo]="repo.studioInfo()" />
   </section>
 
-  <app-home-booking-process [steps]="repo.bookingSteps()" />
-
-  <section class="home-band home-band--final">
-    @if (finalCtaContent(); as cta) {
-      <app-home-final-cta
-        [title]="cta.title"
-        [subtitle]="cta.subtitle"
-        [primaryLabel]="cta.primaryLabel"
-        [primaryRoute]="cta.primaryRoute"
-        [secondaryLabel]="cta.secondaryLabel"
-        [secondaryRoute]="cta.secondaryRoute" />
-    }
-  </section>
 
   <section class="home-contact-section" aria-labelledby="cs-heading">
     <aside class="cs-intro">
@@ -59,8 +46,8 @@
         <svg viewBox="0 0 16 10" fill="currentColor"><path d="M8 0 L11 5 L8 10 L5 5 Z" /></svg>
         <span></span>
       </div>
-      <h2 id="cs-heading" class="cs-intro__title">Đăng ký tư vấn concept phù hợp với buổi chụp của bạn</h2>
-      <p class="cs-intro__sub">Chúng tôi luôn sẵn sàng lắng nghe và đồng hành cùng bạn để tạo nên những bức ảnh đẹp và đầy cảm xúc.</p>
+      <h2 id="cs-heading" class="cs-intro__title">Tư vấn concept — miễn phí, không ràng buộc</h2>
+      <p class="cs-intro__sub">Điền form bên cạnh, đội ngũ sẽ phản hồi trong ngày.</p>
     </aside>
 
     <app-contact-form></app-contact-form>

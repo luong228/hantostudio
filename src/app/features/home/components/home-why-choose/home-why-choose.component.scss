@@ -119,11 +119,11 @@
 }
 
 .why-card__num {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans-serif);
   font-size: 3.6rem;
   font-weight: 700;
   line-height: 0.9;
-  color: rgba(1, 25, 59, 0.18);
+  color: var(--primary);
   letter-spacing: -0.02em;
   flex-shrink: 0;
   margin-top: 0.2rem;

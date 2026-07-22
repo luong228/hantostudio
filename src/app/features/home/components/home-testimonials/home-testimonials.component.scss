@@ -104,7 +104,7 @@
 }
 
 .stat-value {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans-serif);
   font-size: 3rem;
   font-weight: 700;
   color: var(--primary);
@@ -114,6 +114,7 @@
 
 .stat-denom {
   font-size: 1.8rem;
+  font-family: var(--font-sans-serif);
   opacity: 0.55;
 }
 

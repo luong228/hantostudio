@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { environment } from '../../../../../environments/environment';
 import { ContentRepositoryService } from '../../../../core/services/content-repository.service';
 import { SeoService } from '../../../../core/services/seo.service';
 import { ConversionBannerComponent } from '../../../../shared/ui/conversion-banner/conversion-banner.component';
@@ -25,7 +26,8 @@ export class ServiceDetailPageComponent {
   constructor() {
     this.seo.update(this.repo.seoForServiceSlug(this.slug, {
       title: 'Dịch Vụ Chụp Ảnh | HANTO Studio',
-      description: 'Khám phá dịch vụ chụp ảnh và thông tin đặt lịch chi tiết.'
+      description: 'Khám phá dịch vụ chụp ảnh và thông tin đặt lịch chi tiết.',
+      canonicalUrl: `${environment.appBaseUrl}/dich-vu/${this.slug}`
     }));
   }
 

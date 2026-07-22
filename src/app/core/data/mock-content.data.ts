@@ -1,3 +1,4 @@
+﻿import { environment } from '../../../environments/environment';
 import {
   BlogPost,
   BookingStep,
@@ -31,7 +32,8 @@ export const PAGES: PageContent[] = [
     seo: {
       title: 'HANTO Studio | Studio Chụp Ảnh Chân Dung Và Gia Đình Cao Cấp',
       description: 'Studio chụp ảnh chân dung, profile, gia đình, mẹ bầu và concept cao cấp với sự ấm áp và tinh tế.',
-      keywords: 'studio chụp ảnh chân dung, chụp ảnh gia đình, ảnh mẹ bầu, studio chụp ảnh profile'
+      keywords: 'studio chụp ảnh chân dung, chụp ảnh gia đình, ảnh mẹ bầu, studio chụp ảnh profile',
+      canonicalUrl: `${environment.appBaseUrl}/`
     },
     home: {
       hero: {
@@ -66,7 +68,8 @@ export const PAGES: PageContent[] = [
     title: 'Dịch Vụ Chụp Ảnh | HANTO Studio',
     seo: {
       title: 'Dịch Vụ Chụp Ảnh | HANTO Studio',
-      description: 'Khám phá các dịch vụ chụp ảnh cao cấp được thiết kế riêng cho chân dung, câu chuyện gia đình, khoảnh khắc mẹ bầu và thương hiệu cá nhân.'
+      description: 'Khám phá các dịch vụ chụp ảnh cao cấp được thiết kế riêng cho chân dung, câu chuyện gia đình, khoảnh khắc mẹ bầu và thương hiệu cá nhân.',
+      canonicalUrl: `${environment.appBaseUrl}/dich-vu`
     }
   },
   {
@@ -76,7 +79,8 @@ export const PAGES: PageContent[] = [
     title: 'Bảng Giá | HANTO Studio',
     seo: {
       title: 'Bảng Giá | HANTO Studio',
-      description: 'Bảng giá minh bạch cho các gói chụp ảnh cao cấp bao gồm styling và chỉnh sửa ảnh.'
+      description: 'Bảng giá minh bạch cho các gói chụp ảnh cao cấp bao gồm styling và chỉnh sửa ảnh.',
+      canonicalUrl: `${environment.appBaseUrl}/bang-gia`
     }
   },
   {
@@ -86,7 +90,8 @@ export const PAGES: PageContent[] = [
     title: 'Về Studio | HANTO Studio',
     seo: {
       title: 'Về Studio | HANTO Studio',
-      description: 'Gặp gỡ đội ngũ và triết lý đằng sau trải nghiệm chụp ảnh ấm áp và cao cấp của chúng tôi.'
+      description: 'Gặp gỡ đội ngũ và triết lý đằng sau trải nghiệm chụp ảnh ấm áp và cao cấp của chúng tôi.',
+      canonicalUrl: `${environment.appBaseUrl}/about`
     }
   },
   {
@@ -96,7 +101,8 @@ export const PAGES: PageContent[] = [
     title: 'Nhật Ký Nhiếp Ảnh | HANTO Studio',
     seo: {
       title: 'Nhật Ký Nhiếp Ảnh | HANTO Studio',
-      description: 'Những chia sẻ thực tế và cảm hứng để chuẩn bị cho buổi chụp ảnh thanh lịch và ý nghĩa.'
+      description: 'Những chia sẻ thực tế và cảm hứng để chuẩn bị cho buổi chụp ảnh thanh lịch và ý nghĩa.',
+      canonicalUrl: `${environment.appBaseUrl}/blog`
     }
   },
   {
@@ -106,7 +112,8 @@ export const PAGES: PageContent[] = [
     title: 'Câu Hỏi Thường Gặp | HANTO Studio',
     seo: {
       title: 'Câu Hỏi Thường Gặp | HANTO Studio',
-      description: 'Tìm câu trả lời về đặt lịch, quy trình buổi chụp, bảng giá và thời gian giao ảnh.'
+      description: 'Tìm câu trả lời về đặt lịch, quy trình buổi chụp, bảng giá và thời gian giao ảnh.',
+      canonicalUrl: `${environment.appBaseUrl}/cau-hoi-thuong-gap`
     }
   },
   {
@@ -116,7 +123,8 @@ export const PAGES: PageContent[] = [
     title: 'Liên Hệ Và Đặt Lịch | HANTO Studio',
     seo: {
       title: 'Liên Hệ Và Đặt Lịch | HANTO Studio',
-      description: 'Bắt đầu yêu cầu đặt lịch và lên kế hoạch cho buổi chụp ảnh với đội ngũ studio của chúng tôi.'
+      description: 'Bắt đầu yêu cầu đặt lịch và lên kế hoạch cho buổi chụp ảnh với đội ngũ studio của chúng tôi.',
+      canonicalUrl: `${environment.appBaseUrl}/lien-he`
     }
   }
 ];
@@ -125,14 +133,14 @@ export const STUDIO_INFO: StudioInfo = {
   brandName: 'HANTO Studio',
   tagline: 'Studio chân dung nơi sự chân thật cảm xúc gặp gỡ nghệ thuật editorial.',
   address: 'Tầng 3 T12-06, Khu Manhattan, Vinhomes Grand Park, Thủ Đức, Hồ Chí Minh, Việt Nam',
-  openingHours: 'Thứ 3 - Chủ Nhật, 09:00-19:00',
+  openingHours: 'Thứ 2 - Chủ Nhật, 09:00-19:00',
   phone: '0396 887 597',
-  email: 'hello@hantostudio.vn'
+  email: 'hantostudiobyhangtu@gmail.com'
 };
 
 export const CONTACT_CHANNELS: ContactChannel[] = [
   { label: 'Điện thoại', value: STUDIO_INFO.phone, href: 'tel:0396887597' },
-  { label: 'Email', value: STUDIO_INFO.email, href: 'mailto:hello@hantostudio.vn' },
+  { label: 'Email', value: STUDIO_INFO.email, href: 'mailto:hantostudiobyhangtu@gmail.com' },
   { label: 'Zalo', value: '@hantostudio', href: 'https://zalo.me/0396887597' },
   { label: 'Facebook', value: 'HANTO Studio Studio', href: 'https://www.facebook.com/profile.php?id=61591415732605' }
 ];
@@ -229,7 +237,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'svc-portrait-signature',
     slug: 'chan-dung',
     name: 'Chụp Ảnh Chân Dung',
-    shortDescription: 'Chân dung editorial cho profile cá nhân, thương hiệu cá nhân và kỷ niệm cột mốc.',
+    shortDescription: 'Chân dung editorial — profile & thương hiệu.',
     description:
       'Gói chân dung chủ lực với quy trình makeup, styling, hướng dẫn tạo dáng và retouch cao cấp để bạn lên hình tự nhiên, sáng và đúng thần thái.',
     heroImage: '/images/chan-dung.png',
@@ -245,7 +253,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'svc-family-heirloom',
     slug: 'gia-dinh',
     name: 'Chụp Ảnh Gia Đình',
-    shortDescription: 'Ảnh gia đình tự nhiên, cảm xúc và dễ để trẻ nhỏ hợp tác trong buổi chụp.',
+    shortDescription: 'Ảnh gia đình tự nhiên, thân thiện trẻ nhỏ.',
     description:
       'Dịch vụ dành cho gia đình muốn giữ lại khoảnh khắc thật, đội ngũ điều tiết nhịp độ và nhịp điệu để ảnh đẹp mà vẫn tự nhiên.',
     heroImage: '/images/gia-dinh.png',
@@ -261,7 +269,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'svc-maternity-glow',
     slug: 'thai-san',
     name: 'Mẹ bầu',
-    shortDescription: 'Nhóm buổi chụp concept với trang phục, bối cảnh và câu chuyện được thiết kế riêng.',
+    shortDescription: 'Ảnh mẹ bầu nhẹ nhàng, đầy cảm xúc.',
     description:
       'Phù hợp với khách hàng muốn bộ ảnh mang tính chủ đề rõ ràng: áo dài, mẹ bầu hoặc concept nghệ thuật với quy trình sản xuất trọn gói.',
     heroImage: '/images/thai-san.png',
@@ -277,7 +285,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'svc-profile-linkedin',
     slug: 'profile-ca-nhan',
     name: 'Profile Cá Nhân & LinkedIn',
-    shortDescription: 'Ảnh profile chuyên nghiệp dùng được ngay cho LinkedIn, website và hồ sơ doanh nghiệp.',
+    shortDescription: 'Ảnh profile chuyên nghiệp cho LinkedIn & website.',
     description:
       'Buổi chụp ngắn gọn, tập trung vào 1–2 bộ trang phục, ánh sáng phòng thu và góc khuôn mặt tốt nhất. Kết quả là bộ ảnh tự tin, thân thiện và đáng tin cậy.',
     heroImage: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1400&q=80',
@@ -293,7 +301,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'svc-concept-art',
     slug: 'concept-nghe-thuat',
     name: 'Concept Nghệ Thuật',
-    shortDescription: 'Bộ ảnh mang chủ đề riêng biệt — áo dài, vintage, tối giản hay câu chuyện bạn muốn kể.',
+    shortDescription: 'Bộ ảnh theo concept & chủ đề riêng.',
     description:
       'Đội ngũ lên concept, chuẩn bị phục trang và bối cảnh theo yêu cầu. Phù hợp với khách hàng muốn một bộ ảnh mang dấu ấn nghệ thuật rõ ràng, không theo khuôn mẫu.',
     heroImage: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1400&q=80',
@@ -309,7 +317,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'svc-pre-wedding',
     slug: 'pre-wedding',
     name: 'Pre-Wedding',
-    shortDescription: 'Bộ ảnh cưới lãng mạn, tự nhiên — ghi lại cảm xúc trước ngày trọng đại.',
+    shortDescription: 'Ảnh cưới lãng mạn trước ngày trọng đại.',
     description:
       'Buổi chụp pre-wedding tập trung vào sự kết nối và cảm xúc thật của hai người. Studio hỗ trợ từ chọn concept, phối trang phục đến dẫn dắt tương tác tự nhiên trước ống kính.',
     heroImage: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80',
@@ -333,16 +341,15 @@ export const PRICING_PLANS: PricingPlan[] = [
     idealFor: 'Chụp cá nhân, chân dung cơ bản',
     category: 'nu',
     features: [
-      'Chụp 120 - 160 ảnh',
-      '1 layout makeup và làm tóc dành cho nữ TIÊU CHUẨN',
-      '1 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
-      '08 ảnh chỉnh sửa kỹ lưỡng',
+      'Chụp <mark>120 - 160 ảnh</mark>',
+      'Layout makeup và làm tóc dành cho nữ <mark>TIÊU CHUẨN</mark>',
+      '<mark>1 layout</mark> trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '<mark>08 ảnh</mark> chỉnh sửa kỹ lưỡng',
       '1 background của HANTO Studio khách hàng lựa chọn',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
-      'Không gian và bối cảnh chụp',
-      'Phụ kiện TIÊU CHUẨN',
       'Toàn bộ ảnh gốc',
+      'Phụ kiện <mark>TIÊU CHUẨN</mark>',
     ],
   },
   {
@@ -354,17 +361,17 @@ export const PRICING_PLANS: PricingPlan[] = [
     category: 'nu',
     highlighted: true,
     features: [
-      'Chụp 160 - 250 ảnh',
-      '1 layout makeup và làm tóc dành cho nữ CHUYÊN NGHIỆP',
-      '1 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
-      '15 ảnh chỉnh sửa kỹ lưỡng',
+      'Chụp <mark>160 - 250 ảnh</mark>',
+      'Layout makeup và làm tóc dành cho nữ <mark>CHUYÊN NGHIỆP</mark>',
+      '<mark>1 layout</mark> trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '<mark>15 ảnh</mark> chỉnh sửa kỹ lưỡng',
       '1 background của HANTO Studio khách hàng lựa chọn',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
-      'Không gian và bối cảnh chụp',
       'Toàn bộ ảnh gốc',
-      'Phụ kiện CAO CẤP',
-      'Tặng kèm Nail hoặc Lens + Bộ ảnh beauty'
+      'Phụ kiện <mark>CAO CẤP</mark>',
+      'Tặng kèm <mark>Nail hoặc Lens</mark>',
+      'Tặng kèm <mark>Bộ ảnh beauty</mark>'
     ],
   },
   {
@@ -375,19 +382,18 @@ export const PRICING_PLANS: PricingPlan[] = [
     idealFor: 'Gói cao cấp hoàn hảo cho chân dung nghệ thuật',
     category: 'nu',
     features: [
-      'Chụp ảnh không giới hạn',
-      '1 layout makeup và làm tóc CAO CẤP dành cho nữ THEO YÊU CẦU',
-      '2 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
-      '22 ảnh chỉnh sửa kỹ lưỡng',
+      'Chụp ảnh <mark>không giới hạn</mark>',
+      'Layout makeup và làm tóc <mark>CAO CẤP</mark> dành cho nữ <mark>THEO YÊU CẦU</mark>',
+      '<mark>2 layout</mark> trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '<mark>22 ảnh</mark> chỉnh sửa kỹ lưỡng',
       '1 background của HANTO Studio khách hàng lựa chọn',
-      'Clip quay hậu trường đã edit',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
-      'Không gian và bối cảnh chụp',
       'Toàn bộ ảnh gốc',
-      'Phụ kiện CAO CẤP',
-      'Tặng kèm Nail + Lens',
-      'Tặng kèm bộ ảnh beauty'
+      '<mark>Clip quay hậu trường đã edit</mark>',
+      'Phụ kiện <mark>CAO CẤP</mark>',
+      'Tặng kèm <mark>Nail + Lens</mark>',
+      'Tặng kèm <mark>bộ ảnh beauty</mark>'
     ],
   },
 
@@ -400,15 +406,14 @@ export const PRICING_PLANS: PricingPlan[] = [
     idealFor: 'Chụp cá nhân, chân dung nam chuyên nghiệp',
     category: 'nam',
     features: [
-      'Chụp 80 - 120 ảnh',
-      '1 layout makeup và làm tóc dành cho nam TIÊU CHUẨN',
-      '1 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
-      '08 ảnh chỉnh sửa kỹ lưỡng',
+      'Chụp <mark>80 - 120 ảnh</mark>',
+      'Layout makeup và làm tóc dành cho nam <mark>TIÊU CHUẨN</mark>',
+      'Layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '<mark>08 ảnh</mark> chỉnh sửa kỹ lưỡng',
       '1 background của HANTO Studio khách hàng lựa chọn',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
-      'Không gian và bối cảnh chụp',
-      'Phụ kiện tiêu chuẩn',
+      'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Toàn bộ ảnh gốc',
     ],
   },
@@ -421,18 +426,16 @@ export const PRICING_PLANS: PricingPlan[] = [
     category: 'nam',
     highlighted: true,
     features: [
-      'Chụp 120-180 ảnh',
-      '1 layout makeup và làm tóc dành cho nam CHUYÊN NGHIỆP',
-      '1 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
-      '15 ảnh chỉnh sửa kỹ lưỡng',
+      'Chụp <mark>120-180 ảnh</mark>',
+      'Layout makeup và làm tóc dành cho nam <mark>CHUYÊN NGHIỆP</mark>',
+      'Layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '<mark>15 ảnh</mark> chỉnh sửa kỹ lưỡng',
       '1 background của HANTO Studio khách hàng lựa chọn',
-      'Miễn phí chỉnh trang cho bé dưới 7 tuổi',
-      'Clip quay hậu trường đã edit',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
-      'Không gian và bối cảnh chụp',
-      'Phụ kiện CAO CẤP',
+      'Phụ kiện <mark>CAO CẤP</mark>',
       'Toàn bộ ảnh gốc',
+      '<mark>Clip quay hậu trường đã edit</mark>',
     ],
   },
 
@@ -445,18 +448,18 @@ export const PRICING_PLANS: PricingPlan[] = [
     idealFor: 'Cặp đôi, gia đình 2 thành viên',
     category: 'gia-dinh',
     features: [
-      'Chụp 80 - 120 ảnh',
-      '2 layout makeup và làm tóc CHUYÊN NGHIỆP',
-      '2 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
-      '15 ảnh chỉnh sửa kỹ lưỡng',
-      '2 background của HANTO Studio khách hàng lựa chọn',
-      'Miễn phí chỉnh trang cho bé dưới 7 tuổi',
+      'Chụp <mark>80 - 120 ảnh</mark>',
+      '<mark>2 layout</mark> makeup và làm tóc <mark>CHUYÊN NGHIỆP</mark>',
+      '<mark>2 layout</mark> trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '<mark>15 ảnh</mark> chỉnh sửa kỹ lưỡng',
+      '<mark>2 background</mark> của HANTO Studio khách hàng lựa chọn',
+      '<mark>Miễn phí chỉnh trang cho bé dưới 7 tuổi</mark>',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
-      'Không gian và bối cảnh chụp',
-      'Phụ kiện TIÊU CHUẨN',
+      'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Toàn bộ ảnh gốc',
-      'Tặng kèm 1 ảnh in 30x40cm và 1 khung gỗ'
+      'Tặng kèm <mark>1 ảnh in 30x40cm</mark>',
+      'Tặng kèm <mark>1 khung gỗ</mark>'
     ],
   },
   {
@@ -468,18 +471,18 @@ export const PRICING_PLANS: PricingPlan[] = [
     category: 'gia-dinh',
     highlighted: true,
     features: [
-      'Chụp 120 - 160 ảnh',
-      '3 layout makeup và làm tóc CHUYÊN NGHIỆP',
-      '3 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
-      '15 ảnh chỉnh sửa kỹ lưỡng',
-      '3 background của HANTO Studio khách hàng lựa chọn',
-      'Miễn phí chỉnh trang cho bé dưới 7 tuổi',
+      'Chụp <mark>120 - 160 ảnh</mark>',
+      '<mark>3 layout</mark> makeup và làm tóc <mark>CHUYÊN NGHIỆP</mark>',
+      '<mark>3 layout</mark> trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '<mark>15 ảnh</mark> chỉnh sửa kỹ lưỡng',
+      '<mark>3 background</mark> của HANTO Studio khách hàng lựa chọn',
+      '<mark>Miễn phí chỉnh trang cho bé dưới 7 tuổi</mark>',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
-      'Không gian và bối cảnh chụp',
-      'Phụ kiện TIÊU CHUẨN',
+      'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Toàn bộ ảnh gốc',
-      'Tặng kèm 1 ảnh in 30x40cm và 1 khung gỗ'
+      'Tặng kèm <mark>1 ảnh in 30x40cm</mark>',
+      'Tặng kèm <mark>1 khung gỗ</mark>'
     ],
   },
   {
@@ -490,17 +493,18 @@ export const PRICING_PLANS: PricingPlan[] = [
     idealFor: 'Gia đình 4 thành viên trở lên',
     category: 'gia-dinh',
     features: [
-      'Chụp ảnh không giới hạn',
-      '4 layout makeup và làm tóc CHUYÊN NGHIỆP',
-      '4 layout trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
-      '15 ảnh chỉnh sửa kỹ lưỡng',
-      '4 background của HANTO Studio khách hàng lựa chọn',
+      'Chụp ảnh <mark>không giới hạn</mark>',
+      '<mark>4 layout</mark> makeup và làm tóc <mark>CHUYÊN NGHIỆP</mark>',
+      '<mark>4 layout</mark> trang phục của HANTO Studio chuẩn bị và phụ kiện kèm theo concept',
+      '<mark>15 ảnh</mark> chỉnh sửa kỹ lưỡng',
+      '<mark>4 background</mark> của HANTO Studio khách hàng lựa chọn',
+      '<mark>Miễn phí chỉnh trang cho bé dưới 7 tuổi</mark>',
       'Dịch vụ chăm sóc trước buổi chụp',
       'Kíp hỗ trợ tạo dáng, chọn góc xuyên suốt buổi chụp',
-      'Không gian và bối cảnh chụp',
-      'Phụ kiện TIÊU CHUẨN',
+      'Phụ kiện <mark>TIÊU CHUẨN</mark>',
       'Toàn bộ ảnh gốc',
-      'Tặng kèm 2 ảnh in 30x40cm và 2 khung gỗ'
+      'Tặng kèm <mark>2 ảnh in 30x40cm</mark>',
+      'Tặng kèm <mark>2 khung gỗ</mark>'
     ],
   },
 ];

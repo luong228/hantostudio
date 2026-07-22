@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { HomeBookingProcessComponent } from '../../../../features/home/components/home-booking-process/home-booking-process.component';
 import { ContentRepositoryService } from '../../../../core/services/content-repository.service';
 import { SeoService } from '../../../../core/services/seo.service';
 import { ContactFormComponent } from '../../../../shared/ui/contact-form/contact-form.component';
@@ -7,7 +8,7 @@ import { ContactFormComponent } from '../../../../shared/ui/contact-form/contact
 @Component({
   selector: 'app-contact-page',
   standalone: true,
-  imports: [ContactFormComponent, RouterLink],
+  imports: [ContactFormComponent, RouterLink, HomeBookingProcessComponent],
   templateUrl: './contact-page.component.html',
   styleUrl: './contact-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
